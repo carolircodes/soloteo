@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teologia Sistemática — Soloteo</title>
+  <meta
+    name="description"
+    content="Explore a seção de Teologia Sistemática da Soloteo com doutrinas centrais, trilhas organizadas, tópicos essenciais e estrutura premium de leitura."
+  />
+  <meta name="theme-color" content="#6b1126" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #fffaf7;
+      --bg-cream: #fff7f1;
+      --surface: rgba(255,255,255,0.82);
+      --surface-solid: #ffffff;
+      --surface-soft: #fffdfb;
+      --text: #1f1619;
+      --text-soft: #695a60;
+      --text-faint: #8b7a80;
+      --wine: #6b1126;
+      --wine-2: #8d1833;
+      --wine-3: #4f0d1d;
+      --gold: #c8a35f;
+      --gold-2: #e5c98f;
+      --gold-3: #fff4dd;
+      --border: #efdfd8;
+      --border-strong: rgba(107,17,38,0.12);
+      --shadow-soft: 0 12px 28px rgba(73, 21, 35, 0.05);
+      --shadow: 0 24px 60px rgba(73, 21, 35, 0.09);
+      --shadow-strong: 0 34px 90px rgba(73, 21, 35, 0.14);
+      --container: 1240px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(200,163,95,0.08), transparent 18%),
+        linear-gradient(180deg, #ffffff 0%, #fffdfa 100%);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--wine);
+    }
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--container));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 6000;
+      width: 100%;
+      padding: 18px 0;
+      transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease, border-color 0.35s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    .site-header.header-scrolled {
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 36px rgba(31, 22, 25, 0.08);
+      border-bottom-color: rgba(107,17,38,0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: #1a1517;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--wine) 0%, #b12245 100%);
+      box-shadow: 0 10px 24px rgba(107,17,38,0.22);
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+    }
+
+    .brand-text {
+      font-size: 1.08rem;
+      letter-spacing: 0.02em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav a {
+      color: #4b3a40;
+      font-weight: 600;
+      font-size: 0.96rem;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--wine), var(--gold));
+      transition: width 0.3s ease;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-cta,
+    .mobile-menu-cta,
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .header-cta,
+    .mobile-menu-cta,
+    .btn-primary {
+      background: linear-gradient(135deg, #8B1E3F, #c9a24a);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(139,30,63,0.18);
+    }
+
+    .header-cta:hover,
+    .mobile-menu-cta:hover,
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(107,17,38,0.16);
+      color: var(--wine);
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: var(--wine);
+      color: #fff;
+    }
+
+    .menu-toggle {
+      display: none;
+      position: relative;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(107,17,38,0.08);
+      box-shadow: 0 10px 24px rgba(73, 21, 35, 0.06);
+      z-index: 7001;
+    }
+
+    .menu-toggle span {
+      position: absolute;
+      left: 50%;
+      width: 20px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--wine);
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle span:nth-child(1) { top: 16px; }
+    .menu-toggle span:nth-child(2) { top: 23px; }
+    .menu-toggle span:nth-child(3) { top: 30px; }
+
+    .menu-toggle.is-active span:nth-child(1) {
+      top: 23px;
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    .menu-toggle.is-active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.is-active span:nth-child(3) {
+      top: 23px;
+      transform: translateX(-50%) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 7000;
+      pointer-events: none;
+    }
+
+    .mobile-menu-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(23, 13, 16, 0.56);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .mobile-menu-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: min(90vw, 380px);
+      height: 100%;
+      background: linear-gradient(180deg, #fffdfb 0%, #fff7f2 100%);
+      box-shadow: -24px 0 60px rgba(17, 10, 12, 0.16);
+      padding: 100px 26px 30px;
+      transform: translateX(100%);
+      transition: transform 0.42s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .mobile-menu.is-open {
+      pointer-events: auto;
+    }
+
+    .mobile-menu.is-open .mobile-menu-overlay {
+      opacity: 1;
+    }
+
+    .mobile-menu.is-open .mobile-menu-panel {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mobile-menu-nav a {
+      padding: 14px 16px;
+      border-radius: 16px;
+      font-weight: 700;
+      color: #2b1d21;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(107,17,38,0.06);
+    }
+
+    .mobile-menu-foot {
+      margin-top: auto;
+      padding-top: 22px;
+      border-top: 1px solid rgba(107,17,38,0.08);
+    }
+
+    .mobile-menu-note {
+      font-size: 0.94rem;
+      color: var(--text-soft);
+      margin-bottom: 16px;
+    }
+
+    .page-hero {
+      padding: 38px 0 30px;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 22px;
+      color: var(--text-faint);
+      font-size: 0.92rem;
+    }
+
+    .breadcrumbs span {
+      opacity: 0.55;
+    }
+
+    .page-hero-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .page-hero-copy {
+      padding: 10px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--wine);
+      background: linear-gradient(180deg, #fffdf9 0%, #fff7ec 100%);
+      border: 1px solid rgba(200, 163, 95, 0.34);
+      box-shadow: 0 6px 18px rgba(200, 163, 95, 0.08);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--gold) 0%, #b98a36 100%);
+      box-shadow: 0 0 0 6px rgba(200, 163, 95, 0.13);
+    }
+
+    .page-title {
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+      color: #1a1517;
+      margin-top: 20px;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+
+    .page-title span {
+      background: linear-gradient(135deg, var(--wine) 0%, #b12245 55%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-subtitle {
+      font-size: 1.08rem;
+      color: var(--text-soft);
+      max-width: 700px;
+      margin-bottom: 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-side-card {
+      position: relative;
+      min-height: 320px;
+      border-radius: 30px;
+      padding: 28px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,249,245,0.94) 100%);
+      border: 1px solid rgba(107,17,38,0.08);
+      box-shadow: var(--shadow-strong);
+      overflow: hidden;
+    }
+
+    .hero-side-glow {
+      position: absolute;
+      right: -50px;
+      top: -40px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,163,95,0.22) 0%, transparent 68%);
+      filter: blur(8px);
+    }
+
+    .hero-side-card h3 {
+      position: relative;
+      z-index: 1;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #1a1517;
+    }
+
+    .hero-side-card p {
+      position: relative;
+      z-index: 1;
+      color: var(--text-soft);
+      margin-bottom: 20px;
+    }
+
+    .hero-stat-list {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-stat {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.76);
+      border: 1px solid rgba(107,17,38,0.08);
+    }
+
+    .hero-stat strong {
+      display: block;
+      color: var(--wine);
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .hero-stat span {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+    }
+
+    .content-section {
+      padding: 40px 0 90px;
+    }
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .content-main {
+      display: grid;
+      gap: 24px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, #ffffff 0%, #fffaf7 100%);
+      border: 1px solid rgba(107,17,38,0.08);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .panel h2 {
+      font-size: 1.7rem;
+      line-height: 1.16;
+      margin-bottom: 14px;
+      color: #1a1517;
+    }
+
+    .panel h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #1a1517;
+    }
+
+    .panel p {
+      color: var(--text-soft);
+      margin-bottom: 14px;
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .mini-card {
+      padding: 20px;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid rgba(107,17,38,0.08);
+      box-shadow: 0 10px 24px rgba(73, 21, 35, 0.05);
+    }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--wine);
+      font-size: 1rem;
+    }
+
+    .mini-card p {
+      margin: 0;
+      font-size: 0.96rem;
+    }
+
+    .reading-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .reading-card {
+      display: block;
+      padding: 22px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid rgba(107,17,38,0.08);
+      box-shadow: 0 12px 26px rgba(73, 21, 35, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .reading-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: rgba(107,17,38,0.14);
+    }
+
+    .reading-tag {
+      display: inline-flex;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #fff6ea;
+      color: var(--wine);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .reading-card h3 {
+      font-size: 1.15rem;
+      line-height: 1.26;
+      margin-bottom: 10px;
+      color: #1a1517;
+    }
+
+    .reading-card p {
+      color: var(--text-soft);
+      margin-bottom: 14px;
+      font-size: 0.97rem;
+    }
+
+    .reading-link {
+      color: var(--wine);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .highlight-box {
+      padding: 24px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(139,30,63,0.98) 0%, rgba(200,163,95,0.95) 100%);
+      color: #fff;
+      box-shadow: 0 24px 60px rgba(91, 24, 43, 0.22);
+    }
+
+    .highlight-box h3 {
+      font-size: 1.28rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .highlight-box p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 14px;
+    }
+
+    .highlight-box ul {
+      padding-left: 18px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .highlight-box li {
+      color: rgba(255,255,255,0.92);
+    }
+
+    .topic-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .topic-item {
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid rgba(107,17,38,0.08);
+      box-shadow: 0 10px 24px rgba(73, 21, 35, 0.05);
+    }
+
+    .topic-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #1a1517;
+    }
+
+    .topic-item span {
+      color: var(--text-soft);
+      font-size: 0.97rem;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 100px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .sidebar-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #fffaf7 100%);
+      border: 1px solid rgba(107,17,38,0.08);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .sidebar-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 14px;
+      color: #1a1517;
+    }
+
+    .sidebar-nav {
+      display: grid;
+      gap: 10px;
+    }
+
+    .sidebar-nav a {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid rgba(107,17,38,0.06);
+      color: #4e3c42;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .sidebar-nav a:hover {
+      background: #fff8f0;
+      color: var(--wine);
+    }
+
+    .sidebar-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .sidebar-list div {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid rgba(107,17,38,0.06);
+    }
+
+    .sidebar-list strong {
+      display: block;
+      color: var(--wine);
+      font-size: 0.94rem;
+      margin-bottom: 4px;
+    }
+
+    .sidebar-list span {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
+
+    .cta-panel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 30px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #fff8f2 0%, #ffffff 100%);
+      border: 1px solid rgba(107,17,38,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-panel h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #1a1517;
+    }
+
+    .cta-panel p {
+      color: var(--text-soft);
+      max-width: 720px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      padding: 60px 0 70px;
+      border-top: 1px solid rgba(107,17,38,0.08);
+      color: var(--text-faint);
+      font-size: 0.95rem;
+      background: linear-gradient(180deg, #fffdfa 0%, #fff8f4 100%);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .footer-brand {
+      max-width: 360px;
+    }
+
+    .footer-brand .brand {
+      margin-bottom: 16px;
+    }
+
+    .footer-text {
+      color: var(--text-soft);
+      margin-bottom: 18px;
+    }
+
+    .footer-mini {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(107,17,38,0.08);
+      color: #5d4a51;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .footer-col h4 {
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--wine);
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-soft);
+      font-weight: 600;
+    }
+
+    .footer-bottom {
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(107,17,38,0.08);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--text-faint);
+      font-size: 0.9rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+      will-change: opacity, transform;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-36px);
+      transition: opacity 1s ease, transform 1s ease;
+      will-change: opacity, transform;
+    }
+
+    .reveal-left.is-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-zoom {
+      opacity: 0;
+      transform: scale(0.96);
+      transition: opacity 1s ease, transform 1s ease;
+      will-change: opacity, transform;
+    }
+
+    .reveal-zoom.is-visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .stagger > * {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .stagger.is-visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.08s; }
+    .stagger.is-visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.16s; }
+    .stagger.is-visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.24s; }
+    .stagger.is-visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.32s; }
+    .stagger.is-visible > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.40s; }
+    .stagger.is-visible > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.48s; }
+
+    @media (max-width: 1180px) {
+      .page-hero-wrap,
+      .content-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav,
+      .header-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .reading-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-panel {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-title {
+        font-size: 2.4rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+      }
+
+      .mobile-menu-panel {
+        width: 100%;
+      }
+
+      .panel,
+      .sidebar-card,
+      .hero-side-card {
+        padding: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal-left,
+      .reveal-zoom,
+      .stagger > * {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">ST</span>
+        <span class="brand-text">Soloteo</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html#secoes">Seções</a>
+        <a href="index.html#trilhas">Trilhas</a>
+        <a href="index.html#biblioteca">Biblioteca</a>
+        <a href="index.html#sobre">Sobre</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="index.html#biblioteca" class="header-cta">Explorar</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+
+    <aside class="mobile-menu-panel">
+      <nav class="mobile-menu-nav">
+        <a href="index.html#secoes" class="mobile-link">Seções</a>
+        <a href="index.html#trilhas" class="mobile-link">Trilhas</a>
+        <a href="index.html#biblioteca" class="mobile-link">Biblioteca</a>
+        <a href="index.html#sobre" class="mobile-link">Sobre</a>
+      </nav>
+
+      <div class="mobile-menu-foot">
+        <p class="mobile-menu-note">
+          Uma plataforma organizada para estudar teologia com profundidade, beleza e direção.
+        </p>
+        <a href="index.html#biblioteca" class="mobile-menu-cta mobile-link">Explorar agora</a>
+      </div>
+    </aside>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumbs reveal">
+          <a href="index.html">Início</a>
+          <span>/</span>
+          <a href="index.html#secoes">Seções</a>
+          <span>/</span>
+          <strong>Teologia Sistemática</strong>
+        </div>
+
+        <div class="page-hero-wrap">
+          <div class="page-hero-copy reveal-left">
+            <span class="eyebrow">Seção principal</span>
+            <h1 class="page-title">Teologia <span>Sistemática</span></h1>
+            <p class="page-subtitle">
+              Uma seção pensada para organizar as doutrinas centrais da fé cristã com profundidade,
+              clareza e elegância. Aqui, cada tema pode se tornar uma página interna, uma trilha ou um
+              conjunto de leituras relacionadas.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#leituras" class="btn-primary">Ver leituras</a>
+              <a href="#mapa" class="btn-secondary">Ver estrutura</a>
+            </div>
+          </div>
+
+          <div class="hero-side-card reveal-zoom">
+            <div class="hero-side-glow"></div>
+            <h3>Como usar esta página</h3>
+            <p>
+              Esta é a base premium da seção. Você pode transformá-la em um portal com subtemas,
+              artigos, trilhas e aprofundamentos progressivos.
+            </p>
+
+            <div class="hero-stat-list">
+              <div class="hero-stat">
+                <strong>Doutrinas centrais</strong>
+                <span>Organização clara dos temas essenciais da fé.</span>
+              </div>
+              <div class="hero-stat">
+                <strong>Leituras guiadas</strong>
+                <span>Cards prontos para ampliar nas páginas internas.</span>
+              </div>
+              <div class="hero-stat">
+                <strong>Escala elegante</strong>
+                <span>Estrutura pensada para crescer sem perder beleza.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container content-layout">
+        <div class="content-main">
+          <article class="panel reveal" id="visao-geral">
+            <h2>Visão geral da seção</h2>
+            <p>
+              A Teologia Sistemática organiza as doutrinas da fé de maneira coerente, conectando
+              Escritura, tradição cristã, história e reflexão teológica. Nesta seção, você pode reunir
+              conteúdos fundamentais como doutrina de Deus, Cristo, Espírito Santo, salvação, igreja,
+              pecado, graça, fé e escatologia.
+            </p>
+            <p>
+              A proposta da Soloteo é oferecer essa organização de forma visualmente refinada, clara para
+              o leitor e forte o suficiente para se tornar uma referência nacional em conteúdo teológico.
+            </p>
+
+            <div class="intro-grid stagger">
+              <div class="mini-card">
+                <strong>Clareza doutrinária</strong>
+                <p>Temas centrais organizados sem poluição visual.</p>
+              </div>
+              <div class="mini-card">
+                <strong>Profundidade real</strong>
+                <p>Estrutura pensada para textos sérios e escaláveis.</p>
+              </div>
+              <div class="mini-card">
+                <strong>Beleza premium</strong>
+                <p>Um visual memorável, digno da grandiosidade do conteúdo.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel reveal" id="leituras">
+            <h2>Leituras e subtemas recomendados</h2>
+            <p>
+              Abaixo está um modelo de cards internos. Cada card pode levar para uma página própria,
+              com artigo completo, índice, referências e materiais relacionados.
+            </p>
+
+            <div class="reading-grid stagger">
+              <a href="doutrina-de-deus.html" class="reading-card">
+                <span class="reading-tag">Tema essencial</span>
+                <h3>Doutrina de Deus</h3>
+                <p>Atributos divinos, santidade, soberania, eternidade e conhecimento de Deus.</p>
+                <span class="reading-link">Abrir seção →</span>
+              </a>
+
+              <a href="cristologia.html" class="reading-card">
+                <span class="reading-tag">Cristologia</span>
+                <h3>Pessoa e obra de Cristo</h3>
+                <p>Encarnação, natureza de Cristo, mediação, cruz, ressurreição e senhorio.</p>
+                <span class="reading-link">Abrir seção →</span>
+              </a>
+
+              <a href="pneumatologia.html" class="reading-card">
+                <span class="reading-tag">Espírito Santo</span>
+                <h3>Doutrina do Espírito</h3>
+                <p>Presença, atuação, santificação, dons e obra do Espírito na igreja.</p>
+                <span class="reading-link">Abrir seção →</span>
+              </a>
+
+              <a href="soteriologia.html" class="reading-card">
+                <span class="reading-tag">Salvação</span>
+                <h3>Doutrina da salvação</h3>
+                <p>Graça, fé, regeneração, justificação, adoção e perseverança.</p>
+                <span class="reading-link">Abrir seção →</span>
+              </a>
+
+              <a href="eclesiologia.html" class="reading-card">
+                <span class="reading-tag">Igreja</span>
+                <h3>Doutrina da igreja</h3>
+                <p>Natureza da igreja, missão, comunhão, sacramentos e discipulado.</p>
+                <span class="reading-link">Abrir seção →</span>
+              </a>
+
+              <a href="escatologia.html" class="reading-card">
+                <span class="reading-tag">Escatologia</span>
+                <h3>Últimas coisas</h3>
+                <p>Esperança cristã, consumação, ressurreição, juízo e eternidade.</p>
+                <span class="reading-link">Abrir seção →</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="highlight-box reveal">
+            <h3>Estratégia ideal para esta seção</h3>
+            <p>
+              Para ficar realmente premium, esta página deve funcionar como um portal elegante, e não
+              como um artigo longo comum.
+            </p>
+            <ul>
+              <li>Use esta página como hub principal da seção.</li>
+              <li>Crie uma página separada para cada subtema.</li>
+              <li>Mantenha a home limpa e a profundidade nas páginas internas.</li>
+              <li>Padronize visual, estrutura e hierarquia em todas as subsequentes.</li>
+            </ul>
+          </article>
+
+          <article class="panel reveal" id="mapa">
+            <h2>Mapa interno da seção</h2>
+            <p>
+              Você pode estruturar a Teologia Sistemática em camadas, para que o visitante entre por uma
+              visão geral e depois aprofunde conforme o interesse.
+            </p>
+
+            <div class="topic-list stagger">
+              <div class="topic-item">
+                <strong>Nível 1 — Visão geral</strong>
+                <span>Página elegante, introdutória e organizada, como esta.</span>
+              </div>
+              <div class="topic-item">
+                <strong>Nível 2 — Subpáginas doutrinárias</strong>
+                <span>Uma página para cada grande tema: Deus, Cristo, Espírito, salvação, igreja, escatologia.</span>
+              </div>
+              <div class="topic-item">
+                <strong>Nível 3 — Artigos específicos</strong>
+                <span>Textos mais aprofundados dentro de cada subtema.</span>
+              </div>
+              <div class="topic-item">
+                <strong>Nível 4 — Trilhas e leituras relacionadas</strong>
+                <span>Percursos guiados para iniciantes, intermediários e avançados.</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cta-panel reveal">
+            <div>
+              <h2>Continue expandindo essa seção</h2>
+              <p>
+                Agora que você tem a base premium pronta, o próximo passo é criar o mesmo modelo para as
+                demais páginas internas e depois começar a preencher cada uma com o conteúdo definitivo.
+              </p>
+            </div>
+
+            <a href="index.html#secoes" class="btn-primary">Voltar para a home</a>
+          </article>
+        </div>
+
+        <aside class="sidebar reveal-zoom">
+          <div class="sidebar-card">
+            <h3>Índice da página</h3>
+            <nav class="sidebar-nav">
+              <a href="#visao-geral">Visão geral</a>
+              <a href="#leituras">Leituras</a>
+              <a href="#mapa">Mapa da seção</a>
+            </nav>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Estrutura recomendada</h3>
+            <div class="sidebar-list">
+              <div>
+                <strong>Página principal</strong>
+                <span>Hub visual da seção</span>
+              </div>
+              <div>
+                <strong>Subtemas</strong>
+                <span>Páginas organizadas por doutrina</span>
+              </div>
+              <div>
+                <strong>Artigos</strong>
+                <span>Aprofundamentos específicos</span>
+              </div>
+              <div>
+                <strong>Trilhas</strong>
+                <span>Jornadas guiadas de leitura</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Outras seções</h3>
+            <nav class="sidebar-nav">
+              <a href="historia-da-igreja.html">História da Igreja</a>
+              <a href="apologetica.html">Apologética</a>
+              <a href="biografias-cristas.html">Biografias Cristãs</a>
+              <a href="livros-da-biblia.html">Livros da Bíblia</a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">ST</span>
+            <span class="brand-text">Soloteo</span>
+          </a>
+
+          <p class="footer-text">
+            Profundidade, beleza e clareza para uma geração que deseja estudar com seriedade.
+          </p>
+
+          <div class="footer-mini">
+            <span class="footer-pill">Teologia</span>
+            <span class="footer-pill">História</span>
+            <span class="footer-pill">Doutrina</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Plataforma</h4>
+          <div class="footer-links">
+            <a href="index.html#secoes">Seções</a>
+            <a href="index.html#trilhas">Trilhas</a>
+            <a href="index.html#biblioteca">Biblioteca</a>
+            <a href="index.html#sobre">Visão</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Principais áreas</h4>
+          <div class="footer-links">
+            <a href="teologia-sistematica.html">Teologia Sistemática</a>
+            <a href="historia-da-igreja.html">História da Igreja</a>
+            <a href="apologetica.html">Apologética</a>
+            <a href="biografias-cristas.html">Biografias</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Biblioteca</h4>
+          <div class="footer-links">
+            <a href="livros-da-biblia.html">Livros da Bíblia</a>
+            <a href="glossario.html">Glossário</a>
+            <a href="cronologias.html">Cronologias</a>
+            <a href="mapas-e-contextos.html">Mapas e Contextos</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Soloteo. Todos os direitos reservados.</span>
+        <span>Projeto digital com identidade premium e organização escalável.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileOverlay = document.getElementById("mobileOverlay");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    function openMenu() {
+      mobileMenu.classList.add("is-open");
+      menuToggle.classList.add("is-active");
+      menuToggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("menu-open");
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove("is-open");
+      menuToggle.classList.remove("is-active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
+    }
+
+    function toggleMenu() {
+      if (mobileMenu.classList.contains("is-open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", toggleMenu);
+    }
+
+    if (mobileOverlay) {
+      mobileOverlay.addEventListener("click", closeMenu);
+    }
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("scroll", function () {
+      const header = document.getElementById("siteHeader");
+      if (!header) return;
+
+      if (window.scrollY > 30) {
+        header.classList.add("header-scrolled");
+      } else {
+        header.classList.remove("header-scrolled");
+      }
+    });
+
+    window.addEventListener("load", function () {
+      const animatedElements = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-zoom, .stagger"
+      );
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.14,
+          rootMargin: "0px 0px -40px 0px"
+        }
+      );
+
+      animatedElements.forEach((element) => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
