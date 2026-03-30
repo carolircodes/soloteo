@@ -4,28 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Gênesis | Estudo completo e detalhado | soloteo</title>
-  <meta name="description" content="Estudo completo e detalhado do livro de Gênesis no soloteo: introdução, contexto, estrutura, temas teológicos, personagens, aplicações práticas, perguntas para estudo e conexão com Cristo." />
-  <meta name="keywords" content="Gênesis, estudo de Gênesis, livro de Gênesis, Pentateuco, estudo bíblico, teologia bíblica, soloteo" />
+  <title>Gênesis | Estudo completo capítulo por capítulo | soloteo</title>
+  <meta name="description" content="Estudo completo de Gênesis, capítulo por capítulo, com introdução, contexto, estrutura, temas teológicos, aplicações práticas e leitura detalhada pronta para o site soloteo." />
+  <meta name="keywords" content="Gênesis, estudo de Gênesis, Gênesis capítulo por capítulo, Pentateuco, estudo bíblico, soloteo" />
   <meta name="author" content="soloteo" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.soloteo.com.br/livros-da-biblia/pentateuco-genesis.html" />
 
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Gênesis | Estudo completo e detalhado | soloteo" />
-  <meta property="og:description" content="Uma leitura profunda, organizada e aplicada do livro de Gênesis: origens, queda, promessa, patriarcas e a base de toda a narrativa bíblica." />
+  <meta property="og:title" content="Gênesis | Estudo completo capítulo por capítulo | soloteo" />
+  <meta property="og:description" content="Um estudo completo, original e detalhado do livro de Gênesis, pronto para publicação no site." />
   <meta property="og:url" content="https://www.soloteo.com.br/livros-da-biblia/pentateuco-genesis.html" />
   <meta property="og:site_name" content="soloteo" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Gênesis | Estudo completo e detalhado | soloteo" />
-  <meta name="twitter:description" content="Estudo longo e detalhado do livro de Gênesis." />
+  <meta name="twitter:title" content="Gênesis | Estudo completo capítulo por capítulo | soloteo" />
+  <meta name="twitter:description" content="Estudo detalhado, longo e original de Gênesis, pronto para o site." />
 
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Article",
-    "headline":"Gênesis | Estudo completo e detalhado",
+    "headline":"Gênesis | Estudo completo capítulo por capítulo",
     "description":"Estudo completo e detalhado do livro de Gênesis no soloteo.",
     "author":{
       "@type":"Organization",
@@ -54,7 +54,6 @@
       --wine:#6e2132;
       --wine-2:#8c2f45;
       --gold:#c7a461;
-      --gold-2:#e7d3a0;
       --shadow:0 20px 60px rgba(55,22,18,.09);
       --radius:24px;
       --radius-lg:32px;
@@ -63,7 +62,6 @@
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-
     body{
       margin:0;
       font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -72,7 +70,7 @@
         radial-gradient(circle at top left, rgba(199,164,97,.10), transparent 26%),
         radial-gradient(circle at top right, rgba(110,33,50,.07), transparent 20%),
         linear-gradient(180deg, #fbf8f4 0%, #f4efe8 100%);
-      line-height:1.75;
+      line-height:1.72;
     }
 
     a{color:inherit;text-decoration:none}
@@ -350,10 +348,6 @@
       color:var(--muted);
     }
 
-    .content-card p:last-child{
-      margin-bottom:0;
-    }
-
     .content-card ul{
       margin:0;
       padding-left:18px;
@@ -394,33 +388,6 @@
       font-weight:600;
     }
 
-    .chapter-blocks{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:16px;
-      margin-top:18px;
-    }
-
-    .chapter-card{
-      background:rgba(255,255,255,.95);
-      border:1px solid rgba(86,50,38,.09);
-      border-radius:22px;
-      padding:20px;
-    }
-
-    .chapter-card strong{
-      display:block;
-      color:var(--wine);
-      margin-bottom:10px;
-      font-size:.9rem;
-      letter-spacing:.06em;
-      text-transform:uppercase;
-    }
-
-    .chapter-card p{
-      margin:0;
-    }
-
     .key-list{
       display:grid;
       gap:12px;
@@ -433,6 +400,62 @@
       background:#fff;
       border:1px solid rgba(86,50,38,.08);
       color:var(--muted);
+    }
+
+    .chapters-grid{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    details.chapter{
+      background:linear-gradient(180deg,#fff,#fcf8f2);
+      border:1px solid rgba(199,164,97,.18);
+      border-radius:20px;
+      overflow:hidden;
+    }
+
+    details.chapter summary{
+      list-style:none;
+      cursor:pointer;
+      padding:18px 20px;
+      font-weight:800;
+      color:#2a1d18;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    details.chapter summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .chapter-label{
+      color:var(--wine);
+      font-size:.88rem;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+
+    .chapter-body{
+      padding:0 20px 20px;
+      color:var(--muted);
+      border-top:1px solid rgba(86,50,38,.08);
+    }
+
+    .chapter-body p{
+      margin:14px 0 0;
+    }
+
+    .chapter-body .focus{
+      margin-top:14px;
+      padding:14px 16px;
+      background:#fff;
+      border:1px solid rgba(86,50,38,.08);
+      border-radius:16px;
+      color:#5f4f48;
     }
 
     .qa-list{
@@ -495,11 +518,9 @@
       .hero-stats{
         grid-template-columns:repeat(2,1fr);
       }
-
       .layout{
         grid-template-columns:1fr;
       }
-
       .sidebar{
         position:static;
       }
@@ -511,11 +532,9 @@
         align-items:flex-start;
         flex-direction:column;
       }
-
       .nav-links{
         width:100%;
       }
-
       .brand-text span{
         white-space:normal;
       }
@@ -525,27 +544,21 @@
       .hero{
         padding-top:36px;
       }
-
       .hero-card,
       .content-card{
         padding:24px;
       }
-
       .hero-stats,
-      .mini-grid,
-      .chapter-blocks{
+      .mini-grid{
         grid-template-columns:1fr;
       }
-
       .brand-logo{
         width:46px;
         height:46px;
       }
-
       .brand-text strong{
         font-size:1rem;
       }
-
       .brand-text span{
         font-size:.78rem;
       }
@@ -590,11 +603,7 @@
           <div class="eyebrow"><span class="dot"></span> Estudo do livro</div>
           <h1>Gênesis</h1>
           <p class="hero-description">
-            Gênesis é o grande livro dos começos. Ele apresenta as origens do universo, da humanidade, do pecado,
-            do juízo, das nações, da aliança e da linhagem da promessa. É também a base de toda a narrativa bíblica,
-            porque mostra que o Deus que cria é o mesmo Deus que julga, preserva, chama, promete e conduz a história
-            para a redenção. O material-base que você enviou destaca exatamente essa amplitude: Deus como Criador,
-            Sustentador, Juiz e Redentor; o valor do ser humano; a tragédia do pecado; e a promessa da salvação. 
+            Gênesis é a grande porta de entrada da Bíblia. Aqui começam a criação, a humanidade, a queda, o juízo, as nações, a aliança e a linhagem da promessa. Este estudo foi estruturado para publicação direta no site, com linguagem original, organização premium e leitura capítulo por capítulo.
           </p>
 
           <div class="hero-stats">
@@ -604,15 +613,15 @@
             </div>
             <div class="stat">
               <strong>Ênfase</strong>
-              <span>Origens, aliança e promessa</span>
+              <span>Origens, promessa e aliança</span>
             </div>
             <div class="stat">
               <strong>Estrutura</strong>
-              <span>Capítulos 1–11 e 12–50</span>
+              <span>50 capítulos</span>
             </div>
             <div class="stat">
               <strong>Visão central</strong>
-              <span>Deus cria, julga, preserva e promete</span>
+              <span>Deus cria, julga, preserva e conduz</span>
             </div>
           </div>
         </div>
@@ -626,19 +635,13 @@
           <nav class="toc">
             <a href="#introducao">Introdução geral</a>
             <a href="#contexto">Contexto e propósito</a>
-            <a href="#tema">Tema principal</a>
-            <a href="#estrutura">Estrutura detalhada</a>
-            <a href="#linha">Linha narrativa</a>
-            <a href="#resumo">Resumo por blocos</a>
-            <a href="#personagens">Personagens principais</a>
-            <a href="#temas">Grandes temas teológicos</a>
-            <a href="#versiculos">Versículos-chave</a>
-            <a href="#licoes">Lições espirituais</a>
-            <a href="#aplicacoes">Aplicações práticas</a>
-            <a href="#curiosidades">Curiosidades e observações</a>
+            <a href="#estrutura">Estrutura do livro</a>
+            <a href="#temas">Temas centrais</a>
+            <a href="#como-ler">Como ler Gênesis</a>
+            <a href="#capitulos">Estudo capítulo por capítulo</a>
+            <a href="#aplicacoes">Aplicações gerais</a>
             <a href="#perguntas">Perguntas para estudo</a>
             <a href="#cristo">Conexão com Cristo</a>
-            <a href="#conclusao">Conclusão</a>
           </nav>
         </div>
 
@@ -655,354 +658,581 @@
         <article class="content-card" id="introducao">
           <h2>Introdução geral</h2>
           <p>
-            Gênesis não é apenas o primeiro livro da Bíblia em ordem. Ele é o primeiro em função, em profundidade
-            estrutural e em importância fundacional. É aqui que descobrimos que o universo não é um acidente, que a
-            humanidade não é sem propósito, que o mal não é uma ilusão e que a redenção não nasce da iniciativa humana,
-            mas do agir de Deus.
+            Gênesis estabelece os fundamentos de toda a narrativa bíblica. Ele mostra que o universo tem origem em Deus, que a humanidade foi criada com dignidade singular, que o pecado entrou na história por rebelião e que a resposta final não surgiria da capacidade humana, mas da iniciativa divina.
           </p>
           <p>
-            O livro começa num horizonte vastíssimo, cósmico, quase absoluto: “no princípio”. Logo nos primeiros
-            capítulos, o leitor é lançado à criação do céu e da terra, ao surgimento da vida, à dignidade humana,
-            à queda, à expansão do mal e ao juízo divino. Depois, a narrativa se concentra progressivamente em uma
-            família específica. Esse afunilamento não empobrece a história; pelo contrário, dá a ela direção. O
-            problema é universal, mas a resposta de Deus começa numa linhagem concreta.
+            O livro começa tratando da humanidade em sentido amplo e depois afunila seu foco até uma família específica. Esse movimento é decisivo: primeiro vemos o problema universal; depois, o início do caminho histórico por meio do qual Deus responderá a esse problema.
           </p>
-          <p>
-            O material do PDF deixa isso muito claro ao apresentar Gênesis como o livro dos começos e, ao mesmo
-            tempo, como a porta de entrada para o povo da aliança e para a história da salvação. 
-          </p>
+          <div class="quote-box">
+            Ler Gênesis bem é lançar o alicerce para entender o restante da Bíblia com muito mais profundidade.
+          </div>
         </article>
 
         <article class="content-card" id="contexto">
-          <h2>Contexto e propósito do livro</h2>
+          <h2>Contexto e propósito</h2>
           <p>
-            Em Gênesis, a Bíblia estabelece seu grande cenário. O livro responde perguntas fundamentais: de onde
-            vieram todas as coisas? O que significa ser humano? Por que o mundo está quebrado? Qual a origem das
-            nações? Como começou a história do povo de Deus? E por que a promessa é tão central para o restante
-            das Escrituras?
+            Gênesis foi organizado para responder perguntas decisivas: de onde vieram todas as coisas, por que o mundo é ao mesmo tempo belo e quebrado, como começou a história do povo da aliança e por que a promessa é tão importante para toda a Escritura.
           </p>
           <p>
-            O propósito de Gênesis não é apenas histórico. Ele é também teológico, espiritual e existencial. O livro
-            organiza a realidade em torno de Deus. Ele ensina que a criação tem origem, sentido e direção; que o ser
-            humano possui valor singular; que a queda afetou profundamente a ordem criada; e que Deus não abandonou
-            sua obra, mas iniciou um caminho de restauração.
+            A estrutura geral destacada no material-base, com a parte dos “Começos” e a parte da “Família Escolhida”, ajuda a entender que Gênesis não é apenas um livro de passado distante. Ele é o mapa inicial da redenção. :contentReference[oaicite:1]{index=1}
           </p>
-          <p>
-            O sumário do material que você enviou ajuda muito nessa percepção, porque ele apresenta Gênesis dentro da
-            seção dos “Começos” e depois o insere na fase da “Família Escolhida de Deus”, ao lado de Jó. Isso mostra
-            que a história do livro vai do universal ao particular, da humanidade ao povo da aliança. :contentReference[oaicite:5]{index=5}
-          </p>
-          <div class="mini-grid">
-            <div class="mini-box">
-              <h3>Função teológica</h3>
-              <p>Mostrar os fundamentos da cosmovisão bíblica: criação, queda, juízo, graça, promessa e aliança.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Função narrativa</h3>
-              <p>Levar o leitor da origem do mundo até o início da linhagem por meio da qual o plano de Deus avança.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="content-card" id="tema">
-          <h2>Tema principal</h2>
-          <p>
-            O tema central de Gênesis pode ser resumido assim: o Deus soberano cria todas as coisas com propósito,
-            responde ao pecado com justiça e graça, e inicia sua obra redentora através da promessa e da aliança.
-          </p>
-          <p>
-            Essa síntese é poderosa porque une os principais movimentos do livro. Gênesis não fala apenas do início
-            do mundo, mas do início de um drama espiritual e do início de uma esperança. Em outras palavras: ele não
-            é só um livro sobre origens; é um livro sobre o começo da resposta de Deus ao problema humano.
-          </p>
-          <div class="quote-box">
-            Em Gênesis, Deus não é um personagem periférico. Ele é o centro absoluto da história: cria, fala, limita,
-            julga, preserva, chama, promete e conduz.
-          </div>
         </article>
 
         <article class="content-card" id="estrutura">
-          <h2>Estrutura detalhada do livro</h2>
-          <p>
-            A organização mais clara de Gênesis é em duas grandes metades. O próprio material-base favorece isso:
-            primeiro, o bloco dos começos; depois, a história da família escolhida. :contentReference[oaicite:6]{index=6}
-          </p>
+          <h2>Estrutura do livro</h2>
           <div class="mini-grid">
             <div class="mini-box">
-              <h3>Parte 1 — Capítulos 1–11</h3>
+              <h3>Capítulos 1–11</h3>
               <p>Criação, queda, expansão do pecado, dilúvio, reinício da humanidade e dispersão das nações.</p>
             </div>
             <div class="mini-box">
-              <h3>Parte 2 — Capítulos 12–50</h3>
-              <p>Abraão, Isaque, Jacó e José: a formação da linhagem da promessa e a preparação do futuro de Israel.</p>
+              <h3>Capítulos 12–50</h3>
+              <p>Abraão, Isaque, Jacó e José: a formação da linhagem da promessa e a preservação da família da aliança.</p>
             </div>
           </div>
-          <p>
-            A primeira metade mostra a dimensão universal do problema. A segunda mostra o início histórico da resposta
-            divina. É uma estrutura elegante e profundamente estratégica.
-          </p>
-        </article>
-
-        <article class="content-card" id="linha">
-          <h2>Linha narrativa de Gênesis</h2>
-          <p>
-            A linha narrativa de Gênesis pode ser vista como um movimento em sete etapas. Primeiro, Deus cria. Depois,
-            o ser humano cai. Em seguida, o pecado se expande. Então, Deus julga e preserva. Depois disso, as nações
-            se dispersam. Em seguida, Deus chama Abraão. Por fim, a família da promessa é preservada no Egito.
-          </p>
-          <p>
-            Essa linha mostra que o livro não é um amontoado de episódios desconectados. Há progressão, coerência e
-            intenção. Cada etapa prepara a seguinte, e todas apontam para um plano maior.
-          </p>
-          <div class="key-list">
-            <div class="key-item"><strong>1.</strong> Deus cria um mundo bom e ordenado.</div>
-            <div class="key-item"><strong>2.</strong> A humanidade se rebela e rompe a comunhão com o Criador.</div>
-            <div class="key-item"><strong>3.</strong> O pecado se espalha para a vida pessoal, familiar e social.</div>
-            <div class="key-item"><strong>4.</strong> Deus manifesta juízo, mas também preserva a vida por graça.</div>
-            <div class="key-item"><strong>5.</strong> As nações se multiplicam e se dispersam.</div>
-            <div class="key-item"><strong>6.</strong> Deus chama Abraão e inicia a história da promessa.</div>
-            <div class="key-item"><strong>7.</strong> A família da aliança é conduzida ao Egito, preparando o Êxodo.</div>
-          </div>
-        </article>
-
-        <article class="content-card" id="resumo">
-          <h2>Resumo por blocos de capítulos</h2>
-          <div class="chapter-blocks">
-            <div class="chapter-card">
-              <strong>Gênesis 1–2</strong>
-              <p>Criação do universo, da terra, da vida e do ser humano. Deus estabelece ordem, propósito e bondade.</p>
-            </div>
-            <div class="chapter-card">
-              <strong>Gênesis 3</strong>
-              <p>A queda. O pecado entra na história humana e rompe a comunhão com Deus.</p>
-            </div>
-            <div class="chapter-card">
-              <strong>Gênesis 4–5</strong>
-              <p>Caim e Abel, o aumento da violência e a continuação da linhagem humana.</p>
-            </div>
-            <div class="chapter-card">
-              <strong>Gênesis 6–9</strong>
-              <p>Corrupção geral, dilúvio, preservação de Noé e renovação da ordem após o juízo.</p>
-            </div>
-            <div class="chapter-card">
-              <strong>Gênesis 10–11</strong>
-              <p>Nações, genealogias e torre de Babel, com a dispersão dos povos.</p>
-            </div>
-            <div class="chapter-card">
-              <strong>Gênesis 12–25</strong>
-              <p>Abraão: chamado, promessas, alianças, testes de fé e formação da linhagem da promessa.</p>
-            </div>
-            <div class="chapter-card">
-              <strong>Gênesis 26–27</strong>
-              <p>Isaque e a continuidade da promessa, agora em nova geração.</p>
-            </div>
-            <div class="chapter-card">
-              <strong>Gênesis 28–36</strong>
-              <p>Jacó: fuga, encontros com Deus, conflitos familiares e transformação espiritual.</p>
-            </div>
-            <div class="chapter-card">
-              <strong>Gênesis 37–45</strong>
-              <p>José: rejeição, sofrimento, ascensão no Egito e revelação da providência divina.</p>
-            </div>
-            <div class="chapter-card">
-              <strong>Gênesis 46–50</strong>
-              <p>Descida da família ao Egito, bênçãos finais e encerramento do livro em expectativa.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="content-card" id="personagens">
-          <h2>Personagens principais</h2>
-          <ul>
-            <li><strong>Deus:</strong> o centro do livro, Senhor da criação e da história.</li>
-            <li><strong>Adão e Eva:</strong> primeiros representantes da humanidade, marcados pela queda.</li>
-            <li><strong>Caim e Abel:</strong> evidenciam a rápida propagação do pecado.</li>
-            <li><strong>Noé:</strong> exemplo da preservação graciosa em meio ao juízo.</li>
-            <li><strong>Abraão:</strong> personagem-chave da promessa, da fé e da aliança.</li>
-            <li><strong>Sara:</strong> importante na concretização da promessa apesar da esterilidade e da espera.</li>
-            <li><strong>Isaque:</strong> herdeiro da promessa e elo da continuidade.</li>
-            <li><strong>Rebeca:</strong> figura importante na passagem da promessa à geração seguinte.</li>
-            <li><strong>Jacó:</strong> personagem de conflito, amadurecimento e transformação.</li>
-            <li><strong>José:</strong> retrato da providência divina agindo no sofrimento e na exaltação.</li>
-          </ul>
         </article>
 
         <article class="content-card" id="temas">
-          <h2>Grandes temas teológicos de Gênesis</h2>
-          <p>
-            O PDF destaca de maneira muito forte quatro dimensões sobre Deus em Gênesis: Criador, Sustentador, Juiz
-            e Redentor. Também destaca o valor humano, a entrada do pecado e a promessa da salvação. Essa combinação
-            é excelente para orientar a leitura teológica do livro. :contentReference[oaicite:7]{index=7}
-          </p>
-          <div class="mini-grid">
-            <div class="mini-box">
-              <h3>Criação</h3>
-              <p>O mundo é intencional, bom em sua origem e dependente de Deus para existir.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Imagem de Deus</h3>
-              <p>O ser humano possui dignidade singular, responsabilidade moral e vocação relacional.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Pecado</h3>
-              <p>A queda compromete a relação com Deus, consigo mesmo, com o outro e com a criação.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Juízo</h3>
-              <p>Deus não é indiferente ao mal; o dilúvio e Babel revelam sua justiça.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Graça</h3>
-              <p>Mesmo diante do fracasso humano, Deus continua preservando, chamando e prometendo.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Aliança</h3>
-              <p>A história avança por compromissos divinos assumidos pelo próprio Deus.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Promessa</h3>
-              <p>Gênesis lança as sementes da esperança futura para Israel e para as nações.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Providência</h3>
-              <p>Deus governa até os eventos dolorosos e os integra ao seu propósito maior.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="content-card" id="versiculos">
-          <h2>Versículos-chave em linguagem original</h2>
-          <p>
-            Em vez de simplesmente reproduzir o texto bíblico, aqui estão formulações-resumo que capturam a essência
-            de alguns eixos centrais de Gênesis:
-          </p>
+          <h2>Temas centrais de Gênesis</h2>
           <div class="key-list">
-            <div class="key-item">Tudo começa em Deus, e toda a realidade depende dele para existir.</div>
-            <div class="key-item">O ser humano foi feito com dignidade singular e chamado para refletir algo do Criador.</div>
-            <div class="key-item">O pecado prometeu autonomia, mas produziu ruptura, vergonha e morte.</div>
-            <div class="key-item">Mesmo depois da queda, Deus iniciou uma promessa de restauração.</div>
-            <div class="key-item">A fé verdadeira aprende a caminhar com Deus mesmo sem ver tudo com clareza.</div>
-            <div class="key-item">Aquilo que os homens usam para o mal, Deus pode transformar em preservação e propósito.</div>
+            <div class="key-item">Criação: tudo começa em Deus, e a realidade tem ordem, propósito e sentido.</div>
+            <div class="key-item">Imagem de Deus: o ser humano possui dignidade singular e responsabilidade moral.</div>
+            <div class="key-item">Pecado: a rebelião rompe a comunhão com Deus e distorce toda a vida humana.</div>
+            <div class="key-item">Juízo: Deus não ignora o mal e age contra ele em justiça.</div>
+            <div class="key-item">Graça: mesmo após a queda, Deus preserva, chama, cobre e promete.</div>
+            <div class="key-item">Aliança e promessa: a história caminha para um futuro redentor sustentado pela fidelidade divina.</div>
           </div>
         </article>
 
-        <article class="content-card" id="licoes">
-          <h2>Lições espirituais de Gênesis</h2>
-          <ul>
-            <li>Deus é o fundamento da realidade e da identidade humana.</li>
-            <li>A rebelião contra Deus nunca produz liberdade verdadeira.</li>
-            <li>O pecado tem profundidade pessoal, familiar, social e histórica.</li>
-            <li>A graça de Deus aparece desde muito cedo na narrativa bíblica.</li>
-            <li>As promessas divinas não fracassam por causa da imperfeição humana.</li>
-            <li>Deus trabalha em processos longos, silenciosos e muitas vezes desconfortáveis.</li>
-            <li>A história humana não está solta; ela é conduzida por uma providência real.</li>
-          </ul>
+        <article class="content-card" id="como-ler">
+          <h2>Como ler Gênesis</h2>
+          <p>
+            O ideal é ler Gênesis em duas chaves ao mesmo tempo. A primeira é histórica: o livro narra eventos, famílias, deslocamentos e crises reais. A segunda é teológica: cada episódio ajuda a revelar quem Deus é, quem somos e por que a esperança bíblica é necessária.
+          </p>
+          <p>
+            Gênesis também deve ser lido com atenção às repetições, genealogias, promessas, bênçãos e conflitos familiares. Nada está ali por acaso. O livro é cuidadosamente construído para mostrar continuidade, ruptura e direção.
+          </p>
+        </article>
+
+        <article class="content-card" id="capitulos">
+          <h2>Estudo capítulo por capítulo</h2>
+          <div class="chapters-grid">
+
+            <details class="chapter" open>
+              <summary><span>Capítulo 1</span><span class="chapter-label">Criação do universo</span></summary>
+              <div class="chapter-body">
+                <p>Gênesis 1 apresenta Deus como Criador absoluto. O mundo não surge do caos por si mesmo, mas da palavra soberana de Deus, que organiza, separa, dá função e declara bondade sobre a criação. A ordem do capítulo revela um universo intencional, não aleatório.</p>
+                <p>O ser humano aparece no clímax do relato, criado com dignidade singular. Isso mostra que a vida humana tem valor derivado do Criador e não apenas da utilidade social, da força ou da capacidade intelectual.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> tudo começa em Deus, e a criação possui ordem, propósito e valor.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 2</span><span class="chapter-label">Criação do homem e da mulher</span></summary>
+              <div class="chapter-body">
+                <p>Se o capítulo 1 mostra o panorama cósmico, o capítulo 2 aproxima a lente e destaca a relação de Deus com o ser humano. Aqui vemos o jardim, o trabalho, o limite moral e o casamento como parte da boa ordem criada.</p>
+                <p>O texto mostra que o ser humano foi feito para viver em dependência de Deus, em vocação e em comunhão. O casamento aparece não como invenção cultural tardia, mas como parte da própria estrutura da criação.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> identidade, vocação, limite e relacionamento são dons do Criador.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 3</span><span class="chapter-label">A queda</span></summary>
+              <div class="chapter-body">
+                <p>Gênesis 3 é um dos capítulos mais importantes da Bíblia. O pecado entra na história quando o ser humano troca a confiança em Deus pela autonomia. A tentação não começa apenas com desejo, mas com distorção da palavra divina.</p>
+                <p>O resultado é ruptura: vergonha, culpa, medo, acusação e expulsão. Ainda assim, o capítulo não termina sem esperança. Deus continua buscando o ser humano caído e deixa implícita uma promessa de futura derrota do mal.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> o pecado rompe a comunhão, mas a graça de Deus já começa a agir.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 4</span><span class="chapter-label">Caim e Abel</span></summary>
+              <div class="chapter-body">
+                <p>O pecado que entrou no capítulo anterior agora se espalha horizontalmente. O conflito entre irmãos culmina em assassinato, mostrando que a rebelião contra Deus atinge rapidamente a vida relacional.</p>
+                <p>Ao mesmo tempo, o capítulo revela a seriedade com que Deus trata o coração humano. O mal não aparece só como ato consumado, mas como força que deseja dominar o interior. O capítulo é uma advertência sobre inveja, ressentimento e endurecimento moral.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> o pecado interior, quando cultivado, rapidamente se transforma em destruição concreta.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 5</span><span class="chapter-label">Genealogia de Adão</span></summary>
+              <div class="chapter-body">
+                <p>A genealogia pode parecer apenas transição, mas ela carrega peso teológico. Mostra continuidade da humanidade, cumprimento do juízo da morte e preservação da história humana apesar da queda.</p>
+                <p>Em meio à repetição marcada pela mortalidade, o capítulo também aponta para a fidelidade de Deus em manter a linhagem humana e preparar o futuro da narrativa.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a morte confirma a gravidade da queda, mas a história continua sob o governo de Deus.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 6</span><span class="chapter-label">Corrupção da humanidade e chamado de Noé</span></summary>
+              <div class="chapter-body">
+                <p>A maldade humana alcança nível generalizado. Gênesis mostra que o pecado não ficou restrito a indivíduos isolados; tornou-se uma realidade social ampla.</p>
+                <p>Noé surge como figura de preservação em meio ao juízo iminente. Deus não ignora a corrupção, mas também não deixa a história terminar em ruína total. Sua graça separa um caminho de continuidade.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus julga o mal, mas preserva a vida segundo sua graça.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 7</span><span class="chapter-label">O dilúvio</span></summary>
+              <div class="chapter-body">
+                <p>O dilúvio manifesta o juízo divino em escala histórica. O mundo corrompido colhe as consequências de sua rebelião, e a arca se torna símbolo de preservação dentro do juízo.</p>
+                <p>O capítulo mostra que a santidade de Deus não é abstrata. Sua resposta ao mal é real. Ainda assim, a arca lembra que o juízo não anula a graça; os dois aparecem juntos.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> no juízo de Deus, também se vê sua misericórdia preservadora.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 8</span><span class="chapter-label">As águas diminuem</span></summary>
+              <div class="chapter-body">
+                <p>Depois do juízo, o capítulo mostra recomeço. A terra seca lentamente, e a narrativa transmite a ideia de paciência, espera e renovação.</p>
+                <p>O sacrifício oferecido por Noé aponta para reconhecimento, dependência e gratidão. Não é um reinício autônomo da humanidade, mas um recomeço diante de Deus.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus pode trazer novo começo após períodos profundos de juízo e ruptura.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 9</span><span class="chapter-label">Aliança com Noé</span></summary>
+              <div class="chapter-body">
+                <p>Deus estabelece uma aliança que envolve estabilidade para a ordem da criação. O capítulo mostra que a história seguirá adiante sob a fidelidade divina.</p>
+                <p>Ao mesmo tempo, a embriaguez de Noé e o incidente doméstico lembram que o dilúvio não eliminou a inclinação pecaminosa do coração humano. Houve preservação da criação, mas não consumação da redenção.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a graça preserva o mundo, mas a natureza humana ainda precisa de restauração mais profunda.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 10</span><span class="chapter-label">As nações</span></summary>
+              <div class="chapter-body">
+                <p>Esse capítulo organiza os povos e mostra a expansão da humanidade após o dilúvio. A diversidade das nações não é detalhe secundário; ela prepara o cenário da história bíblica posterior.</p>
+                <p>Gênesis ensina, aqui, que toda a humanidade permanece ligada a uma origem comum. Isso é importante para pensar unidade humana, responsabilidade compartilhada e alcance universal do plano de Deus.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> as nações se multiplicam, mas a humanidade continua inserida numa única história diante de Deus.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 11</span><span class="chapter-label">Torre de Babel</span></summary>
+              <div class="chapter-body">
+                <p>Babel revela a rebelião humana em escala coletiva. A humanidade, unida em orgulho, tenta construir grandeza independente de Deus. O pecado assume forma cultural e civilizatória.</p>
+                <p>A intervenção divina confunde as línguas e dispersa os povos. O capítulo mostra que a unidade sem submissão a Deus não produz verdadeira glória, mas arrogância organizada.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> grandeza humana sem reverência a Deus termina em confusão.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 12</span><span class="chapter-label">Chamado de Abraão</span></summary>
+              <div class="chapter-body">
+                <p>A narrativa muda de escala. Deus chama Abraão e inicia explicitamente a história da promessa. Terra, descendência e bênção tornam-se eixos centrais do restante do livro.</p>
+                <p>O chamado exige fé prática: sair, confiar e caminhar. A resposta de Abraão mostra que a fé bíblica não é mera ideia interior; ela se manifesta em obediência concreta.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus chama pessoas reais para participarem do avanço de sua promessa.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 13</span><span class="chapter-label">Separação entre Abraão e Ló</span></summary>
+              <div class="chapter-body">
+                <p>Conflitos de convivência surgem, e Abraão demonstra postura de paz. O capítulo contrasta escolhas feitas pela aparência imediata com a segurança da promessa divina.</p>
+                <p>Ló se orienta por vantagens visíveis; Abraão permanece vinculado ao que Deus disse. O texto ensina a diferença entre visão moldada pela fé e decisão guiada apenas por conveniência.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a promessa de Deus vale mais do que a vantagem aparente do momento.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 14</span><span class="chapter-label">Abraão resgata Ló</span></summary>
+              <div class="chapter-body">
+                <p>Abraão aparece como homem de coragem e responsabilidade. Ele não abandona Ló em meio ao caos político e militar.</p>
+                <p>O encontro com Melquisedeque introduz uma dimensão de bênção e reconhecimento de Deus acima das vitórias humanas. O capítulo mostra que o triunfo não deve ser apropriado com orgulho, mas devolvido em honra ao Senhor.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> vitória verdadeira deve ser lida sob a soberania de Deus, não sob a exaltação humana.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 15</span><span class="chapter-label">Aliança confirmada</span></summary>
+              <div class="chapter-body">
+                <p>Abraão lida com a tensão entre promessa e realidade. Deus então reafirma sua palavra e formaliza a aliança. O capítulo é crucial para a teologia bíblica da fé.</p>
+                <p>A confiança de Abraão é tratada como resposta central diante de Deus. Aqui o leitor aprende que a relação com a promessa não se sustenta por mérito, mas por fé na palavra divina.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a promessa se firma na fidelidade de Deus, e a fé é a resposta adequada a ela.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 16</span><span class="chapter-label">Agar e Ismael</span></summary>
+              <div class="chapter-body">
+                <p>A demora no cumprimento da promessa leva a soluções humanas apressadas. O capítulo mostra como a tentativa de “ajudar Deus” produz dor relacional e complicações duradouras.</p>
+                <p>Ao mesmo tempo, Deus vê a aflição de Agar. Isso revela algo precioso: mesmo quando a desordem é provocada por escolhas humanas erradas, Deus ainda enxerga os feridos dentro dessa história.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> precipitação humana gera conflito, mas a compaixão de Deus continua presente.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 17</span><span class="chapter-label">Sinal da aliança</span></summary>
+              <div class="chapter-body">
+                <p>Deus reafirma a aliança, muda nomes e estabelece a circuncisão como sinal visível. O capítulo une identidade, promessa e pertença.</p>
+                <p>A mudança de nome destaca transformação de destino e vocação. Deus não apenas promete coisas; ele redefine pessoas à luz do que fará por meio delas.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a aliança molda identidade, memória e compromisso diante de Deus.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 18</span><span class="chapter-label">Visita a Abraão</span></summary>
+              <div class="chapter-body">
+                <p>O capítulo combina promessa e intercessão. Deus reafirma o nascimento do filho prometido e, ao mesmo tempo, revela o que fará em relação a Sodoma.</p>
+                <p>Abraão aparece aqui como amigo de Deus e intercessor. Ele dialoga com reverência, mas também com ousadia humilde. A fé madura não se afasta da justiça divina; aproxima-se dela em oração.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> intimidade com Deus aprofunda a confiança e desperta intercessão.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 19</span><span class="chapter-label">Sodoma e Gomorra</span></summary>
+              <div class="chapter-body">
+                <p>O juízo sobre Sodoma e Gomorra revela a seriedade moral do pecado coletivo. A cidade se torna símbolo de degradação e endurecimento.</p>
+                <p>Ló é retirado, mas sua história também expõe ambivalência espiritual. O capítulo adverte contra proximidade excessiva com ambientes corrompidos e mostra que o juízo de Deus é real.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a graça pode livrar, mas a convivência prolongada com o mal deixa marcas profundas.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 20</span><span class="chapter-label">Abraão e Abimeleque</span></summary>
+              <div class="chapter-body">
+                <p>Abraão repete um padrão de medo e disfarce. Isso é importante porque Gênesis não transforma seus grandes personagens em figuras intocáveis.</p>
+                <p>O capítulo revela que fé verdadeira não elimina automaticamente toda fraqueza. Ainda assim, a promessa continua sendo conduzida pela fidelidade divina, não pela perfeição humana.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a fraqueza dos escolhidos não anula a firmeza do propósito de Deus.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 21</span><span class="chapter-label">Nascimento de Isaque</span></summary>
+              <div class="chapter-body">
+                <p>Depois de longa espera, o filho prometido nasce. O capítulo marca o cumprimento concreto da palavra de Deus e reforça que suas promessas não expiram.</p>
+                <p>A tensão entre Sara, Agar e Ismael mostra que mesmo momentos de cumprimento podem vir acompanhados de conflitos dolorosos. A fidelidade divina não elimina instantaneamente todas as consequências humanas.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus cumpre o que promete, ainda que o caminho até isso tenha sido marcado por demora e tensão.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 22</span><span class="chapter-label">Sacrifício de Isaque</span></summary>
+              <div class="chapter-body">
+                <p>Esse é um dos capítulos mais densos de Gênesis. Abraão é levado ao limite da confiança. O teste não existe para destruir a fé, mas para revelá-la e amadurecê-la.</p>
+                <p>No momento decisivo, Deus provê substituição. O capítulo liga fé, obediência e provisão divina, além de estabelecer uma das imagens mais fortes de entrega e substituição em toda a Escritura.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a fé madura aprende que Deus continua digno de confiança mesmo nas exigências mais difíceis.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 23</span><span class="chapter-label">Morte de Sara</span></summary>
+              <div class="chapter-body">
+                <p>A compra do campo para sepultamento é carregada de significado. Mesmo sem possuir plenamente a terra prometida, Abraão dá um passo concreto dentro dela.</p>
+                <p>O capítulo mostra como promessa e luto podem coexistir. A esperança bíblica não nega a dor, mas aprende a atravessá-la com fé.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a promessa continua viva mesmo em momentos de perda.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 24</span><span class="chapter-label">Rebeca para Isaque</span></summary>
+              <div class="chapter-body">
+                <p>O casamento de Isaque não é tratado como detalhe doméstico, mas como continuidade da linhagem da promessa. O servo age com senso de missão e dependência de Deus.</p>
+                <p>O capítulo revela providência em circunstâncias ordinárias. Direção divina não acontece apenas em milagres espetaculares, mas também em decisões, encontros e caminhos cuidadosamente conduzidos.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus trabalha nos bastidores da vida comum para sustentar seus propósitos.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 25</span><span class="chapter-label">Transição para a nova geração</span></summary>
+              <div class="chapter-body">
+                <p>A narrativa encaminha a passagem da promessa à geração seguinte. A morte de Abraão encerra uma etapa sem encerrar o propósito de Deus.</p>
+                <p>Os nascimentos de Esaú e Jacó introduzem tensões que marcarão o restante da história familiar. O capítulo já sugere que a eleição divina nem sempre acompanha as expectativas humanas mais óbvias.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a promessa atravessa gerações e não depende da permanência de um único personagem humano.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 26</span><span class="chapter-label">Isaque e Abimeleque</span></summary>
+              <div class="chapter-body">
+                <p>Isaque vive experiências que ecoam a vida de Abraão. Isso mostra continuidade, mas também repetição de fraquezas. O texto é realista quanto à transmissão de padrões familiares.</p>
+                <p>Ao mesmo tempo, Deus reafirma sua presença e bênção. O capítulo ensina que a continuidade da promessa não é mecânica; ela é sustentada ativamente por Deus.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus permanece fiel mesmo quando padrões humanos frágeis reaparecem.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 27</span><span class="chapter-label">Jacó recebe a bênção</span></summary>
+              <div class="chapter-body">
+                <p>Engano, favoritismo e manipulação tomam conta do ambiente familiar. O capítulo mostra uma casa espiritualmente significativa, mas relacionalmente desordenada.</p>
+                <p>Gênesis insiste em não esconder as falhas dos patriarcas. Isso ajuda o leitor a entender que a história da promessa avança por graça soberana, não por famílias idealizadas.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus conduz seu propósito mesmo através de contextos familiares profundamente imperfeitos.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 28</span><span class="chapter-label">Jacó em Betel</span></summary>
+              <div class="chapter-body">
+                <p>Em fuga e vulnerabilidade, Jacó encontra-se com Deus. A visão da escada revela ligação entre céu e terra e mostra que a presença divina alcança o homem em deslocamento e crise.</p>
+                <p>O capítulo marca um ponto de inflexão espiritual. A promessa feita aos patriarcas agora é reafirmada a Jacó, e Betel se torna lugar de memória e consagração.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus se revela também nos desertos e deslocamentos da vida.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 29</span><span class="chapter-label">Jacó, Lia e Raquel</span></summary>
+              <div class="chapter-body">
+                <p>O enganador agora experimenta ser enganado. O capítulo mostra como a história humana frequentemente devolve em forma dolorosa aquilo que foi semeado de modo errado.</p>
+                <p>Além disso, a rivalidade afetiva no lar revela carências, comparações e dores profundas. Deus continua agindo dentro de um cenário emocionalmente quebrado.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus trabalha até em histórias marcadas por feridas afetivas e relações tensas.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 30</span><span class="chapter-label">Conflitos e crescimento da família</span></summary>
+              <div class="chapter-body">
+                <p>A competição entre Lia e Raquel intensifica a tensão doméstica. O capítulo é carregado de desejo por reconhecimento, maternidade e validação.</p>
+                <p>Ao mesmo tempo, a família cresce. Mesmo sem romantizar esse processo, Gênesis mostra que Deus é capaz de fazer avançar sua história em meio a ambientes imperfeitos.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a graça de Deus pode operar crescimento em contextos desordenados.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 31</span><span class="chapter-label">Jacó deixa Labão</span></summary>
+              <div class="chapter-body">
+                <p>Depois de anos de tensão e exploração, Jacó parte. O capítulo mistura libertação, medo e confronto. Romper ciclos difíceis também exige coragem e discernimento.</p>
+                <p>Deus aparece como aquele que vê injustiça e orienta a saída. Isso transforma a fuga em passo providencial, não mero improviso humano.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus acompanha transições difíceis e protege seus servos em mudanças delicadas.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 32</span><span class="chapter-label">Luta com Deus</span></summary>
+              <div class="chapter-body">
+                <p>Jacó se prepara para reencontrar Esaú, mas antes enfrenta uma luta decisiva. O capítulo simboliza confronto interior, temor e transformação espiritual.</p>
+                <p>A mudança de nome para Israel revela que a história da promessa passa por quebrantamento. A bênção não elimina a marca da luta; muitas vezes a acompanha.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> verdadeira transformação espiritual envolve confronto, dependência e rendição.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 33</span><span class="chapter-label">Reconciliação com Esaú</span></summary>
+              <div class="chapter-body">
+                <p>O encontro com Esaú surpreende pela reconciliação. O medo acumulado em Jacó é confrontado com misericórdia inesperada.</p>
+                <p>O capítulo mostra que Deus pode amolecer histórias endurecidas. Nem toda tensão do passado termina em destruição; algumas encontram espaço para restauração.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus pode abrir caminhos de reconciliação onde havia forte expectativa de conflito.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 34</span><span class="chapter-label">Diná e a violência</span></summary>
+              <div class="chapter-body">
+                <p>Esse é um capítulo duro e desconfortável. Ele mostra abuso, vingança e manipulação. Gênesis não embeleza a brutalidade humana.</p>
+                <p>O texto revela como injustiça e reação descontrolada podem aprofundar ainda mais o caos moral. O leitor é levado a perceber quanto o pecado desfigura relações, honra e comunidade.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a violência humana produz ciclos ainda maiores de destruição quando não é tratada à luz de Deus.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 35</span><span class="chapter-label">Retorno a Betel</span></summary>
+              <div class="chapter-body">
+                <p>Jacó é chamado a retornar a Betel, lugar de encontro com Deus. O capítulo une purificação, memória espiritual e renovação da aliança.</p>
+                <p>Há também perdas dolorosas. Isso torna o capítulo complexo: renovação espiritual e luto aparecem juntos. A caminhada com Deus não apaga a dor, mas lhe dá direção.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> voltar aos lugares de consagração ajuda a reorganizar a vida diante de Deus.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 36</span><span class="chapter-label">Descendência de Esaú</span></summary>
+              <div class="chapter-body">
+                <p>Mais uma genealogia, agora ligada a Esaú. O capítulo mostra que a narrativa bíblica reconhece também os ramos paralelos da história.</p>
+                <p>Ele reforça que Deus governa povos, famílias e caminhos históricos diversos. Nem todos estarão na linha central da promessa, mas todos seguem existindo diante do seu senhorio.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a história da promessa convive com outras histórias sob o mesmo governo divino.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 37</span><span class="chapter-label">José é vendido</span></summary>
+              <div class="chapter-body">
+                <p>A história de José começa com favoritismo, inveja e traição. O sonho que sugere grandeza futura provoca reação violenta dos irmãos.</p>
+                <p>O capítulo é fundamental porque inaugura uma narrativa onde providência e sofrimento caminharão juntos. O mal humano aparece claramente, mas o leitor já percebe que a história ainda não terminou.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> o mal dos homens não consegue cancelar o plano de Deus.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 38</span><span class="chapter-label">Judá e Tamar</span></summary>
+              <div class="chapter-body">
+                <p>Esse capítulo interrompe a linha de José para expor a história de Judá. Ele mostra desordem moral, responsabilidade negligenciada e surpreendente reversão.</p>
+                <p>Gênesis ensina aqui que Deus não abandona a história mesmo em contextos altamente confusos. O capítulo também revela a complexidade da linhagem pela qual a história bíblica seguirá.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a graça de Deus atravessa histórias humanas moralmente quebradas sem deixar de expor sua gravidade.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 39</span><span class="chapter-label">José na casa de Potifar</span></summary>
+              <div class="chapter-body">
+                <p>José demonstra integridade em ambiente vulnerável. Sua recusa diante da tentação revela temor de Deus acima de conveniência ou impulso.</p>
+                <p>A injustiça seguinte, porém, mostra que fidelidade nem sempre produz recompensa imediata. O capítulo é importante porque corrige a ideia de que obediência garante vida fácil.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> integridade pode custar caro, mas continua sendo o caminho da fidelidade.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 40</span><span class="chapter-label">José na prisão</span></summary>
+              <div class="chapter-body">
+                <p>Mesmo na prisão, José permanece útil, atento e sensível. Seu dom continua operando num lugar que parecia sem futuro.</p>
+                <p>O esquecimento posterior intensifica o peso da espera. O capítulo ensina que processos de Deus podem incluir silêncio prolongado, sem que isso signifique abandono.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> dons e fidelidade continuam significativos mesmo em fases ocultas da vida.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 41</span><span class="chapter-label">José diante de Faraó</span></summary>
+              <div class="chapter-body">
+                <p>Em um movimento brusco, José sai da prisão para o centro do poder. Deus usa sua sabedoria para interpretar o momento e preparar o Egito para tempos de crise.</p>
+                <p>O capítulo mostra que exaltação verdadeira, quando vem de Deus, não nasce do oportunismo, mas de um longo processo de formação em humildade, fidelidade e sofrimento.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus pode transformar longos períodos de espera em preparação para responsabilidade maior.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 42</span><span class="chapter-label">Primeira ida dos irmãos ao Egito</span></summary>
+              <div class="chapter-body">
+                <p>A fome empurra os irmãos de José para o lugar onde o passado será confrontado. Eles ainda não reconhecem José, mas começam a enfrentar a própria culpa.</p>
+                <p>O capítulo inicia um processo de revelação, disciplina e retorno da consciência moral. A história não está apenas resolvendo fome; está tratando pecado antigo.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> Deus usa circunstâncias externas para expor questões internas não resolvidas.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 43</span><span class="chapter-label">Retorno com Benjamim</span></summary>
+              <div class="chapter-body">
+                <p>O retorno ao Egito aprofunda a tensão. A presença de Benjamim torna tudo mais sensível, porque reabre feridas relacionadas ao favoritismo do passado.</p>
+                <p>Judá começa a aparecer de forma diferente, assumindo postura mais responsável. O capítulo sugere transformação silenciosa em alguns dos irmãos.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> arrependimento real costuma aparecer gradualmente em novas atitudes.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 44</span><span class="chapter-label">O teste final</span></summary>
+              <div class="chapter-body">
+                <p>José leva os irmãos a uma situação-limite. O objetivo não é vingança, mas revelação moral. Ele quer saber se eles continuam sendo os mesmos homens que o venderam.</p>
+                <p>A resposta de Judá mostra mudança profunda. O antigo ambiente de rivalidade dá lugar a disposição sacrificial. O capítulo prepara uma reconciliação verdadeira, não superficial.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> reconciliação sólida exige transformação real de caráter.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 45</span><span class="chapter-label">José se revela</span></summary>
+              <div class="chapter-body">
+                <p>Este é um dos momentos mais emocionantes de Gênesis. José finalmente se dá a conhecer e interpreta sua história à luz da providência de Deus.</p>
+                <p>Sem negar o mal sofrido, ele reconhece que Deus estava acima de tudo isso, transformando tragédia em preservação. O capítulo é uma das chaves teológicas de todo o livro.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> providência não nega a dor, mas mostra que a dor não teve a palavra final.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 46</span><span class="chapter-label">Jacó desce ao Egito</span></summary>
+              <div class="chapter-body">
+                <p>A família inteira se move para o Egito. O capítulo traz sensação de transição histórica importante. O lugar de preservação será também, futuramente, lugar de opressão e libertação.</p>
+                <p>Deus reafirma sua presença nesse deslocamento. A descida ao Egito não é queda fora do plano, mas passo dentro da história maior da aliança.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> mudanças geográficas e históricas podem fazer parte do propósito de Deus, mesmo quando parecem estranhas à promessa.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 47</span><span class="chapter-label">Estabelecimento no Egito</span></summary>
+              <div class="chapter-body">
+                <p>A família se estabelece, e José administra a crise com grande habilidade. O capítulo mostra sabedoria administrativa, discernimento e responsabilidade pública.</p>
+                <p>Ao mesmo tempo, Jacó, ao final da vida, olha para a frente da promessa. Mesmo no Egito, sua esperança não se reduz ao presente confortável.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> viver bem no presente não deve apagar a esperança orientada pela promessa futura.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 48</span><span class="chapter-label">Jacó abençoa os filhos de José</span></summary>
+              <div class="chapter-body">
+                <p>O capítulo mostra transferência de bênção e continuidade da história da aliança. Também reaparece a lógica bíblica de reversão de expectativas humanas.</p>
+                <p>Jacó enxerga a fidelidade de Deus através de sua própria trajetória. A memória da graça passa a moldar sua visão do futuro.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> bênção, memória e futuro se unem quando a vida é relida à luz da fidelidade divina.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 49</span><span class="chapter-label">Bênçãos sobre os filhos</span></summary>
+              <div class="chapter-body">
+                <p>Jacó fala profeticamente sobre seus filhos e sobre o futuro das tribos. O capítulo é importante porque conecta a história familiar ao horizonte mais amplo de Israel.</p>
+                <p>As palavras não são uniformes; algumas expõem falhas, outras apontam vocações, outras antecipam relevância futura. O passado de cada filho influencia a direção que sua memória deixará.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a história pessoal importa, porque ela molda legado e direção futura.</div>
+              </div>
+            </details>
+
+            <details class="chapter">
+              <summary><span>Capítulo 50</span><span class="chapter-label">Morte de Jacó e de José</span></summary>
+              <div class="chapter-body">
+                <p>O livro termina com luto, reconciliação reafirmada e esperança aberta. José mais uma vez interpreta a história a partir da providência divina e desmonta o medo dos irmãos.</p>
+                <p>Gênesis fecha sem resolver tudo completamente. A promessa continua, mas seu cumprimento pleno ainda está por vir. Esse encerramento cria expectativa e prepara o Êxodo.</p>
+                <div class="focus"><strong>Foco do capítulo:</strong> a história da promessa continua além da morte dos grandes personagens humanos.</div>
+              </div>
+            </details>
+
+          </div>
         </article>
 
         <article class="content-card" id="aplicacoes">
-          <h2>Aplicações práticas para a vida</h2>
+          <h2>Aplicações gerais de Gênesis</h2>
           <p>
-            Gênesis continua poderosamente atual porque trata de temas permanentes da experiência humana. Ele fala
-            de identidade, família, tentação, vergonha, culpa, vocação, fé, espera, dor, recomeço, promessa e futuro.
-          </p>
-          <p>
-            Quando alguém se sente sem propósito, Gênesis responde com a doutrina da criação. Quando alguém olha o
-            mundo e não entende sua mistura de beleza e ruína, Gênesis responde com a queda. Quando alguém pergunta
-            se Deus ainda age em meio a processos difíceis, Gênesis responde com Abraão, Jacó e José.
+            Gênesis é profundamente atual. Ele fala ao leitor que busca propósito, luta com culpa, sofre em relações quebradas, vive processos demorados ou tenta entender o silêncio de Deus.
           </p>
           <div class="mini-grid">
             <div class="mini-box">
-              <h3>Para a identidade</h3>
-              <p>Você não é produto do acaso. Sua existência tem valor porque vem do Criador.</p>
+              <h3>Identidade</h3>
+              <p>Você não é fruto do acaso. Sua dignidade começa no fato de ter sido pensado por Deus.</p>
             </div>
             <div class="mini-box">
-              <h3>Para a culpa</h3>
-              <p>O pecado é sério, mas Deus não abandona a história ao desespero.</p>
+              <h3>Pecado</h3>
+              <p>O mal não é superficial. Ele atinge coração, família, sociedade e cultura.</p>
             </div>
             <div class="mini-box">
-              <h3>Para a espera</h3>
-              <p>A promessa muitas vezes amadurece no tempo, não na pressa.</p>
+              <h3>Esperança</h3>
+              <p>A história bíblica não termina na queda. Desde cedo, Deus aponta para restauração.</p>
             </div>
             <div class="mini-box">
-              <h3>Para o sofrimento</h3>
-              <p>A providência divina pode estar agindo mesmo onde só vemos perdas.</p>
+              <h3>Providência</h3>
+              <p>Mesmo fases dolorosas podem estar sendo usadas por Deus para algo maior.</p>
             </div>
           </div>
         </article>
 
-        <article class="content-card" id="curiosidades">
-          <h2>Curiosidades e observações importantes</h2>
-          <ul>
-            <li>Gênesis estabelece a base para compreender casamento, família, trabalho, pecado, juízo e promessa.</li>
-            <li>O livro vai de um horizonte universal para um horizonte pactual, mostrando foco crescente na linhagem da promessa.</li>
-            <li>Ele encerra no Egito, não na terra prometida, deixando uma tensão narrativa importante para o Êxodo.</li>
-            <li>A história dos patriarcas mostra repetidamente que Deus usa pessoas falhas sem deixar de ser santo e soberano.</li>
-            <li>José funciona como uma das maiores demonstrações de providência em toda a Escritura.</li>
-          </ul>
-        </article>
-
         <article class="content-card" id="perguntas">
-          <h2>Perguntas para estudo e reflexão</h2>
+          <h2>Perguntas para estudo</h2>
           <div class="qa-list">
             <div class="qa-item">
               <strong>1. O que Gênesis ensina sobre quem Deus é?</strong>
-              <p>Observe como o livro apresenta Deus como Criador, Senhor da história, Juiz do pecado e Deus da promessa.</p>
+              <p>Observe como o livro o revela como Criador, Juiz, Sustentador da história e Deus da promessa.</p>
             </div>
             <div class="qa-item">
-              <strong>2. O que muda em nossa visão de nós mesmos quando entendemos a criação e a imagem de Deus?</strong>
-              <p>Pense sobre dignidade, propósito, responsabilidade e relação com o Criador.</p>
+              <strong>2. O que a queda explica sobre a experiência humana?</strong>
+              <p>Pense em culpa, vergonha, conflito, desordem social, violência e morte.</p>
             </div>
             <div class="qa-item">
-              <strong>3. Como a queda ajuda a explicar a condição humana?</strong>
-              <p>Reflita sobre culpa, conflito, sofrimento, orgulho e desordem moral.</p>
+              <strong>3. Como a história dos patriarcas corrige uma visão simplista da fé?</strong>
+              <p>Repare como fé, tropeços, espera e amadurecimento caminham juntos.</p>
             </div>
             <div class="qa-item">
-              <strong>4. O que a história de Abraão ensina sobre fé?</strong>
-              <p>Considere a tensão entre promessa, espera, tropeços e obediência.</p>
+              <strong>4. O que a vida de José ensina sobre providência?</strong>
+              <p>Considere como Deus age até em contextos injustos e dolorosos.</p>
             </div>
             <div class="qa-item">
-              <strong>5. Como a vida de José revela a providência divina?</strong>
-              <p>Pense em como Deus integra dor, injustiça e exaltação em um propósito maior.</p>
+              <strong>5. Por que Gênesis é essencial para entender o restante da Bíblia?</strong>
+              <p>Porque ele lança os alicerces de criação, pecado, promessa, aliança e esperança redentora.</p>
             </div>
           </div>
         </article>
 
         <article class="content-card" id="cristo">
-          <h2>Conexão com Cristo e com o restante da Bíblia</h2>
+          <h2>Conexão com Cristo</h2>
           <p>
-            O material-base afirma que Gênesis define o cenário para toda a Bíblia, e isso é central para sua leitura. :contentReference[oaicite:8]{index=8}
+            Gênesis prepara o leitor para Cristo pela própria lógica do livro. A queda cria necessidade de redenção. A promessa aponta para um futuro em que o mal não vencerá. A linhagem da aliança mostra que Deus conduzirá a história de forma concreta até seu ápice.
           </p>
           <p>
-            Em Gênesis, a história da redenção ainda não chegou ao clímax, mas suas linhas principais já aparecem:
-            a promessa de restauração, a descendência, a bênção para as nações, a aliança, o povo escolhido e a
-            expectativa de um futuro no qual o mal não terá a palavra final.
-          </p>
-          <p>
-            Cristo é preparado por Gênesis não apenas por ecos pontuais, mas pela própria lógica do livro. O leitor
-            aprende desde cedo que o mundo precisa de redenção, que a promessa vem de Deus e que a esperança futura
-            será histórica, concreta e fiel ao que o Senhor jurou.
+            O livro ensina desde cedo que a humanidade precisa de restauração que venha de Deus. Essa expectativa atravessa toda a Bíblia e encontra cumprimento pleno apenas mais adiante.
           </p>
           <div class="quote-box">
-            Gênesis abre a Bíblia com as origens, mas também acende a expectativa de um desfecho redentor.
+            Gênesis começa com as origens, mas já abre espaço para a esperança de uma restauração definitiva.
           </div>
-        </article>
-
-        <article class="content-card" id="conclusao">
-          <h2>Conclusão</h2>
-          <p>
-            Gênesis é profundo, majestoso e essencial. Ele não apenas informa o leitor sobre o passado; ele dá
-            estrutura para compreender toda a realidade bíblica. Sem Gênesis, muitos temas posteriores ficam
-            soltos. Com Gênesis, a Bíblia começa a revelar sua coerência.
-          </p>
-          <p>
-            O livro mostra quem Deus é, quem somos, o que aconteceu com a criação, por que o mal é tão sério,
-            por que a promessa é tão preciosa e por que a história não termina no fracasso humano. Ele termina
-            com a promessa ainda em curso, o que deixa o leitor olhando para frente.
-          </p>
-          <p>
-            Ler Gênesis bem é lançar alicerces fortes. E quando o fundamento está sólido, toda a construção da
-            narrativa bíblica ganha mais beleza, profundidade e força.
-          </p>
         </article>
 
         <div class="next-prev">
