@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soloteo — Teologia com profundidade, beleza e clareza</title>
+  <title>SoloTeo — Teologia com profundidade, beleza e clareza</title>
   <meta
     name="description"
-    content="A Soloteo é uma plataforma premium de teologia com estudos bíblicos, teologia sistemática, apologética, história da igreja, biografias, curiosidades, trilhas de estudo e uma estrutura pensada para se tornar referência nacional."
+    content="A SoloTeo é uma plataforma premium de teologia com estudos bíblicos, teologia sistemática, apologética, história da igreja, biografias, curiosidades, trilhas de estudo e uma estrutura pensada para se tornar referência nacional."
   />
   <meta name="theme-color" content="#6b1126" />
 
@@ -1151,6 +1151,187 @@
         transition: none !important;
       }
     }
+	  .floating-search {
+  position: sticky;
+  top: 88px;
+  z-index: 5500;
+  padding: 10px 0 0;
+  pointer-events: none;
+}
+
+.floating-search .container {
+  pointer-events: none;
+}
+
+.floating-search-bar,
+.search-results {
+  pointer-events: auto;
+}
+
+.floating-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(107,17,38,0.08);
+  box-shadow: 0 20px 44px rgba(73, 21, 35, 0.10);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.floating-search-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, #8B1E3F, #c9a24a);
+  box-shadow: 0 10px 24px rgba(139,30,63,0.18);
+}
+
+.floating-search-bar input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.floating-search-bar input::placeholder {
+  color: #8b7a80;
+}
+
+.floating-search-clear {
+  flex-shrink: 0;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #fff7f4;
+  border: 1px solid rgba(107,17,38,0.08);
+  color: var(--wine);
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.floating-search-clear:hover {
+  background: var(--wine);
+  color: #fff;
+}
+
+.search-results {
+  display: none;
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(107,17,38,0.08);
+  box-shadow: 0 24px 60px rgba(73, 21, 35, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.search-results.is-visible {
+  display: block;
+}
+
+.search-results-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.search-result-item {
+  display: block;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fffaf7 100%);
+  border: 1px solid rgba(107,17,38,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-result-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(107,17,38,0.14);
+  box-shadow: 0 14px 30px rgba(73, 21, 35, 0.08);
+  color: inherit;
+}
+
+.search-result-label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--wine);
+}
+
+.search-result-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1a1517;
+  margin-bottom: 4px;
+}
+
+.search-result-desc {
+  display: block;
+  font-size: 0.94rem;
+  color: var(--text-soft);
+}
+
+.search-empty {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fffaf7 100%);
+  border: 1px solid rgba(107,17,38,0.06);
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .floating-search {
+    top: 78px;
+    padding-top: 8px;
+  }
+
+  .floating-search-bar {
+    padding: 12px 12px;
+    gap: 10px;
+    border-radius: 18px;
+  }
+
+  .floating-search-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+
+  .floating-search-clear {
+    padding: 9px 12px;
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-search-bar {
+    align-items: center;
+  }
+
+  .floating-search-bar input {
+    font-size: 0.95rem;
+  }
+
+  .floating-search-clear {
+    padding: 8px 10px;
+  }
+}
   </style>
 </head>
 
@@ -1162,7 +1343,7 @@
         <div class="loader-ring"></div>
         <div class="loader-logo">ST</div>
       </div>
-      <p class="loader-title">Soloteo</p>
+      <p class="loader-title">SoloTeo</p>
       <p class="loader-subtitle">Profundidade. Beleza. Verdade.</p>
       <div class="loader-bar">
         <div class="loader-progress"></div>
@@ -1174,7 +1355,7 @@
     <div class="container header-inner">
       <a href="#" class="brand">
         <span class="brand-mark">ST</span>
-        <span class="brand-text">Soloteo</span>
+        <span class="brand-text">SoloTeo</span>
       </a>
 
       <nav class="nav desktop-nav">
@@ -1196,7 +1377,26 @@
       </div>
     </div>
   </header>
+<div class="floating-search" id="floatingSearch">
+  <div class="container">
+    <div class="floating-search-bar">
+      <div class="floating-search-icon">⌕</div>
 
+      <input
+        type="text"
+        id="siteSearch"
+        placeholder="Buscar teologia sistemática, apologética, história da igreja..."
+        aria-label="Buscar no site"
+      />
+
+      <button type="button" id="clearSearch" class="floating-search-clear" aria-label="Limpar busca">
+        Limpar
+      </button>
+    </div>
+
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-overlay" id="mobileOverlay"></div>
 
@@ -1268,7 +1468,7 @@
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">Estrutura principal</span>
-          <h2 class="section-title">Seções definitivas da Soloteo</h2>
+          <h2 class="section-title">Seções definitivas da SoloTeo</h2>
           <p class="section-text">
             A página inicial apresenta apenas os grandes pilares do projeto,
             deixando o aprofundamento para as páginas internas.
@@ -1428,7 +1628,7 @@
           <span class="eyebrow">Monetização</span>
           <h2 class="section-title">Um ecossistema que gera valor — e receita</h2>
           <p class="section-text">
-            A Soloteo é gratuita, mas estrategicamente estruturada para gerar receita
+            A SoloTeo é gratuita, mas estrategicamente estruturada para gerar receita
             com produtos, recomendações e experiências premium.
           </p>
         </div>
@@ -1505,7 +1705,7 @@
           <span class="eyebrow">Expansão</span>
           <h2 class="section-title">Construído para crescer</h2>
           <p class="section-text">
-            A Soloteo nasce como conteúdo, mas evolui para um ecossistema completo.
+            A SoloTeo nasce como conteúdo, mas evolui para um ecossistema completo.
           </p>
         </div>
 
@@ -1544,7 +1744,7 @@
             <span class="eyebrow">Visão do projeto</span>
             <h2 class="section-title">Uma referência nacional em teologia digital</h2>
             <p class="section-text">
-              A Soloteo nasce para unir profundidade teológica, organização impecável
+              A SoloTeo nasce para unir profundidade teológica, organização impecável
               e estética premium em uma plataforma memorável.
             </p>
           </div>
@@ -1582,7 +1782,7 @@
         <div class="footer-brand">
           <a href="#" class="brand">
             <span class="brand-mark">ST</span>
-            <span class="brand-text">Soloteo</span>
+            <span class="brand-text">SoloTeo</span>
           </a>
 
           <p class="footer-text">
@@ -1629,7 +1829,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 Soloteo. Todos os direitos reservados.</span>
+        <span>© 2026 SoloTeo. Todos os direitos reservados.</span>
         <span>Projeto digital com identidade premium e organização escalável.</span>
       </div>
     </div>
@@ -1726,6 +1926,209 @@
         header.classList.remove("header-scrolled");
       }
     });
+	  const searchableItems = [
+  {
+    title: "Teologia Sistemática",
+    desc: "Doutrinas organizadas por tema, com profundidade e clareza.",
+    url: "teologia-sistematica.html",
+    label: "Seções"
+  },
+  {
+    title: "Trilhas de Estudo",
+    desc: "Percursos guiados para estudar com ordem, constância e direção.",
+    url: "trilhas-de-estudo.html",
+    label: "Seções"
+  },
+  {
+    title: "História da Igreja",
+    desc: "Eventos, períodos, movimentos e personagens da tradição cristã.",
+    url: "historia-da-igreja.html",
+    label: "Seções"
+  },
+  {
+    title: "Biografias Cristãs",
+    desc: "Vidas que marcaram a história da fé e do pensamento cristão.",
+    url: "biografias-cristas.html",
+    label: "Seções"
+  },
+  {
+    title: "Apologética",
+    desc: "Defesa da fé cristã com clareza, solidez e relevância contemporânea.",
+    url: "apologetica.html",
+    label: "Seções"
+  },
+  {
+    title: "Livros da Bíblia",
+    desc: "Panoramas, estruturas e contextos de cada livro das Escrituras.",
+    url: "livros-da-biblia.html",
+    label: "Seções"
+  },
+  {
+    title: "Referências Históricas",
+    desc: "Concílios, documentos, datas, marcos e conexões essenciais.",
+    url: "referencias-historicas.html",
+    label: "Seções"
+  },
+  {
+    title: "Biblioteca Teológica",
+    desc: "Recursos organizados para consulta, aprofundamento e pesquisa.",
+    url: "biblioteca-teologica.html",
+    label: "Seções"
+  },
+  {
+    title: "Doutrinas Centrais",
+    desc: "Base organizada sobre Deus, Cristo, Espírito, pecado, graça e redenção.",
+    url: "doutrinas-centrais.html",
+    label: "Biblioteca"
+  },
+  {
+    title: "Autores Cristãos",
+    desc: "Reformadores, pais da igreja e grandes pensadores cristãos.",
+    url: "autores-cristaos.html",
+    label: "Biblioteca"
+  },
+  {
+    title: "Glossário Teológico",
+    desc: "Termos explicados com linguagem clara, precisa e elegante.",
+    url: "glossario.html",
+    label: "Biblioteca"
+  },
+  {
+    title: "Cronologias",
+    desc: "Linhas do tempo para entender épocas, eventos e conexões históricas.",
+    url: "cronologias.html",
+    label: "Biblioteca"
+  },
+  {
+    title: "Confissões de Fé",
+    desc: "Documentos históricos e teológicos essenciais para consulta e estudo.",
+    url: "confissoes-de-fe.html",
+    label: "Biblioteca"
+  },
+  {
+    title: "Mapas e Contextos",
+    desc: "Recursos visuais e históricos para aprofundar a compreensão bíblica.",
+    url: "mapas-e-contextos.html",
+    label: "Biblioteca"
+  },
+  {
+    title: "Curiosidades Bíblicas",
+    desc: "Temas que despertam interesse e aprofundam o entendimento do texto.",
+    url: "curiosidades-biblicas.html",
+    label: "Biblioteca"
+  },
+  {
+    title: "Começando na Teologia",
+    desc: "Base inicial para quem quer construir entendimento com ordem e clareza.",
+    url: "trilha-iniciante.html",
+    label: "Trilhas"
+  },
+  {
+    title: "Doutrinas Centrais da Fé",
+    desc: "Percurso sólido sobre Deus, Cristo, graça, salvação e Igreja.",
+    url: "trilha-doutrinas.html",
+    label: "Trilhas"
+  },
+  {
+    title: "Panorama da História da Igreja",
+    desc: "Dos primeiros séculos à atualidade, com contexto e continuidade.",
+    url: "trilha-historia.html",
+    label: "Trilhas"
+  },
+  {
+    title: "Entendendo a Bíblia por Etapas",
+    desc: "Livros, temas, contexto e leitura organizada para estudo consistente.",
+    url: "trilha-biblia.html",
+    label: "Trilhas"
+  }
+];
+
+const siteSearch = document.getElementById("siteSearch");
+const searchResults = document.getElementById("searchResults");
+const clearSearch = document.getElementById("clearSearch");
+
+function normalizeText(text) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+function renderResults(results) {
+  if (!searchResults) return;
+
+  if (!results.length) {
+    searchResults.innerHTML = `
+      <div class="search-empty">
+        Nenhum resultado encontrado. Tente buscar por “apologética”, “história”, “bíblia” ou “teologia sistemática”.
+      </div>
+    `;
+    searchResults.classList.add("is-visible");
+    return;
+  }
+
+  searchResults.innerHTML = `
+    <div class="search-results-grid">
+      ${results.map(item => `
+        <a href="${item.url}" class="search-result-item">
+          <span class="search-result-label">${item.label}</span>
+          <span class="search-result-title">${item.title}</span>
+          <span class="search-result-desc">${item.desc}</span>
+        </a>
+      `).join("")}
+    </div>
+  `;
+
+  searchResults.classList.add("is-visible");
+}
+
+function handleSearch() {
+  if (!siteSearch || !searchResults) return;
+
+  const query = normalizeText(siteSearch.value.trim());
+
+  if (!query) {
+    searchResults.classList.remove("is-visible");
+    searchResults.innerHTML = "";
+    return;
+  }
+
+  const results = searchableItems.filter(item => {
+    const haystack = normalizeText(`${item.title} ${item.desc} ${item.label}`);
+    return haystack.includes(query);
+  });
+
+  renderResults(results.slice(0, 8));
+}
+
+if (siteSearch) {
+  siteSearch.addEventListener("input", handleSearch);
+
+  siteSearch.addEventListener("focus", () => {
+    if (siteSearch.value.trim()) {
+      handleSearch();
+    }
+  });
+}
+
+if (clearSearch) {
+  clearSearch.addEventListener("click", () => {
+    if (!siteSearch || !searchResults) return;
+    siteSearch.value = "";
+    siteSearch.focus();
+    searchResults.classList.remove("is-visible");
+    searchResults.innerHTML = "";
+  });
+}
+
+document.addEventListener("click", (event) => {
+  if (!searchResults || !siteSearch) return;
+
+  const floatingSearch = document.getElementById("floatingSearch");
+  if (floatingSearch && !floatingSearch.contains(event.target)) {
+    searchResults.classList.remove("is-visible");
+  }
+});
   </script>
 </body>
 </html>
