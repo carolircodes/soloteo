@@ -236,6 +236,46 @@
       z-index:1;
     }
 
+    .hero-top-actions{
+      margin-top:24px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      position:relative;
+      z-index:1;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:999px;
+      font-weight:800;
+      border:1px solid transparent;
+      transition:.22s ease;
+      cursor:pointer;
+      background:#fff;
+      color:var(--wine);
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--wine),var(--wine-2));
+      color:#fff;
+      box-shadow:0 16px 30px rgba(110,33,50,.18);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      background:#fff;
+      color:var(--wine);
+      border-color:rgba(110,33,50,.12);
+    }
+
     .hero-stats{
       margin-top:28px;
       display:grid;
@@ -301,6 +341,33 @@
       color:var(--wine);
     }
 
+    .search-box{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .search-box input{
+      flex:1 1 100%;
+      min-width:0;
+      border:none;
+      outline:none;
+      padding:14px 16px;
+      border-radius:16px;
+      border:1px solid rgba(86,50,38,.1);
+      background:#fff;
+      color:var(--text);
+      font-size:1rem;
+    }
+
+    .search-status{
+      margin-top:12px;
+      min-height:20px;
+      color:var(--muted);
+      font-size:.9rem;
+      font-weight:600;
+    }
+
     .toc{
       display:grid;
       gap:8px;
@@ -314,7 +381,8 @@
       transition:.2s ease;
     }
 
-    .toc a:hover{
+    .toc a:hover,
+    .toc a.is-match{
       background:#fff;
       color:var(--wine);
     }
@@ -327,6 +395,7 @@
 
     .content-card{
       padding:32px;
+      transition:.2s ease;
     }
 
     .content-card h2{
@@ -356,6 +425,15 @@
 
     .content-card li + li{
       margin-top:8px;
+    }
+
+    .content-card.is-hidden{
+      display:none;
+    }
+
+    .content-card.is-highlight{
+      border-color:rgba(110,33,50,.3);
+      box-shadow:0 24px 50px rgba(110,33,50,.10);
     }
 
     .mini-grid{
@@ -413,6 +491,16 @@
       border:1px solid rgba(199,164,97,.18);
       border-radius:20px;
       overflow:hidden;
+      transition:.2s ease;
+    }
+
+    details.chapter.is-hidden{
+      display:none;
+    }
+
+    details.chapter.is-highlight{
+      border-color:rgba(110,33,50,.3);
+      box-shadow:0 20px 40px rgba(110,33,50,.08);
     }
 
     details.chapter summary{
@@ -606,6 +694,11 @@
             Gênesis é a grande porta de entrada da Bíblia. Aqui começam a criação, a humanidade, a queda, o juízo, as nações, a aliança e a linhagem da promessa. Este estudo foi estruturado para publicação direta no site, com linguagem original, organização premium e leitura capítulo por capítulo.
           </p>
 
+          <div class="hero-top-actions">
+            <a href="#capitulos" class="btn btn-primary">Ir para os capítulos</a>
+            <a href="pentateuco-exodo.html" class="btn btn-secondary">Próximo livro: Êxodo</a>
+          </div>
+
           <div class="hero-stats">
             <div class="stat">
               <strong>Categoria</strong>
@@ -631,8 +724,23 @@
     <section class="container layout">
       <aside class="sidebar">
         <div class="side-card">
+          <h2>Buscar neste estudo</h2>
+          <div class="search-box">
+            <input
+              type="text"
+              id="pageSearch"
+              placeholder="Ex.: criação, queda, abraão, capítulo 12, dilúvio, promessa"
+              aria-label="Buscar em Gênesis"
+            />
+            <button type="button" id="searchButton" class="btn btn-primary">Buscar</button>
+            <button type="button" id="clearButton" class="btn btn-secondary">Limpar</button>
+          </div>
+          <div class="search-status" id="searchStatus"></div>
+        </div>
+
+        <div class="side-card">
           <h2>Nesta página</h2>
-          <nav class="toc">
+          <nav class="toc" id="tocLinks">
             <a href="#introducao">Introdução geral</a>
             <a href="#contexto">Contexto e propósito</a>
             <a href="#estrutura">Estrutura do livro</a>
@@ -649,13 +757,13 @@
           <h2>Navegação</h2>
           <nav class="toc">
             <a href="pentateuco.html">← Voltar ao Pentateuco</a>
-            <a href="#">Próximo livro: Êxodo →</a>
+            <a href="pentateuco-exodo.html">Próximo livro: Êxodo →</a>
           </nav>
         </div>
       </aside>
 
-      <div class="content">
-        <article class="content-card" id="introducao">
+      <div class="content" id="contentArea">
+        <article class="content-card" id="introducao" data-search="introducao introdução geral gênesis fundamentos narrativa bíblica universo origem humanidade dignidade pecado iniciativa divina promessa">
           <h2>Introdução geral</h2>
           <p>
             Gênesis estabelece os fundamentos de toda a narrativa bíblica. Ele mostra que o universo tem origem em Deus, que a humanidade foi criada com dignidade singular, que o pecado entrou na história por rebelião e que a resposta final não surgiria da capacidade humana, mas da iniciativa divina.
@@ -668,17 +776,17 @@
           </div>
         </article>
 
-        <article class="content-card" id="contexto">
+        <article class="content-card" id="contexto" data-search="contexto propósito mapa inicial redenção começos família escolhida perguntas decisivas mundo belo quebrado povo aliança promessa">
           <h2>Contexto e propósito</h2>
           <p>
             Gênesis foi organizado para responder perguntas decisivas: de onde vieram todas as coisas, por que o mundo é ao mesmo tempo belo e quebrado, como começou a história do povo da aliança e por que a promessa é tão importante para toda a Escritura.
           </p>
           <p>
-            A estrutura geral destacada no material-base, com a parte dos “Começos” e a parte da “Família Escolhida”, ajuda a entender que Gênesis não é apenas um livro de passado distante. Ele é o mapa inicial da redenção. :contentReference[oaicite:1]{index=1}
+            A estrutura geral do livro, com a parte dos começos e a parte da família escolhida, ajuda a entender que Gênesis não é apenas um livro de passado distante. Ele é o mapa inicial da redenção.
           </p>
         </article>
 
-        <article class="content-card" id="estrutura">
+        <article class="content-card" id="estrutura" data-search="estrutura capítulos 1 11 12 50 criação queda dilúvio babel patriarcas abraão isaque jacó josé">
           <h2>Estrutura do livro</h2>
           <div class="mini-grid">
             <div class="mini-box">
@@ -692,7 +800,7 @@
           </div>
         </article>
 
-        <article class="content-card" id="temas">
+        <article class="content-card" id="temas" data-search="temas centrais criação imagem de deus pecado juízo graça aliança promessa">
           <h2>Temas centrais de Gênesis</h2>
           <div class="key-list">
             <div class="key-item">Criação: tudo começa em Deus, e a realidade tem ordem, propósito e sentido.</div>
@@ -704,7 +812,7 @@
           </div>
         </article>
 
-        <article class="content-card" id="como-ler">
+        <article class="content-card" id="como-ler" data-search="como ler gênesis histórico teológico genealogias promessas bênçãos conflitos familiares continuidade ruptura direção">
           <h2>Como ler Gênesis</h2>
           <p>
             O ideal é ler Gênesis em duas chaves ao mesmo tempo. A primeira é histórica: o livro narra eventos, famílias, deslocamentos e crises reais. A segunda é teológica: cada episódio ajuda a revelar quem Deus é, quem somos e por que a esperança bíblica é necessária.
@@ -714,11 +822,11 @@
           </p>
         </article>
 
-        <article class="content-card" id="capitulos">
+        <article class="content-card" id="capitulos" data-search="capítulos capítulo por capítulo estudo detalhado gênesis">
           <h2>Estudo capítulo por capítulo</h2>
           <div class="chapters-grid">
 
-            <details class="chapter" open>
+            <details class="chapter" open data-search="capítulo 1 criacao criação universo dias luz céu terra humanidade imagem de deus">
               <summary><span>Capítulo 1</span><span class="chapter-label">Criação do universo</span></summary>
               <div class="chapter-body">
                 <p>Gênesis 1 apresenta Deus como Criador absoluto. O mundo não surge do caos por si mesmo, mas da palavra soberana de Deus, que organiza, separa, dá função e declara bondade sobre a criação. A ordem do capítulo revela um universo intencional, não aleatório.</p>
@@ -727,7 +835,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 2 homem mulher jardim eden casamento vocação trabalho limite moral">
               <summary><span>Capítulo 2</span><span class="chapter-label">Criação do homem e da mulher</span></summary>
               <div class="chapter-body">
                 <p>Se o capítulo 1 mostra o panorama cósmico, o capítulo 2 aproxima a lente e destaca a relação de Deus com o ser humano. Aqui vemos o jardim, o trabalho, o limite moral e o casamento como parte da boa ordem criada.</p>
@@ -736,7 +844,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 3 queda pecado serpente tentação vergonha culpa expulsão promessa">
               <summary><span>Capítulo 3</span><span class="chapter-label">A queda</span></summary>
               <div class="chapter-body">
                 <p>Gênesis 3 é um dos capítulos mais importantes da Bíblia. O pecado entra na história quando o ser humano troca a confiança em Deus pela autonomia. A tentação não começa apenas com desejo, mas com distorção da palavra divina.</p>
@@ -745,7 +853,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 4 caim abel assassinato inveja ressentimento endurecimento">
               <summary><span>Capítulo 4</span><span class="chapter-label">Caim e Abel</span></summary>
               <div class="chapter-body">
                 <p>O pecado que entrou no capítulo anterior agora se espalha horizontalmente. O conflito entre irmãos culmina em assassinato, mostrando que a rebelião contra Deus atinge rapidamente a vida relacional.</p>
@@ -754,7 +862,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 5 genealogia adão morte linhagem continuidade">
               <summary><span>Capítulo 5</span><span class="chapter-label">Genealogia de Adão</span></summary>
               <div class="chapter-body">
                 <p>A genealogia pode parecer apenas transição, mas ela carrega peso teológico. Mostra continuidade da humanidade, cumprimento do juízo da morte e preservação da história humana apesar da queda.</p>
@@ -763,7 +871,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 6 corrupção humanidade noé juízo graça preservação">
               <summary><span>Capítulo 6</span><span class="chapter-label">Corrupção da humanidade e chamado de Noé</span></summary>
               <div class="chapter-body">
                 <p>A maldade humana alcança nível generalizado. Gênesis mostra que o pecado não ficou restrito a indivíduos isolados; tornou-se uma realidade social ampla.</p>
@@ -772,7 +880,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 7 dilúvio arca juízo misericórdia">
               <summary><span>Capítulo 7</span><span class="chapter-label">O dilúvio</span></summary>
               <div class="chapter-body">
                 <p>O dilúvio manifesta o juízo divino em escala histórica. O mundo corrompido colhe as consequências de sua rebelião, e a arca se torna símbolo de preservação dentro do juízo.</p>
@@ -781,7 +889,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 8 águas recomeço terra seca sacrifício gratidão">
               <summary><span>Capítulo 8</span><span class="chapter-label">As águas diminuem</span></summary>
               <div class="chapter-body">
                 <p>Depois do juízo, o capítulo mostra recomeço. A terra seca lentamente, e a narrativa transmite a ideia de paciência, espera e renovação.</p>
@@ -790,7 +898,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 9 aliança noé arco estabilidade ordem criação">
               <summary><span>Capítulo 9</span><span class="chapter-label">Aliança com Noé</span></summary>
               <div class="chapter-body">
                 <p>Deus estabelece uma aliança que envolve estabilidade para a ordem da criação. O capítulo mostra que a história seguirá adiante sob a fidelidade divina.</p>
@@ -799,7 +907,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 10 nações povos diversidade humanidade">
               <summary><span>Capítulo 10</span><span class="chapter-label">As nações</span></summary>
               <div class="chapter-body">
                 <p>Esse capítulo organiza os povos e mostra a expansão da humanidade após o dilúvio. A diversidade das nações não é detalhe secundário; ela prepara o cenário da história bíblica posterior.</p>
@@ -808,7 +916,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 11 babel torre confusão línguas orgulho rebelião">
               <summary><span>Capítulo 11</span><span class="chapter-label">Torre de Babel</span></summary>
               <div class="chapter-body">
                 <p>Babel revela a rebelião humana em escala coletiva. A humanidade, unida em orgulho, tenta construir grandeza independente de Deus. O pecado assume forma cultural e civilizatória.</p>
@@ -817,7 +925,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 12 abraão chamado terra descendência bênção fé promessa">
               <summary><span>Capítulo 12</span><span class="chapter-label">Chamado de Abraão</span></summary>
               <div class="chapter-body">
                 <p>A narrativa muda de escala. Deus chama Abraão e inicia explicitamente a história da promessa. Terra, descendência e bênção tornam-se eixos centrais do restante do livro.</p>
@@ -826,7 +934,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 13 abraão ló separação paz visão fé conveniência">
               <summary><span>Capítulo 13</span><span class="chapter-label">Separação entre Abraão e Ló</span></summary>
               <div class="chapter-body">
                 <p>Conflitos de convivência surgem, e Abraão demonstra postura de paz. O capítulo contrasta escolhas feitas pela aparência imediata com a segurança da promessa divina.</p>
@@ -835,7 +943,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 14 resgate ló melquisedeque vitória soberania">
               <summary><span>Capítulo 14</span><span class="chapter-label">Abraão resgata Ló</span></summary>
               <div class="chapter-body">
                 <p>Abraão aparece como homem de coragem e responsabilidade. Ele não abandona Ló em meio ao caos político e militar.</p>
@@ -844,7 +952,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 15 aliança fé promessa abraão justiça">
               <summary><span>Capítulo 15</span><span class="chapter-label">Aliança confirmada</span></summary>
               <div class="chapter-body">
                 <p>Abraão lida com a tensão entre promessa e realidade. Deus então reafirma sua palavra e formaliza a aliança. O capítulo é crucial para a teologia bíblica da fé.</p>
@@ -853,7 +961,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 16 agar ismael precipitação conflito compaixão">
               <summary><span>Capítulo 16</span><span class="chapter-label">Agar e Ismael</span></summary>
               <div class="chapter-body">
                 <p>A demora no cumprimento da promessa leva a soluções humanas apressadas. O capítulo mostra como a tentativa de “ajudar Deus” produz dor relacional e complicações duradouras.</p>
@@ -862,7 +970,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 17 sinal aliança circuncisão identidade promessa">
               <summary><span>Capítulo 17</span><span class="chapter-label">Sinal da aliança</span></summary>
               <div class="chapter-body">
                 <p>Deus reafirma a aliança, muda nomes e estabelece a circuncisão como sinal visível. O capítulo une identidade, promessa e pertença.</p>
@@ -871,7 +979,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 18 visita sara intercessão sodoma">
               <summary><span>Capítulo 18</span><span class="chapter-label">Visita a Abraão</span></summary>
               <div class="chapter-body">
                 <p>O capítulo combina promessa e intercessão. Deus reafirma o nascimento do filho prometido e, ao mesmo tempo, revela o que fará em relação a Sodoma.</p>
@@ -880,7 +988,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 19 sodoma gomorra juízo ló livramento">
               <summary><span>Capítulo 19</span><span class="chapter-label">Sodoma e Gomorra</span></summary>
               <div class="chapter-body">
                 <p>O juízo sobre Sodoma e Gomorra revela a seriedade moral do pecado coletivo. A cidade se torna símbolo de degradação e endurecimento.</p>
@@ -889,7 +997,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 20 abimeleque medo fraqueza promessa">
               <summary><span>Capítulo 20</span><span class="chapter-label">Abraão e Abimeleque</span></summary>
               <div class="chapter-body">
                 <p>Abraão repete um padrão de medo e disfarce. Isso é importante porque Gênesis não transforma seus grandes personagens em figuras intocáveis.</p>
@@ -898,7 +1006,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 21 nascimento isaque cumprimento promessa agar">
               <summary><span>Capítulo 21</span><span class="chapter-label">Nascimento de Isaque</span></summary>
               <div class="chapter-body">
                 <p>Depois de longa espera, o filho prometido nasce. O capítulo marca o cumprimento concreto da palavra de Deus e reforça que suas promessas não expiram.</p>
@@ -907,7 +1015,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 22 isaque sacrifício teste provisão substituição fé">
               <summary><span>Capítulo 22</span><span class="chapter-label">Sacrifício de Isaque</span></summary>
               <div class="chapter-body">
                 <p>Esse é um dos capítulos mais densos de Gênesis. Abraão é levado ao limite da confiança. O teste não existe para destruir a fé, mas para revelá-la e amadurecê-la.</p>
@@ -916,7 +1024,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 23 sara morte luto promessa terra">
               <summary><span>Capítulo 23</span><span class="chapter-label">Morte de Sara</span></summary>
               <div class="chapter-body">
                 <p>A compra do campo para sepultamento é carregada de significado. Mesmo sem possuir plenamente a terra prometida, Abraão dá um passo concreto dentro dela.</p>
@@ -925,7 +1033,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 24 rebeca isaque providência casamento linhagem">
               <summary><span>Capítulo 24</span><span class="chapter-label">Rebeca para Isaque</span></summary>
               <div class="chapter-body">
                 <p>O casamento de Isaque não é tratado como detalhe doméstico, mas como continuidade da linhagem da promessa. O servo age com senso de missão e dependência de Deus.</p>
@@ -934,7 +1042,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 25 abraão morte esaú jacó nova geração">
               <summary><span>Capítulo 25</span><span class="chapter-label">Transição para a nova geração</span></summary>
               <div class="chapter-body">
                 <p>A narrativa encaminha a passagem da promessa à geração seguinte. A morte de Abraão encerra uma etapa sem encerrar o propósito de Deus.</p>
@@ -943,7 +1051,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 26 isaque abimeleque padrões familiares bênção">
               <summary><span>Capítulo 26</span><span class="chapter-label">Isaque e Abimeleque</span></summary>
               <div class="chapter-body">
                 <p>Isaque vive experiências que ecoam a vida de Abraão. Isso mostra continuidade, mas também repetição de fraquezas. O texto é realista quanto à transmissão de padrões familiares.</p>
@@ -952,7 +1060,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 27 jacó bênção engano favoritismo">
               <summary><span>Capítulo 27</span><span class="chapter-label">Jacó recebe a bênção</span></summary>
               <div class="chapter-body">
                 <p>Engano, favoritismo e manipulação tomam conta do ambiente familiar. O capítulo mostra uma casa espiritualmente significativa, mas relacionalmente desordenada.</p>
@@ -961,7 +1069,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 28 betel escada céu terra jacó fuga">
               <summary><span>Capítulo 28</span><span class="chapter-label">Jacó em Betel</span></summary>
               <div class="chapter-body">
                 <p>Em fuga e vulnerabilidade, Jacó encontra-se com Deus. A visão da escada revela ligação entre céu e terra e mostra que a presença divina alcança o homem em deslocamento e crise.</p>
@@ -970,7 +1078,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 29 lia raquel labão engano feridas afetivas">
               <summary><span>Capítulo 29</span><span class="chapter-label">Jacó, Lia e Raquel</span></summary>
               <div class="chapter-body">
                 <p>O enganador agora experimenta ser enganado. O capítulo mostra como a história humana frequentemente devolve em forma dolorosa aquilo que foi semeado de modo errado.</p>
@@ -979,7 +1087,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 30 família crescimento rivalidade lia raquel">
               <summary><span>Capítulo 30</span><span class="chapter-label">Conflitos e crescimento da família</span></summary>
               <div class="chapter-body">
                 <p>A competição entre Lia e Raquel intensifica a tensão doméstica. O capítulo é carregado de desejo por reconhecimento, maternidade e validação.</p>
@@ -988,7 +1096,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 31 jacó labão saída mudança transição">
               <summary><span>Capítulo 31</span><span class="chapter-label">Jacó deixa Labão</span></summary>
               <div class="chapter-body">
                 <p>Depois de anos de tensão e exploração, Jacó parte. O capítulo mistura libertação, medo e confronto. Romper ciclos difíceis também exige coragem e discernimento.</p>
@@ -997,7 +1105,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 32 luta deus israel transformação esaú">
               <summary><span>Capítulo 32</span><span class="chapter-label">Luta com Deus</span></summary>
               <div class="chapter-body">
                 <p>Jacó se prepara para reencontrar Esaú, mas antes enfrenta uma luta decisiva. O capítulo simboliza confronto interior, temor e transformação espiritual.</p>
@@ -1006,7 +1114,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 33 reconciliação esaú jacó misericórdia">
               <summary><span>Capítulo 33</span><span class="chapter-label">Reconciliação com Esaú</span></summary>
               <div class="chapter-body">
                 <p>O encontro com Esaú surpreende pela reconciliação. O medo acumulado em Jacó é confrontado com misericórdia inesperada.</p>
@@ -1015,7 +1123,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 34 diná violência vingança abuso">
               <summary><span>Capítulo 34</span><span class="chapter-label">Diná e a violência</span></summary>
               <div class="chapter-body">
                 <p>Esse é um capítulo duro e desconfortável. Ele mostra abuso, vingança e manipulação. Gênesis não embeleza a brutalidade humana.</p>
@@ -1024,7 +1132,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 35 betel purificação renovação aliança luto">
               <summary><span>Capítulo 35</span><span class="chapter-label">Retorno a Betel</span></summary>
               <div class="chapter-body">
                 <p>Jacó é chamado a retornar a Betel, lugar de encontro com Deus. O capítulo une purificação, memória espiritual e renovação da aliança.</p>
@@ -1033,7 +1141,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 36 esaú descendência edom">
               <summary><span>Capítulo 36</span><span class="chapter-label">Descendência de Esaú</span></summary>
               <div class="chapter-body">
                 <p>Mais uma genealogia, agora ligada a Esaú. O capítulo mostra que a narrativa bíblica reconhece também os ramos paralelos da história.</p>
@@ -1042,7 +1150,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 37 josé vendido sonhos inveja irmãos">
               <summary><span>Capítulo 37</span><span class="chapter-label">José é vendido</span></summary>
               <div class="chapter-body">
                 <p>A história de José começa com favoritismo, inveja e traição. O sonho que sugere grandeza futura provoca reação violenta dos irmãos.</p>
@@ -1051,7 +1159,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 38 judá tamar graça linhagem">
               <summary><span>Capítulo 38</span><span class="chapter-label">Judá e Tamar</span></summary>
               <div class="chapter-body">
                 <p>Esse capítulo interrompe a linha de José para expor a história de Judá. Ele mostra desordem moral, responsabilidade negligenciada e surpreendente reversão.</p>
@@ -1060,7 +1168,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 39 josé potifar integridade tentação prisão">
               <summary><span>Capítulo 39</span><span class="chapter-label">José na casa de Potifar</span></summary>
               <div class="chapter-body">
                 <p>José demonstra integridade em ambiente vulnerável. Sua recusa diante da tentação revela temor de Deus acima de conveniência ou impulso.</p>
@@ -1069,7 +1177,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 40 josé prisão dons espera silêncio">
               <summary><span>Capítulo 40</span><span class="chapter-label">José na prisão</span></summary>
               <div class="chapter-body">
                 <p>Mesmo na prisão, José permanece útil, atento e sensível. Seu dom continua operando num lugar que parecia sem futuro.</p>
@@ -1078,7 +1186,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 41 faraó exaltação sabedoria preparação">
               <summary><span>Capítulo 41</span><span class="chapter-label">José diante de Faraó</span></summary>
               <div class="chapter-body">
                 <p>Em um movimento brusco, José sai da prisão para o centro do poder. Deus usa sua sabedoria para interpretar o momento e preparar o Egito para tempos de crise.</p>
@@ -1087,7 +1195,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 42 irmãos egito culpa fome">
               <summary><span>Capítulo 42</span><span class="chapter-label">Primeira ida dos irmãos ao Egito</span></summary>
               <div class="chapter-body">
                 <p>A fome empurra os irmãos de José para o lugar onde o passado será confrontado. Eles ainda não reconhecem José, mas começam a enfrentar a própria culpa.</p>
@@ -1096,7 +1204,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 43 benjamim retorno judá responsabilidade">
               <summary><span>Capítulo 43</span><span class="chapter-label">Retorno com Benjamim</span></summary>
               <div class="chapter-body">
                 <p>O retorno ao Egito aprofunda a tensão. A presença de Benjamim torna tudo mais sensível, porque reabre feridas relacionadas ao favoritismo do passado.</p>
@@ -1105,7 +1213,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 44 teste final judá caráter reconciliação">
               <summary><span>Capítulo 44</span><span class="chapter-label">O teste final</span></summary>
               <div class="chapter-body">
                 <p>José leva os irmãos a uma situação-limite. O objetivo não é vingança, mas revelação moral. Ele quer saber se eles continuam sendo os mesmos homens que o venderam.</p>
@@ -1114,7 +1222,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 45 josé se revela providência perdão">
               <summary><span>Capítulo 45</span><span class="chapter-label">José se revela</span></summary>
               <div class="chapter-body">
                 <p>Este é um dos momentos mais emocionantes de Gênesis. José finalmente se dá a conhecer e interpreta sua história à luz da providência de Deus.</p>
@@ -1123,7 +1231,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 46 jacó egito mudança promessa">
               <summary><span>Capítulo 46</span><span class="chapter-label">Jacó desce ao Egito</span></summary>
               <div class="chapter-body">
                 <p>A família inteira se move para o Egito. O capítulo traz sensação de transição histórica importante. O lugar de preservação será também, futuramente, lugar de opressão e libertação.</p>
@@ -1132,7 +1240,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 47 estabelecimento egito crise esperança">
               <summary><span>Capítulo 47</span><span class="chapter-label">Estabelecimento no Egito</span></summary>
               <div class="chapter-body">
                 <p>A família se estabelece, e José administra a crise com grande habilidade. O capítulo mostra sabedoria administrativa, discernimento e responsabilidade pública.</p>
@@ -1141,7 +1249,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 48 bênção filhos josé memória">
               <summary><span>Capítulo 48</span><span class="chapter-label">Jacó abençoa os filhos de José</span></summary>
               <div class="chapter-body">
                 <p>O capítulo mostra transferência de bênção e continuidade da história da aliança. Também reaparece a lógica bíblica de reversão de expectativas humanas.</p>
@@ -1150,7 +1258,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 49 bênçãos tribos legado futuro">
               <summary><span>Capítulo 49</span><span class="chapter-label">Bênçãos sobre os filhos</span></summary>
               <div class="chapter-body">
                 <p>Jacó fala profeticamente sobre seus filhos e sobre o futuro das tribos. O capítulo é importante porque conecta a história familiar ao horizonte mais amplo de Israel.</p>
@@ -1159,7 +1267,7 @@
               </div>
             </details>
 
-            <details class="chapter">
+            <details class="chapter" data-search="capítulo 50 morte jacó josé reconciliação esperança">
               <summary><span>Capítulo 50</span><span class="chapter-label">Morte de Jacó e de José</span></summary>
               <div class="chapter-body">
                 <p>O livro termina com luto, reconciliação reafirmada e esperança aberta. José mais uma vez interpreta a história a partir da providência divina e desmonta o medo dos irmãos.</p>
@@ -1171,7 +1279,7 @@
           </div>
         </article>
 
-        <article class="content-card" id="aplicacoes">
+        <article class="content-card" id="aplicacoes" data-search="aplicações identidade culpa espera sofrimento providência vida atual">
           <h2>Aplicações gerais de Gênesis</h2>
           <p>
             Gênesis é profundamente atual. Ele fala ao leitor que busca propósito, luta com culpa, sofre em relações quebradas, vive processos demorados ou tenta entender o silêncio de Deus.
@@ -1196,7 +1304,7 @@
           </div>
         </article>
 
-        <article class="content-card" id="perguntas">
+        <article class="content-card" id="perguntas" data-search="perguntas estudo reflexão deus queda patriarcas josé providência">
           <h2>Perguntas para estudo</h2>
           <div class="qa-list">
             <div class="qa-item">
@@ -1222,16 +1330,16 @@
           </div>
         </article>
 
-        <article class="content-card" id="cristo">
+        <article class="content-card" id="cristo" data-search="cristo conexão restauração descendência promessa redenção">
           <h2>Conexão com Cristo</h2>
           <p>
             Gênesis prepara o leitor para Cristo pela própria lógica do livro. A queda cria necessidade de redenção. A promessa aponta para um futuro em que o mal não vencerá. A linhagem da aliança mostra que Deus conduzirá a história de forma concreta até seu ápice.
           </p>
           <p>
-            O livro ensina desde cedo que a humanidade precisa de restauração que venha de Deus. Essa expectativa atravessa toda a Bíblia e encontra cumprimento pleno apenas mais adiante.
+            O livro também ensina que a humanidade precisa não só de começo, mas de restauração. Desde cedo, o leitor aprende que a história caminha para uma resposta divina mais profunda do que qualquer esforço humano poderia produzir.
           </p>
           <div class="quote-box">
-            Gênesis começa com as origens, mas já abre espaço para a esperança de uma restauração definitiva.
+            Gênesis mostra que a história começa em Deus e também precisa terminar na vitória da sua promessa.
           </div>
         </article>
 
@@ -1241,7 +1349,7 @@
             <strong>Pentateuco</strong>
           </a>
 
-          <a href="#" class="nav-card">
+          <a href="pentateuco-exodo.html" class="nav-card">
             <small>Próximo livro</small>
             <strong>Êxodo</strong>
           </a>
@@ -1255,5 +1363,123 @@
       © 2026 soloteo — Teologia profunda, clara e viva.
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const searchInput = document.getElementById('pageSearch');
+      const searchButton = document.getElementById('searchButton');
+      const clearButton = document.getElementById('clearButton');
+      const searchStatus = document.getElementById('searchStatus');
+      const contentCards = Array.from(document.querySelectorAll('.content-card'));
+      const chapterBlocks = Array.from(document.querySelectorAll('details.chapter'));
+      const tocLinks = Array.from(document.querySelectorAll('#tocLinks a'));
+      const chaptersSection = document.getElementById('capitulos');
+
+      function normalize(text) {
+        return text
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .trim();
+      }
+
+      function clearHighlights() {
+        contentCards.forEach(card => card.classList.remove('is-highlight'));
+        chapterBlocks.forEach(block => block.classList.remove('is-highlight'));
+        tocLinks.forEach(link => link.classList.remove('is-match'));
+      }
+
+      function runSearch() {
+        const query = normalize(searchInput.value);
+        clearHighlights();
+
+        if (query === '') {
+          contentCards.forEach(card => card.classList.remove('is-hidden'));
+          chapterBlocks.forEach(block => {
+            block.classList.remove('is-hidden');
+            if (block.hasAttribute('open')) return;
+          });
+          searchStatus.textContent = 'Mostrando o estudo completo de Gênesis.';
+          return;
+        }
+
+        let visibleSections = 0;
+        let visibleChapters = 0;
+        let firstMatch = null;
+
+        contentCards.forEach(card => {
+          if (card.id === 'capitulos') {
+            card.classList.remove('is-hidden');
+            return;
+          }
+
+          const text = normalize((card.dataset.search || '') + ' ' + card.textContent);
+          const matched = text.includes(query);
+
+          card.classList.toggle('is-hidden', !matched);
+
+          if (matched) {
+            visibleSections += 1;
+            card.classList.add('is-highlight');
+            if (!firstMatch) firstMatch = card;
+            const link = document.querySelector('#tocLinks a[href="#' + card.id + '"]');
+            if (link) link.classList.add('is-match');
+          }
+        });
+
+        chapterBlocks.forEach(block => {
+          const text = normalize((block.dataset.search || '') + ' ' + block.textContent);
+          const matched = text.includes(query);
+
+          block.classList.toggle('is-hidden', !matched);
+
+          if (matched) {
+            visibleChapters += 1;
+            block.classList.add('is-highlight');
+            block.open = true;
+            if (!firstMatch) firstMatch = block;
+            chaptersSection.classList.add('is-highlight');
+            const link = document.querySelector('#tocLinks a[href="#capitulos"]');
+            if (link) link.classList.add('is-match');
+          }
+        });
+
+        if (!firstMatch) {
+          searchStatus.textContent = 'Nenhum trecho encontrado para "' + searchInput.value + '".';
+          return;
+        }
+
+        const totalMatches = visibleSections + visibleChapters;
+        if (totalMatches === 1) {
+          searchStatus.textContent = '1 resultado encontrado para "' + searchInput.value + '".';
+        } else {
+          searchStatus.textContent = totalMatches + ' resultados encontrados para "' + searchInput.value + '".';
+        }
+
+        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function clearSearch() {
+        searchInput.value = '';
+        clearHighlights();
+        contentCards.forEach(card => card.classList.remove('is-hidden'));
+        chapterBlocks.forEach(block => block.classList.remove('is-hidden'));
+        searchStatus.textContent = 'Mostrando o estudo completo de Gênesis.';
+        searchInput.focus();
+      }
+
+      searchButton.addEventListener('click', runSearch);
+      clearButton.addEventListener('click', clearSearch);
+      searchInput.addEventListener('input', runSearch);
+      searchInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          runSearch();
+        }
+      });
+
+      clearSearch();
+    })();
+  </script>
 </body>
 </html>
