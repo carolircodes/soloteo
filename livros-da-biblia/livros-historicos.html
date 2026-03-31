@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Livros Históricos | soloteo</title>
   <meta
     name="description"
-    content="Estudo completo dos Livros Históricos da Bíblia no soloteo: Josué até Ester, com contexto, estrutura, teologia, personagens centrais e aplicações."
+    content="Estudos completos dos Livros Históricos da Bíblia no soloteo: Josué, Juízes, Rute, Samuel, Reis, Crônicas, Esdras, Neemias e Ester."
   />
   <meta
     name="keywords"
-    content="Livros Históricos, Josué, Juízes, Rute, 1 Samuel, 2 Samuel, 1 Reis, 2 Reis, 1 Crônicas, 2 Crônicas, Esdras, Neemias, Ester, estudo bíblico, soloteo"
+    content="Livros Históricos, Josué, Juízes, Rute, 1 Samuel, 2 Samuel, 1 Reis, 2 Reis, 1 Crônicas, 2 Crônicas, Esdras, Neemias, Ester, estudos bíblicos, soloteo"
   />
   <meta name="author" content="soloteo" />
   <meta name="robots" content="index, follow" />
@@ -21,7 +20,7 @@
   <meta property="og:title" content="Livros Históricos | soloteo" />
   <meta
     property="og:description"
-    content="Do ingresso em Canaã ao retorno do exílio: explore os Livros Históricos com profundidade, clareza e aplicação."
+    content="Uma jornada profunda pelos Livros Históricos da Bíblia, com estudos organizados, contexto, estrutura e leitura detalhada."
   />
   <meta property="og:url" content="https://www.soloteo.com.br/livros-da-biblia/livros-historicos.html" />
   <meta property="og:site_name" content="soloteo" />
@@ -30,23 +29,8 @@
   <meta name="twitter:title" content="Livros Históricos | soloteo" />
   <meta
     name="twitter:description"
-    content="Uma leitura organizada e profunda dos Livros Históricos da Bíblia: conquista, juízes, monarquia, exílio e restauração."
+    content="Estudos completos dos Livros Históricos da Bíblia no soloteo."
   />
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"Livros Históricos",
-    "url":"https://www.soloteo.com.br/livros-da-biblia/livros-historicos.html",
-    "description":"Página de estudos dos Livros Históricos no soloteo.",
-    "publisher":{
-      "@type":"Organization",
-      "name":"soloteo",
-      "url":"https://www.soloteo.com.br"
-    }
-  }
-  </script>
 
   <style>
     :root{
@@ -59,7 +43,6 @@
       --wine:#6e2132;
       --wine-2:#8c2f45;
       --gold:#c7a461;
-      --gold-2:#e7d3a0;
       --shadow:0 20px 60px rgba(55,22,18,.09);
       --shadow-soft:0 10px 30px rgba(55,22,18,.06);
       --radius:24px;
@@ -78,17 +61,12 @@
         radial-gradient(circle at top left, rgba(199,164,97,.10), transparent 26%),
         radial-gradient(circle at top right, rgba(110,33,50,.07), transparent 20%),
         linear-gradient(180deg, #fbf8f4 0%, #f4efe8 100%);
-      line-height:1.7;
+      line-height:1.74;
     }
 
     a{
       color:inherit;
       text-decoration:none;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
     }
 
     .container{
@@ -150,10 +128,6 @@
       letter-spacing:.04em;
     }
 
-    .brand-name{
-      display:none;
-    }
-
     .brand-text{
       display:flex;
       flex-direction:column;
@@ -205,14 +179,19 @@
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.16fr .84fr;
+      grid-template-columns:1.08fr .92fr;
       gap:26px;
       align-items:stretch;
     }
 
     .hero-card,
-    .hero-side{
-      background:rgba(255,253,249,.88);
+    .hero-side-card,
+    .search-card,
+    .info-card,
+    .book-card,
+    .phase-card,
+    .cta-box{
+      background:rgba(255,253,249,.92);
       border:1px solid var(--line);
       box-shadow:var(--shadow);
       border-radius:var(--radius-lg);
@@ -233,6 +212,16 @@
         radial-gradient(circle at 18% 15%, rgba(199,164,97,.15), transparent 24%),
         linear-gradient(180deg, rgba(255,255,255,.12), rgba(110,33,50,.02));
       z-index:-1;
+    }
+
+    .hero-side-card{
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      background:
+        radial-gradient(circle at top right, rgba(199,164,97,.14), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,.88), rgba(251,246,239,.96));
     }
 
     .eyebrow{
@@ -258,7 +247,7 @@
     h1{
       margin:0;
       font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(2.7rem, 6vw, 5rem);
+      font-size:clamp(2.7rem, 6vw, 4.7rem);
       line-height:.95;
       letter-spacing:-.04em;
       color:#221714;
@@ -312,67 +301,20 @@
       background:#fff8fa;
     }
 
-    .hero-side{
-      padding:26px;
-      display:flex;
-      flex-direction:column;
-      gap:20px;
-      justify-content:space-between;
-    }
-
-    .hero-side-card{
-      background:linear-gradient(180deg,#fff, var(--paper-2));
-      border:1px solid rgba(199,164,97,.18);
-      border-radius:24px;
-      padding:22px;
-    }
-
     .hero-side-card h2{
-      margin:0 0 10px;
-      font-size:1.08rem;
-      color:#2b1f1a;
+      margin:0 0 12px;
+      font-size:1.25rem;
+      font-family:Georgia, "Times New Roman", serif;
+      color:#251916;
     }
 
     .hero-side-card p{
       margin:0;
       color:var(--muted);
-      font-size:.97rem;
-    }
-
-    .search-box{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) auto auto;
-      gap:10px;
-      margin-top:16px;
-    }
-
-    .search-box input{
-      width:100%;
-      min-width:0;
-      border:1px solid rgba(110,33,50,.12);
-      background:#fff;
-      color:var(--text);
-      border-radius:18px;
-      padding:15px 16px;
-      font:inherit;
-      outline:none;
-      transition:border-color .2s ease, box-shadow .2s ease;
-    }
-
-    .search-box input:focus{
-      border-color:rgba(110,33,50,.3);
-      box-shadow:0 0 0 4px rgba(110,33,50,.06);
-    }
-
-    .search-status{
-      margin-top:12px;
-      font-size:.92rem;
-      color:var(--muted);
-      min-height:22px;
     }
 
     .section{
-      padding:22px 0;
+      padding:20px 0;
     }
 
     .section-header{
@@ -394,159 +336,170 @@
 
     .section-header p{
       margin:0;
-      max-width:640px;
+      max-width:760px;
       color:var(--muted);
+    }
+
+    .search-card{
+      padding:22px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .search-card h2{
+      margin:0 0 12px;
+      font-size:1.18rem;
+      color:#261b17;
+    }
+
+    .search-card p{
+      margin:0 0 16px;
+      color:var(--muted);
+    }
+
+    .search-form{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .search-form input{
+      flex:1 1 320px;
+      min-width:0;
+      padding:15px 18px;
+      border-radius:18px;
+      border:1px solid rgba(86,50,38,.12);
+      background:#fff;
+      color:var(--text);
+      font-size:1rem;
+      outline:none;
+      transition:border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .search-form input:focus{
+      border-color:rgba(110,33,50,.28);
+      box-shadow:0 0 0 4px rgba(110,33,50,.08);
+    }
+
+    .search-form button{
+      border:none;
+    }
+
+    .search-meta{
+      margin-top:12px;
+      font-size:.95rem;
+      color:#7a665d;
     }
 
     .grid{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
       gap:18px;
     }
 
+    .books-grid{
+      grid-template-columns:repeat(2, minmax(0,1fr));
+    }
+
     .book-card{
-      background:rgba(255,253,249,.92);
-      border:1px solid var(--line);
-      border-radius:26px;
-      padding:24px;
+      padding:26px;
       box-shadow:var(--shadow-soft);
       transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-      display:flex;
-      flex-direction:column;
-      min-height:100%;
     }
 
     .book-card:hover{
-      transform:translateY(-5px);
-      box-shadow:var(--shadow);
-      border-color:rgba(199,164,97,.35);
+      transform:translateY(-4px);
+      border-color:rgba(110,33,50,.18);
+      box-shadow:0 18px 36px rgba(55,22,18,.09);
     }
 
-    .book-tag{
+    .book-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:10px;
+      flex-wrap:wrap;
+    }
+
+    .book-badge{
       display:inline-flex;
-      width:max-content;
+      align-items:center;
+      justify-content:center;
       padding:8px 12px;
       border-radius:999px;
-      background:rgba(110,33,50,.08);
+      background:#fff;
+      border:1px solid rgba(86,50,38,.08);
       color:var(--wine);
-      font-size:.78rem;
+      font-size:.82rem;
       font-weight:800;
       letter-spacing:.08em;
       text-transform:uppercase;
-      margin-bottom:14px;
     }
 
     .book-card h3{
-      margin:0 0 10px;
-      font-size:1.34rem;
+      margin:0 0 12px;
       color:#251916;
+      font-size:1.35rem;
       font-family:Georgia, "Times New Roman", serif;
     }
 
     .book-card p{
-      margin:0;
+      margin:0 0 18px;
       color:var(--muted);
-      flex:1;
+    }
+
+    .book-links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
     }
 
     .book-link{
-      margin-top:18px;
-      color:var(--wine);
-      font-weight:800;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 16px;
+      border-radius:999px;
+      font-weight:700;
+      background:linear-gradient(135deg,var(--wine),var(--wine-2));
+      color:#fff;
+      box-shadow:0 12px 22px rgba(110,33,50,.14);
+      transition:transform .18s ease;
     }
 
     .book-link:hover{
-      color:var(--wine-2);
+      transform:translateY(-2px);
     }
 
-    .content-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
+    .phase-grid{
+      grid-template-columns:repeat(3, minmax(0,1fr));
     }
 
-    .info-card,
-    .timeline-card,
-    .cta-box{
-      background:rgba(255,253,249,.9);
-      border:1px solid var(--line);
-      border-radius:28px;
+    .phase-card,
+    .info-card{
+      padding:26px;
       box-shadow:var(--shadow-soft);
     }
 
-    .info-card{
-      padding:28px;
-    }
-
+    .phase-card h3,
     .info-card h3{
-      margin:0 0 14px;
+      margin:0 0 12px;
       color:#251916;
-      font-size:1.28rem;
+      font-size:1.24rem;
       font-family:Georgia, "Times New Roman", serif;
     }
 
+    .phase-card p,
     .info-card p{
       margin:0;
       color:var(--muted);
     }
 
-    .info-card ul{
-      margin:0;
-      padding-left:18px;
-      color:var(--muted);
+    .curiosities-grid{
+      grid-template-columns:repeat(2, minmax(0,1fr));
     }
 
-    .info-card li + li{
-      margin-top:10px;
-    }
-
-    .timeline-card{
-      padding:28px;
-    }
-
-    .timeline-card h3{
-      margin:0 0 18px;
-      color:#251916;
-      font-size:1.34rem;
-      font-family:Georgia, "Times New Roman", serif;
-    }
-
-    .timeline{
-      display:grid;
-      gap:14px;
-    }
-
-    .timeline-item{
-      display:grid;
-      grid-template-columns:120px 1fr;
-      gap:16px;
-      align-items:start;
-      padding:14px 0;
-      border-top:1px solid rgba(86,50,38,.08);
-    }
-
-    .timeline-item:first-child{
-      border-top:none;
-      padding-top:0;
-    }
-
-    .timeline-period{
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:var(--wine);
-    }
-
-    .timeline-body strong{
-      display:block;
-      color:#241916;
-      margin-bottom:5px;
-    }
-
-    .timeline-body p{
-      margin:0;
-      color:var(--muted);
+    .curiosity-card{
+      min-height:100%;
     }
 
     .cta{
@@ -566,44 +519,16 @@
     }
 
     .cta-box h3{
-      margin:0 0 8px;
-      font-size:1.5rem;
+      margin:0 0 10px;
+      color:#251916;
+      font-size:1.45rem;
       font-family:Georgia, "Times New Roman", serif;
-      color:#241916;
     }
 
     .cta-box p{
       margin:0;
       color:var(--muted);
-      max-width:720px;
-    }
-
-    .pill-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:16px;
-    }
-
-    .pill{
-      padding:10px 14px;
-      border-radius:999px;
-      background:#fff;
-      border:1px solid rgba(86,50,38,.08);
-      color:#5b4b44;
-      font-weight:600;
-      font-size:.92rem;
-    }
-
-    .empty-state{
-      display:none;
-      background:rgba(255,253,249,.92);
-      border:1px dashed rgba(110,33,50,.18);
-      color:var(--muted);
-      border-radius:24px;
-      padding:24px;
-      text-align:center;
-      margin-top:18px;
+      max-width:760px;
     }
 
     .footer{
@@ -616,14 +541,25 @@
       text-align:center;
     }
 
+    .hidden-card{
+      display:none !important;
+    }
+
+    mark{
+      background:rgba(199,164,97,.22);
+      color:inherit;
+      padding:0 .15em;
+      border-radius:4px;
+    }
+
     @media (max-width: 1100px){
       .hero-grid,
-      .content-grid{
+      .books-grid,
+      .phase-grid,
+      .overview-grid,
+      .study-grid,
+      .curiosities-grid{
         grid-template-columns:1fr;
-      }
-
-      .grid{
-        grid-template-columns:repeat(2, minmax(0,1fr));
       }
     }
 
@@ -645,44 +581,49 @@
       }
 
       .hero-card,
-      .hero-side,
-      .timeline-card,
+      .hero-side-card,
+      .search-card,
       .info-card,
+      .book-card,
+      .phase-card,
       .cta-box{
         border-radius:24px;
       }
 
-      .hero-card{
-        padding:28px;
-      }
-
-      .hero-side{
-        padding:18px;
-      }
-
-      .grid{
-        grid-template-columns:1fr;
-      }
-
-      .search-box{
-        grid-template-columns:1fr;
-      }
-
-      .timeline-item{
-        grid-template-columns:1fr;
-        gap:8px;
-      }
-
-      .timeline-period{
-        font-size:.76rem;
+      .hero-card,
+      .hero-side-card,
+      .search-card,
+      .info-card,
+      .book-card,
+      .phase-card,
+      .cta-box{
+        padding:22px;
       }
 
       h1{
-        font-size:clamp(2.3rem, 12vw, 3.7rem);
+        font-size:clamp(2.2rem, 12vw, 3.7rem);
       }
 
       .section-header h2{
         font-size:1.7rem;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .search-form{
+        flex-direction:column;
+      }
+
+      .search-form input,
+      .search-form button{
+        width:100%;
       }
     }
   </style>
@@ -709,8 +650,6 @@
         <a href="../index.html">Início</a>
         <a href="../categorias/categorias.html">Categorias</a>
         <a href="../categorias/livros-da-biblia.html" class="active">Livros da Bíblia</a>
-        <a href="../categorias/trilhas-de-estudo.html">Trilhas</a>
-        <a href="../categorias/apologetica.html">Apologética</a>
       </nav>
     </div>
   </header>
@@ -719,51 +658,122 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-card">
-          <div class="eyebrow"><span class="dot"></span> Subcategoria</div>
+          <div class="eyebrow"><span class="dot"></span> Livros da Bíblia</div>
           <h1>Livros Históricos</h1>
 
           <p class="hero-description">
-            Os Livros Históricos narram a caminhada de Israel dentro da história:
-            a entrada na terra prometida, o tempo dos juízes, o surgimento da monarquia,
-            a divisão do reino, a crise do exílio e os primeiros movimentos de restauração.
-            No soloteo, essa seção foi organizada para unir profundidade bíblica,
-            clareza teológica e leitura elegante.
+            Nesta seção, você encontra uma jornada completa pelos Livros Históricos da Bíblia,
+            do tempo da conquista da terra até o exílio, o retorno e a preservação do povo em contexto estrangeiro.
+            Cada livro foi organizado em página própria, com estudo aprofundado, panorama teológico,
+            estrutura maior e leitura capítulo por capítulo.
           </p>
 
           <div class="hero-actions">
             <a href="#livros" class="btn btn-primary">Explorar livros</a>
-            <a href="livros-historicos-josue.html" class="btn btn-secondary">Começar por Josué</a>
+            <a href="#curiosidades" class="btn btn-secondary">Ver curiosidades</a>
           </div>
         </div>
 
-        <aside class="hero-side">
-          <div class="hero-side-card">
-            <h2>O que você vai encontrar</h2>
-            <p>
-              Introdução geral, panorama cronológico, livros organizados em ordem,
-              contexto histórico, foco teológico, personagens centrais e aplicações
-              que mostram como Deus governa a história do seu povo.
-            </p>
-          </div>
-
-          <div class="hero-side-card">
-            <h2>Busca visual</h2>
-            <p>Busque por livro, tema ou palavra-chave dentro desta página.</p>
-
-            <div class="search-box">
-              <input
-                type="text"
-                id="bookSearch"
-                placeholder="Ex.: josué, monarquia, davi, exílio, restauração, ester"
-                aria-label="Buscar nos Livros Históricos"
-              />
-              <button type="button" id="searchButton" class="btn btn-primary">Buscar</button>
-              <button type="button" id="clearButton" class="btn btn-secondary">Limpar</button>
-            </div>
-
-            <div class="search-status" id="searchStatus"></div>
-          </div>
+        <aside class="hero-side-card">
+          <h2>O que você vai encontrar</h2>
+          <p>
+            Introdução geral, panorama cronológico, livros organizados em ordem,
+            contexto histórico, foco teológico, personagens centrais, aplicações
+            e uma seção especial com curiosidades históricas, literárias e arqueológicas
+            que ampliam a leitura dos Livros Históricos.
+          </p>
         </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="search-card">
+          <h2>Buscador da categoria</h2>
+          <p>
+            Digite o nome de um livro, personagem, tema ou palavra-chave. A busca acontece
+            apenas ao apertar Enter ou clicar no botão.
+          </p>
+
+          <form class="search-form" id="searchForm">
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Ex.: Davi, exílio, templo, Ester, Josué..."
+              aria-label="Buscar nos Livros Históricos"
+            />
+            <button type="submit" class="btn btn-primary">Buscar</button>
+          </form>
+
+          <div class="search-meta" id="searchMeta">
+            Mostrando todos os livros desta categoria.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="panorama">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>Panorama cronológico</h2>
+          </div>
+          <p>
+            Os Livros Históricos atravessam fases muito diferentes da história bíblica.
+            Ler essa categoria por blocos ajuda a entender melhor a progressão dos acontecimentos.
+          </p>
+        </div>
+
+        <div class="grid phase-grid">
+          <article class="phase-card">
+            <h3>Posse da Terra</h3>
+            <p>
+              Josué, Juízes, Rute e 1 Samuel mostram o povo entrando na terra,
+              vivendo instabilidades, ciclos de crise e a transição para a monarquia.
+            </p>
+          </article>
+
+          <article class="phase-card">
+            <h3>Monarquia Unida</h3>
+            <p>
+              2 Samuel e 1 Reis apresentam Davi, Salomão, o estabelecimento do reino
+              e o auge ligado a Jerusalém e ao templo.
+            </p>
+          </article>
+
+          <article class="phase-card">
+            <h3>Nação Fragmentada</h3>
+            <p>
+              1 e 2 Reis, junto com 1 e 2 Crônicas em sua releitura teológica,
+              ajudam a compreender a divisão do reino, os reis de Judá e Israel
+              e a crescente deterioração espiritual.
+            </p>
+          </article>
+
+          <article class="phase-card">
+            <h3>Exílio</h3>
+            <p>
+              O colapso de Jerusalém e a dispersão do povo mostram o peso histórico
+              da infidelidade persistente à aliança.
+            </p>
+          </article>
+
+          <article class="phase-card">
+            <h3>Retorno</h3>
+            <p>
+              Esdras e Neemias revelam reconstrução do templo, dos muros e da vida comunitária,
+              com forte ênfase em reforma espiritual.
+            </p>
+          </article>
+
+          <article class="phase-card">
+            <h3>Diáspora</h3>
+            <p>
+              Ester mostra a preservação do povo de Deus em terra estrangeira,
+              em ambiente imperial, por meio de providência e reversão histórica.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -771,267 +781,270 @@
       <div class="container">
         <div class="section-header">
           <div>
-            <h2>Livros desta seção</h2>
+            <h2>Livros da categoria</h2>
           </div>
           <p>
-            Do livro de Josué ao livro de Ester, esta parte da Escritura acompanha
-            a consolidação, a crise e a preservação do povo de Deus ao longo dos séculos.
+            Aqui estão todos os livros históricos organizados em ordem, já prontos para navegação.
           </p>
         </div>
 
-        <div class="grid" id="booksGrid">
-          <article class="book-card" data-title="Josué" data-keywords="josué conquista canaã canaan posse da terra promessa herança aliança liderança fidelidade">
-            <span class="book-tag">Livro 1</span>
+        <div class="grid books-grid" id="booksGrid">
+
+          <article class="book-card searchable-card" data-search="josué joshua conquista terra canaã posse terra liderança herança">
+            <div class="book-top">
+              <span class="book-badge">Posse da Terra</span>
+            </div>
             <h3>Josué</h3>
             <p>
-              A entrada na terra prometida, a distribuição da herança e a convocação à fidelidade
-              ao Deus que cumpre o que promete.
+              Entrada na terra prometida, conquistas, distribuição da herança e renovação da aliança.
             </p>
-            <a class="book-link" href="livros-historicos-josue.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-josue.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="Juízes" data-keywords="juízes juizes apostasia ciclos opressão libertação desordem pecado liderança crise israel">
-            <span class="book-tag">Livro 2</span>
+          <article class="book-card searchable-card" data-search="juízes juizes judges ciclos apostasia opressão livramento débora gideão sansão">
+            <div class="book-top">
+              <span class="book-badge">Posse da Terra</span>
+            </div>
             <h3>Juízes</h3>
             <p>
-              O retrato de uma nação espiritualmente instável, presa a ciclos de rebelião,
-              disciplina, clamor e livramento.
+              O ciclo repetido de pecado, opressão, clamor e livramento, revelando a instabilidade espiritual de Israel.
             </p>
-            <a class="book-link" href="livros-historicos-juizes.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-juizes.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="Rute" data-keywords="rute redenção graça boaz noemi fidelidade linhagem davídica providência">
-            <span class="book-tag">Livro 3</span>
+          <article class="book-card searchable-card" data-search="rute ruth boaz noemi redenção providência linhagem davi">
+            <div class="book-top">
+              <span class="book-badge">Posse da Terra</span>
+            </div>
             <h3>Rute</h3>
             <p>
-              Em meio ao caos dos dias dos juízes, surge uma narrativa de fidelidade,
-              redenção e providência silenciosa.
+              Uma história de lealdade, providência, redenção e esperança em meio ao tempo dos juízes.
             </p>
-            <a class="book-link" href="livros-historicos-rute.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-rute.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="1 Samuel" data-keywords="1 samuel primeiro samuel saul samuel unção transição monarquia davi reino">
-            <span class="book-tag">Livro 4</span>
+          <article class="book-card searchable-card" data-search="1 samuel primeiro samuel samuel saul davi monarquia unção obediencia">
+            <div class="book-top">
+              <span class="book-badge">Transição para a Monarquia</span>
+            </div>
             <h3>1 Samuel</h3>
             <p>
-              A transição do período dos juízes para a monarquia, com Samuel, Saul
-              e o início da ascensão de Davi.
+              A transição do período dos juízes para a monarquia, com Samuel, Saul e o surgimento de Davi.
             </p>
-            <a class="book-link" href="livros-historicos-ssamueli.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-ssamueli.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="2 Samuel" data-keywords="2 samuel segundo samuel davi reino jerusalém aliança davídica pecado restauração">
-            <span class="book-tag">Livro 5</span>
+          <article class="book-card searchable-card" data-search="2 samuel segundo samuel davi reinado jerusalém aliança davídica absalão bate seba">
+            <div class="book-top">
+              <span class="book-badge">Monarquia Unida</span>
+            </div>
             <h3>2 Samuel</h3>
             <p>
-              O reinado de Davi, suas vitórias, suas quedas e o desenvolvimento
-              da promessa ligada à sua casa.
+              O reinado de Davi, a aliança davídica, a consolidação do reino e as crises internas da casa real.
             </p>
-            <a class="book-link" href="livros-historicos-ssamuelii.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-ssamuelii.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="1 Reis" data-keywords="1 reis primeiro reis salomão templo divisão do reino elias idolatria">
-            <span class="book-tag">Livro 6</span>
+          <article class="book-card searchable-card" data-search="1 reis primeiro reis salomão templo divisão reino elias">
+            <div class="book-top">
+              <span class="book-badge">Monarquia Unida e Divisão</span>
+            </div>
             <h3>1 Reis</h3>
             <p>
-              O esplendor do reinado de Salomão, a construção do templo
-              e a trágica divisão do reino após sua morte.
+              Salomão, o templo, o auge da monarquia e a divisão do reino, com a entrada decisiva da voz profética.
             </p>
-            <a class="book-link" href="livros-historicos-reisi.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-reisi.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="2 Reis" data-keywords="2 reis segundo reis eliseu queda de israel queda de judá exílio juízo profetas">
-            <span class="book-tag">Livro 7</span>
+          <article class="book-card searchable-card" data-search="2 reis segundo reis eliseu queda samaria queda jerusalém exílio assíria babilônia">
+            <div class="book-top">
+              <span class="book-badge">Nação Fragmentada e Exílio</span>
+            </div>
             <h3>2 Reis</h3>
             <p>
-              O aprofundamento da decadência espiritual até a queda de Israel e de Judá,
-              culminando no exílio.
+              A continuidade da decadência dos dois reinos, a voz profética, a queda de Samaria e o exílio de Judá.
             </p>
-            <a class="book-link" href="livros-historicos-reisii.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-reisii.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="1 Crônicas" data-keywords="1 crônicas primeiro cronicas genealogias davi culto templo adoração identidade">
-            <span class="book-tag">Livro 8</span>
+          <article class="book-card searchable-card" data-search="1 crônicas primeiro crônicas genealogias davi levitas culto preparação templo">
+            <div class="book-top">
+              <span class="book-badge">Releitura Teológica</span>
+            </div>
             <h3>1 Crônicas</h3>
             <p>
-              Uma releitura histórica com ênfase na identidade do povo, na linhagem
-              e na centralidade do culto ao Senhor.
+              Genealogias, identidade do povo, centralidade de Davi, culto, levitas e preparação do templo.
             </p>
-            <a class="book-link" href="livros-historicos-cronicasi.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-cronicasi.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="2 Crônicas" data-keywords="2 crônicas segundo cronicas templo judá reis reforma exílio esperança">
-            <span class="book-tag">Livro 9</span>
+          <article class="book-card searchable-card" data-search="2 crônicas segundo crônicas salomão templo judá ezequias josias exílio reformas">
+            <div class="book-top">
+              <span class="book-badge">Releitura Teológica</span>
+            </div>
             <h3>2 Crônicas</h3>
             <p>
-              A história de Judá vista sob perspectiva espiritual, com destaque
-              para o templo, as reformas e as consequências da infidelidade.
+              Salomão, o templo, os reis de Judá, grandes reformas espirituais e o caminho até o exílio.
             </p>
-            <a class="book-link" href="livros-historicos-cronicasii.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-cronicasii.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="Esdras" data-keywords="esdras retorno reconstrução templo restauração lei pós-exílio zorobabel">
-            <span class="book-tag">Livro 10</span>
+          <article class="book-card searchable-card" data-search="esdras ezra retorno exílio reconstrução templo lei reforma espiritual">
+            <div class="book-top">
+              <span class="book-badge">Retorno</span>
+            </div>
             <h3>Esdras</h3>
             <p>
-              O retorno do exílio, a reconstrução do templo e a retomada da vida
-              espiritual por meio da Palavra e da aliança.
+              O retorno do exílio, a reconstrução do templo e a reorganização espiritual do povo pela palavra.
             </p>
-            <a class="book-link" href="livros-historicos-esdras.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-esdras.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="Neemias" data-keywords="neemias muros reconstrução liderança reforma renovação jerusalém pós-exílio">
-            <span class="book-tag">Livro 11</span>
+          <article class="book-card searchable-card" data-search="neemias nehemiah muros jerusalém liderança oração reforma aliança">
+            <div class="book-top">
+              <span class="book-badge">Retorno</span>
+            </div>
             <h3>Neemias</h3>
             <p>
-              A reconstrução dos muros de Jerusalém, a liderança firme e a renovação
-              de uma comunidade fragilizada.
+              A reconstrução dos muros, a reorganização da cidade e a renovação da aliança sob liderança fiel.
             </p>
-            <a class="book-link" href="livros-historicos-neemias.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-neemias.html">Abrir estudo</a>
+            </div>
           </article>
 
-          <article class="book-card" data-title="Ester" data-keywords="ester mardoqueu persia diáspora providência livramento soberania coragem">
-            <span class="book-tag">Livro 12</span>
+          <article class="book-card searchable-card" data-search="ester esther mardoqueu hamã providência purim diáspora persia preservação">
+            <div class="book-top">
+              <span class="book-badge">Diáspora</span>
+            </div>
             <h3>Ester</h3>
             <p>
-              A preservação do povo de Deus na diáspora, revelando a providência divina
-              mesmo quando ela não aparece de forma explícita.
+              A preservação do povo de Deus em contexto persa, por meio de providência, coragem e reversão histórica.
             </p>
-            <a class="book-link" href="livros-historicos-ester.html">Ler estudo completo →</a>
+            <div class="book-links">
+              <a class="book-link" href="livros-historicos-ester.html">Abrir estudo</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="curiosidades">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>Curiosidades históricas, arqueológicas e fatos interessantes</h2>
+          </div>
+          <p>
+            Detalhes do contexto bíblico e histórico que enriquecem a leitura dos Livros Históricos
+            e ajudam a perceber como essa parte da Escritura conversa com memória, geografia,
+            registros antigos, diáspora e cultura do mundo bíblico.
+          </p>
+        </div>
+
+        <div class="grid curiosities-grid">
+          <article class="info-card curiosity-card">
+            <h3>Ebenézer significa “pedra de ajuda”</h3>
+            <p>
+              Em 1 Samuel 7, Samuel ergue uma pedra memorial e a chama de <strong>Ebenézer</strong>,
+              expressão ligada à ideia de que o Senhor havia ajudado Israel até aquele ponto.
+              Mais do que um nome bonito, isso mostra um padrão bíblico importante:
+              a fé de Israel também era sustentada por marcos de memória.
+              A história não deveria ser apenas vivida — deveria ser lembrada corretamente.
+            </p>
+          </article>
+
+          <article class="info-card curiosity-card">
+            <h3>Siló desaparece da narrativa histórica</h3>
+            <p>
+              Durante o período mais antigo da história de Israel, <strong>Siló</strong> ocupou lugar de destaque
+              como centro religioso. Depois, porém, ela deixa de aparecer com relevância na sequência
+              dos livros históricos. Isso ajuda o leitor a perceber que a história do culto em Israel
+              também passou por deslocamentos, crises e mudanças de centralidade.
+            </p>
+          </article>
+
+          <article class="info-card curiosity-card">
+            <h3>Baal-Zebube tinha contexto próprio dentro do mundo pagão</h3>
+            <p>
+              Em 2 Reis 1, aparece <strong>Baal-Zebube</strong>, ligado à cidade de <strong>Ecrom</strong>.
+              Isso mostra que o universo religioso pagão do Antigo Testamento não era uniforme.
+              Havia expressões locais, centros específicos de culto e associações próprias de poder,
+              mistério e suposta resposta espiritual.
+            </p>
+          </article>
+
+          <article class="info-card curiosity-card">
+            <h3>Os livros de Reis mencionam registros históricos antigos</h3>
+            <p>
+              Um detalhe muito interessante é que 1 e 2 Reis frequentemente mencionam
+              registros como os livros das crônicas dos reis de Israel e de Judá.
+              Isso reforça que a narrativa bíblica também dialoga com memória documental
+              e tradição histórica, sem perder seu caráter teológico.
+            </p>
+          </article>
+
+          <article class="info-card curiosity-card">
+            <h3>A diáspora também faz parte dos Livros Históricos</h3>
+            <p>
+              Nem toda a história do povo acontece apenas em Jerusalém ou na terra de Judá.
+              <strong>Ester</strong> mostra com clareza a realidade da <strong>diáspora</strong>,
+              isto é, do povo vivendo em ambiente estrangeiro, sob império, mas ainda preservado
+              pela fidelidade de Deus.
+            </p>
+          </article>
+
+          <article class="info-card curiosity-card">
+            <h3>Os Livros Históricos atravessam fases bem diferentes</h3>
+            <p>
+              Essa categoria não é um bloco simples e uniforme. Ela passa por conquista da terra,
+              juízes, monarquia unida, reino dividido, exílio, retorno e diáspora.
+              Entender essas fases evita leituras confusas e ajuda a localizar melhor cada livro
+              dentro do grande movimento da história bíblica.
+            </p>
+          </article>
+
+          <article class="info-card curiosity-card">
+            <h3>O pós-exílio não foi só reconstrução de prédios</h3>
+            <p>
+              Em Esdras e Neemias, a reconstrução do templo e dos muros é importante,
+              mas a grande questão continua sendo a reorganização espiritual da comunidade.
+              O problema do povo nunca era apenas falta de estrutura — era também necessidade
+              de renovação do coração diante da palavra de Deus.
+            </p>
+          </article>
+
+          <article class="info-card curiosity-card">
+            <h3>Os Livros Históricos são riquíssimos para leitura histórica e arqueológica</h3>
+            <p>
+              Essa parte da Bíblia é especialmente forte em cidades, reinos, guerras, muralhas,
+              rotas, centros de culto, reis, arquivos, decretos e deslocamentos populacionais.
+              Por isso, ela dialoga muito bem com interesse histórico, geográfico e arqueológico,
+              sem deixar de ser, ao mesmo tempo, profundamente teológica.
+            </p>
           </article>
         </div>
-
-        <div class="empty-state" id="emptyState">
-          Nenhum resultado encontrado. Tente buscar por outro livro, tema ou palavra-chave.
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container content-grid">
-        <article class="info-card">
-          <h3>Por que os Livros Históricos são tão importantes?</h3>
-          <p>
-            Porque eles mostram que a revelação bíblica não acontece em abstrato.
-            Deus se revela dentro da história, em contextos políticos, familiares,
-            militares, espirituais e nacionais. Aqui vemos promessas sendo cumpridas,
-            alianças sendo lembradas, líderes sendo levantados, reinos caindo
-            e a fidelidade divina permanecendo de pé.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Temas centrais desta seção</h3>
-          <ul>
-            <li>O cumprimento das promessas de Deus na história</li>
-            <li>A tensão entre fidelidade e apostasia</li>
-            <li>A importância da liderança espiritual e moral</li>
-            <li>O peso das escolhas nacionais e pessoais</li>
-            <li>O juízo divino como resposta à rebelião persistente</li>
-            <li>A preservação do povo da aliança mesmo em meio à crise</li>
-            <li>A esperança de restauração depois do colapso</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="timeline-card">
-          <h3>Panorama cronológico</h3>
-
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-period">1406–1050 a.C.</div>
-              <div class="timeline-body">
-                <strong>Posse da terra</strong>
-                <p>
-                  O período de Josué, Juízes, Rute e parte de 1 Samuel registra a entrada em Canaã,
-                  a distribuição da terra e a instabilidade espiritual da nação recém-estabelecida.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">1050–930 a.C.</div>
-              <div class="timeline-body">
-                <strong>Monarquia unida</strong>
-                <p>
-                  Com Saul, Davi e Salomão, Israel alcança centralização política, expansão territorial
-                  e grande relevância histórica, mas também revela profundas tensões espirituais.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">930–586 a.C.</div>
-              <div class="timeline-body">
-                <strong>Reino dividido e decadência</strong>
-                <p>
-                  Após a divisão entre Israel e Judá, os livros de Reis e Crônicas expõem
-                  a deterioração progressiva da nação, os alertas proféticos e a aproximação do juízo.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">586–538 a.C.</div>
-              <div class="timeline-body">
-                <strong>Exílio</strong>
-                <p>
-                  A queda de Jerusalém e o cativeiro babilônico marcam o colapso institucional do reino,
-                  sem, contudo, anular a aliança e a soberania de Deus.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">538–6 a.C.</div>
-              <div class="timeline-body">
-                <strong>Retorno e diáspora</strong>
-                <p>
-                  Esdras, Neemias e Ester revelam dois movimentos paralelos: o retorno de parte do povo
-                  à terra e a preservação de muitos judeus espalhados fora dela.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="pill-row">
-            <span class="pill">Conquista</span>
-            <span class="pill">Juízes</span>
-            <span class="pill">Monarquia</span>
-            <span class="pill">Reino dividido</span>
-            <span class="pill">Exílio</span>
-            <span class="pill">Restauração</span>
-            <span class="pill">Diáspora</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container content-grid">
-        <article class="info-card">
-          <h3>Como ler essa seção com profundidade</h3>
-          <p>
-            A melhor forma de estudar os Livros Históricos é observar, ao mesmo tempo,
-            a narrativa e a teologia. Não se trata apenas de perguntar o que aconteceu,
-            mas por que aconteceu, o que isso revela sobre Deus e o que expõe sobre o coração humano.
-            A história de Israel é também uma pedagogia espiritual.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Leituras que atravessam todos os livros</h3>
-          <ul>
-            <li>Deus governa mesmo quando o cenário parece caótico</li>
-            <li>Vitória externa não substitui fidelidade interna</li>
-            <li>Instituições podem se corromper quando o coração se afasta do Senhor</li>
-            <li>O juízo de Deus é sério, mas nunca é sua última palavra</li>
-            <li>A graça preserva uma história que merecia ter terminado em ruína</li>
-          </ul>
-        </article>
       </div>
     </section>
 
@@ -1039,15 +1052,15 @@
       <div class="container">
         <div class="cta-box">
           <div>
-            <h3>Comece por Josué</h3>
+            <h3>Categoria concluída com mais profundidade</h3>
             <p>
-              Josué é uma excelente porta de entrada para esta seção porque marca a passagem
-              do deserto para a terra, da promessa para a posse, e inaugura uma nova etapa
-              da história de Israel. A partir dele, o fluxo dos Livros Históricos ganha forma.
+              Agora sua página principal dos Livros Históricos já fica pronta para apresentar
+              todos os estudos, organizar a navegação e ainda enriquecer a leitura com contexto,
+              curiosidades e fatos relevantes.
             </p>
           </div>
 
-          <a href="livros-historicos-josue.html" class="btn btn-primary">Abrir estudo de Josué</a>
+          <a href="../categorias/livros-da-biblia.html" class="btn btn-primary">Voltar aos livros da Bíblia</a>
         </div>
       </div>
     </section>
@@ -1063,80 +1076,98 @@
 
   <script>
     (function () {
-      const searchInput = document.getElementById('bookSearch');
-      const searchButton = document.getElementById('searchButton');
-      const clearButton = document.getElementById('clearButton');
-      const cards = Array.from(document.querySelectorAll('.book-card'));
-      const status = document.getElementById('searchStatus');
-      const emptyState = document.getElementById('emptyState');
+      const searchForm = document.getElementById('searchForm');
+      const searchInput = document.getElementById('searchInput');
+      const searchMeta = document.getElementById('searchMeta');
+      const cards = Array.from(document.querySelectorAll('.searchable-card'));
 
       function normalize(text) {
-        return (text || '')
+        return text
           .toLowerCase()
           .normalize('NFD')
           .replace(/[\u0300-\u036f]/g, '')
           .trim();
       }
 
-      function updateSearch() {
-        const term = normalize(searchInput.value);
+      function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      }
+
+      function removeHighlights(element) {
+        const marks = element.querySelectorAll('mark');
+        marks.forEach((mark) => {
+          const parent = mark.parentNode;
+          parent.replaceChild(document.createTextNode(mark.textContent), mark);
+          parent.normalize();
+        });
+      }
+
+      function highlightText(element, query) {
+        if (!query) return;
+
+        const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (node.parentNode && node.parentNode.tagName !== 'MARK' && node.textContent.trim()) {
+            textNodes.push(node);
+          }
+        }
+
+        textNodes.forEach((node) => {
+          const original = node.textContent;
+          const normalizedOriginal = normalize(original);
+          const normalizedQuery = normalize(query);
+
+          const index = normalizedOriginal.indexOf(normalizedQuery);
+          if (index === -1) return;
+
+          const regex = new RegExp('(' + escapeRegExp(query) + ')', 'ig');
+          if (!regex.test(original)) return;
+
+          const span = document.createElement('span');
+          span.innerHTML = original.replace(regex, '<mark>$1</mark>');
+          node.parentNode.replaceChild(span, node);
+        });
+      }
+
+      function runSearch() {
+        const query = normalize(searchInput.value);
         let visibleCount = 0;
 
-        cards.forEach(card => {
-          const title = normalize(card.dataset.title);
-          const keywords = normalize(card.dataset.keywords);
-          const text = normalize(card.innerText);
+        cards.forEach((card) => {
+          removeHighlights(card);
 
-          const match = !term || title.includes(term) || keywords.includes(term) || text.includes(term);
+          const haystack = normalize(card.dataset.search + ' ' + card.innerText);
+          const matches = !query || haystack.includes(query);
 
-          card.style.display = match ? '' : 'none';
-          if (match) visibleCount++;
+          if (matches) {
+            card.classList.remove('hidden-card');
+            if (query) {
+              highlightText(card, searchInput.value.trim());
+            }
+            visibleCount++;
+          } else {
+            card.classList.add('hidden-card');
+          }
         });
 
-        if (!term) {
-          status.textContent = 'Digite um termo para filtrar os livros desta seção.';
-          emptyState.style.display = 'none';
-          return;
-        }
-
-        if (visibleCount === 0) {
-          status.textContent = 'Nenhum resultado encontrado para: "' + searchInput.value + '".';
-          emptyState.style.display = 'block';
+        if (!query) {
+          searchMeta.textContent = 'Mostrando todos os livros desta categoria.';
+        } else if (visibleCount === 0) {
+          searchMeta.textContent = 'Nenhum resultado encontrado para "' + searchInput.value.trim() + '".';
         } else if (visibleCount === 1) {
-          status.textContent = '1 resultado encontrado para: "' + searchInput.value + '".';
-          emptyState.style.display = 'none';
+          searchMeta.textContent = '1 resultado encontrado para "' + searchInput.value.trim() + '".';
         } else {
-          status.textContent = visibleCount + ' resultados encontrados para: "' + searchInput.value + '".';
-          emptyState.style.display = 'none';
+          searchMeta.textContent = visibleCount + ' resultados encontrados para "' + searchInput.value.trim() + '".';
         }
       }
 
-      function clearSearch() {
-        searchInput.value = '';
-        cards.forEach(card => {
-          card.style.display = '';
-        });
-        status.textContent = 'Digite um termo para filtrar os livros desta seção.';
-        emptyState.style.display = 'none';
-        searchInput.focus();
-      }
-
-      searchButton.addEventListener('click', updateSearch);
-      clearButton.addEventListener('click', clearSearch);
-
-      searchInput.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-          updateSearch();
-        }
+      searchForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        runSearch();
       });
-
-      searchInput.addEventListener('input', function () {
-        if (!searchInput.value.trim()) {
-          clearSearch();
-        }
-      });
-
-      status.textContent = 'Digite um termo para filtrar os livros desta seção.';
     })();
   </script>
 </body>
