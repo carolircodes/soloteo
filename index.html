@@ -47,8 +47,45 @@
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 148px;
+    }
+
+    :root {
+      --header-height: 92px;
+      --floating-search-top: 88px;
+    }
+
+    body {
+      padding-bottom: env(safe-area-inset-bottom, 0);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid rgba(200, 163, 95, 0.45);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -56px;
+      z-index: 100000;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: #ffffff;
+      color: var(--wine);
+      border: 1px solid rgba(107,17,38,0.12);
+      box-shadow: 0 12px 28px rgba(73, 21, 35, 0.14);
+      font-weight: 800;
+      transition: top 0.25s ease;
+    }
+
+    .skip-link:focus {
+      top: 16px;
     }
 
     body {
@@ -1038,6 +1075,78 @@
       50% { transform: scale(1.08); opacity: 1; }
     }
 
+
+    .header-inner,
+    .hero-grid,
+    .premium-banner,
+    .footer-bottom {
+      min-width: 0;
+    }
+
+    .hero-copy,
+    .hero-subtitle,
+    .section-heading,
+    .section-card,
+    .library-card,
+    .trail-card,
+    .footer-col,
+    .footer-brand {
+      min-width: 0;
+    }
+
+    .trail-row {
+      scroll-snap-type: x proximity;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 14px;
+    }
+
+    .trail-card {
+      scroll-snap-align: start;
+    }
+
+    .hero-feature-card,
+    .section-card,
+    .library-card,
+    .trail-card,
+    .floating-search-bar,
+    .search-results,
+    .premium-banner,
+    .mobile-menu-panel {
+      overflow-wrap: break-word;
+    }
+
+    .hero-feature-card {
+      max-width: 290px;
+    }
+
+    .section-card,
+    .library-card {
+      height: 100%;
+    }
+
+    .floating-search {
+      margin-bottom: 6px;
+    }
+
+    .floating-search-bar {
+      min-height: 72px;
+    }
+
+    .floating-search-bar input {
+      width: 100%;
+    }
+
+    @media (min-width: 861px) {
+      .desktop-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-copy {
+        padding-right: 20px;
+      }
+    }
+
     @media (max-width: 1180px) {
       .hero-grid {
         grid-template-columns: 1fr;
@@ -1060,6 +1169,11 @@
     }
 
     @media (max-width: 860px) {
+      :root {
+        --header-height: 82px;
+        --floating-search-top: 74px;
+      }
+
       .desktop-nav,
       .header-cta {
         display: none;
@@ -1073,6 +1187,17 @@
         padding: 14px 0;
       }
 
+      .brand-text {
+        font-size: 1rem;
+      }
+
+      .brand-logo-wrap {
+        width: 48px;
+        height: 48px;
+        padding: 6px;
+        border-radius: 16px;
+      }
+
       .hero {
         padding-top: 26px;
       }
@@ -1081,28 +1206,41 @@
         padding: 18px 0 14px;
       }
 
+      .hero-grid {
+        gap: 22px;
+      }
+
       .hero-visual {
-        min-height: 540px;
+        min-height: unset;
         padding: 18px;
+        display: grid;
+        gap: 14px;
+        align-items: stretch;
+      }
+
+      .hero-glow {
+        inset: auto auto auto auto;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        width: 240px;
+        height: 240px;
       }
 
       .hero-feature-card {
-        width: calc(100% - 36px);
+        position: relative;
+        inset: auto;
+        width: 100%;
+        max-width: none;
       }
 
-      .hero-feature-card:nth-child(2) {
-        top: 24px;
-        left: 18px;
-      }
-
-      .hero-feature-card:nth-child(3) {
-        top: 188px;
-        right: 18px;
-      }
-
+      .hero-feature-card:nth-child(2),
+      .hero-feature-card:nth-child(3),
       .hero-feature-card:nth-child(4) {
-        bottom: 18px;
-        left: 18px;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
       }
 
       .section-grid,
@@ -1111,19 +1249,58 @@
         grid-template-columns: 1fr;
       }
 
+      .premium-banner {
+        padding: 26px 22px;
+      }
+
       .trail-card {
         min-width: 84%;
         max-width: 84%;
       }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     @media (max-width: 640px) {
+      :root {
+        --header-height: 78px;
+        --floating-search-top: 68px;
+      }
+
+      .container {
+        width: min(94%, var(--container));
+      }
+
       .section {
         padding: 72px 0;
       }
 
+      .site-header {
+        padding: 12px 0;
+      }
+
+      .header-inner {
+        gap: 12px;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-text {
+        display: none;
+      }
+
+      .menu-toggle {
+        width: 46px;
+        height: 46px;
+      }
+
       .hero-title {
-        font-size: 2.45rem;
+        font-size: clamp(2.05rem, 9vw, 2.7rem);
       }
 
       .hero-subtitle,
@@ -1141,15 +1318,47 @@
       }
 
       .hero-visual {
-        min-height: 560px;
+        padding: 14px;
+        border-radius: 26px;
+      }
+
+      .hero-feature-card {
+        padding: 18px;
+        border-radius: 20px;
       }
 
       .hero-feature-card h3 {
-        font-size: 1.12rem;
+        font-size: 1.08rem;
+      }
+
+      .section-card,
+      .library-card,
+      .trail-card {
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .trail-card {
+        min-width: 88%;
+        max-width: 88%;
+      }
+
+      .premium-banner {
+        padding: 22px 18px;
+        border-radius: 24px;
       }
 
       .mobile-menu-panel {
         width: 100%;
+        padding: calc(92px + env(safe-area-inset-top, 0px)) 20px calc(26px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .mobile-menu-nav a {
+        padding: 15px 16px;
+      }
+
+      .footer {
+        padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
       }
     }
 
@@ -1175,7 +1384,7 @@
     }
 	  .floating-search {
   position: sticky;
-  top: 88px;
+  top: calc(var(--floating-search-top) + env(safe-area-inset-top, 0px));
   z-index: 5500;
   padding: 10px 0 0;
   pointer-events: none;
@@ -1249,6 +1458,8 @@
 
 .search-results {
   display: none;
+  max-height: min(70vh, 560px);
+  overflow: auto;
   margin-top: 12px;
   padding: 14px;
   border-radius: 24px;
@@ -1270,6 +1481,7 @@
 
 .search-result-item {
   display: block;
+  scroll-margin-top: 150px;
   padding: 14px 16px;
   border-radius: 18px;
   background: linear-gradient(180deg, #ffffff 0%, #fffaf7 100%);
@@ -1319,7 +1531,7 @@
 
 @media (max-width: 860px) {
   .floating-search {
-    top: 78px;
+    top: calc(var(--floating-search-top) + env(safe-area-inset-top, 0px));
     padding-top: 8px;
   }
 
@@ -1342,8 +1554,23 @@
 }
 
 @media (max-width: 640px) {
+  .floating-search {
+    padding-top: 6px;
+  }
+
   .floating-search-bar {
     align-items: center;
+    min-height: 64px;
+    gap: 8px;
+    padding: 10px 10px;
+    border-radius: 16px;
+  }
+
+  .floating-search-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    font-size: 0.92rem;
   }
 
   .floating-search-bar input {
@@ -1352,12 +1579,20 @@
 
   .floating-search-clear {
     padding: 8px 10px;
+    min-width: 44px;
+  }
+
+  .search-results {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 18px;
   }
 }
   </style>
 </head>
 
 <body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo</a>
   <div class="page-loader" id="pageLoader" aria-hidden="true">
     <div class="loader-grain"></div>
     <div class="loader-shell">
@@ -1403,7 +1638,7 @@
   </header>
 <div class="floating-search" id="floatingSearch">
   <div class="container">
-    <div class="floating-search-bar">
+    <div class="floating-search-bar" role="search">
       <div class="floating-search-icon">⌕</div>
 
       <input
@@ -1418,7 +1653,7 @@
       </button>
     </div>
 
-    <div class="search-results" id="searchResults"></div>
+    <div class="search-results" id="searchResults" aria-live="polite"></div>
   </div>
 </div>
   <div class="mobile-menu" id="mobileMenu">
@@ -1442,7 +1677,7 @@
     </aside>
   </div>
 
-  <main>
+  <main id="conteudo-principal">
     <section class="hero hero-premium">
       <div class="container hero-grid">
         <div class="hero-copy reveal-left">
@@ -1869,8 +2104,17 @@
     const mobileMenu = document.getElementById("mobileMenu");
     const mobileOverlay = document.getElementById("mobileOverlay");
     const mobileLinks = document.querySelectorAll(".mobile-link");
+    const siteHeader = document.getElementById("siteHeader");
+
+    function syncHeaderMetrics() {
+      if (!siteHeader) return;
+      const headerHeight = siteHeader.offsetHeight || 82;
+      document.documentElement.style.setProperty("--header-height", `${headerHeight}px`);
+      document.documentElement.style.setProperty("--floating-search-top", `${Math.max(headerHeight - 4, 60)}px`);
+    }
 
     function openMenu() {
+      if (!mobileMenu || !menuToggle) return;
       mobileMenu.classList.add("is-open");
       menuToggle.classList.add("is-active");
       menuToggle.setAttribute("aria-expanded", "true");
@@ -1878,6 +2122,7 @@
     }
 
     function closeMenu() {
+      if (!mobileMenu || !menuToggle) return;
       mobileMenu.classList.remove("is-open");
       menuToggle.classList.remove("is-active");
       menuToggle.setAttribute("aria-expanded", "false");
@@ -1885,10 +2130,20 @@
     }
 
     function toggleMenu() {
+      if (!mobileMenu) return;
       if (mobileMenu.classList.contains("is-open")) {
         closeMenu();
       } else {
         openMenu();
+      }
+    }
+
+    function handleHeaderState() {
+      if (!siteHeader) return;
+      if (window.scrollY > 30) {
+        siteHeader.classList.add("header-scrolled");
+      } else {
+        siteHeader.classList.remove("header-scrolled");
       }
     }
 
@@ -1911,6 +2166,9 @@
     });
 
     window.addEventListener("load", function () {
+      syncHeaderMetrics();
+      handleHeaderState();
+
       setTimeout(() => {
         if (pageLoader) {
           pageLoader.classList.add("is-hidden");
@@ -1942,17 +2200,10 @@
       });
     });
 
-    window.addEventListener("scroll", function () {
-      const header = document.getElementById("siteHeader");
-      if (!header) return;
-
-      if (window.scrollY > 30) {
-        header.classList.add("header-scrolled");
-      } else {
-        header.classList.remove("header-scrolled");
-      }
-    });
-	  const searchableItems = [
+    window.addEventListener("resize", syncHeaderMetrics);
+    window.addEventListener("orientationchange", syncHeaderMetrics);
+    window.addEventListener("scroll", handleHeaderState);
+const searchableItems = [
   {
     title: "Teologia Sistemática",
     desc: "Doutrinas organizadas por tema, com profundidade e clareza.",
@@ -2096,7 +2347,7 @@ function renderResults(results) {
   searchResults.innerHTML = `
     <div class="search-results-grid">
       ${results.map(item => `
-        <a href="${item.url}" class="search-result-item">
+        <a href="${item.url}" class="search-result-item" aria-label="${item.title}">
           <span class="search-result-label">${item.label}</span>
           <span class="search-result-title">${item.title}</span>
           <span class="search-result-desc">${item.desc}</span>
@@ -2155,6 +2406,26 @@ document.addEventListener("click", (event) => {
     searchResults.classList.remove("is-visible");
   }
 });
+
+if (siteSearch) {
+  siteSearch.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      const firstResult = searchResults ? searchResults.querySelector(".search-result-item") : null;
+      if (firstResult) {
+        window.location.href = firstResult.getAttribute("href");
+      }
+    }
+  });
+}
+
+document.addEventListener("keydown", (event) => {
+  const isTypingField = ["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName);
+  if ((event.key === "/" || (event.key.toLowerCase() === "k" && (event.ctrlKey || event.metaKey))) && !isTypingField) {
+    event.preventDefault();
+    siteSearch?.focus();
+  }
+});
+
   </script>
 </body>
 </html>
