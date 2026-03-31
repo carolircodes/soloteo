@@ -3,61 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Josué | Livros Históricos | soloteo</title>
-  <meta
-    name="description"
-    content="Estudo completo do livro de Josué no soloteo: contexto, estrutura, teologia, temas centrais e análise detalhada capítulo por capítulo."
-  />
-  <meta
-    name="keywords"
-    content="Josué, livro de Josué, estudo de Josué, Josué capítulo por capítulo, conquista da terra, livros históricos, soloteo"
-  />
+  <title>Josué | soloteo</title>
+  <meta name="description" content="Estudo ultra premium do livro de Josué no soloteo: panorama, linha de leitura, curiosidades históricas e estudo detalhado capítulo por capítulo." />
+  <meta name="keywords" content="Josué, estudo bíblico, livros históricos, Bíblia, soloteo" />
   <meta name="author" content="soloteo" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.soloteo.com.br/livros-da-biblia/livros-historicos-josue.html" />
 
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Josué | Livros Históricos | soloteo" />
-  <meta
-    property="og:description"
-    content="Estudo completo de Josué com contexto, estrutura, teologia e leitura detalhada capítulo por capítulo."
-  />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Josué | soloteo" />
+  <meta property="og:description" content="Estudo completo, elegante e aprofundado do livro de Josué." />
   <meta property="og:url" content="https://www.soloteo.com.br/livros-da-biblia/livros-historicos-josue.html" />
   <meta property="og:site_name" content="soloteo" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Josué | Livros Históricos | soloteo" />
-  <meta
-    name="twitter:description"
-    content="Uma leitura profunda e detalhada do livro de Josué, capítulo por capítulo."
-  />
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Josué",
-    "description":"Estudo completo do livro de Josué no soloteo.",
-    "author":{
-      "@type":"Organization",
-      "name":"soloteo"
-    },
-    "publisher":{
-      "@type":"Organization",
-      "name":"soloteo",
-      "url":"https://www.soloteo.com.br"
-    },
-    "mainEntityOfPage":{
-      "@type":"WebPage",
-      "@id":"https://www.soloteo.com.br/livros-da-biblia/livros-historicos-josue.html"
-    }
-  }
-  </script>
+  <meta name="twitter:title" content="Josué | soloteo" />
+  <meta name="twitter:description" content="Versão ultra premium do estudo de Josué, capítulo por capítulo." />
 
   <style>
     :root{
-      --bg:#f7f3ee;
       --paper:#fffdf9;
       --paper-2:#fbf6ef;
       --text:#201815;
@@ -67,1615 +31,1602 @@
       --wine-2:#8c2f45;
       --gold:#c7a461;
       --shadow:0 20px 60px rgba(55,22,18,.09);
-      --shadow-soft:0 10px 30px rgba(55,22,18,.06);
+      --shadow-soft:0 14px 38px rgba(55,22,18,.07);
       --radius:24px;
-      --radius-lg:32px;
-      --max:1240px;
+      --radius-lg:34px;
+      --max:1260px;
+      --narrow:980px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-
     body{
       margin:0;
       font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color:var(--text);
+      line-height:1.68;
       background:
-        radial-gradient(circle at top left, rgba(199,164,97,.10), transparent 26%),
-        radial-gradient(circle at top right, rgba(110,33,50,.07), transparent 20%),
+        radial-gradient(circle at top left, rgba(199,164,97,.12), transparent 24%),
+        radial-gradient(circle at top right, rgba(110,33,50,.08), transparent 20%),
         linear-gradient(180deg, #fbf8f4 0%, #f4efe8 100%);
-      line-height:1.72;
+      overflow-x:hidden;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    ::selection{background:rgba(110,33,50,.12)}
 
-    .container{
-      width:min(calc(100% - 32px), var(--max));
-      margin:0 auto;
+    .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
+    .narrow{width:min(calc(100% - 32px), var(--narrow));margin:0 auto}
+
+    .skip-link{
+      position:absolute;top:-60px;left:14px;padding:10px 14px;border-radius:12px;background:#fff;color:var(--wine);
+      font-weight:800;z-index:3000;box-shadow:var(--shadow-soft);transition:top .25s ease;
+    }
+    .skip-link:focus{top:12px}
+
+    .progress-bar{
+      position:fixed;top:0;left:0;width:0%;height:3px;z-index:2500;
+      background:linear-gradient(90deg,var(--gold),var(--wine),var(--gold));
+      box-shadow:0 0 24px rgba(110,33,50,.35);transform-origin:left center;
     }
 
     .topbar{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(16px);
-      background:rgba(251,248,244,.90);
-      border-bottom:1px solid rgba(86,50,38,.08);
+      position:sticky;top:0;z-index:1100;backdrop-filter:blur(18px);
+      background:rgba(251,248,244,.9);border-bottom:1px solid rgba(86,50,38,.08);
+      transition:background .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+    .topbar.is-scrolled{
+      background:rgba(255,252,248,.95);
+      box-shadow:0 14px 34px rgba(40,20,18,.06);
+      border-bottom-color:rgba(110,33,50,.08);
     }
 
-    .nav{
-      min-height:86px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
-    }
-
+    .nav-shell{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:14px;min-width:0;flex:1}
     .brand-logo{
-      width:52px;
-      height:52px;
-      object-fit:contain;
-      flex-shrink:0;
-      border-radius:10px;
+      width:54px;height:54px;object-fit:contain;border-radius:12px;flex-shrink:0;transition:transform .35s ease;
     }
+    .brand:hover .brand-logo{transform:translateY(-1px) scale(1.02)}
+    .brand-text{min-width:0;display:flex;flex-direction:column;line-height:1.08}
+    .brand-text strong{font-size:1.18rem;letter-spacing:.12em;text-transform:uppercase;color:#241916;font-weight:800}
+    .brand-text span{margin-top:7px;color:#7a6a60;font-size:.84rem}
 
-    .brand-fallback{
-      width:52px;
-      height:52px;
-      border-radius:14px;
-      display:none;
-      place-items:center;
-      background:linear-gradient(135deg,var(--wine),#3b0f19);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.15);
-      position:relative;
-      overflow:hidden;
-      flex-shrink:0;
+    .menu-toggle{
+      display:none;width:48px;height:48px;border:none;border-radius:16px;background:rgba(255,255,255,.82);
+      box-shadow:var(--shadow-soft);align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;position:relative;z-index:1300;
     }
-
-    .brand-fallback::before{
-      content:"S";
-      color:#f8f0e1;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:1.45rem;
-      font-weight:700;
-      letter-spacing:.04em;
+    .menu-toggle span,.menu-toggle::before,.menu-toggle::after{
+      content:"";position:absolute;width:18px;height:2px;border-radius:999px;background:var(--wine);
+      transition:transform .3s ease, opacity .22s ease;
     }
+    .menu-toggle span{transform:translateY(0)}
+    .menu-toggle::before{transform:translateY(-6px)}
+    .menu-toggle::after{transform:translateY(6px)}
+    .menu-toggle.is-open span{opacity:0}
+    .menu-toggle.is-open::before{transform:rotate(45deg)}
+    .menu-toggle.is-open::after{transform:rotate(-45deg)}
 
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      line-height:1.1;
-      min-width:0;
-    }
-
-    .brand-text strong{
-      font-size:1.18rem;
-      letter-spacing:.08em;
-      color:#2a1d18;
-      font-weight:800;
-      text-transform:uppercase;
-    }
-
-    .brand-text span{
-      font-size:.84rem;
-      color:#7a6a60;
-      margin-top:6px;
-      white-space:nowrap;
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-
+    .nav-links{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}
     .nav-links a{
-      color:var(--muted);
-      font-weight:600;
-      padding:10px 14px;
-      border-radius:999px;
-      transition:.22s ease;
+      color:var(--muted);font-weight:700;padding:11px 15px;border-radius:999px;transition:.24s ease;position:relative;overflow:hidden;
+    }
+    .nav-links a::after{
+      content:"";position:absolute;left:16px;right:16px;bottom:8px;height:2px;border-radius:999px;
+      background:linear-gradient(90deg,var(--gold),var(--wine));
+      transform:scaleX(0);transform-origin:left center;transition:transform .25s ease;
+    }
+    .nav-links a:hover,.nav-links a.active{background:#fff;color:var(--wine);box-shadow:var(--shadow-soft)}
+    .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+
+    .menu-overlay{
+      position:fixed;inset:0;background:rgba(20,10,10,.28);backdrop-filter:blur(2px);opacity:0;visibility:hidden;
+      transition:opacity .25s ease, visibility .25s ease;z-index:1200;
+    }
+    .menu-overlay.active{opacity:1;visibility:visible}
+
+    .hero{padding:56px 0 22px;position:relative}
+    .hero::before,.hero::after{
+      content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(4px);opacity:.7;animation:floatOrb 12s ease-in-out infinite;
+    }
+    .hero::before{
+      width:220px;height:220px;top:20px;left:-60px;background:radial-gradient(circle, rgba(199,164,97,.18), transparent 68%);
+    }
+    .hero::after{
+      width:260px;height:260px;top:80px;right:-90px;background:radial-gradient(circle, rgba(110,33,50,.12), transparent 70%);animation-delay:-6s;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active{
-      background:#fff;
-      color:var(--wine);
-      box-shadow:var(--shadow-soft);
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:24px;align-items:stretch}
+    .hero-card,.hero-side{
+      background:rgba(255,253,249,.9);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden;
     }
-
-    .hero{
-      padding:54px 0 28px;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.12fr .88fr;
-      gap:26px;
-      align-items:stretch;
-    }
-
-    .hero-card,
-    .hero-side,
-    .panel,
-    .part-card,
-    .chapter-card,
-    .overview-card,
-    .study-card,
-    .cta-box{
-      background:rgba(255,253,249,.9);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      border-radius:var(--radius-lg);
-      overflow:hidden;
-    }
-
     .hero-card{
-      padding:42px;
-      position:relative;
-      isolation:isolate;
+      padding:42px;position:relative;isolation:isolate;transform:translateY(18px);opacity:0;
+      animation:heroReveal .9s cubic-bezier(.2,.8,.2,1) forwards;
     }
-
     .hero-card::before{
-      content:"";
-      position:absolute;
-      inset:0;
+      content:"";position:absolute;inset:0;z-index:-2;
       background:
-        radial-gradient(circle at 18% 15%, rgba(199,164,97,.15), transparent 24%),
-        linear-gradient(180deg, rgba(255,255,255,.12), rgba(110,33,50,.02));
-      z-index:-1;
+        radial-gradient(circle at 18% 15%, rgba(199,164,97,.18), transparent 24%),
+        radial-gradient(circle at 82% 78%, rgba(110,33,50,.07), transparent 18%),
+        linear-gradient(180deg, rgba(255,255,255,.1), rgba(110,33,50,.02));
+    }
+    .hero-card::after,.callout::after,.cta-box::after{
+      content:"";position:absolute;inset:-1px;background:linear-gradient(120deg, transparent 24%, rgba(255,255,255,.4) 34%, transparent 44%);
+      transform:translateX(-130%);animation:shineSweep 5.8s ease-in-out infinite 1.4s;z-index:-1;pointer-events:none;
     }
 
     .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.13em;
-      text-transform:uppercase;
-      color:var(--wine);
-      margin-bottom:18px;
+      display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;font-size:.82rem;font-weight:800;letter-spacing:.13em;
+      color:var(--wine);text-transform:uppercase;
     }
-
     .dot{
-      width:9px;
-      height:9px;
-      border-radius:50%;
-      background:linear-gradient(135deg,var(--gold),#f3e2b7);
-      box-shadow:0 0 0 8px rgba(199,164,97,.12);
+      width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#f3e2b7);
+      box-shadow:0 0 0 8px rgba(199,164,97,.12);animation:pulseDot 2.8s ease-in-out infinite;
     }
 
-    h1{
-      margin:0;
+    h1,h2,h3,h4{
       font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(2.7rem, 6vw, 4.9rem);
-      line-height:.95;
-      letter-spacing:-.04em;
       color:#221714;
     }
+    h1{margin:0;font-size:clamp(2.8rem, 6vw, 5.2rem);line-height:.94;letter-spacing:-.04em}
+    h2{margin:0 0 10px;font-size:clamp(1.95rem, 3vw, 2.9rem);letter-spacing:-.02em}
+    h3{margin:0 0 12px;font-size:1.55rem}
+    h4{margin:0 0 10px;font-size:1.05rem}
 
     .hero-description{
-      margin:22px 0 0;
-      color:var(--muted);
-      font-size:1.06rem;
-      max-width:760px;
+      margin:22px 0 0;font-size:1.06rem;max-width:760px;color:var(--muted);
+      transform:translateY(16px);opacity:0;animation:fadeUp .78s ease forwards .16s;
     }
 
-    .hero-actions{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:30px;
+    .hero-kicker{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .mini-pill{
+      display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.72);
+      border:1px solid rgba(110,33,50,.08);color:var(--wine);font-size:.8rem;font-weight:700;
+      transform:translateY(16px);opacity:0;animation:fadeUp .75s ease forwards;
     }
+    .mini-pill:nth-child(1){animation-delay:.22s}
+    .mini-pill:nth-child(2){animation-delay:.29s}
+    .mini-pill:nth-child(3){animation-delay:.36s}
+    .mini-pill:nth-child(4){animation-delay:.43s}
+    .mini-pill:nth-child(5){animation-delay:.50s}
 
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;transform:translateY(16px);opacity:0;animation:fadeUp .82s ease forwards .28s}
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:14px 20px;
-      border-radius:999px;
-      font-weight:800;
-      border:1px solid transparent;
-      transition:.22s ease;
-      cursor:pointer;
-      font-size:.96rem;
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 20px;border-radius:999px;
+      border:1px solid transparent;font-weight:800;transition:transform .24s ease, box-shadow .24s ease, background .24s ease, border-color .24s ease;
+      cursor:pointer;position:relative;overflow:hidden;isolation:isolate;
     }
-
-    .btn-primary{
-      background:linear-gradient(135deg,var(--wine),var(--wine-2));
-      color:#fff;
-      box-shadow:0 16px 30px rgba(110,33,50,.18);
+    .btn::after{
+      content:"";position:absolute;inset:0;background:linear-gradient(120deg, transparent 24%, rgba(255,255,255,.22) 42%, transparent 58%);
+      transform:translateX(-130%);transition:transform .65s ease;z-index:-1;
     }
-
-    .btn-primary:hover{
-      transform:translateY(-2px);
-    }
-
-    .btn-secondary{
-      background:#fff;
-      color:var(--wine);
-      border-color:rgba(110,33,50,.12);
-    }
-
-    .btn-secondary:hover{
-      background:#fff8fa;
-    }
+    .btn:hover::after{transform:translateX(130%)}
+    .btn-primary{color:#fff;background:linear-gradient(135deg,var(--wine),var(--wine-2));box-shadow:0 16px 30px rgba(110,33,50,.18)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(110,33,50,.24)}
+    .btn-secondary{color:var(--wine);background:#fff;border-color:rgba(110,33,50,.12)}
+    .btn-secondary:hover{background:#fff8fa;transform:translateY(-2px)}
 
     .hero-side{
-      padding:26px;
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-      justify-content:space-between;
+      padding:24px;display:flex;flex-direction:column;gap:18px;justify-content:space-between;
+      transform:translateY(18px);opacity:0;animation:heroReveal .9s cubic-bezier(.2,.8,.2,1) forwards .15s;
     }
 
-    .side-box{
+    .hero-side-card,.panel,.timeline-card,.chapter-card,.note-card,.theme-box,.cta-box,.subbox{
       background:linear-gradient(180deg,#fff, var(--paper-2));
       border:1px solid rgba(199,164,97,.18);
-      border-radius:24px;
-      padding:22px;
-    }
-
-    .side-box h2{
-      margin:0 0 10px;
-      font-size:1.08rem;
-      color:#2b1f1a;
-    }
-
-    .side-box p{
-      margin:0;
-      color:var(--muted);
-      font-size:.97rem;
-    }
-
-    .side-list{
-      margin:12px 0 0;
-      padding-left:18px;
-      color:var(--muted);
-    }
-
-    .side-list li + li{
-      margin-top:8px;
-    }
-
-    .section{
-      padding:20px 0;
-    }
-
-    .section-header{
-      display:flex;
-      align-items:end;
-      justify-content:space-between;
-      gap:20px;
-      margin-bottom:20px;
-      flex-wrap:wrap;
-    }
-
-    .section-header h2{
-      margin:0;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:2rem;
-      line-height:1.05;
-      color:#231816;
-    }
-
-    .section-header p{
-      margin:0;
-      max-width:760px;
-      color:var(--muted);
-    }
-
-    .overview-grid,
-    .study-grid{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:18px;
-    }
-
-    .overview-card,
-    .study-card{
-      padding:28px;
+      border-radius:26px;
       box-shadow:var(--shadow-soft);
     }
+    .hero-side-card{padding:22px;transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease}
+    .hero-side-card:hover,.panel:hover,.timeline-card:hover,.chapter-card:hover,.note-card:hover,.theme-box:hover{
+      transform:translateY(-4px);box-shadow:0 22px 46px rgba(55,22,18,.1);border-color:rgba(199,164,97,.30);
+    }
+    .hero-side-card h2{font-size:1rem;color:var(--wine);font-family:inherit;letter-spacing:.02em}
+    .hero-side-card p,.panel p,.panel li,.timeline-card p,.chapter-card p,.note-card p,.theme-box li,.theme-box p{color:var(--muted)}
+    .hero-side-card p{margin:0;font-size:.96rem}
 
-    .overview-card h3,
-    .study-card h3,
-    .panel h3,
-    .part-card h3,
-    .chapter-card h3,
-    .cta-box h3{
-      margin:0 0 14px;
-      color:#251916;
-      font-size:1.35rem;
-      font-family:Georgia, "Times New Roman", serif;
+    .search-box{margin-top:16px;display:flex;flex-wrap:wrap;gap:12px}
+    .search-box input{
+      flex:1 1 220px;min-width:0;padding:15px 16px;border-radius:18px;border:1px solid rgba(86,50,38,.1);outline:none;background:#fff;color:var(--text);
+      transition:border-color .22s ease, box-shadow .22s ease, transform .22s ease;
+    }
+    .search-box input:focus{border-color:rgba(110,33,50,.22);box-shadow:0 0 0 5px rgba(110,33,50,.08);transform:translateY(-1px)}
+    .search-status{margin-top:12px;min-height:22px;color:var(--muted);font-size:.92rem;font-weight:600}
+
+    .section{padding:24px 0 10px}
+    .section-header{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}
+    .section-header p,.section-lead{color:var(--muted)}
+    .section-lead{max-width:820px;margin:0 0 22px}
+
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+    .metric{
+      padding:18px;background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:22px;
+      transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+    .metric:hover{transform:translateY(-3px);border-color:rgba(199,164,97,.28);box-shadow:0 18px 40px rgba(55,22,18,.08)}
+    .metric strong{
+      display:block;font-family:Georgia, "Times New Roman", serif;font-size:1.75rem;color:#241916;line-height:1;margin-bottom:8px;
+    }
+    .metric span{color:var(--muted);font-size:.92rem;font-weight:600}
+
+    .deep-grid,.timeline-grid,.notes-grid,.themes-grid,.chapters-grid,.chapter-grid{
+      display:grid;gap:18px;
+    }
+    .deep-grid{grid-template-columns:1.06fr .94fr}
+    .timeline-grid{grid-template-columns:repeat(4,1fr)}
+    .notes-grid{grid-template-columns:repeat(3,1fr)}
+    .themes-grid{grid-template-columns:repeat(2,1fr)}
+    .chapters-grid{grid-template-columns:1fr}
+    .chapter-grid{grid-template-columns:repeat(2,1fr);margin-top:18px}
+
+    .panel,.timeline-card,.chapter-card,.note-card,.theme-box{padding:24px;transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease}
+
+    .timeline-card .icon,.note-card .icon{
+      width:44px;height:44px;display:grid;place-items:center;border-radius:14px;margin-bottom:14px;background:rgba(110,33,50,.08);color:var(--wine);font-weight:800;
+      transition:transform .3s ease, background .3s ease;
+    }
+    .timeline-card:hover .icon,.note-card:hover .icon{transform:translateY(-2px) scale(1.04);background:rgba(110,33,50,.12)}
+    .timeline-card small,.note-card small{
+      display:block;color:var(--wine);text-transform:uppercase;letter-spacing:.11em;font-weight:800;margin-bottom:10px;
     }
 
-    .overview-card p,
-    .study-card p,
-    .panel p,
-    .part-card p,
-    .chapter-card p,
-    .cta-box p{
-      margin:0;
-      color:var(--muted);
-    }
-
-    .overview-card ul,
-    .study-card ul,
-    .panel ul,
-    .part-card ul,
-    .chapter-card ul{
-      margin:0;
-      padding-left:18px;
-      color:var(--muted);
-    }
-
-    .overview-card li + li,
-    .study-card li + li,
-    .panel li + li,
-    .part-card li + li,
-    .chapter-card li + li{
-      margin-top:10px;
-    }
-
-    .panel{
-      padding:30px;
-      box-shadow:var(--shadow-soft);
-    }
-
-    .panel + .panel{
-      margin-top:18px;
-    }
-
-    .timeline{
-      display:grid;
-      gap:14px;
-    }
-
-    .timeline-item{
-      display:grid;
-      grid-template-columns:128px 1fr;
-      gap:16px;
-      align-items:start;
-      padding:14px 0;
-      border-top:1px solid rgba(86,50,38,.08);
-    }
-
-    .timeline-item:first-child{
-      border-top:none;
-      padding-top:0;
-    }
-
-    .timeline-period{
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:var(--wine);
-    }
-
-    .timeline-body strong{
-      display:block;
-      color:#241916;
-      margin-bottom:5px;
-    }
-
-    .timeline-body p{
-      margin:0;
-      color:var(--muted);
-    }
-
-    .pill-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:18px;
-    }
-
-    .pill{
-      padding:10px 14px;
-      border-radius:999px;
-      background:#fff;
-      border:1px solid rgba(86,50,38,.08);
-      color:#5b4b44;
-      font-weight:600;
-      font-size:.92rem;
-    }
-
-    .parts-wrap,
-    .chapters-wrap{
-      display:grid;
-      gap:18px;
-    }
-
-    .part-card,
     .chapter-card{
-      box-shadow:var(--shadow-soft);
+      position:relative;overflow:hidden;background:rgba(255,253,249,.95);border:1px solid var(--line);transform-style:preserve-3d;
+    }
+    .chapter-card::before{
+      content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,.18), transparent 35%);opacity:0;transition:opacity .28s ease;pointer-events:none;
+    }
+    .chapter-card::after{
+      content:"";position:absolute;right:-34px;bottom:-34px;width:130px;height:130px;background:radial-gradient(circle, rgba(199,164,97,.12), transparent 70%);pointer-events:none;transition:transform .35s ease;
+    }
+    .chapter-card:hover::before{opacity:1}
+    .chapter-card:hover::after{transform:scale(1.08)}
+    .chapter-card.is-hidden{display:none}
+    .chapter-card.is-highlight{
+      border-color:rgba(110,33,50,.34);box-shadow:0 24px 50px rgba(110,33,50,.12);animation:foundPulse 1.2s ease;
     }
 
-    .part-head{
-      padding:24px 26px 0;
+    .chapter-label{
+      display:inline-flex;padding:8px 10px;border-radius:999px;background:rgba(110,33,50,.06);color:var(--wine);font-size:.77rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;
     }
 
-    .part-head span{
-      display:inline-block;
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.11em;
-      text-transform:uppercase;
-      color:var(--wine);
-      margin-bottom:8px;
+    .subbox{padding:18px}
+    .subbox ul,.panel ul,.theme-list{margin:0;padding-left:18px}
+    .insight{
+      margin-top:18px;padding:18px 20px;border-radius:22px;background:linear-gradient(135deg, rgba(110,33,50,.05), rgba(199,164,97,.08));
+      border:1px solid rgba(110,33,50,.08);color:var(--muted);font-weight:600;
+    }
+    .insight strong{color:#241916}
+
+    .toc{
+      display:flex;flex-wrap:wrap;gap:10px;
+      padding:24px;background:linear-gradient(180deg,#fff, var(--paper-2));border:1px solid rgba(199,164,97,.18);border-radius:26px;box-shadow:var(--shadow-soft);
+    }
+    .toc a{
+      display:inline-flex;padding:10px 14px;border-radius:999px;background:rgba(110,33,50,.06);color:var(--wine);font-size:.85rem;font-weight:700;transition:.24s ease;
+    }
+    .toc a:hover{background:#fff;box-shadow:var(--shadow-soft);transform:translateY(-2px)}
+
+    .callout{
+      padding:20px 22px;border-radius:24px;background:linear-gradient(135deg, rgba(110,33,50,.05), rgba(199,164,97,.08));
+      border:1px solid rgba(110,33,50,.08);margin-top:18px;position:relative;overflow:hidden;
     }
 
-    .part-head h3{
-      margin-bottom:10px;
-    }
-
-    .part-body{
-      padding:0 26px 26px;
-    }
-
-    .chapter-toggle{
-      width:100%;
-      border:none;
-      background:transparent;
-      padding:22px 26px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      cursor:pointer;
-      text-align:left;
-      color:inherit;
-    }
-
-    .chapter-toggle:hover{
-      background:rgba(255,255,255,.35);
-    }
-
-    .chapter-title{
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-      min-width:0;
-    }
-
-    .chapter-title span{
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.11em;
-      text-transform:uppercase;
-      color:var(--wine);
-    }
-
-    .chapter-title strong{
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:1.22rem;
-      color:#251916;
-    }
-
-    .chapter-icon{
-      width:38px;
-      height:38px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      background:rgba(110,33,50,.08);
-      color:var(--wine);
-      font-size:1.1rem;
-      font-weight:800;
-      flex-shrink:0;
-      transition:transform .22s ease, background .22s ease;
-    }
-
-    .chapter-card.active .chapter-icon{
-      transform:rotate(45deg);
-      background:rgba(110,33,50,.14);
-    }
-
-    .chapter-content{
-      display:block;
-      padding:0 26px 26px;
-      border-top:1px solid rgba(86,50,38,.08);
-    }
-
-    .chapter-content p + p{
-      margin-top:14px;
-    }
-
-    .chapter-content ul{
-      margin-top:16px;
-    }
-
-    .cta{
-      padding:26px 0 60px;
-    }
-
+    .cta{padding:42px 0 72px}
     .cta-box{
-      padding:30px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-      background:
-        radial-gradient(circle at top right, rgba(199,164,97,.16), transparent 26%),
-        linear-gradient(180deg, rgba(255,255,255,.88), rgba(251,246,239,.94));
+      padding:32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+      background:linear-gradient(135deg,#fff9ef,#fff,#fcf6ec);position:relative;overflow:hidden;
+    }
+    .cta-box h3{margin:0 0 8px;font-size:clamp(1.8rem,3vw,2.5rem)}
+    footer{padding:0 0 42px;color:var(--muted);font-size:.95rem}
+
+    .to-top{
+      position:fixed;right:18px;bottom:18px;width:52px;height:52px;border:none;border-radius:50%;
+      background:linear-gradient(135deg,var(--wine),var(--wine-2));color:#fff;font-size:1.1rem;font-weight:800;cursor:pointer;
+      box-shadow:0 18px 34px rgba(110,33,50,.22);z-index:1400;opacity:0;visibility:hidden;transform:translateY(16px) scale(.95);
+      transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
+    }
+    .to-top.show{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+
+    [data-reveal]{
+      opacity:0;transform:translateY(26px);
+      transition:opacity .72s cubic-bezier(.2,.8,.2,1), transform .72s cubic-bezier(.2,.8,.2,1);
+      transition-delay:var(--delay, 0s);will-change:transform, opacity;
+    }
+    [data-reveal].is-visible{opacity:1;transform:translateY(0)}
+
+    @keyframes heroReveal{
+      from{opacity:0;transform:translateY(18px) scale(.985)}
+      to{opacity:1;transform:translateY(0) scale(1)}
+    }
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(16px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+    @keyframes pulseDot{
+      0%,100%{box-shadow:0 0 0 8px rgba(199,164,97,.12)}
+      50%{box-shadow:0 0 0 12px rgba(199,164,97,.06)}
+    }
+    @keyframes floatOrb{
+      0%,100%{transform:translate3d(0,0,0)}
+      50%{transform:translate3d(0,-16px,0)}
+    }
+    @keyframes shineSweep{
+      0%{transform:translateX(-130%)}
+      55%,100%{transform:translateX(130%)}
+    }
+    @keyframes foundPulse{
+      0%{transform:translateY(-2px) scale(.985)}
+      45%{transform:translateY(-6px) scale(1.01)}
+      100%{transform:translateY(-4px) scale(1)}
     }
 
-    .footer{
-      padding:0 0 42px;
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *, *::before, *::after{animation:none !important;transition:none !important}
+      [data-reveal]{opacity:1 !important;transform:none !important}
+      .progress-bar{display:none}
     }
 
-    .footer-note{
-      color:#7f6d64;
-      font-size:.92rem;
-      text-align:center;
+    @media (max-width:1180px){
+      .hero-grid,.deep-grid{grid-template-columns:1fr}
+      .timeline-grid{grid-template-columns:repeat(2,1fr)}
+      .metrics{grid-template-columns:repeat(2,1fr)}
     }
 
-    @media (max-width: 1100px){
-      .hero-grid,
-      .overview-grid,
-      .study-grid{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 760px){
-      .nav{
-        min-height:auto;
-        padding:14px 0;
-        align-items:flex-start;
-        flex-direction:column;
-      }
-
+    @media (max-width:940px){
+      .notes-grid,.themes-grid,.chapter-grid{grid-template-columns:1fr}
+      .menu-toggle{display:inline-flex}
       .nav-links{
-        width:100%;
-        justify-content:flex-start;
+        position:fixed;top:0;right:-100%;width:min(84vw, 350px);height:100dvh;padding:96px 18px 24px;
+        background:rgba(255,253,249,.98);backdrop-filter:blur(18px);box-shadow:-18px 0 45px rgba(0,0,0,.08);
+        display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:8px;z-index:1250;overflow-y:auto;flex-wrap:nowrap;transition:right .34s ease;
       }
+      .nav-links.active{right:0}
+      .nav-links a{width:100%;font-size:1.04rem;padding:14px 16px;border-radius:16px;background:transparent}
+    }
 
-      .hero{
-        padding-top:28px;
-      }
-
-      .hero-card,
-      .hero-side,
-      .panel,
-      .part-card,
-      .chapter-card,
-      .overview-card,
-      .study-card,
-      .cta-box{
-        border-radius:24px;
-      }
-
-      .hero-card{
-        padding:28px;
-      }
-
-      .hero-side,
-      .panel,
-      .overview-card,
-      .study-card,
-      .cta-box{
-        padding:22px;
-      }
-
-      .part-head{
-        padding:22px 20px 0;
-      }
-
-      .part-body{
-        padding:0 20px 20px;
-      }
-
-      .chapter-toggle{
-        padding:20px 20px;
-      }
-
-      .chapter-content{
-        padding:0 20px 20px;
-      }
-
-      .timeline-item{
-        grid-template-columns:1fr;
-        gap:8px;
-      }
-
-      h1{
-        font-size:clamp(2.2rem, 12vw, 3.7rem);
-      }
-
-      .section-header h2{
-        font-size:1.7rem;
-      }
-
-      .hero-actions{
-        flex-direction:column;
-        align-items:stretch;
-      }
-
-      .btn{
-        width:100%;
-      }
+    @media (max-width:760px){
+      .hero{padding-top:34px}
+      .hero-card{padding:28px}
+      .hero-side{padding:18px}
+      .timeline-grid,.metrics{grid-template-columns:1fr}
+      .section-header{align-items:flex-start;flex-direction:column}
+      .cta-box{padding:24px}
+      .brand-logo{width:46px;height:46px}
+      .brand-text strong{font-size:1rem}
+      .brand-text span{font-size:.78rem}
+      .hero-actions,.search-box{flex-direction:column;align-items:stretch}
+      .btn{width:100%}
+      .container,.narrow{width:min(calc(100% - 22px), var(--max))}
+      .mini-pill{font-size:.76rem}
+      .panel,.timeline-card,.chapter-card,.note-card,.theme-box,.subbox{padding:20px}
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="../index.html" class="brand" aria-label="soloteo">
-        <img
-          src="../assets/img/logo-soloteo.png"
-          alt="Logo soloteo"
-          class="brand-logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
-        />
-        <span class="brand-fallback"></span>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="progress-bar" id="progressBar"></div>
 
-        <span class="brand-text">
-          <strong>soloteo</strong>
-          <span>teologia organizada com beleza e profundidade</span>
-        </span>
+  <header class="topbar" id="topbar">
+    <div class="container nav-shell">
+      <a href="../index.html" class="brand" aria-label="soloteo">
+        <img src="../assets/img/logo-soloteo.png" alt="Logo soloteo" class="brand-logo" />
+        <div class="brand-text">
+          <strong>SOLOTEO</strong>
+          <span>Teologia com profundidade, beleza e clareza</span>
+        </div>
       </a>
 
-      <nav class="nav-links" aria-label="Principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="mobileMenu" aria-label="Principal">
         <a href="../index.html">Início</a>
-        <a href="../categorias/categorias.html">Categorias</a>
         <a href="../categorias/livros-da-biblia.html" class="active">Livros da Bíblia</a>
         <a href="livros-historicos.html">Livros Históricos</a>
+        <a href="../categorias/trilhas-de-estudo.html">Trilhas</a>
+        <a href="../categorias/apologetica.html">Apologética</a>
       </nav>
+
+      <div class="menu-overlay" id="menuOverlay"></div>
     </div>
   </header>
 
-  <main>
+  <main id="conteudo">
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-card">
-          <div class="eyebrow"><span class="dot"></span> Livros Históricos</div>
+          <div class="eyebrow"><span class="dot"></span> Estudo ultra premium</div>
           <h1>Josué</h1>
-
           <p class="hero-description">
-            O livro de Josué registra a passagem do povo de Deus do deserto para a terra prometida.
-            Aqui, a promessa recebida ao longo da história patriarcal e reafirmada por meio de Moisés
-            começa a assumir forma territorial, comunitária e histórica. É um livro de avanço,
-            de memória, de aliança e de responsabilidade. A fidelidade de Deus se destaca de forma
-            luminosa, mas junto dela aparece também a exigência de obediência perseverante.
+            O livro de Josué marca a transição entre a promessa recebida e a terra experimentada. Aqui, a história bíblica sai
+            do deserto e entra em Canaã, mas o foco do livro não é um heroísmo militar vazio. Josué mostra liderança,
+            santidade, obediência, herança, memória e renovação da aliança. Esta página foi montada em padrão premium,
+            com panorama, linha de leitura, curiosidades, temas centrais e um estudo grande, detalhado e capítulo por capítulo.
           </p>
 
+          <div class="hero-kicker">
+            <span class="mini-pill">Transição e coragem</span>
+            <span class="mini-pill">Jordão e memória</span>
+            <span class="mini-pill">Jericó e Ai</span>
+            <span class="mini-pill">Herança e fidelidade</span>
+            <span class="mini-pill">Aliança renovada</span>
+          </div>
+
           <div class="hero-actions">
-            <a href="#estudo" class="btn btn-primary">Ler estudo completo</a>
-            <a href="livros-historicos.html" class="btn btn-secondary">Voltar à categoria</a>
+            <a href="#capitulos" class="btn btn-primary">Ir para o estudo capítulo por capítulo</a>
+            <a href="#curiosidades" class="btn btn-secondary">Ver curiosidades e contexto</a>
           </div>
         </div>
 
         <aside class="hero-side">
-          <div class="side-box">
-            <h2>Visão rápida</h2>
+          <div class="hero-side-card">
+            <h2>O que você vai encontrar</h2>
             <p>
-              Josué inaugura a fase da posse da terra e mostra que a história bíblica não para
-              na promessa: ela avança para a ocupação concreta da herança dada por Deus.
+              Panorama do livro, estrutura narrativa, linha de leitura, curiosidades, temas teológicos e um estudo
+              aprofundado dos 24 capítulos, pronto para o site.
             </p>
           </div>
 
-          <div class="side-box">
-            <h2>Temas centrais</h2>
-            <ul class="side-list">
-              <li>Fidelidade divina</li>
-              <li>Liderança de Josué</li>
-              <li>Travessia e conquista</li>
-              <li>Herança e distribuição</li>
-              <li>Santidade e aliança</li>
-              <li>Memória espiritual</li>
-            </ul>
+          <div class="hero-side-card">
+            <h2>Busca visual</h2>
+            <p>Pesquise por capítulo, tema ou palavra-chave para filtrar rapidamente os estudos abaixo.</p>
+            <div class="search-box">
+              <input type="text" id="chapterSearch" placeholder="Ex.: raabe, jericó, ai, calebe, altar, escolha" aria-label="Buscar em Josué" />
+              <button type="button" id="searchButton" class="btn btn-primary">Buscar</button>
+              <button type="button" id="clearButton" class="btn btn-secondary">Limpar</button>
+            </div>
+            <div class="search-status" id="searchStatus"></div>
           </div>
 
-          <div class="side-box">
-            <h2>Como este estudo foi organizado</h2>
+          <div class="hero-side-card">
+            <h2>Leitura orientada</h2>
             <p>
-              Primeiro, você encontra um panorama teológico do livro. Depois, uma divisão por grandes partes.
-              Em seguida, vem o estudo capítulo por capítulo, para deixar a página realmente completa e sólida.
+              Josué deve ser lido como ponte entre o Pentateuco e os Livros Históricos. O que havia sido prometido a Abraão,
+              reafirmado a Moisés e aguardado no deserto agora entra no terreno concreto da história.
             </p>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="section" id="estudo">
+    <section class="section">
       <div class="container">
-        <div class="section-header">
-          <div>
-            <h2>Panorama do livro</h2>
+        <div class="panel" data-reveal style="--delay:.02s;">
+          <div class="section-header" style="margin-bottom:18px;">
+            <div><h2>Panorama de Josué</h2></div>
+            <p>
+              Um livro de transição, conquista, herança e responsabilidade espiritual.
+            </p>
           </div>
-          <p>
-            Na estrutura cronológica do Antigo Testamento, Josué pertence ao período da posse da terra,
-            sucedendo a etapa do Pentateuco. :contentReference[oaicite:1]{index=1}
+          <p class="section-lead">
+            Josué narra a entrada do povo na terra prometida, a travessia do Jordão, a queda de Jericó, a derrota em Ai por causa
+            do pecado de Acã, a retomada da vitória, as campanhas principais, a distribuição da herança e a renovação final da aliança.
+            Não é apenas um livro de batalhas: é um livro sobre a fidelidade de Deus e sobre a necessidade de o povo viver com coragem,
+            santidade, memória e obediência.
           </p>
-        </div>
-
-        <div class="overview-grid">
-          <article class="overview-card">
-            <h3>Contexto histórico</h3>
-            <p>
-              Depois da morte de Moisés, Israel está diante de uma virada decisiva. O povo já foi libertado
-              do Egito, já recebeu a lei, já atravessou o deserto e agora precisa tomar posse da terra prometida.
-              O livro se move nesse ponto de transição: não mais a formação inicial do povo, mas seu estabelecimento
-              dentro da terra da aliança.
-            </p>
-          </article>
-
-          <article class="overview-card">
-            <h3>Propósito do livro</h3>
-            <p>
-              Josué mostra que Deus cumpre o que promete. Ao mesmo tempo, o livro deixa claro que viver a promessa
-              exige fidelidade, santidade e perseverança. A terra é dom divino, mas a permanência saudável nela
-              exige obediência e consciência da aliança.
-            </p>
-          </article>
-
-          <article class="overview-card">
-            <h3>Importância teológica</h3>
-            <p>
-              O livro conecta promessa, história e responsabilidade. Ele não trata apenas de vitória militar,
-              mas da forma como Deus estabelece o seu povo, organiza a herança, preserva a memória de seus feitos
-              e convoca à fidelidade renovada.
-            </p>
-          </article>
-
-          <article class="overview-card">
-            <h3>Lugar na narrativa bíblica</h3>
-            <p>
-              Josué funciona como ponte entre o Pentateuco e os demais Livros Históricos. O que vinha sendo prometido
-              desde Abraão começa aqui a aparecer de modo concreto, comunitário e nacional.
-            </p>
-          </article>
+          <div class="metrics">
+            <div class="metric" data-reveal style="--delay:.04s;"><strong>24</strong><span>capítulos de transição e herança</span></div>
+            <div class="metric" data-reveal style="--delay:.10s;"><strong>4</strong><span>grandes movimentos narrativos</span></div>
+            <div class="metric" data-reveal style="--delay:.16s;"><strong>1</strong><span>fio condutor: promessa cumprida</span></div>
+            <div class="metric" data-reveal style="--delay:.22s;"><strong>0</strong><span>triunfalismo vazio no fim do livro</span></div>
+          </div>
+          <div class="callout" data-reveal style="--delay:.18s;">
+            <strong>Leitura-chave:</strong> Josué mostra que a promessa divina entra na história concreta, mas só pode ser vivida
+            corretamente quando o povo permanece alinhado com a presença, a Palavra e a santidade de Deus.
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <article class="panel">
-          <h3>Panorama estrutural</h3>
-
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-period">Josué 1–5</div>
-              <div class="timeline-body">
-                <strong>Preparação para entrar na terra</strong>
-                <p>Comissionamento de Josué, envio dos espias, travessia do Jordão e renovação da consagração do povo.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">Josué 6–12</div>
-              <div class="timeline-body">
-                <strong>Campanhas de conquista</strong>
-                <p>Jericó, Ai, alianças problemáticas, confrontos militares e avanço sobre a terra.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">Josué 13–22</div>
-              <div class="timeline-body">
-                <strong>Distribuição da herança</strong>
-                <p>Repartição da terra entre as tribos, cidades especiais e organização da vida nacional.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">Josué 23–24</div>
-              <div class="timeline-body">
-                <strong>Apelos finais de fidelidade</strong>
-                <p>Últimos discursos de Josué, renovação da aliança e chamada à escolha consciente pelo Senhor.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="pill-row">
-            <span class="pill">Travessia</span>
-            <span class="pill">Conquista</span>
-            <span class="pill">Herança</span>
-            <span class="pill">Aliança</span>
-            <span class="pill">Memória</span>
-            <span class="pill">Fidelidade</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2>Estudo por grandes partes</h2>
-          </div>
+      <div class="container deep-grid">
+        <article class="panel" data-reveal style="--delay:.02s;">
+          <h2>Por que Josué é tão decisivo?</h2>
           <p>
-            Antes do detalhamento capítulo por capítulo, esta divisão ajuda a enxergar o fluxo maior do livro.
+            Porque o livro mostra que a promessa divina entra no terreno concreto da história. O que havia sido dito a Abraão,
+            reafirmado aos patriarcas e sustentado durante o êxodo agora começa a tomar forma territorial, política, militar e espiritual.
           </p>
-        </div>
-
-        <div class="parts-wrap">
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 1</span>
-              <h3>Josué 1–5 — O povo se prepara para entrar</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                O livro começa com a sucessão de Moisés e a confirmação de que a missão continua porque Deus continua.
-                Josué recebe força e coragem, mas sempre ligadas à Palavra. A travessia do Jordão e os memoriais erguidos
-                mostram que a entrada na terra não é só movimento geográfico: é ato teológico. Israel entra lembrando,
-                consagrando-se e reconhecendo que o Deus do êxodo é o mesmo Deus da conquista.
-              </p>
-            </div>
-          </article>
-
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 2</span>
-              <h3>Josué 6–12 — A conquista da terra</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                Jericó, Ai e as campanhas seguintes revelam que o centro da conquista não é a força humana,
-                mas a presença de Deus. O livro também mostra que desobediência compromete a caminhada.
-                Não basta avançar; é preciso avançar em santidade. A conquista, portanto, é espiritual e histórica.
-              </p>
-            </div>
-          </article>
-
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 3</span>
-              <h3>Josué 13–22 — A herança é distribuída</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                A promessa não se cumpre apenas com cidades derrotadas. Ela se cumpre quando a terra é repartida,
-                recebida e organizada entre as tribos. O livro mostra que Deus não atua apenas em grandes eventos,
-                mas também na ordem, na justiça comunitária e na forma concreta da vida na aliança.
-              </p>
-            </div>
-          </article>
-
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 4</span>
-              <h3>Josué 23–24 — A aliança precisa ser renovada</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                O final do livro insiste em uma verdade decisiva: entrar na terra não encerra a necessidade de fidelidade.
-                Josué relembra a história do povo, adverte contra a infidelidade e chama Israel a uma decisão consciente.
-                A herança recebida exige compromisso contínuo.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2>Estudo capítulo por capítulo</h2>
-          </div>
-          <p>
-            Aqui o estudo entra em detalhe mesmo, para deixar a página com profundidade real e leitura robusta.
-          </p>
-        </div>
-
-        <div class="chapters-wrap">
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 1</span>
-                <strong>Josué 1 — A sucessão de Moisés e o chamado à coragem</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O primeiro capítulo estabelece o tom de todo o livro. Moisés morreu, mas a história de Deus com seu povo não terminou.
-                Josué é chamado para uma missão enorme: conduzir Israel à terra prometida. A ênfase do texto, porém, não está apenas
-                na grandeza da tarefa, mas no fundamento da liderança. Josué deve ser forte e corajoso porque Deus está com ele
-                e porque a Palavra deve permanecer no centro de sua vida.
-              </p>
-              <p>
-                A coragem aqui não é agressividade, autossuficiência ou impulso emocional. É firmeza produzida pela presença divina
-                e pela obediência. O livro começa, portanto, definindo a verdadeira força espiritual: não a que nasce do ego,
-                mas a que floresce da submissão.
-              </p>
-              <ul>
-                <li>A obra de Deus continua além da vida de grandes líderes.</li>
-                <li>A liderança bíblica depende da presença de Deus e da centralidade da Palavra.</li>
-                <li>Coragem espiritual e obediência caminham juntas.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 2</span>
-                <strong>Josué 2 — Raabe, os espias e a fé que reconhece o agir de Deus</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O envio dos espias a Jericó leva a narrativa a um ponto surpreendente: uma mulher cananeia se torna peça importante
-                dentro da história da redenção. Raabe reconhece que o Deus de Israel está agindo e responde com fé concreta.
-                O texto mostra que a fama dos feitos do Senhor já atravessou fronteiras e que sua ação produz impacto até fora de Israel.
-              </p>
-              <p>
-                Esse capítulo amplia a visão do leitor. A conquista da terra não é uma simples operação territorial; ela está inserida
-                em uma história maior, em que Deus se revela como Senhor da história e desperta respostas inesperadas.
-                Raabe encarna a possibilidade de acolhimento e redenção em meio ao juízo.
-              </p>
-              <ul>
-                <li>A fama dos atos de Deus alcança povos e nações.</li>
-                <li>A fé pode surgir em lugares improváveis.</li>
-                <li>Deus já estava agindo antes de Israel ver a queda de Jericó.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 3</span>
-                <strong>Josué 3 — A travessia do Jordão</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                A travessia do Jordão ecoa claramente a travessia do mar Vermelho. O texto quer mostrar continuidade:
-                o Deus que libertou o povo do Egito é o mesmo Deus que o introduz em Canaã. A arca à frente do povo
-                aponta para a centralidade da presença divina. Israel não entra na terra por puro avanço humano;
-                entra porque Deus vai adiante.
-              </p>
-              <p>
-                O Jordão aberto é sinal de que a promessa não depende da capacidade humana de vencer obstáculos,
-                mas do agir soberano do Senhor. A travessia não é apenas passagem física; é rito de transição histórica.
-              </p>
-              <ul>
-                <li>Deus conduz seu povo em continuidade com sua própria história redentora.</li>
-                <li>A presença de Deus é o centro da caminhada.</li>
-                <li>Grandes transições espirituais exigem fé e consagração.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 4</span>
-                <strong>Josué 4 — Memoriais para as próximas gerações</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Depois da travessia, o povo ergue pedras memoriais. Isso revela algo essencial: a fé bíblica não vive de experiências
-                isoladas e esquecidas. Ela se constrói também por meio da memória cultivada. As pedras serviriam para provocar perguntas
-                futuras e manter viva a narrativa do agir de Deus.
-              </p>
-              <p>
-                O memorial ensina que as novas gerações precisam não só de instruções abstratas, mas de marcos que as conectem
-                à história da fidelidade divina. A experiência precisa virar lembrança compartilhada e ensino transmitido.
-              </p>
-              <ul>
-                <li>A memória espiritual é parte da formação do povo de Deus.</li>
-                <li>Experiências com Deus devem gerar ensino às próximas gerações.</li>
-                <li>A história da salvação precisa ser lembrada, narrada e preservada.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 5</span>
-                <strong>Josué 5 — Consagração antes da batalha</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Antes de grandes campanhas, o povo é circuncidado, celebra a Páscoa e vê cessar o maná. Isso mostra que a terra prometida
-                não pode ser recebida como simples conquista de guerra. Israel precisa reafirmar sua identidade de aliança.
-                O capítulo ensina que a vida do povo de Deus precisa ser ordenada espiritualmente antes de qualquer avanço exterior.
-              </p>
-              <p>
-                O encontro de Josué com o príncipe do exército do Senhor reforça que a pergunta central não é se Deus está do lado
-                de Josué, mas se Josué está alinhado com Deus. A guerra pertence ao Senhor.
-              </p>
-              <ul>
-                <li>Consagração precede avanço saudável.</li>
-                <li>A identidade da aliança deve ser renovada continuamente.</li>
-                <li>Deus não se submete aos projetos humanos; o povo é que deve alinhar-se a ele.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 6</span>
-                <strong>Josué 6 — A queda de Jericó</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Jericó cai de modo que ninguém possa atribuir a vitória à lógica militar comum. O povo marcha, espera e obedece.
-                A narrativa foi construída para deixar claro que o sucesso não nasce de genialidade estratégica humana,
-                mas do agir de Deus. O Senhor entrega a cidade.
-              </p>
-              <p>
-                Também aqui aparece o tema da santidade: Jericó é consagrada ao juízo e ao Senhor. A conquista não é mero triunfo nacional;
-                é ato carregado de seriedade espiritual.
-              </p>
-              <ul>
-                <li>A vitória verdadeira pertence ao Senhor.</li>
-                <li>Obediência aparentemente simples pode ter profundo valor espiritual.</li>
-                <li>O livro impede qualquer leitura de autoglorificação humana.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 7</span>
-                <strong>Josué 7 — O pecado de Acã e a derrota em Ai</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Depois de Jericó, o livro interrompe qualquer triunfalismo. Acã desobedece, e a derrota em Ai expõe
-                que a presença de Deus não acompanha a infidelidade como se nada tivesse acontecido. O pecado oculto
-                de um homem se torna crise comunitária.
-              </p>
-              <p>
-                O capítulo é severo porque quer ensinar a gravidade da santidade. Não existe verdadeira posse da promessa
-                sem reverência diante de Deus. A aliança não comporta indiferença moral.
-              </p>
-              <ul>
-                <li>O pecado oculto tem impacto coletivo.</li>
-                <li>Vitórias anteriores não substituem fidelidade presente.</li>
-                <li>A santidade de Deus não é detalhe secundário na caminhada do povo.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 8</span>
-                <strong>Josué 8 — A restauração e a vitória sobre Ai</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Depois da disciplina vem a restauração. Israel vence Ai, mas agora a narrativa deixa claro que a vitória
-                é recebida em contexto de correção e retorno à ordem. O povo aprende que não pode tratar a aliança
-                com superficialidade.
-              </p>
-              <p>
-                A leitura pública da lei ao final do capítulo reforça que o centro da vida nacional não deve ser a guerra,
-                mas a Palavra. O sucesso da caminhada depende de constante realinhamento com o que Deus disse.
-              </p>
-              <ul>
-                <li>O juízo de Deus visa corrigir e restaurar.</li>
-                <li>Depois da queda, a Palavra precisa voltar ao centro.</li>
-                <li>A restauração verdadeira inclui reverência renovada.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 9</span>
-                <strong>Josué 9 — Os gibeonitas e o erro de não consultar o Senhor</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O engano dos gibeonitas mostra que nem toda crise virá em forma de ataque direto. Às vezes, o problema entra
-                pela aparência de plausibilidade. Israel erra ao agir com base apenas no que vê e sem consultar o Senhor.
-              </p>
-              <p>
-                O capítulo ensina discernimento. A vida da aliança não pode ser conduzida apenas pela observação humana,
-                pela pressa ou pela impressão superficial. É necessário buscar direção divina.
-              </p>
-              <ul>
-                <li>Nem sempre o maior perigo é explícito.</li>
-                <li>Discernimento espiritual exige consulta ao Senhor.</li>
-                <li>Decisões precipitadas podem gerar efeitos duradouros.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 10</span>
-                <strong>Josué 10 — A campanha do sul</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O capítulo 10 apresenta uma série de confrontos decisivos e sublinha que Deus luta por Israel.
-                Mesmo em meio à linguagem de batalha, o foco teológico continua firme: a história não está sendo conduzida
-                apenas por reis e coalizões, mas pelo Senhor da aliança.
-              </p>
-              <p>
-                A campanha do sul mostra que a conquista avança, mas sempre sob o olhar da soberania divina.
-                O povo participa, mas o centro da narrativa continua sendo o agir de Deus.
-              </p>
-              <ul>
-                <li>Deus governa a história e os conflitos humanos.</li>
-                <li>Israel avança não por autonomia, mas por dependência.</li>
-                <li>A soberania divina é uma das chaves do livro.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 11</span>
-                <strong>Josué 11 — A campanha do norte</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                A campanha do norte amplia ainda mais a visão da conquista. A narrativa insiste em mostrar que,
-                apesar da complexidade militar, a força determinante permanece sendo o agir de Deus.
-                O capítulo também enfatiza a perseverança: a promessa se cumpre ao longo de um processo,
-                não apenas em momentos instantâneos.
-              </p>
-              <p>
-                Isso impede leituras triunfalistas simplistas. A fidelidade se manifesta tanto em atos extraordinários
-                quanto na continuidade da caminhada.
-              </p>
-              <ul>
-                <li>A conquista tem processo, não só clímax.</li>
-                <li>Promessa cumprida inclui perseverança histórica.</li>
-                <li>Deus sustenta a caminhada em longo prazo.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 12</span>
-                <strong>Josué 12 — A memória das vitórias</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                A lista de reis vencidos pode parecer apenas informativa, mas tem função teológica. Ela registra,
-                organiza e preserva a memória da ação de Deus. O povo precisa lembrar concretamente do que foi feito.
-              </p>
-              <p>
-                Em Josué, listas e registros não são excesso burocrático: são memória histórica da fidelidade divina.
-                O texto quer impedir o esquecimento.
-              </p>
-              <ul>
-                <li>A memória da vitória fortalece a identidade do povo.</li>
-                <li>Registrar a ação de Deus é parte da espiritualidade bíblica.</li>
-                <li>O livro une história e teologia de forma concreta.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 13</span>
-                <strong>Josué 13 — Ainda resta muita terra</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Este capítulo marca uma mudança importante: a narrativa da conquista dá lugar à distribuição da herança.
-                Ao mesmo tempo, o texto reconhece que ainda há terra a ser ocupada. Isso traz realismo à leitura:
-                promessa cumprida não elimina completamente o trabalho contínuo.
-              </p>
-              <p>
-                A herança começa a ser organizada, e o povo aprende que o dom de Deus também precisa ser administrado
-                com responsabilidade histórica.
-              </p>
-              <ul>
-                <li>Mesmo após grandes avanços, ainda existem tarefas pendentes.</li>
-                <li>A herança divina requer responsabilidade prática.</li>
-                <li>O livro combina promessa e realismo.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 14</span>
-                <strong>Josué 14 — Calebe e a perseverança da fé</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Calebe aparece como testemunho precioso de fidelidade longa. Ele não é lembrado apenas por coragem do passado,
-                mas por perseverança madura. Décadas depois, continua sustentado pela mesma confiança em Deus.
-              </p>
-              <p>
-                O capítulo mostra que fé verdadeira não vive só de momentos heroicos; ela permanece. Calebe encarna estabilidade,
-                constância e desejo santo de possuir plenamente o que Deus prometeu.
-              </p>
-              <ul>
-                <li>A fidelidade de longo prazo é uma grande forma de força espiritual.</li>
-                <li>A promessa de Deus pode ser aguardada com perseverança.</li>
-                <li>Calebe é um modelo de constância e confiança madura.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 15</span>
-                <strong>Josué 15 — A porção de Judá</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                A distribuição da herança à tribo de Judá mostra que a promessa se torna concreta em limites, nomes e territórios.
-                O texto pode parecer técnico, mas na verdade é profundamente teológico: Deus não prometeu algo vago,
-                mas uma herança real e identificável.
-              </p>
-              <p>
-                O capítulo ensina que a fidelidade divina se expressa também nos detalhes. A história da aliança não é abstrata.
-              </p>
-              <ul>
-                <li>Deus cumpre promessas de modo concreto.</li>
-                <li>A história bíblica valoriza detalhes porque eles expressam fidelidade real.</li>
-                <li>Herança recebida precisa ser reconhecida com gratidão.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 16</span>
-                <strong>Josué 16 — A porção dos filhos de José</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Aqui a herança dos descendentes de José começa a ganhar forma, reforçando que a promessa alcança o povo
-                de modo ordenado e comunitário. As divisões de território mostram que a terra deve ser recebida não como
-                posse autônoma egoísta, mas como parte da identidade coletiva da aliança.
-              </p>
-              <ul>
-                <li>A promessa tem dimensão comunitária.</li>
-                <li>Herança e identidade caminham juntas.</li>
-                <li>Deus estabelece o seu povo com ordem.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 17</span>
-                <strong>Josué 17 — Limites, desafios e responsabilidade</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O capítulo 17 mostra que receber herança não elimina totalmente a dificuldade. As tribos ainda precisarão lidar
-                com desafios concretos. Isso impede que a promessa seja lida de forma simplista. Deus entrega, mas o povo também
-                é chamado a agir com coragem e responsabilidade.
-              </p>
-              <ul>
-                <li>Promessa recebida não exclui trabalho e responsabilidade.</li>
-                <li>Desafios posteriores não anulam a fidelidade divina.</li>
-                <li>A herança deve ser assumida com maturidade.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 18</span>
-                <strong>Josué 18 — O centro em Siló e o restante da distribuição</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                A instalação da tenda em Siló tem peso simbólico importante. A distribuição da terra acontece com o centro cultual
-                diante do povo. A vida nacional não deveria ser organizada separadamente da presença de Deus.
-              </p>
-              <p>
-                O capítulo também confronta a demora de algumas tribos em tomar posse do que lhes foi dado.
-                O dom de Deus exige resposta concreta.
-              </p>
-              <ul>
-                <li>O centro da vida do povo deve permanecer ligado ao Senhor.</li>
-                <li>Não basta receber herança; é preciso assumi-la.</li>
-                <li>A espiritualidade bíblica não separa culto e organização comunitária.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 19</span>
-                <strong>Josué 19 — A conclusão da repartição e a porção de Josué</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O capítulo conclui a distribuição da terra e mostra Josué recebendo sua porção ao final.
-                Isso é bonito e teologicamente eloquente. O líder não se coloca acima do povo, nem toma primeiro para si.
-                Ele participa da herança de modo coerente com a missão que exerceu.
-              </p>
-              <ul>
-                <li>A liderança bíblica não é marcada por apropriação egoísta.</li>
-                <li>A distribuição da herança reforça ordem e justiça.</li>
-                <li>Josué aparece como líder coerente com a aliança.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 20</span>
-                <strong>Josué 20 — As cidades de refúgio</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                As cidades de refúgio mostram que a vida na terra prometida deve refletir justiça, ordem e proteção.
-                A promessa divina não se resume à ocupação do espaço; ela inclui organização moral da comunidade.
-              </p>
-              <p>
-                O capítulo revela um Deus que se importa com responsabilidade jurídica e com preservação da vida.
-              </p>
-              <ul>
-                <li>A justiça faz parte da vida da aliança.</li>
-                <li>A terra prometida deve refletir valores do Deus que a concedeu.</li>
-                <li>Ordem social e espiritualidade não estão separadas.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 21</span>
-                <strong>Josué 21 — As cidades dos levitas e a fidelidade do Senhor</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                A distribuição das cidades levíticas reforça a centralidade do culto e da instrução espiritual no meio do povo.
-                Israel não foi chamado apenas a ocupar um território, mas a viver como comunidade moldada pela presença de Deus.
-              </p>
-              <p>
-                O resumo final do capítulo é um dos grandes ápices do livro: nada falhou de tudo o que o Senhor havia prometido.
-                Essa afirmação resume a teologia de Josué com força impressionante.
-              </p>
-              <ul>
-                <li>Deus cumpre plenamente o que promete.</li>
-                <li>A vida espiritual deve estar espalhada no meio do povo, não confinada.</li>
-                <li>A fidelidade divina é o grande eixo do livro.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 22</span>
-                <strong>Josué 22 — O altar, a tensão e a importância da unidade</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O altar erguido pelas tribos do outro lado do Jordão gera uma crise de interpretação.
-                O capítulo é importante porque mostra como a unidade espiritual do povo exigia discernimento,
-                diálogo e zelo pela aliança. Nem toda tensão nasce de rebeldia aberta; às vezes nasce de suspeita
-                e comunicação incompleta.
-              </p>
-              <ul>
-                <li>A unidade do povo de Deus exige verdade e cuidado.</li>
-                <li>Zelo pela aliança precisa caminhar junto com discernimento.</li>
-                <li>Conflitos podem ser evitados quando há busca sincera por entendimento.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 23</span>
-                <strong>Josué 23 — O primeiro discurso final de Josué</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Já no fim da vida, Josué relembra ao povo a fidelidade do Senhor e adverte quanto ao perigo de se misturar
-                espiritualmente com os povos ao redor. O tom é pastoral e solene. O livro deixa claro que a grande ameaça futura
-                não será apenas militar, mas religiosa e moral.
-              </p>
-              <ul>
-                <li>Lembrar a fidelidade de Deus é essencial para permanecer fiel.</li>
-                <li>O futuro espiritual do povo depende de vigilância contínua.</li>
-                <li>A herança recebida não protege automaticamente contra queda moral.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 24</span>
-                <strong>Josué 24 — Renovação da aliança e decisão final</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O capítulo final reúne história, apelo e decisão. Josué reconstrói a memória da ação de Deus desde os patriarcas,
-                mostrando que Israel chegou até ali pela graça. Em seguida, convoca o povo a uma escolha consciente:
-                servir ao Senhor com integridade.
-              </p>
-              <p>
-                A célebre declaração “eu e a minha casa serviremos ao Senhor” aparece nesse contexto de aliança, responsabilidade
-                e memória. O livro termina como começou: diante da Palavra, da história de Deus e da necessidade de resposta fiel.
-              </p>
-              <ul>
-                <li>A fé bíblica exige decisão clara e renovada.</li>
-                <li>Memória da graça sustenta compromisso presente.</li>
-                <li>Josué termina chamando o povo à fidelidade consciente.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container study-grid">
-        <article class="study-card">
-          <h3>Personagens centrais</h3>
           <ul>
-            <li><strong>Josué:</strong> sucessor de Moisés e líder da entrada em Canaã.</li>
-            <li><strong>Raabe:</strong> exemplo de fé inesperada e acolhida na história redentora.</li>
-            <li><strong>Calebe:</strong> retrato de perseverança e confiança duradoura.</li>
-            <li><strong>Acã:</strong> sinal severo da gravidade do pecado oculto.</li>
-            <li><strong>As tribos de Israel:</strong> protagonistas coletivos da promessa e da responsabilidade da aliança.</li>
+            <li>Faz a ponte entre o Pentateuco e os Livros Históricos.</li>
+            <li>Mostra que promessa e obediência caminham juntas.</li>
+            <li>Expõe a necessidade de santidade no meio da conquista.</li>
+            <li>Apresenta a terra como herança, não como conquista autônoma do povo.</li>
+            <li>Encerra com renovação da aliança, não com triunfalismo vazio.</li>
           </ul>
         </article>
 
-        <article class="study-card">
-          <h3>Aplicações práticas</h3>
+        <article class="panel" data-reveal style="--delay:.10s;">
+          <h2>Estrutura em grandes movimentos</h2>
           <ul>
-            <li>Promessas divinas não eliminam a necessidade de obediência.</li>
-            <li>Memória espiritual é indispensável para formar novas gerações.</li>
-            <li>Vitória exterior não compensa desordem interior.</li>
-            <li>Deus se importa com justiça, organização e fidelidade prática.</li>
-            <li>A vida da aliança sempre exige escolha e renovação.</li>
+            <li><strong>Josué 1–5:</strong> preparação, travessia e consagração.</li>
+            <li><strong>Josué 6–12:</strong> campanhas centrais, sul e norte.</li>
+            <li><strong>Josué 13–21:</strong> distribuição da terra e organização da herança.</li>
+            <li><strong>Josué 22–24:</strong> tensões internas, discursos finais e renovação da aliança.</li>
           </ul>
+          <div class="callout" data-reveal style="--delay:.18s;">
+            <strong>Visão de conjunto:</strong> Josué não é apenas sobre entrar na terra, mas sobre aprender a viver dentro da fidelidade de Deus.
+          </div>
         </article>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <article class="panel">
-          <h3>Conclusão teológica</h3>
-          <p>
-            Josué é um livro sobre promessa cumprida, mas também sobre responsabilidade. Ele mostra que Deus é fiel,
-            conduz a história, abre caminhos, entrega herança e estabelece o seu povo. Ao mesmo tempo, deixa claro
-            que a vida dentro da promessa não pode ser vivida em negligência espiritual.
-          </p>
-          <p style="margin-top:14px;">
-            Por isso, Josué continua atual. Ele confronta qualquer desejo de vitória sem santidade, herança sem aliança,
-            progresso sem memória e fé sem decisão. O Deus que cumpre o que prometeu continua chamando o seu povo
-            a viver com coragem, reverência e fidelidade.
-          </p>
-        </article>
+        <div class="section-header" data-reveal>
+          <div><h2>Linha de leitura de Josué</h2></div>
+          <p>Uma visão rápida do fluxo narrativo antes do estudo detalhado de cada capítulo.</p>
+        </div>
+
+        <div class="timeline-grid">
+          <article class="timeline-card" data-reveal style="--delay:.03s;">
+            <div class="icon">1</div>
+            <small>Transição</small>
+            <h3>Moisés morre, Josué assume</h3>
+            <p>O livro começa com continuidade da missão e reafirmação da presença de Deus sobre a nova liderança.</p>
+          </article>
+
+          <article class="timeline-card" data-reveal style="--delay:.08s;">
+            <div class="icon">2</div>
+            <small>Entrada</small>
+            <h3>Jordão e consagração</h3>
+            <p>A travessia, o memorial, a circuncisão e a Páscoa mostram que a conquista começa com memória e santidade.</p>
+          </article>
+
+          <article class="timeline-card" data-reveal style="--delay:.13s;">
+            <div class="icon">3</div>
+            <small>Conquista</small>
+            <h3>Jericó, Ai e coalizões</h3>
+            <p>Vitórias, derrota por pecado, restauração, alianças e campanhas mostram a tensão entre promessa e obediência.</p>
+          </article>
+
+          <article class="timeline-card" data-reveal style="--delay:.18s;">
+            <div class="icon">4</div>
+            <small>Herança</small>
+            <h3>Distribuição e fidelidade final</h3>
+            <p>As tribos são organizadas e Josué encerra o livro chamando o povo à fidelidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <div class="section-header" data-reveal>
+          <div><h2>Mapa rápido dos capítulos</h2></div>
+          <p>Use como navegação rápida antes de descer para o estudo completo.</p>
+        </div>
+        <div class="toc" data-reveal>
+          <a href="#cap1">Capítulo 1</a><a href="#cap2">Capítulo 2</a><a href="#cap3">Capítulo 3</a><a href="#cap4">Capítulo 4</a>
+          <a href="#cap5">Capítulo 5</a><a href="#cap6">Capítulo 6</a><a href="#cap7">Capítulo 7</a><a href="#cap8">Capítulo 8</a>
+          <a href="#cap9">Capítulo 9</a><a href="#cap10">Capítulo 10</a><a href="#cap11">Capítulo 11</a><a href="#cap12">Capítulo 12</a>
+          <a href="#cap13">Capítulo 13</a><a href="#cap14">Capítulo 14</a><a href="#cap15">Capítulo 15</a><a href="#cap16">Capítulo 16</a>
+          <a href="#cap17">Capítulo 17</a><a href="#cap18">Capítulo 18</a><a href="#cap19">Capítulo 19</a><a href="#cap20">Capítulo 20</a>
+          <a href="#cap21">Capítulo 21</a><a href="#cap22">Capítulo 22</a><a href="#cap23">Capítulo 23</a><a href="#cap24">Capítulo 24</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="capitulos">
+      <div class="narrow">
+        <div class="section-header" data-reveal>
+          <div><h2>Josué capítulo por capítulo</h2></div>
+          <p>Estudo grande, detalhado e pronto para publicação.</p>
+        </div>
+
+        <div class="chapters-grid">
+          <article class="chapter-card" id="cap1" data-reveal data-title="Capítulo 1" data-keywords="capítulo 1 comissionamento coragem lei moises moisés liderança presença">
+            <span class="chapter-label">Capítulo 1</span>
+            <h3>Comissionamento de Josué e a transição de liderança</h3>
+            <p>
+              O livro abre com um momento decisivo: Moisés morreu, mas a missão não morreu com ele. Deus chama Josué a ocupar um espaço
+              que humanamente parecia enorme e espiritualmente delicado. A repetição de “sê forte e corajoso” mostra que a liderança bíblica
+              não nasce da autoconfiança, mas da certeza de que a presença de Deus acompanha o servo chamado.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que acontece no capítulo</h4>
+                <ul>
+                  <li>Deus confirma Josué como sucessor de Moisés.</li>
+                  <li>A terra prometida é reafirmada como herança do povo.</li>
+                  <li>A lei é colocada no centro da liderança.</li>
+                  <li>As tribos a leste do Jordão renovam seu compromisso de lutar junto com os irmãos.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>A conquista começa com palavra, não com espada.</li>
+                  <li>Coragem aqui não é bravura natural, mas perseverança obediente.</li>
+                  <li>Josué não é autorizado a inventar seu próprio caminho; ele deve meditar na lei.</li>
+                  <li>O capítulo liga liderança e fidelidade bíblica.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> antes de entrar na terra, Josué precisa aprender que a vitória dependerá mais de alinhamento espiritual do que de cálculo militar.</div>
+          </article>
+
+          <article class="chapter-card" id="cap2" data-reveal data-title="Capítulo 2" data-keywords="capítulo 2 raabe espioes espiões jerico jericó fé estrangeira salvação cordão">
+            <span class="chapter-label">Capítulo 2</span>
+            <h3>Raabe, os espias e a fé que reconhece o Deus de Israel</h3>
+            <p>
+              Dois espias são enviados a Jericó, mas o centro do capítulo não está neles: está em Raabe. Ela é uma mulher cananeia,
+              vulnerável e improvável aos olhos humanos, mas percebe quem é o Deus de Israel e age com fé. O capítulo antecipa uma das
+              marcas mais belas da Bíblia: a graça divina alcançando gente improvável antes mesmo da queda das muralhas.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Elementos principais</h4>
+                <ul>
+                  <li>Envio dos espias a Jericó.</li>
+                  <li>Raabe os acolhe e os protege.</li>
+                  <li>O cordão escarlate torna-se sinal de preservação.</li>
+                  <li>Jericó já aparece como cidade tomada pelo medo.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Raabe discerne a ação de Deus antes de muitos israelitas.</li>
+                  <li>A fé bíblica não fica no discurso; ela toma decisões concretas.</li>
+                  <li>O capítulo revela que a conquista também envolve salvação.</li>
+                  <li>Gente improvável pode se tornar parte da história de Deus.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> quando Deus está agindo na história, até quem está fora do centro religioso pode percebê-lo antes dos mais próximos.</div>
+          </article>
+
+          <article class="chapter-card" id="cap3" data-reveal data-title="Capítulo 3" data-keywords="capítulo 3 jordão arca travessia milagre presença">
+            <span class="chapter-label">Capítulo 3</span>
+            <h3>A travessia do Jordão e a confirmação pública da presença de Deus</h3>
+            <p>
+              A entrada em Canaã começa com um sinal que ecoa o êxodo. O Jordão se abre, a arca vai à frente e o povo atravessa em seco.
+              O capítulo confirma Josué diante da nação e mostra que a presença de Deus é o verdadeiro fator decisivo da travessia.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que acontece</h4>
+                <ul>
+                  <li>O povo se prepara para atravessar.</li>
+                  <li>A arca da aliança vai adiante.</li>
+                  <li>As águas do Jordão se detêm.</li>
+                  <li>Israel atravessa em seco.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>A arca mostra que Deus lidera a entrada.</li>
+                  <li>Josué é autenticado por Deus diante do povo.</li>
+                  <li>A travessia liga Jordão e Mar Vermelho numa mesma linha de fidelidade.</li>
+                  <li>A promessa continua ancorada na presença divina.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> o povo só entra corretamente na terra quando entende que não está abrindo caminho para Deus; é Deus quem abre o caminho para o povo.</div>
+          </article>
+
+          <article class="chapter-card" id="cap4" data-reveal data-title="Capítulo 4" data-keywords="capítulo 4 memorial pedras memória jordão doze tribos">
+            <span class="chapter-label">Capítulo 4</span>
+            <h3>Doze pedras e a pedagogia da memória</h3>
+            <p>
+              Depois da travessia, Deus manda levantar um memorial. As pedras retiradas do Jordão transformam o milagre em memória visível.
+              O povo precisava não apenas passar pelo evento, mas preservá-lo para as gerações seguintes.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Função do memorial</h4>
+                <ul>
+                  <li>Recordar o milagre do Jordão.</li>
+                  <li>Ensinar os filhos sobre o agir de Deus.</li>
+                  <li>Unir as tribos em torno de uma memória comum.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>A fé bíblica cultiva memória, não amnésia espiritual.</li>
+                  <li>O povo precisa reaprender a contar sua própria história.</li>
+                  <li>Memoriais impedem que o milagre vire abstração.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> quem não aprende a lembrar corretamente os atos de Deus logo começa a interpretar mal a própria jornada.</div>
+          </article>
+
+          <article class="chapter-card" id="cap5" data-reveal data-title="Capítulo 5" data-keywords="capítulo 5 circuncisão páscoa pascoa maná comandante do senhor">
+            <span class="chapter-label">Capítulo 5</span>
+            <h3>Consagração antes da guerra: circuncisão, Páscoa e o comandante do Senhor</h3>
+            <p>
+              Antes de cair Jericó, Deus trabalha o coração do povo. O capítulo une três elementos: renovação do sinal da aliança,
+              celebração da Páscoa e o encontro de Josué com o comandante do exército do Senhor. É uma sequência muito forte: o povo
+              não entra em batalha primeiro como exército, mas como povo consagrado.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Elementos principais</h4>
+                <ul>
+                  <li>A circuncisão renova externamente o compromisso da aliança.</li>
+                  <li>A Páscoa religa Canaã ao êxodo.</li>
+                  <li>O maná cessa, porque uma nova fase começou.</li>
+                  <li>Josué encontra uma figura que o reposiciona diante da santidade de Deus.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Antes da conquista, Deus restaura identidade.</li>
+                  <li>A terra não deve apagar a memória do êxodo.</li>
+                  <li>Josué aprende que não pode instrumentalizar Deus; ele é quem deve se alinhar ao Senhor.</li>
+                  <li>O capítulo coloca culto, identidade e santidade antes da guerra.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> não adianta desejar vitórias públicas sem permitir primeiro um tratamento profundo da vida espiritual.</div>
+          </article>
+
+          <article class="chapter-card" id="cap6" data-reveal data-title="Capítulo 6" data-keywords="capítulo 6 jericó muralhas trombetas obediência raabe">
+            <span class="chapter-label">Capítulo 6</span>
+            <h3>Jericó cai pela obediência, não pela lógica humana</h3>
+            <p>
+              A estratégia de Jericó parece estranha aos padrões militares: marchas, silêncio, trombetas e um grito final. Justamente por isso,
+              o capítulo impede que a vitória seja lida como simples superioridade bélica. Jericó cai para exibir a supremacia do Senhor.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que o texto destaca</h4>
+                <ul>
+                  <li>Jericó é entregue por Deus antes do combate final.</li>
+                  <li>A marcha e o silêncio disciplinam o povo.</li>
+                  <li>Raabe e sua casa são preservadas.</li>
+                  <li>A cidade se torna sinal de juízo e vitória divina.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>A vitória depende de obediência reverente.</li>
+                  <li>O impossível aparente se torna cenário da glória de Deus.</li>
+                  <li>A preservação de Raabe mostra graça no meio do juízo.</li>
+                  <li>Jericó não cai para exaltar Israel, mas para exaltar o Senhor.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> quando Deus entrega a vitória, Ele também escolhe a forma de recebê-la — e nem sempre ela passa pelos métodos que mais agradam à nossa lógica.</div>
+          </article>
+
+          <article class="chapter-card" id="cap7" data-reveal data-title="Capítulo 7" data-keywords="capítulo 7 acã ai pecado derrota anátema">
+            <span class="chapter-label">Capítulo 7</span>
+            <h3>O pecado de Acã e a derrota inesperada em Ai</h3>
+            <p>
+              Depois de Jericó, o povo experimenta derrota. A causa não é fraqueza militar, mas quebra de santidade. O pecado de Acã mostra
+              que a vida espiritual da comunidade não pode ser tratada como detalhe. A terra da promessa não seria sustentada por poder,
+              mas por aliança.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Movimento do capítulo</h4>
+                <ul>
+                  <li>Israel sofre derrota em Ai.</li>
+                  <li>Josué busca entender a causa diante de Deus.</li>
+                  <li>O pecado oculto é exposto.</li>
+                  <li>Acã e sua casa são julgados.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>O pecado particular pode trazer efeitos coletivos.</li>
+                  <li>A santidade é parte da permanência na terra.</li>
+                  <li>Triunfos recentes não tornam o povo imune à queda.</li>
+                  <li>Josué aprende a ler derrotas espiritualmente.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> depois de grandes vitórias, o maior perigo pode ser a falsa sensação de segurança espiritual.</div>
+          </article>
+
+          <article class="chapter-card" id="cap8" data-reveal data-title="Capítulo 8" data-keywords="capítulo 8 ai restauração altar ebal lei leitura">
+            <span class="chapter-label">Capítulo 8</span>
+            <h3>Restauração, nova estratégia e renovação da aliança</h3>
+            <p>
+              Depois do julgamento do pecado, Deus volta a conduzir o povo à vitória em Ai. O capítulo combina estratégia militar,
+              restauração da confiança e leitura pública da lei em Ebal. Isso mostra que conquista e Palavra não podem ser separadas.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que acontece</h4>
+                <ul>
+                  <li>Deus encoraja Josué a não temer.</li>
+                  <li>Israel vence Ai com nova estratégia.</li>
+                  <li>Um altar é levantado.</li>
+                  <li>A lei é lida diante de todo o povo.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Deus restaura depois de disciplina verdadeira.</li>
+                  <li>A obediência volta a abrir caminho.</li>
+                  <li>Vitória militar sem centralidade da lei seria vazia.</li>
+                  <li>A terra deve ser habitada com culto e escuta.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> restauração verdadeira não termina em alívio; ela termina em realinhamento diante da Palavra.</div>
+          </article>
+
+          <article class="chapter-card" id="cap9" data-reveal data-title="Capítulo 9" data-keywords="capítulo 9 gibeonitas engano pacto consulta senhor">
+            <span class="chapter-label">Capítulo 9</span>
+            <h3>O engano dos gibeonitas e o custo de decidir sem consultar o Senhor</h3>
+            <p>
+              Os gibeonitas se aproximam com aparência de distância e pobreza, e Israel faz aliança sem consultar a Deus.
+              O texto mostra como discernimento espiritual não pode ser substituído por análise meramente humana.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que acontece</h4>
+                <ul>
+                  <li>Os gibeonitas montam uma encenação convincente.</li>
+                  <li>Israel avalia os sinais visíveis.</li>
+                  <li>Uma aliança é firmada sem consulta ao Senhor.</li>
+                  <li>O engano é descoberto tarde demais.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Nem toda decisão errada nasce de má intenção; algumas nascem de independência espiritual.</li>
+                  <li>O texto valoriza a integridade do pacto assumido.</li>
+                  <li>A liderança precisa discernir além do visível.</li>
+                  <li>A história prepara o capítulo seguinte, em que Israel precisará defender quem o havia enganado.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> ver, tocar e avaliar não substitui a necessidade de consultar o Senhor.</div>
+          </article>
+
+          <article class="chapter-card" id="cap10" data-reveal data-title="Capítulo 10" data-keywords="capítulo 10 sol parado gibeão amorreus bete-horom saraiva coalizão sul">
+            <span class="chapter-label">Capítulo 10</span>
+            <h3>A coalizão do sul, a defesa de Gibeão e o episódio do sol parado</h3>
+            <p>
+              A aliança feita com Gibeão gera crise diplomática e militar. Cinco reis amorreus atacam a cidade, e Josué sobe rapidamente para defendê-la.
+              O texto combina estratégia, marcha noturna, pânico enviado por Deus, saraiva vinda do céu e o famoso relato do sol que se detém sobre Gibeão.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Movimento do capítulo</h4>
+                <ul>
+                  <li>Coalizão de reis do sul contra Gibeão.</li>
+                  <li>Subida apressada de Josué desde Gilgal.</li>
+                  <li>Intervenção divina por confusão e saraiva.</li>
+                  <li>Oração extraordinária e prolongamento da batalha.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Josué honra alianças mesmo quando surgiram de um erro.</li>
+                  <li>Deus transforma uma ameaça concentrada em ocasião de grande vitória.</li>
+                  <li>O capítulo mostra que a história e a criação estão igualmente sob o governo do Senhor.</li>
+                  <li>Vitória e integridade caminham juntas.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> Deus pode usar até as consequências de decisões imperfeitas para conduzir o povo a vitórias maiores, desde que haja integridade e dependência.</div>
+          </article>
+
+          <article class="chapter-card" id="cap11" data-reveal data-title="Capítulo 11" data-keywords="capítulo 11 norte hazor anaquins obediência conquista progressiva">
+            <span class="chapter-label">Capítulo 11</span>
+            <h3>Conquista do norte e a obediência perseverante de Josué</h3>
+            <p>
+              O capítulo 11 expande a narrativa para o norte da terra. Novas coalizões aparecem, e o texto destaca a perseverança de Josué em obedecer.
+              A conquista é apresentada como processo de muitos dias, e não como evento instantâneo.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Pontos centrais</h4>
+                <ul>
+                  <li>Novos reis se ajuntam contra Israel.</li>
+                  <li>Josué recebe encorajamento para não temer.</li>
+                  <li>Hazor ganha destaque como centro importante.</li>
+                  <li>A narrativa sublinha tempo prolongado de guerra.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Conquista bíblica não é romantizada como facilidade.</li>
+                  <li>Obediência constante vale mais que impulsos heroicos isolados.</li>
+                  <li>O texto preserva a tensão entre promessa certa e processo prolongado.</li>
+                  <li>A menção aos anaquins reforça a superação de antigos medos do povo.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> promessas certas podem exigir lutas longas; a demora do processo não anula a fidelidade de Deus.</div>
+          </article>
+
+          <article class="chapter-card" id="cap12" data-reveal data-title="Capítulo 12" data-keywords="capítulo 12 reis vencidos resumo memorial batalha conquista">
+            <span class="chapter-label">Capítulo 12</span>
+            <h3>Lista dos reis vencidos: memória histórica da conquista</h3>
+            <p>
+              À primeira vista, esse capítulo parece apenas administrativo. Mas ele tem peso teológico: a lista transforma batalhas dispersas em
+              memória oficial da fidelidade de Deus. O povo precisa lembrar não só do milagre de Jericó, mas da soma de muitas vitórias concretas.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Função do capítulo</h4>
+                <ul>
+                  <li>Registrar os reis derrotados a leste e a oeste do Jordão.</li>
+                  <li>Consolidar historicamente o avanço de Israel.</li>
+                  <li>Marcar a transição para a fase de distribuição da terra.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>O texto organiza a conquista para que ela não seja esquecida ou distorcida.</li>
+                  <li>A enumeração dos reis mostra o alcance real da ação divina.</li>
+                  <li>A memória histórica também é instrumento de fé.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> a Bíblia não preserva apenas emoções espirituais; preserva também registros concretos da história de Deus com o seu povo.</div>
+          </article>
+
+          <article class="chapter-card" id="cap13" data-reveal data-title="Capítulo 13" data-keywords="capítulo 13 distribuição terra restante ainda falta herança rubem gade manassés">
+            <span class="chapter-label">Capítulo 13</span>
+            <h3>Começa a distribuição: há terra dada e ainda há terra por possuir</h3>
+            <p>
+              O capítulo 13 inaugura uma nova fase do livro. A guerra ampla diminui e a ênfase passa para a distribuição da herança. Mas o capítulo
+              não deixa o leitor idealizar o momento: ainda havia áreas não completamente ocupadas. Isso cria uma tensão importante entre
+              promessa recebida e apropriação contínua.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que o capítulo faz</h4>
+                <ul>
+                  <li>Reconhece a idade avançada de Josué.</li>
+                  <li>Declara que ainda há terra por conquistar.</li>
+                  <li>Começa a repartir heranças, incluindo as tribos a leste do Jordão.</li>
+                  <li>Reafirma que os levitas têm o Senhor como herança especial.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Receber promessa não significa concluir imediatamente a responsabilidade.</li>
+                  <li>O texto distingue posse legal e ocupação plena.</li>
+                  <li>Os levitas lembram que vida espiritual não depende só de território.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> há momentos em que Deus já deu algo ao seu povo, mas ainda será necessário maturidade para viver isso plenamente.</div>
+          </article>
+
+          <article class="chapter-card" id="cap14" data-reveal data-title="Capítulo 14" data-keywords="capítulo 14 calebe hebron hebrom força fidelidade promessa">
+            <span class="chapter-label">Capítulo 14</span>
+            <h3>Calebe pede Hebrom: perseverança de fé depois de décadas</h3>
+            <p>
+              Calebe é uma das figuras mais belas de Josué. Depois de muitos anos, ele ainda fala com vigor, memória e confiança. Seu pedido por Hebrom
+              não é arrogância, mas expressão de perseverança: ele continua crendo na palavra que Deus havia dito muito antes.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Elementos principais</h4>
+                <ul>
+                  <li>Calebe relembra a promessa recebida.</li>
+                  <li>Hebrom é pedido como herança.</li>
+                  <li>A força espiritual permanece viva mesmo após décadas.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Fidelidade longa vale mais que entusiasmo curto.</li>
+                  <li>Calebe encarna perseverança confiante.</li>
+                  <li>O capítulo mostra que promessas antigas continuam vivas em corações obedientes.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> maturidade espiritual não apaga o vigor da fé; ela o purifica.</div>
+          </article>
+
+          <article class="chapter-card" id="cap15" data-reveal data-title="Capítulo 15" data-keywords="capítulo 15 judá judah herança calebe otniel acsa">
+            <span class="chapter-label">Capítulo 15</span>
+            <h3>Judá recebe sua herança e a promessa ganha contornos concretos</h3>
+            <p>
+              O capítulo 15 trabalha limites, cidades e episódios ligados à tribo de Judá. À primeira vista, parece apenas geográfico;
+              na prática, torna visível que a promessa de Deus entra em detalhes concretos. O episódio de Acsa também mostra iniciativa,
+              pedido e expansão da herança.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que o capítulo registra</h4>
+                <ul>
+                  <li>Delimitação territorial de Judá.</li>
+                  <li>Cidades e regiões associadas à tribo.</li>
+                  <li>Calebe, Otniel e Acsa aparecem no enredo.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Promessa divina também assume forma geográfica concreta.</li>
+                  <li>Acsa mostra que herança pode ser recebida com iniciativa de fé.</li>
+                  <li>Os detalhes territoriais revelam ordem, não improviso.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> Deus não trabalha apenas com ideias amplas; Ele também dá contornos reais àquilo que promete.</div>
+          </article>
+
+          <article class="chapter-card" id="cap16" data-reveal data-title="Capítulo 16" data-keywords="capítulo 16 efraim herança fronteiras cananeus">
+            <span class="chapter-label">Capítulo 16</span>
+            <h3>Efraim recebe sua porção, mas a ocupação ainda não está completa</h3>
+            <p>
+              O capítulo 16 registra a herança de Efraim, mas também mostra que a ocupação não foi imediatamente total. O texto preserva a tensão
+              entre receber a terra e viver plenamente a responsabilidade de possuí-la.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Pontos principais</h4>
+                <ul>
+                  <li>Delimitação da herança de Efraim.</li>
+                  <li>Registro de fronteiras e cidades.</li>
+                  <li>Persistência de elementos cananeus em algumas regiões.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Promessa não elimina automaticamente a necessidade de ação continuada.</li>
+                  <li>O texto mostra uma posse parcialmente vivida.</li>
+                  <li>Fronteiras formais não significam fidelidade prática completa.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> há diferença entre receber uma herança diante de Deus e ocupá-la com coragem e constância.</div>
+          </article>
+
+          <article class="chapter-card" id="cap17" data-reveal data-title="Capítulo 17" data-keywords="capítulo 17 manassés filhas de zelofeade floresta herança insuficiente">
+            <span class="chapter-label">Capítulo 17</span>
+            <h3>Manassés, as filhas de Zelofeade e o desafio de avançar</h3>
+            <p>
+              O capítulo 17 mistura justiça herdada de textos anteriores, delimitação tribal e o desconforto de tribos que consideram pequena a porção recebida.
+              Josué responde apontando para esforço, coragem e expansão. Herança não deve gerar passividade.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Elementos principais</h4>
+                <ul>
+                  <li>As filhas de Zelofeade recebem sua porção.</li>
+                  <li>Manassés recebe território específico.</li>
+                  <li>Surge reclamação sobre limite da herança.</li>
+                  <li>Josué aponta para conquista adicional.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>O capítulo une justiça, responsabilidade e coragem.</li>
+                  <li>A resposta de Josué combate acomodação disfarçada de insatisfação.</li>
+                  <li>Nem toda sensação de limitação vem de injustiça; às vezes vem de falta de avanço.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> quando Deus dá direção, a resposta madura não é murmuração, mas movimento.</div>
+          </article>
+
+          <article class="chapter-card" id="cap18" data-reveal data-title="Capítulo 18" data-keywords="capítulo 18 silo siló tabernáculo sete tribos repartição">
+            <span class="chapter-label">Capítulo 18</span>
+            <h3>Siló, repartição restante e confronto contra a apatia</h3>
+            <p>
+              O texto também expõe a lentidão de algumas tribos em assumir sua herança, e Josué precisa confrontá-las. A centralidade de Siló
+              ajuda a organizar a vida nacional e cúltica dessa fase.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que acontece</h4>
+                <ul>
+                  <li>O tabernáculo é instalado em Siló.</li>
+                  <li>Sete tribos ainda não haviam tomado plenamente sua herança.</li>
+                  <li>Josué organiza levantamento da terra para nova repartição.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>O centro cúltico organiza a vida nacional.</li>
+                  <li>Josué confronta a apatia das tribos.</li>
+                  <li>A terra prometida precisa ser recebida com prontidão, não com procrastinação.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> Deus pode entregar a promessa, mas o povo ainda precisa reagir com disposição e movimento.</div>
+          </article>
+
+          <article class="chapter-card" id="cap19" data-reveal data-title="Capítulo 19" data-keywords="capítulo 19 simeão zebulom issacar aser naftali dã josué timnate-sera">
+            <span class="chapter-label">Capítulo 19</span>
+            <h3>As últimas tribos recebem herança, e Josué também recebe a sua</h3>
+            <p>
+              O capítulo 19 finaliza boa parte da distribuição da terra para as tribos restantes e encerra com um gesto bonito:
+              Josué recebe sua herança apenas ao final. Isso reforça sua postura de liderança servidora. Ele conduz primeiro o povo;
+              depois recebe sua própria parte.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Elementos principais</h4>
+                <ul>
+                  <li>Distribuição para Simeão, Zebulom, Issacar, Aser, Naftali e Dã.</li>
+                  <li>Conclusão das delimitações tribais.</li>
+                  <li>Josué recebe Timnate-Sera.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>O líder não se antecipa egoisticamente ao povo.</li>
+                  <li>A herança de Josué no final do processo confirma sua integridade.</li>
+                  <li>O capítulo mostra ordem, distribuição e fechamento de uma fase histórica.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> líderes íntegros não se servem primeiro do que receberam para administrar.</div>
+          </article>
+
+          <article class="chapter-card" id="cap20" data-reveal data-title="Capítulo 20" data-keywords="capítulo 20 cidades de refugio refúgio justiça vingador sangue">
+            <span class="chapter-label">Capítulo 20</span>
+            <h3>Cidades de refúgio: misericórdia, proteção e justiça equilibrada</h3>
+            <p>
+              O capítulo 20 regulamenta as cidades de refúgio, onde alguém envolvido em homicídio sem premeditação poderia buscar proteção até julgamento.
+              Isso mostra que a terra prometida não deveria ser apenas militarmente ocupada, mas também moralmente organizada.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Função do capítulo</h4>
+                <ul>
+                  <li>Designar cidades acessíveis em diferentes regiões.</li>
+                  <li>Proteger o acusado até avaliação justa.</li>
+                  <li>Integrar a herança territorial com estrutura de justiça.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>A terra da promessa precisa refletir o caráter justo de Deus.</li>
+                  <li>O capítulo combate impulsividade vingativa.</li>
+                  <li>Justiça e misericórdia não se anulam; são ordenadas juntas.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> um povo verdadeiramente estabelecido por Deus deve tratar com seriedade não apenas culto e guerra, mas também justiça concreta.</div>
+          </article>
+
+          <article class="chapter-card" id="cap21" data-reveal data-title="Capítulo 21" data-keywords="capítulo 21 levitas cidades promessa cumprida nenhuma falhou">
+            <span class="chapter-label">Capítulo 21</span>
+            <h3>Cidades levíticas e a grande declaração de fidelidade de Deus</h3>
+            <p>
+              Os levitas recebem cidades espalhadas, e o capítulo termina com uma das frases mais fortes do livro: nenhuma promessa do Senhor falhou;
+              todas se cumpriram. Essa declaração resume a teologia de Josué. O foco não está no brilho do povo, mas na confiabilidade de Deus.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que o capítulo mostra</h4>
+                <ul>
+                  <li>Distribuição das cidades aos levitas.</li>
+                  <li>Integração do ministério espiritual no território inteiro.</li>
+                  <li>Declaração solene do cumprimento das promessas.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Os levitas espalhados lembram que a vida do povo precisa de presença espiritual por toda parte.</li>
+                  <li>A frase final interpreta retrospectivamente todo o livro.</li>
+                  <li>Josué termina essa grande seção lembrando que a história foi sustentada por Deus.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> a força maior de Josué não é a coragem humana do povo, mas o fato de que nenhuma palavra de Deus caiu por terra.</div>
+          </article>
+
+          <article class="chapter-card" id="cap22" data-reveal data-title="Capítulo 22" data-keywords="capítulo 22 altar jordão tribos leste unidade mal-entendido">
+            <span class="chapter-label">Capítulo 22</span>
+            <h3>O altar junto ao Jordão e a tensão entre zelo e ruptura</h3>
+            <p>
+              As tribos a leste do Jordão retornam para sua terra e levantam um grande altar. O restante de Israel interpreta o gesto como possível apostasia,
+              e o capítulo caminha para um conflito interno gravíssimo. No entanto, o diálogo evita a guerra e transforma o episódio em preservação da unidade.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que acontece</h4>
+                <ul>
+                  <li>Josué libera as tribos do leste para voltarem.</li>
+                  <li>Um grande altar é erguido junto ao Jordão.</li>
+                  <li>As tribos do oeste interpretam o ato como rebelião.</li>
+                  <li>O diálogo esclarece a intenção memorial do altar.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>Zelo pela pureza do culto é importante, mas precisa caminhar com escuta.</li>
+                  <li>Nem todo símbolo ambíguo é imediatamente apostasia.</li>
+                  <li>A unidade do povo exige discernimento antes de condenação.</li>
+                  <li>O capítulo valoriza mediação, investigação e reconciliação.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> comunidades podem evitar guerras desnecessárias quando trocam suspeita precipitada por diálogo sério e reverente.</div>
+          </article>
+
+          <article class="chapter-card" id="cap23" data-reveal data-title="Capítulo 23" data-keywords="capítulo 23 discurso final advertência fidelidade mistura nações">
+            <span class="chapter-label">Capítulo 23</span>
+            <h3>O discurso final de Josué e a advertência contra infidelidade futura</h3>
+            <p>
+              Já avançado em idade, Josué reúne o povo e relembra o que Deus fez. Seu tom é pastoral e solene: se o povo se afastar, misturar-se
+              espiritualmente com as nações e abandonar a aliança, perderá estabilidade na terra. O capítulo mostra que conquista sem perseverança não basta.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>Eixos da advertência</h4>
+                <ul>
+                  <li>Memória das vitórias dadas por Deus.</li>
+                  <li>Chamado à fidelidade perseverante.</li>
+                  <li>Alerta contra alianças e mistura espiritual com as nações.</li>
+                  <li>Lembrança de que tanto bênção quanto juízo são reais.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>O perigo maior agora não é a guerra externa, mas o relaxamento interno.</li>
+                  <li>Josué mostra que permanência na terra depende de fidelidade contínua.</li>
+                  <li>O capítulo desloca o foco do território para o coração.</li>
+                  <li>A memória do passado serve para proteger o futuro.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> depois de grandes conquistas, a ameaça mais séria pode ser a lenta erosão da fidelidade.</div>
+          </article>
+
+          <article class="chapter-card" id="cap24" data-reveal data-title="Capítulo 24" data-keywords="capítulo 24 siquem escolha eu e minha casa renovação aliança testemunha">
+            <span class="chapter-label">Capítulo 24</span>
+            <h3>Renovação da aliança em Siquém e a grande escolha final</h3>
+            <p>
+              O livro termina com uma assembleia histórica em Siquém. Josué recapitula a ação de Deus desde os patriarcas, confronta o povo com a necessidade
+              de decisão e declara a frase que atravessou os séculos: “eu e a minha casa serviremos ao Senhor”. A conclusão do livro não é um mapa,
+              mas uma escolha espiritual diante da história de Deus.
+            </p>
+            <div class="chapter-grid">
+              <div class="subbox">
+                <h4>O que o capítulo realiza</h4>
+                <ul>
+                  <li>Recapitula a história da graça de Deus com Israel.</li>
+                  <li>Confronta o povo com decisão explícita.</li>
+                  <li>Renova formalmente a aliança.</li>
+                  <li>Encerra com testemunhos, sepultamentos e memória.</li>
+                </ul>
+              </div>
+              <div class="subbox">
+                <h4>Leitura profunda</h4>
+                <ul>
+                  <li>A história é narrada para exigir resposta, não só admiração.</li>
+                  <li>O chamado à escolha mostra que aliança envolve compromisso real.</li>
+                  <li>Josué termina como líder que conduz o povo à responsabilidade espiritual.</li>
+                  <li>O livro fecha com herança, memória e convocação à fidelidade.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="insight"><strong>Insight central:</strong> conhecer a história de Deus sem se posicionar diante dela é perder o propósito da própria revelação.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="curiosidades">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div><h2>Curiosidades históricas e fatos interessantes</h2></div>
+          <p>Camadas extras para transformar a página em estudo realmente aprofundado.</p>
+        </div>
+
+        <div class="notes-grid">
+          <article class="note-card" data-reveal style="--delay:.03s;">
+            <div class="icon">01</div>
+            <small>Jericó</small>
+            <h3>Uma cidade fortificada emblemática</h3>
+            <p>
+              Jericó aparece no imaginário bíblico como símbolo de resistência e poder fortificado. Por isso, sua queda comunica muito mais do que uma vitória local.
+            </p>
+          </article>
+
+          <article class="note-card" data-reveal style="--delay:.09s;">
+            <div class="icon">02</div>
+            <small>Hazor</small>
+            <h3>O norte também importava</h3>
+            <p>
+              Hazor ganha destaque na campanha do norte, reforçando que a conquista descrita em Josué não se limita ao centro da terra.
+            </p>
+          </article>
+
+          <article class="note-card" data-reveal style="--delay:.15s;">
+            <div class="icon">03</div>
+            <small>Conquista prolongada</small>
+            <h3>Não foi tudo instantâneo</h3>
+            <p>
+              A própria narrativa sugere um processo longo, com muitos dias de guerra e etapas de consolidação.
+            </p>
+          </article>
+
+          <article class="note-card" data-reveal style="--delay:.05s;">
+            <div class="icon">04</div>
+            <small>Siló</small>
+            <h3>Centro cúltico de uma fase</h3>
+            <p>
+              Siló ganha importância na organização nacional e cúltica antes de perder essa centralidade em momentos posteriores da história bíblica.
+            </p>
+          </article>
+
+          <article class="note-card" data-reveal style="--delay:.11s;">
+            <div class="icon">05</div>
+            <small>Josué</small>
+            <h3>Formado ao lado de Moisés</h3>
+            <p>
+              Josué não surge do nada. Sua firmeza no livro é mais bem compreendida quando lembramos sua longa formação ao lado de Moisés.
+            </p>
+          </article>
+
+          <article class="note-card" data-reveal style="--delay:.17s;">
+            <div class="icon">06</div>
+            <small>Herança</small>
+            <h3>Posse legal e posse vivida</h3>
+            <p>
+              Josué distingue com clareza a terra dada da terra plenamente apropriada. Essa tensão é fundamental para interpretar a segunda metade do livro.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div><h2>Temas teológicos centrais</h2></div>
+          <p>Josué é curto em extensão, mas densíssimo em teologia bíblica.</p>
+        </div>
+
+        <div class="themes-grid">
+          <article class="theme-box" data-reveal style="--delay:.04s;">
+            <h3>Fidelidade de Deus</h3>
+            <ul class="theme-list">
+              <li>Deus cumpre o que prometeu aos patriarcas e a Moisés.</li>
+              <li>O livro enfatiza que a herança vem da palavra fiel do Senhor.</li>
+              <li>A frase de Josué 21 resume essa ênfase: nenhuma promessa falhou.</li>
+            </ul>
+          </article>
+
+          <article class="theme-box" data-reveal style="--delay:.10s;">
+            <h3>Obediência e santidade</h3>
+            <ul class="theme-list">
+              <li>Jericó, Ai e Acã mostram que vitória e santidade não podem ser separadas.</li>
+              <li>A permanência na terra exige fidelidade contínua.</li>
+              <li>A aliança molda guerra, culto, justiça e memória.</li>
+            </ul>
+          </article>
+
+          <article class="theme-box" data-reveal style="--delay:.16s;">
+            <h3>Herança e responsabilidade</h3>
+            <ul class="theme-list">
+              <li>A terra é dádiva, mas também responsabilidade.</li>
+              <li>Receber herança não elimina o dever de avançar e habitar corretamente.</li>
+              <li>Josué mostra a diferença entre posse declarada e posse vivida.</li>
+            </ul>
+          </article>
+
+          <article class="theme-box" data-reveal style="--delay:.22s;">
+            <h3>Memória e decisão</h3>
+            <ul class="theme-list">
+              <li>Pedras, listas, discursos e assembleias ensinam que a fé precisa lembrar.</li>
+              <li>O capítulo final mostra que memória correta deve produzir decisão real.</li>
+              <li>O livro termina exigindo resposta diante da história de Deus.</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="cta">
       <div class="container">
-        <div class="cta-box">
+        <div class="cta-box" data-reveal>
           <div>
-            <h3>Próximo livro: Juízes</h3>
+            <h3>Continue em Juízes depois</h3>
             <p>
-              Se Josué mostra a entrada na terra e a concretização da promessa, Juízes mostrará o que acontece
-              quando a fidelidade do povo se torna instável e a aliança deixa de ocupar o centro.
+              Josué mostra a entrada, a herança e a renovação da aliança. Juízes mostrará o que acontece quando o povo deixa de sustentar essa fidelidade.
             </p>
           </div>
-
-          <a href="livros-historicos-juizes.html" class="btn btn-primary">Abrir Juízes</a>
+          <a href="livros-historicos.html" class="btn btn-primary">Voltar para Livros Históricos</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="container">
-      <p class="footer-note">
-        soloteo — teologia organizada com profundidade, beleza e reverência.
-      </p>
+      © 2026 soloteo — Teologia profunda, clara e viva.
     </div>
   </footer>
 
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo">↑</button>
+
   <script>
     (function () {
-      const chapterCards = document.querySelectorAll('.chapter-card');
+      const topbar = document.getElementById('topbar');
+      const progressBar = document.getElementById('progressBar');
+      const toTop = document.getElementById('toTop');
+      const searchInput = document.getElementById('chapterSearch');
+      const searchButton = document.getElementById('searchButton');
+      const clearButton = document.getElementById('clearButton');
+      const searchStatus = document.getElementById('searchStatus');
+      const cards = Array.from(document.querySelectorAll('.chapter-card'));
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuOverlay = document.getElementById('menuOverlay');
+      const menuLinks = mobileMenu.querySelectorAll('a');
+      const revealItems = document.querySelectorAll('[data-reveal]');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      chapterCards.forEach((card) => {
-        const button = card.querySelector('.chapter-toggle');
-        const content = card.querySelector('.chapter-content');
+      function normalize(text) {
+        return text
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .trim();
+      }
 
-        button.addEventListener('click', () => {
-          const isOpen = card.classList.contains('active');
+      function runSearch() {
+        const query = normalize(searchInput.value);
+        let visibleCount = 0;
+        let firstVisibleCard = null;
 
-          if (isOpen) {
-            card.classList.remove('active');
-            content.style.display = 'none';
-          } else {
-            card.classList.add('active');
-            content.style.display = 'block';
+        cards.forEach((card) => {
+          const title = normalize(card.dataset.title || '');
+          const keywords = normalize(card.dataset.keywords || '');
+          const content = normalize(card.textContent || '');
+          const combined = `${title} ${keywords} ${content}`;
+          const matches = query === '' || combined.includes(query);
+
+          card.classList.toggle('is-hidden', !matches);
+          card.classList.remove('is-highlight');
+
+          if (matches) {
+            visibleCount += 1;
+            if (!firstVisibleCard) firstVisibleCard = card;
           }
         });
+
+        if (query === '') {
+          searchStatus.textContent = 'Todos os 24 capítulos estão visíveis.';
+          return;
+        }
+
+        if (visibleCount === 0) {
+          searchStatus.textContent = `Nenhum resultado encontrado para “${searchInput.value}”.`;
+          return;
+        }
+
+        searchStatus.textContent = `${visibleCount} resultado(s) encontrado(s) para “${searchInput.value}”.`;
+
+        if (firstVisibleCard) {
+          firstVisibleCard.classList.add('is-highlight');
+          firstVisibleCard.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+        }
+      }
+
+      function clearSearch() {
+        searchInput.value = '';
+        cards.forEach((card) => card.classList.remove('is-hidden', 'is-highlight'));
+        searchStatus.textContent = 'Todos os 24 capítulos estão visíveis.';
+      }
+
+      function updateProgressBar() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = `${Math.min(progress, 100)}%`;
+        topbar.classList.toggle('is-scrolled', scrollTop > 16);
+        toTop.classList.toggle('show', scrollTop > 420);
+      }
+
+      function openMenu() {
+        mobileMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        menuToggle.classList.add('is-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        menuToggle.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      function toggleMenu() {
+        if (mobileMenu.classList.contains('active')) closeMenu();
+        else openMenu();
+      }
+
+      function setupReveal() {
+        if (prefersReducedMotion) {
+          revealItems.forEach((item) => item.classList.add('is-visible'));
+          return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+        revealItems.forEach((item) => observer.observe(item));
+      }
+
+      searchButton.addEventListener('click', runSearch);
+      clearButton.addEventListener('click', clearSearch);
+      searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          runSearch();
+        }
       });
+
+      menuToggle.addEventListener('click', toggleMenu);
+      menuOverlay.addEventListener('click', closeMenu);
+      menuLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+
+      window.addEventListener('scroll', updateProgressBar, { passive: true });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 940) closeMenu();
+      });
+
+      toTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      });
+
+      cards.forEach((card) => {
+        if (prefersReducedMotion) return;
+        card.addEventListener('mousemove', (event) => {
+          if (window.innerWidth <= 940) return;
+          const rect = card.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          const rotateY = ((x / rect.width) - 0.5) * 5;
+          const rotateX = ((y / rect.height) - 0.5) * -4;
+          card.style.transform = `translateY(-6px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+
+      searchStatus.textContent = 'Todos os 24 capítulos estão visíveis.';
+      updateProgressBar();
+      setupReveal();
     })();
   </script>
 </body>
