@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Livros da Bíblia | soloteo</title>
-  <meta name="description" content="Estudos por livros da Bíblia no soloteo, com organização por seções, contexto, temas e caminhos de leitura." />
-  <meta name="keywords" content="livros da Bíblia, soloteo, pentateuco, livros históricos, poéticos, sapienciais, profetas, novo testamento" />
-  <meta name="author" content="soloteo" />
+  <title>Livros da Bíblia | Soloteo</title>
+  <meta name="description" content="Estudos por livros da Bíblia no Soloteo, com organização por seções, contexto, temas e caminhos de leitura." />
+  <meta name="keywords" content="livros da Bíblia, Soloteo, pentateuco, livros históricos, poéticos, sapienciais, profetas, novo testamento" />
+  <meta name="author" content="Soloteo" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.soloteo.com.br/categorias/livros-da-biblia.html" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Livros da Bíblia | soloteo" />
+  <meta property="og:title" content="Livros da Bíblia | Soloteo" />
   <meta property="og:description" content="Explore os livros da Bíblia por grandes divisões, com organização elegante e profundidade teológica." />
   <meta property="og:url" content="https://www.soloteo.com.br/categorias/livros-da-biblia.html" />
-  <meta property="og:site_name" content="soloteo" />
+  <meta property="og:site_name" content="Soloteo" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Livros da Bíblia | soloteo" />
+  <meta name="twitter:title" content="Livros da Bíblia | Soloteo" />
   <meta name="twitter:description" content="Uma porta de entrada premium para os estudos por livro da Bíblia." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./categorias.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -31,35 +30,799 @@
     "@type":"CollectionPage",
     "name":"Livros da Bíblia",
     "url":"https://www.soloteo.com.br/categorias/livros-da-biblia.html",
-    "description":"Página de entrada para os estudos por livros da Bíblia no soloteo.",
+    "description":"Página de entrada para os estudos por livros da Bíblia no Soloteo.",
     "publisher":{
       "@type":"Organization",
-      "name":"soloteo",
+      "name":"Soloteo",
       "url":"https://www.soloteo.com.br"
     }
   }
   </script>
+
+  <style>
+    :root {
+      --bg: #fbf8f5;
+      --surface: rgba(255,255,255,.78);
+      --surface-strong: #ffffff;
+      --surface-soft: #f7f1ea;
+      --text: #291a17;
+      --muted: #715b53;
+      --line: rgba(91, 58, 47, .14);
+      --line-strong: rgba(91, 58, 47, .22);
+      --wine: #6f1d35;
+      --wine-deep: #511326;
+      --gold: #b68a3e;
+      --gold-soft: #d6b274;
+      --shadow: 0 20px 60px rgba(72, 37, 28, 0.08);
+      --shadow-soft: 0 10px 30px rgba(72, 37, 28, 0.06);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --container: 1200px;
+      --header-h: 88px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(182, 138, 62, .09), transparent 28%),
+        radial-gradient(circle at top right, rgba(111, 29, 53, .08), transparent 30%),
+        linear-gradient(180deg, #fdfaf7 0%, #fbf8f5 40%, #f7f1ea 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--container));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      background: rgba(251, 248, 245, .82);
+      border-bottom: 1px solid rgba(91, 58, 47, .08);
+    }
+
+    .topbar::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(182,138,62,.5), transparent);
+      opacity: .9;
+    }
+
+    .topbar-inner {
+      min-height: var(--header-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      overflow: hidden;
+      flex: 0 0 54px;
+      background: linear-gradient(180deg, #f5ede3 0%, #efe3d4 100%);
+      border: 1px solid rgba(111, 29, 53, .1);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.7), var(--shadow-soft);
+      display: grid;
+      place-items: center;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-text {
+      min-width: 0;
+      display: grid;
+      gap: 2px;
+    }
+
+    .brand-text strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.7rem, 2vw, 2.25rem);
+      line-height: .9;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .brand-text span {
+      color: var(--muted);
+      font-size: .97rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      position: relative;
+      padding: 12px 14px;
+      border-radius: 999px;
+      color: #5c4a44;
+      font-weight: 600;
+      font-size: .96rem;
+      transition: .25s ease;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      color: var(--wine);
+      background: rgba(111, 29, 53, .06);
+      outline: none;
+    }
+
+    .nav a.active {
+      color: var(--wine);
+      background: rgba(111, 29, 53, .09);
+      box-shadow: inset 0 0 0 1px rgba(111, 29, 53, .08);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(111, 29, 53, .12);
+      background: rgba(255,255,255,.85);
+      border-radius: 14px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-soft);
+      transition: .25s ease;
+    }
+
+    .menu-toggle:hover,
+    .menu-toggle:focus-visible {
+      outline: none;
+      border-color: rgba(111, 29, 53, .22);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle-lines,
+    .menu-toggle-lines::before,
+    .menu-toggle-lines::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--wine);
+      transition: .25s ease;
+      position: relative;
+    }
+
+    .menu-toggle-lines::before { position: absolute; top: -6px; }
+    .menu-toggle-lines::after { position: absolute; top: 6px; }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-lines { background: transparent; }
+    .menu-toggle[aria-expanded="true"] .menu-toggle-lines::before { top: 0; transform: rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] .menu-toggle-lines::after { top: 0; transform: rotate(-45deg); }
+
+    .hero {
+      position: relative;
+      padding: 38px 0 24px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(182, 138, 62, .12), transparent 28%),
+        radial-gradient(circle at 82% 24%, rgba(111, 29, 53, .1), transparent 26%);
+      pointer-events: none;
+    }
+
+    .hero-card {
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.88), rgba(247,241,234,.86)),
+        var(--surface);
+      border: 1px solid rgba(255,255,255,.65);
+      box-shadow: var(--shadow);
+      border-radius: 34px;
+      padding: 34px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(182,138,62,.07), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(111,29,53,.08), transparent 30%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: #7c675d;
+      font-size: .92rem;
+      margin-bottom: 18px;
+    }
+
+    .breadcrumb a:hover { color: var(--wine); }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(111, 29, 53, .08);
+      color: var(--wine);
+      font-weight: 700;
+      font-size: .84rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.6rem, 4.8vw, 5rem);
+      line-height: .95;
+      letter-spacing: -.02em;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .hero-actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .96rem;
+      transition: .25s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--wine), var(--wine-deep));
+      color: #fff;
+      box-shadow: 0 16px 28px rgba(111, 29, 53, .2);
+    }
+
+    .btn-secondary {
+      color: var(--wine);
+      background: rgba(255,255,255,.88);
+      border-color: rgba(111, 29, 53, .12);
+    }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(300px, .78fr);
+      gap: 24px;
+      padding: 10px 0 42px;
+      align-items: start;
+    }
+
+    .panel,
+    .side-box {
+      background: rgba(255,255,255,.8);
+      border: 1px solid rgba(255,255,255,.7);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(12px);
+    }
+
+    .panel {
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .panel-padding {
+      padding: 28px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 8px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.1vw, 3rem);
+      line-height: .98;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 22px;
+      border-radius: 24px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.95), rgba(248,243,237,.95));
+      border: 1px solid var(--line);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 10px 24px rgba(72, 37, 28, .04);
+      transition: .3s ease;
+      min-height: 100%;
+    }
+
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-4px);
+      border-color: rgba(182, 138, 62, .28);
+      box-shadow: 0 20px 36px rgba(72, 37, 28, .08);
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(182,138,62,.3), transparent 35%, rgba(111,29,53,.14));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: .65;
+    }
+
+    .card-tag {
+      width: fit-content;
+      display: inline-flex;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(182, 138, 62, .1);
+      color: #8a6323;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.34rem;
+      line-height: 1.15;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .98rem;
+    }
+
+    .card-link {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      color: var(--wine);
+      font-weight: 800;
+      padding-top: 6px;
+    }
+
+    .card-link::after {
+      content: "→";
+      transition: .25s ease;
+    }
+
+    .card-link:hover::after,
+    .card-link:focus-visible::after {
+      transform: translateX(4px);
+    }
+
+    .sidebar-stack {
+      display: grid;
+      gap: 18px;
+      position: sticky;
+      top: calc(var(--header-h) + 18px);
+    }
+
+    .side-box {
+      border-radius: 26px;
+      padding: 22px;
+    }
+
+    .side-box h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+    }
+
+    .side-box p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .side-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .side-list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 15px;
+      border-radius: 16px;
+      background: rgba(247,241,234,.85);
+      border: 1px solid rgba(91, 58, 47, .08);
+      color: #574640;
+      font-weight: 600;
+      transition: .25s ease;
+    }
+
+    .side-list a:hover,
+    .side-list a:focus-visible {
+      outline: none;
+      transform: translateX(4px);
+      color: var(--wine);
+      border-color: rgba(111, 29, 53, .18);
+      background: rgba(255,255,255,.95);
+    }
+
+    .side-list span:last-child {
+      color: #9b7a52;
+      font-size: .84rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .feature-box {
+      background:
+        linear-gradient(135deg, rgba(111,29,53,.96), rgba(81,19,38,.96));
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.1);
+      box-shadow: 0 20px 40px rgba(81, 19, 38, .24);
+    }
+
+    .feature-box strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .feature-box p {
+      color: rgba(255,255,255,.78);
+    }
+
+    .quote {
+      position: relative;
+      padding-left: 16px;
+      font-style: italic;
+    }
+
+    .quote::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 3px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--gold), var(--wine));
+    }
+
+    .footer {
+      padding: 0 0 36px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 26px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.8);
+      border: 1px solid rgba(255,255,255,.7);
+      box-shadow: var(--shadow-soft);
+      color: #6f5a52;
+      font-size: .95rem;
+      flex-wrap: wrap;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    @media (max-width: 1100px) {
+      .page-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar-stack {
+        position: static;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      :root { --header-h: 80px; }
+
+      .brand-text span {
+        max-width: 38vw;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar-stack {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        gap: 14px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .brand {
+        min-width: 0;
+        max-width: calc(100% - 64px);
+      }
+
+      .brand-mark {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+      }
+
+      .brand-text strong {
+        font-size: 1.55rem;
+      }
+
+      .brand-text span {
+        font-size: .83rem;
+        max-width: 100%;
+      }
+
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero-card,
+      .panel-padding,
+      .side-box {
+        padding: 22px;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .mobile-nav {
+        display: block;
+        position: fixed;
+        inset: var(--header-h) 0 auto 0;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: .25s ease;
+        padding: 10px 16px 0;
+      }
+
+      .mobile-nav.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .mobile-nav-panel {
+        background: rgba(255,255,255,.96);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(91,58,47,.08);
+        border-radius: 24px;
+        box-shadow: 0 24px 60px rgba(48, 25, 19, .16);
+        padding: 12px;
+      }
+
+      .mobile-nav-panel a {
+        display: block;
+        padding: 14px 14px;
+        border-radius: 16px;
+        font-weight: 700;
+        color: #5b4943;
+      }
+
+      .mobile-nav-panel a.active,
+      .mobile-nav-panel a:hover,
+      .mobile-nav-panel a:focus-visible {
+        outline: none;
+        background: rgba(111,29,53,.07);
+        color: var(--wine);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(calc(100% - 22px), var(--container));
+      }
+
+      .topbar-inner {
+        min-height: 74px;
+      }
+
+      .brand-text strong {
+        font-size: 1.4rem;
+      }
+
+      .brand-text span {
+        font-size: .78rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 13vw, 3.2rem);
+      }
+
+      .hero p,
+      .section-title p,
+      .card p,
+      .side-box p {
+        font-size: .96rem;
+      }
+
+      .breadcrumb {
+        font-size: .84rem;
+      }
+
+      .hero-card,
+      .panel-padding,
+      .side-box,
+      .footer-inner {
+        border-radius: 22px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="../index.html" class="brand" aria-label="soloteo">
-        <img src="../assets/img/logo-soloteo.png" alt="Logo soloteo">
-        <div class="brand-text">
-          <strong>soloteo</strong>
+      <a href="../index.html" class="brand" aria-label="Soloteo">
+        <span class="brand-mark">
+          <img src="../assets/img/logo-soloteo.png" alt="Logo Soloteo">
+        </span>
+        <span class="brand-text">
+          <strong>SOLOTEO</strong>
           <span>Teologia com profundidade, beleza e clareza</span>
-        </div>
+        </span>
       </a>
 
-      <nav class="nav" aria-label="Principal">
-        <a href="../index.html">Início</a>
-        <a href="./teologia-sistematica.html">Teologia Sistemática</a>
-        <a href="./trilhas-de-estudo.html">Trilhas</a>
-        <a href="./livros-da-biblia.html" class="active">Livros da Bíblia</a>
-        <a href="./apologetica.html">Apologética</a>
-      </nav>
+      <div class="nav-wrap">
+        <nav class="nav" aria-label="Principal">
+          <a href="../index.html">Início</a>
+          <a href="./teologia-sistematica.html">Teologia Sistemática</a>
+          <a href="./trilhas-de-estudo.html">Trilhas</a>
+          <a href="./livros-da-biblia.html" class="active">Livros da Bíblia</a>
+          <a href="./apologetica.html">Apologética</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-controls="mobileNav" aria-expanded="false" type="button">
+          <span class="menu-toggle-lines"></span>
+        </button>
+      </div>
     </div>
   </header>
+
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav-panel">
+      <a href="../index.html">Início</a>
+      <a href="./teologia-sistematica.html">Teologia Sistemática</a>
+      <a href="./trilhas-de-estudo.html">Trilhas</a>
+      <a href="./livros-da-biblia.html" class="active">Livros da Bíblia</a>
+      <a href="./apologetica.html">Apologética</a>
+      <a href="./referencias-cristas-historicas.html">Referências Cristãs Históricas</a>
+      <a href="./biografias-e-autores.html">Biografias e Autores</a>
+      <a href="./devocionais-e-aplicacoes.html">Devocionais e Aplicações</a>
+    </div>
+  </div>
 
   <section class="hero">
     <div class="container">
@@ -75,9 +838,7 @@
         <div class="hero-badge">Leitura organizada das Escrituras</div>
         <h1>Livros da Bíblia</h1>
         <p>
-          Explore cada livro bíblico com ordem, contexto e profundidade.
-          Uma estrutura pensada para facilitar a navegação entre Antigo e Novo Testamento,
-          com páginas internas organizadas por grandes divisões bíblicas.
+          Explore cada livro bíblico com ordem, contexto e profundidade. Uma estrutura pensada para facilitar a navegação entre Antigo e Novo Testamento, com páginas internas organizadas por grandes divisões bíblicas e um visual no mesmo nível premium da página inicial.
         </p>
 
         <div class="hero-actions">
@@ -94,8 +855,7 @@
         <div>
           <h2 id="estudos">Grandes divisões bíblicas</h2>
           <p>
-            Essa página é a porta de entrada para os estudos por livro,
-            agrupados de forma intuitiva, reverente e elegante.
+            Essa página é a porta de entrada para os estudos por livro, agrupados de forma intuitiva, reverente e elegante. Cada bloco já aponta para a estrutura que você organizou dentro da pasta de estudos.
           </p>
         </div>
       </div>
@@ -105,58 +865,54 @@
           <span class="card-tag">Antigo Testamento</span>
           <h3>Pentateuco</h3>
           <p>
-            Gênesis, Êxodo, Levítico, Números e Deuteronômio com foco em criação,
-            aliança, lei e identidade do povo de Deus.
+            Gênesis, Êxodo, Levítico, Números e Deuteronômio com foco em criação, aliança, lei e identidade do povo de Deus.
           </p>
-          <a class="card-link" href="../livros-da-biblia/pentateuco.html">Abrir seção →</a>
+          <a class="card-link" href="../livros-da-biblia/pentateuco.html">Abrir seção</a>
         </article>
 
         <article class="card">
           <span class="card-tag">Antigo Testamento</span>
           <h3>Livros Históricos</h3>
           <p>
-            Josué até Ester, acompanhando a formação, crise e trajetória histórica de Israel.
+            Josué até Ester, acompanhando a formação, crise e trajetória histórica de Israel em páginas já estruturadas por livro.
           </p>
-          <a class="card-link" href="../livros-da-biblia/historicos.html">Abrir seção →</a>
+          <a class="card-link" href="../livros-da-biblia/livros-historicos.html">Abrir seção</a>
         </article>
 
         <article class="card">
           <span class="card-tag">Sabedoria</span>
           <h3>Poéticos e Sapienciais</h3>
           <p>
-            Jó, Salmos, Provérbios, Eclesiastes e Cânticos: sofrimento, adoração,
-            sabedoria e beleza bíblica.
+            Jó, Salmos, Provérbios, Eclesiastes e Cânticos: sofrimento, adoração, sabedoria e beleza bíblica em um só eixo.
           </p>
-          <a class="card-link" href="../livros-da-biblia/poeticos-e-sapienciais.html">Abrir seção →</a>
+          <a class="card-link" href="../livros-da-biblia/poeticos-e-sapienciais.html">Abrir seção</a>
         </article>
 
         <article class="card">
           <span class="card-tag">Profecia</span>
           <h3>Profetas Maiores</h3>
           <p>
-            Isaías, Jeremias, Lamentações, Ezequiel e Daniel com profundidade histórica,
-            teológica e messiânica.
+            Isaías, Jeremias, Lamentações, Ezequiel e Daniel com profundidade histórica, teológica e messiânica.
           </p>
-          <a class="card-link" href="../livros-da-biblia/profetas-maiores.html">Abrir seção →</a>
+          <a class="card-link" href="../livros-da-biblia/profetas-maiores.html">Abrir seção</a>
         </article>
 
         <article class="card">
           <span class="card-tag">Profecia</span>
           <h3>Profetas Menores</h3>
           <p>
-            De Oseias a Malaquias, reunindo mensagens de juízo, arrependimento,
-            restauração e esperança.
+            De Oseias a Malaquias, reunindo mensagens de juízo, arrependimento, restauração e esperança.
           </p>
-          <a class="card-link" href="../livros-da-biblia/profetas-menores.html">Abrir seção →</a>
+          <a class="card-link" href="../livros-da-biblia/profetas-menores.html">Abrir seção</a>
         </article>
 
         <article class="card">
           <span class="card-tag">Novo Testamento</span>
           <h3>Evangelhos, Cartas e Apocalipse</h3>
           <p>
-            A vida de Cristo, a expansão da Igreja, a doutrina apostólica e a esperança final.
+            A vida de Cristo, a expansão da Igreja, a doutrina apostólica e a esperança final em uma navegação clara e elegante.
           </p>
-          <a class="card-link" href="../livros-da-biblia/novo-testamento.html">Abrir seção →</a>
+          <a class="card-link" href="../livros-da-biblia/novo-testamento.html">Abrir seção</a>
         </article>
       </div>
     </section>
@@ -164,10 +920,10 @@
     <aside class="sidebar-stack">
       <div class="side-box" id="mapa">
         <h3>Mapa da categoria</h3>
-        <p>Cada grupo já pode levar para sua própria página interna.</p>
+        <p>Cada grupo já pode levar para sua página interna principal.</p>
         <ul class="side-list">
           <li><a href="../livros-da-biblia/pentateuco.html"><span>Pentateuco</span><span>01</span></a></li>
-          <li><a href="../livros-da-biblia/historicos.html"><span>Históricos</span><span>02</span></a></li>
+          <li><a href="../livros-da-biblia/livros-historicos.html"><span>Históricos</span><span>02</span></a></li>
           <li><a href="../livros-da-biblia/poeticos-e-sapienciais.html"><span>Poéticos e Sapienciais</span><span>03</span></a></li>
           <li><a href="../livros-da-biblia/profetas-maiores.html"><span>Profetas Maiores</span><span>04</span></a></li>
           <li><a href="../livros-da-biblia/profetas-menores.html"><span>Profetas Menores</span><span>05</span></a></li>
@@ -178,23 +934,62 @@
       <div class="side-box feature-box">
         <strong>Visão do projeto</strong>
         <p>
-          Organizar a Bíblia de forma bela e navegável, sem perder profundidade
-          e reverência no trato com o texto sagrado.
+          Organizar a Bíblia de forma bela, navegável e reverente, sem perder profundidade teológica nem clareza para quem está estudando.
         </p>
       </div>
 
       <div class="side-box">
         <h3>Frase-chave</h3>
-        <p class="quote">“Cada livro revela uma parte da grande história da redenção.”</p>
+        <p class="quote">Cada livro revela uma parte da grande história da redenção.</p>
       </div>
     </aside>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© 2026 soloteo. Todos os direitos reservados.</p>
+      <p>© 2026 Soloteo. Todos os direitos reservados.</p>
       <p>Teologia, estudo, reverência e excelência.</p>
     </div>
   </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    function closeMenu() {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      mobileNav.classList.remove('open');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('menu-open');
+    }
+
+    function openMenu() {
+      menuToggle.setAttribute('aria-expanded', 'true');
+      mobileNav.classList.add('open');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('menu-open');
+    }
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      expanded ? closeMenu() : openMenu();
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 760) closeMenu();
+    });
+
+    document.addEventListener('click', (event) => {
+      const clickInsideMenu = mobileNav.contains(event.target);
+      const clickOnButton = menuToggle.contains(event.target);
+      if (!clickInsideMenu && !clickOnButton && mobileNav.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
+  </script>
 </body>
 </html>

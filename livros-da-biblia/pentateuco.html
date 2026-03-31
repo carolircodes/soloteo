@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Pentateuco | soloteo</title>
-  <meta name="description" content="Estudo completo do Pentateuco no soloteo: Gênesis, Êxodo, Levítico, Números e Deuteronômio. Conteúdo profundo, organizado e acessível." />
-  <meta name="keywords" content="Pentateuco, soloteo, estudo bíblico, Gênesis, Êxodo, Levítico, Números, Deuteronômio, teologia bíblica" />
+  <meta name="description" content="Estudo aprofundado do Pentateuco no soloteo: contexto histórico, estrutura, temas teológicos, curiosidades arqueológicas e fatos interessantes sobre Gênesis, Êxodo, Levítico, Números e Deuteronômio." />
+  <meta name="keywords" content="Pentateuco, Gênesis, Êxodo, Levítico, Números, Deuteronômio, estudo bíblico, arqueologia bíblica, contexto histórico, soloteo" />
   <meta name="author" content="soloteo" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.soloteo.com.br/livros-da-biblia/pentateuco.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Pentateuco | soloteo" />
-  <meta property="og:description" content="Explore os cinco primeiros livros da Bíblia com estudos completos, contexto, estrutura, teologia e aplicação prática." />
+  <meta property="og:description" content="Aprofunde-se nos cinco primeiros livros da Bíblia com contexto, estrutura, temas e curiosidades históricas." />
   <meta property="og:url" content="https://www.soloteo.com.br/livros-da-biblia/pentateuco.html" />
   <meta property="og:site_name" content="soloteo" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Pentateuco | soloteo" />
-  <meta name="twitter:description" content="Estudos completos sobre os cinco primeiros livros da Bíblia no soloteo." />
+  <meta name="twitter:description" content="Estudo completo e elegante do Pentateuco no soloteo." />
 
   <script type="application/ld+json">
   {
@@ -27,7 +26,7 @@
     "@type":"CollectionPage",
     "name":"Pentateuco",
     "url":"https://www.soloteo.com.br/livros-da-biblia/pentateuco.html",
-    "description":"Página de estudos do Pentateuco no soloteo.",
+    "description":"Página de estudos aprofundados do Pentateuco no soloteo.",
     "publisher":{
       "@type":"Organization",
       "name":"soloteo",
@@ -41,63 +40,96 @@
       --bg:#f7f3ee;
       --paper:#fffdf9;
       --paper-2:#fbf6ef;
+      --surface:#fffaf4;
       --text:#201815;
       --muted:#6d5a52;
       --line:rgba(86,50,38,.12);
+      --line-strong:rgba(110,33,50,.14);
       --wine:#6e2132;
       --wine-2:#8c2f45;
       --gold:#c7a461;
       --gold-2:#e7d3a0;
       --shadow:0 20px 60px rgba(55,22,18,.09);
+      --shadow-soft:0 14px 38px rgba(55,22,18,.07);
       --radius:24px;
-      --radius-lg:32px;
-      --max:1240px;
+      --radius-lg:34px;
+      --max:1260px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-
     body{
       margin:0;
       font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color:var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(199,164,97,.10), transparent 26%),
-        radial-gradient(circle at top right, rgba(110,33,50,.07), transparent 20%),
-        linear-gradient(180deg, #fbf8f4 0%, #f4efe8 100%);
       line-height:1.65;
+      background:
+        radial-gradient(circle at top left, rgba(199,164,97,.12), transparent 24%),
+        radial-gradient(circle at top right, rgba(110,33,50,.08), transparent 20%),
+        linear-gradient(180deg, #fbf8f4 0%, #f4efe8 100%);
+      overflow-x:hidden;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button,input{font:inherit}
+    ::selection{background:rgba(110,33,50,.12)}
 
     .container{
       width:min(calc(100% - 32px), var(--max));
       margin:0 auto;
     }
 
+    .skip-link{
+      position:absolute;
+      top:-60px;
+      left:14px;
+      padding:10px 14px;
+      border-radius:12px;
+      background:#fff;
+      color:var(--wine);
+      font-weight:800;
+      z-index:3000;
+      box-shadow:var(--shadow-soft);
+      transition:top .25s ease;
+    }
+    .skip-link:focus{top:12px}
+
+    .progress-bar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:0%;
+      height:3px;
+      z-index:2500;
+      background:linear-gradient(90deg,var(--gold),var(--wine),var(--gold));
+      box-shadow:0 0 24px rgba(110,33,50,.35);
+      transform-origin:left center;
+    }
+
     .topbar{
       position:sticky;
       top:0;
-      z-index:1000;
-      backdrop-filter:blur(16px);
-      background:rgba(251,248,244,.90);
+      z-index:1100;
+      backdrop-filter:blur(18px);
+      background:rgba(251,248,244,.9);
       border-bottom:1px solid rgba(86,50,38,.08);
+      transition:background .28s ease, box-shadow .28s ease, border-color .28s ease, transform .28s ease;
     }
 
-    .nav{
-      min-height:86px;
+    .topbar.is-scrolled{
+      background:rgba(255,252,248,.95);
+      box-shadow:0 14px 34px rgba(40,20,18,.06);
+      border-bottom-color:rgba(110,33,50,.08);
+    }
+
+    .nav-shell{
+      min-height:88px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:20px;
+      gap:18px;
+      padding:14px 0;
     }
 
     .brand{
@@ -105,77 +137,179 @@
       align-items:center;
       gap:14px;
       min-width:0;
+      flex:1;
     }
 
     .brand-logo{
-      width:52px;
-      height:52px;
+      width:54px;
+      height:54px;
       object-fit:contain;
+      border-radius:12px;
       flex-shrink:0;
-      border-radius:10px;
+      transition:transform .35s ease;
     }
 
+    .brand:hover .brand-logo{transform:translateY(-1px) scale(1.02)}
+
     .brand-text{
+      min-width:0;
       display:flex;
       flex-direction:column;
-      line-height:1.1;
-      min-width:0;
+      line-height:1.08;
     }
 
     .brand-text strong{
       font-size:1.18rem;
-      letter-spacing:.08em;
-      color:#2a1d18;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#241916;
       font-weight:800;
     }
 
     .brand-text span{
-      font-size:.84rem;
+      margin-top:7px;
       color:#7a6a60;
-      margin-top:6px;
-      white-space:nowrap;
+      font-size:.84rem;
     }
+
+    .menu-toggle{
+      display:none;
+      width:48px;
+      height:48px;
+      border:none;
+      border-radius:16px;
+      background:rgba(255,255,255,.82);
+      box-shadow:var(--shadow-soft);
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      flex-shrink:0;
+      position:relative;
+      z-index:1300;
+      transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+    }
+    .menu-toggle:hover{transform:translateY(-1px)}
+    .menu-toggle span,
+    .menu-toggle::before,
+    .menu-toggle::after{
+      content:"";
+      position:absolute;
+      width:18px;
+      height:2px;
+      border-radius:999px;
+      background:var(--wine);
+      transition:transform .3s ease, opacity .22s ease;
+    }
+    .menu-toggle span{transform:translateY(0)}
+    .menu-toggle::before{transform:translateY(-6px)}
+    .menu-toggle::after{transform:translateY(6px)}
+    .menu-toggle.is-open span{opacity:0}
+    .menu-toggle.is-open::before{transform:rotate(45deg)}
+    .menu-toggle.is-open::after{transform:rotate(-45deg)}
 
     .nav-links{
       display:flex;
       align-items:center;
+      justify-content:flex-end;
       gap:10px;
       flex-wrap:wrap;
-      justify-content:flex-end;
     }
 
     .nav-links a{
       color:var(--muted);
-      font-weight:600;
-      padding:10px 14px;
+      font-weight:700;
+      padding:11px 15px;
       border-radius:999px;
-      transition:.22s ease;
+      transition:.24s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:16px;
+      right:16px;
+      bottom:8px;
+      height:2px;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--gold),var(--wine));
+      transform:scaleX(0);
+      transform-origin:left center;
+      transition:transform .25s ease;
     }
 
     .nav-links a:hover,
     .nav-links a.active{
       background:#fff;
       color:var(--wine);
-      box-shadow:var(--shadow);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after{transform:scaleX(1)}
+
+    .menu-overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(20,10,10,.28);
+      backdrop-filter:blur(2px);
+      opacity:0;
+      visibility:hidden;
+      transition:opacity .25s ease, visibility .25s ease;
+      z-index:1200;
+    }
+    .menu-overlay.active{
+      opacity:1;
+      visibility:visible;
     }
 
     .hero{
-      padding:54px 0 28px;
+      padding:56px 0 22px;
+      position:relative;
+    }
+
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      pointer-events:none;
+      filter:blur(4px);
+      opacity:.7;
+      animation:floatOrb 12s ease-in-out infinite;
+    }
+
+    .hero::before{
+      width:220px;
+      height:220px;
+      top:20px;
+      left:-60px;
+      background:radial-gradient(circle, rgba(199,164,97,.18), transparent 68%);
+    }
+
+    .hero::after{
+      width:260px;
+      height:260px;
+      top:80px;
+      right:-90px;
+      background:radial-gradient(circle, rgba(110,33,50,.12), transparent 70%);
+      animation-delay:-6s;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.16fr .84fr;
-      gap:26px;
+      grid-template-columns:minmax(0,1.16fr) minmax(320px,.84fr);
+      gap:24px;
       align-items:stretch;
     }
 
     .hero-card,
     .hero-side{
-      background:rgba(255,253,249,.88);
+      background:rgba(255,253,249,.9);
       border:1px solid var(--line);
-      box-shadow:var(--shadow);
       border-radius:var(--radius-lg);
+      box-shadow:var(--shadow);
       overflow:hidden;
     }
 
@@ -183,6 +317,9 @@
       padding:42px;
       position:relative;
       isolation:isolate;
+      transform:translateY(18px);
+      opacity:0;
+      animation:heroReveal .9s cubic-bezier(.2,.8,.2,1) forwards;
     }
 
     .hero-card::before{
@@ -190,21 +327,33 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(circle at 18% 15%, rgba(199,164,97,.15), transparent 24%),
+        radial-gradient(circle at 18% 15%, rgba(199,164,97,.18), transparent 24%),
+        radial-gradient(circle at 82% 78%, rgba(110,33,50,.07), transparent 18%),
         linear-gradient(180deg, rgba(255,255,255,.1), rgba(110,33,50,.02));
+      z-index:-2;
+    }
+
+    .hero-card::after{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      background:linear-gradient(120deg, transparent 24%, rgba(255,255,255,.4) 34%, transparent 44%);
+      transform:translateX(-130%);
+      animation:shineSweep 5.6s ease-in-out infinite 1.4s;
       z-index:-1;
+      pointer-events:none;
     }
 
     .eyebrow{
       display:inline-flex;
       align-items:center;
       gap:10px;
+      margin-bottom:18px;
       font-size:.82rem;
       font-weight:800;
       letter-spacing:.13em;
-      text-transform:uppercase;
       color:var(--wine);
-      margin-bottom:18px;
+      text-transform:uppercase;
     }
 
     .dot{
@@ -213,12 +362,42 @@
       border-radius:50%;
       background:linear-gradient(135deg,var(--gold),#f3e2b7);
       box-shadow:0 0 0 8px rgba(199,164,97,.12);
+      animation:pulseDot 2.8s ease-in-out infinite;
     }
+
+    .hero-kicker{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:22px;
+    }
+
+    .mini-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(110,33,50,.08);
+      color:var(--wine);
+      font-size:.8rem;
+      font-weight:700;
+      transform:translateY(16px);
+      opacity:0;
+      animation:fadeUp .75s ease forwards;
+    }
+
+    .mini-pill:nth-child(1){animation-delay:.22s}
+    .mini-pill:nth-child(2){animation-delay:.29s}
+    .mini-pill:nth-child(3){animation-delay:.36s}
+    .mini-pill:nth-child(4){animation-delay:.43s}
+    .mini-pill:nth-child(5){animation-delay:.50s}
 
     h1{
       margin:0;
       font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(2.7rem, 6vw, 5rem);
+      font-size:clamp(2.8rem, 6vw, 5.2rem);
       line-height:.94;
       letter-spacing:-.04em;
       color:#221714;
@@ -226,9 +405,12 @@
 
     .hero-description{
       margin:22px 0 0;
-      color:var(--muted);
       font-size:1.06rem;
       max-width:760px;
+      color:var(--muted);
+      transform:translateY(16px);
+      opacity:0;
+      animation:fadeUp .78s ease forwards .16s;
     }
 
     .hero-actions{
@@ -236,6 +418,9 @@
       gap:14px;
       flex-wrap:wrap;
       margin-top:30px;
+      transform:translateY(16px);
+      opacity:0;
+      animation:fadeUp .82s ease forwards .28s;
     }
 
     .btn{
@@ -243,80 +428,123 @@
       align-items:center;
       justify-content:center;
       gap:10px;
+      min-height:52px;
       padding:14px 20px;
       border-radius:999px;
-      font-weight:800;
       border:1px solid transparent;
-      transition:.22s ease;
+      font-weight:800;
+      transition:transform .24s ease, box-shadow .24s ease, background .24s ease, border-color .24s ease;
       cursor:pointer;
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
     }
 
+    .btn::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(120deg, transparent 24%, rgba(255,255,255,.22) 42%, transparent 58%);
+      transform:translateX(-130%);
+      transition:transform .65s ease;
+      z-index:-1;
+    }
+
+    .btn:hover::after{transform:translateX(130%)}
+
     .btn-primary{
-      background:linear-gradient(135deg,var(--wine),var(--wine-2));
       color:#fff;
+      background:linear-gradient(135deg,var(--wine),var(--wine-2));
       box-shadow:0 16px 30px rgba(110,33,50,.18);
     }
 
     .btn-primary:hover{
       transform:translateY(-2px);
+      box-shadow:0 18px 34px rgba(110,33,50,.24);
     }
 
     .btn-secondary{
-      background:#fff;
       color:var(--wine);
+      background:#fff;
       border-color:rgba(110,33,50,.12);
     }
 
     .btn-secondary:hover{
       background:#fff8fa;
+      transform:translateY(-2px);
     }
 
     .hero-side{
-      padding:26px;
+      padding:24px;
       display:flex;
       flex-direction:column;
-      gap:20px;
+      gap:18px;
       justify-content:space-between;
+      transform:translateY(18px);
+      opacity:0;
+      animation:heroReveal .9s cubic-bezier(.2,.8,.2,1) forwards .15s;
+    }
+
+    .hero-side-card,
+    .panel,
+    .feature-card,
+    .book-card,
+    .note-card,
+    .timeline-card,
+    .cta-box,
+    .theme-box{
+      background:linear-gradient(180deg,#fff, var(--paper-2));
+      border:1px solid rgba(199,164,97,.18);
+      border-radius:26px;
+      box-shadow:var(--shadow-soft);
     }
 
     .hero-side-card{
-      background:linear-gradient(180deg,#fff, var(--paper-2));
-      border:1px solid rgba(199,164,97,.18);
-      border-radius:24px;
       padding:22px;
+      transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
     }
 
-    .hero-side-card h2{
+    .hero-side-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 18px 42px rgba(55,22,18,.10);
+      border-color:rgba(199,164,97,.3);
+    }
+
+    .hero-side-card h2,
+    .panel h2,
+    .section-header h2,
+    .section-title{
       margin:0 0 10px;
-      color:var(--wine);
-      font-size:1rem;
-      letter-spacing:.02em;
+      color:#241916;
+      font-family:Georgia, "Times New Roman", serif;
     }
 
-    .hero-side-card p{
-      margin:0;
-      color:var(--muted);
-      font-size:.96rem;
-    }
+    .hero-side-card h2{font-size:1rem;color:var(--wine);font-family:inherit;letter-spacing:.02em}
+    .hero-side-card p{margin:0;color:var(--muted);font-size:.96rem}
 
     .search-box{
       margin-top:16px;
       display:flex;
-      gap:12px;
       flex-wrap:wrap;
+      gap:12px;
     }
 
     .search-box input{
       flex:1 1 220px;
       min-width:0;
-      border:none;
-      outline:none;
       padding:15px 16px;
       border-radius:18px;
       border:1px solid rgba(86,50,38,.1);
+      outline:none;
       background:#fff;
       color:var(--text);
-      font-size:1rem;
+      transition:border-color .22s ease, box-shadow .22s ease, transform .22s ease;
+    }
+
+    .search-box input:focus{
+      border-color:rgba(110,33,50,.22);
+      box-shadow:0 0 0 5px rgba(110,33,50,.08);
+      transform:translateY(-1px);
     }
 
     .search-status{
@@ -325,74 +553,204 @@
       color:var(--muted);
       font-size:.92rem;
       font-weight:600;
+      transition:opacity .2s ease, transform .2s ease;
     }
 
     .section{
-      padding:28px 0 10px;
+      padding:24px 0 10px;
     }
 
     .section-header{
       display:flex;
       align-items:end;
       justify-content:space-between;
-      gap:16px;
+      gap:18px;
       margin-bottom:22px;
     }
 
     .section-header h2{
-      margin:0;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(1.9rem,3vw,2.8rem);
+      font-size:clamp(1.95rem, 3vw, 2.9rem);
       letter-spacing:-.02em;
-      color:#241916;
     }
 
-    .section-header p{
-      margin:0;
+    .section-header p,
+    .section-lead,
+    .panel p,
+    .panel li,
+    .feature-card p,
+    .book-card p,
+    .timeline-card p,
+    .note-card p,
+    .cta-box p,
+    .theme-box p{
       color:var(--muted);
-      max-width:700px;
     }
 
-    .grid{
+    .section-lead{
+      max-width:820px;
+      margin:0 0 22px;
+    }
+
+    .metrics{
       display:grid;
-      grid-template-columns:repeat(5,1fr);
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .metric{
+      padding:18px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:22px;
+      transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+
+    .metric:hover{
+      transform:translateY(-3px);
+      border-color:rgba(199,164,97,.28);
+      box-shadow:0 18px 40px rgba(55,22,18,.08);
+    }
+
+    .metric strong{
+      display:block;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.75rem;
+      color:#241916;
+      line-height:1;
+      margin-bottom:8px;
+    }
+
+    .metric span{
+      color:var(--muted);
+      font-size:.92rem;
+      font-weight:600;
+    }
+
+    .feature-grid,
+    .deep-grid,
+    .notes-grid,
+    .timeline-grid,
+    .books-grid,
+    .themes-grid{
+      display:grid;
       gap:18px;
     }
 
+    .feature-grid{grid-template-columns:repeat(3,1fr)}
+    .deep-grid{grid-template-columns:1.2fr .8fr}
+    .notes-grid{grid-template-columns:repeat(3,1fr)}
+    .timeline-grid{grid-template-columns:repeat(3,1fr)}
+    .books-grid{grid-template-columns:repeat(5,1fr)}
+    .themes-grid{grid-template-columns:repeat(2,1fr)}
+
+    .panel,
+    .feature-card,
+    .timeline-card,
+    .note-card,
+    .book-card,
+    .theme-box{
+      padding:24px;
+      transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease, background .3s ease;
+    }
+
+    .panel:hover,
+    .feature-card:hover,
+    .timeline-card:hover,
+    .note-card:hover,
+    .theme-box:hover{
+      transform:translateY(-4px);
+      box-shadow:0 22px 46px rgba(55,22,18,.1);
+      border-color:rgba(199,164,97,.30);
+    }
+
+    .panel ul,
+    .feature-card ul,
+    .note-card ul,
+    .theme-list{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .feature-card h3,
+    .book-card h3,
+    .note-card h3,
+    .timeline-card h3,
+    .theme-box h3{
+      margin:0 0 10px;
+      color:#241916;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.34rem;
+    }
+
+    .feature-card .icon,
+    .timeline-card .icon,
+    .note-card .icon{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      margin-bottom:14px;
+      background:rgba(110,33,50,.08);
+      color:var(--wine);
+      font-weight:800;
+      transition:transform .3s ease, background .3s ease;
+    }
+
+    .timeline-card:hover .icon,
+    .note-card:hover .icon,
+    .feature-card:hover .icon{
+      transform:translateY(-2px) scale(1.04);
+      background:rgba(110,33,50,.12);
+    }
+
+    .books-grid{margin-top:6px}
+
     .book-card{
-      background:rgba(255,253,249,.92);
-      border:1px solid var(--line);
-      border-radius:26px;
-      padding:22px;
-      box-shadow:var(--shadow);
       position:relative;
       overflow:hidden;
-      transition:.24s ease;
+      background:rgba(255,253,249,.95);
+      border:1px solid var(--line);
+      transform-style:preserve-3d;
+    }
+
+    .book-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(255,255,255,.18), transparent 35%);
+      opacity:0;
+      transition:opacity .28s ease;
+      pointer-events:none;
     }
 
     .book-card::after{
       content:"";
       position:absolute;
-      right:-32px;
-      bottom:-32px;
-      width:126px;
-      height:126px;
+      right:-34px;
+      bottom:-34px;
+      width:130px;
+      height:130px;
       background:radial-gradient(circle, rgba(199,164,97,.12), transparent 70%);
       pointer-events:none;
+      transition:transform .35s ease;
     }
 
     .book-card:hover{
-      transform:translateY(-4px);
+      transform:translateY(-6px);
       border-color:rgba(199,164,97,.28);
+      box-shadow:0 24px 50px rgba(55,22,18,.1);
     }
 
-    .book-card.is-hidden{
-      display:none;
-    }
+    .book-card:hover::before{opacity:1}
+    .book-card:hover::after{transform:scale(1.08)}
 
+    .book-card.is-hidden{display:none}
     .book-card.is-highlight{
-      border-color:rgba(110,33,50,.35);
+      border-color:rgba(110,33,50,.34);
       box-shadow:0 24px 50px rgba(110,33,50,.12);
+      animation:foundPulse 1.2s ease;
     }
 
     .book-tag{
@@ -406,73 +764,115 @@
       letter-spacing:.08em;
       text-transform:uppercase;
       margin-bottom:14px;
+      transition:transform .25s ease, background .25s ease;
     }
 
-    .book-card h3{
-      margin:0 0 10px;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:1.24rem;
-      color:#251916;
+    .book-card:hover .book-tag{
+      transform:translateY(-1px);
+      background:rgba(110,33,50,.1);
     }
 
-    .book-card p{
-      margin:0 0 18px;
-      color:var(--muted);
-      font-size:.95rem;
+    .book-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:16px 0 18px;
+    }
+
+    .book-meta span{
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:.76rem;
+      font-weight:700;
+      background:#fff7eb;
+      color:#8a6530;
+      border:1px solid rgba(199,164,97,.18);
+      transition:transform .24s ease, background .24s ease;
+    }
+
+    .book-card:hover .book-meta span{
+      transform:translateY(-1px);
+      background:#fff2d7;
     }
 
     .book-link{
       color:var(--wine);
       font-weight:800;
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
     }
 
-    .content-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-      margin-top:8px;
+    .book-link::after{
+      content:"";
+      width:0;
+      height:2px;
+      background:linear-gradient(90deg,var(--gold),var(--wine));
+      position:absolute;
+      left:0;
+      bottom:-3px;
+      transition:width .25s ease;
     }
 
-    .info-card{
-      background:rgba(255,253,249,.92);
-      border:1px solid var(--line);
-      border-radius:26px;
-      padding:28px;
-      box-shadow:var(--shadow);
+    .book-link:hover::after{width:100%}
+
+    .callout{
+      padding:20px 22px;
+      border-radius:24px;
+      background:linear-gradient(135deg, rgba(110,33,50,.05), rgba(199,164,97,.08));
+      border:1px solid rgba(110,33,50,.08);
+      margin-top:18px;
+      position:relative;
+      overflow:hidden;
     }
 
-    .info-card h3{
-      margin:0 0 14px;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:1.4rem;
-      color:#241916;
+    .callout::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(120deg, transparent 28%, rgba(255,255,255,.22) 44%, transparent 60%);
+      transform:translateX(-130%);
+      animation:shineSweep 6.2s ease-in-out infinite 2.2s;
+      pointer-events:none;
     }
 
-    .info-card p,
-    .info-card li{
-      color:var(--muted);
-    }
+    .callout strong{color:#241916}
 
-    .info-card ul{
-      margin:0;
-      padding-left:18px;
+    .timeline-card small,
+    .note-card small{
+      display:block;
+      color:var(--wine);
+      text-transform:uppercase;
+      letter-spacing:.11em;
+      font-weight:800;
+      margin-bottom:10px;
     }
 
     .cta{
-      padding:42px 0 74px;
+      padding:42px 0 72px;
     }
 
     .cta-box{
-      background:linear-gradient(135deg, #fff9ef, #fff, #fcf6ec);
-      border:1px solid rgba(199,164,97,.24);
-      border-radius:34px;
-      box-shadow:var(--shadow);
-      padding:34px;
+      padding:32px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:24px;
       flex-wrap:wrap;
+      background:linear-gradient(135deg,#fff9ef,#fff,#fcf6ec);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .cta-box::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(120deg, transparent 20%, rgba(255,255,255,.35) 35%, transparent 50%);
+      transform:translateX(-130%);
+      animation:shineSweep 6.5s ease-in-out infinite 1.2s;
+      pointer-events:none;
     }
 
     .cta-box h3{
@@ -482,127 +882,225 @@
       color:#241916;
     }
 
-    .cta-box p{
-      margin:0;
-      color:var(--muted);
-      max-width:720px;
-    }
-
     footer{
       padding:0 0 42px;
       color:var(--muted);
       font-size:.95rem;
     }
 
-    @media (max-width:1100px){
-      .hero-grid{
-        grid-template-columns:1fr;
-      }
-
-      .grid{
-        grid-template-columns:repeat(3,1fr);
-      }
+    .to-top{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:52px;
+      height:52px;
+      border:none;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--wine),var(--wine-2));
+      color:#fff;
+      font-size:1.1rem;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow:0 18px 34px rgba(110,33,50,.22);
+      z-index:1400;
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(16px) scale(.95);
+      transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
     }
 
-    @media (max-width:860px){
-      .nav{
-        padding:14px 0;
-        align-items:flex-start;
-        flex-direction:column;
+    .to-top.show{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0) scale(1);
+    }
+
+    .to-top:hover{transform:translateY(-2px) scale(1.03)}
+
+    [data-reveal]{
+      opacity:0;
+      transform:translateY(26px);
+      transition:opacity .72s cubic-bezier(.2,.8,.2,1), transform .72s cubic-bezier(.2,.8,.2,1);
+      transition-delay:var(--delay, 0s);
+      will-change:transform, opacity;
+    }
+
+    [data-reveal].is-visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @keyframes heroReveal{
+      from{opacity:0;transform:translateY(18px) scale(.985)}
+      to{opacity:1;transform:translateY(0) scale(1)}
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(16px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    @keyframes pulseDot{
+      0%,100%{box-shadow:0 0 0 8px rgba(199,164,97,.12)}
+      50%{box-shadow:0 0 0 12px rgba(199,164,97,.06)}
+    }
+
+    @keyframes floatOrb{
+      0%,100%{transform:translate3d(0,0,0)}
+      50%{transform:translate3d(0,-16px,0)}
+    }
+
+    @keyframes shineSweep{
+      0%{transform:translateX(-130%)}
+      55%,100%{transform:translateX(130%)}
+    }
+
+    @keyframes foundPulse{
+      0%{transform:translateY(-2px) scale(.985)}
+      45%{transform:translateY(-6px) scale(1.01)}
+      100%{transform:translateY(-4px) scale(1)}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *, *::before, *::after{
+        animation:none !important;
+        transition:none !important;
       }
+      [data-reveal]{
+        opacity:1 !important;
+        transform:none !important;
+      }
+      .progress-bar{display:none}
+    }
+
+    @media (max-width:1180px){
+      .hero-grid,
+      .deep-grid{grid-template-columns:1fr}
+      .books-grid{grid-template-columns:repeat(3,1fr)}
+      .timeline-grid{grid-template-columns:repeat(2,1fr)}
+      .metrics{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width:940px){
+      .feature-grid,
+      .notes-grid,
+      .themes-grid{grid-template-columns:1fr}
+      .nav-shell{align-items:center}
+      .menu-toggle{display:inline-flex}
 
       .nav-links{
-        width:100%;
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:min(84vw, 350px);
+        height:100dvh;
+        padding:96px 18px 24px;
+        background:rgba(255,253,249,.98);
+        backdrop-filter:blur(18px);
+        box-shadow:-18px 0 45px rgba(0,0,0,.08);
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        justify-content:flex-start;
+        gap:8px;
+        z-index:1250;
+        overflow-y:auto;
+        flex-wrap:nowrap;
+        transition:right .34s ease;
       }
 
-      .brand-text span{
-        white-space:normal;
+      .nav-links.active{right:0}
+      .nav-links a{
+        width:100%;
+        font-size:1.04rem;
+        padding:14px 16px;
+        border-radius:16px;
+        background:transparent;
       }
+      .brand-text span{white-space:normal}
+      .topbar{overflow:visible}
     }
 
     @media (max-width:760px){
-      .hero{
-        padding-top:36px;
-      }
-
-      .hero-card{
-        padding:28px;
-      }
-
-      .hero-side{
-        padding:20px;
-      }
-
-      .grid,
-      .content-grid{
-        grid-template-columns:1fr;
-      }
-
-      .section-header{
-        align-items:flex-start;
-        flex-direction:column;
-      }
-
-      .cta-box{
-        padding:24px;
-      }
-
-      .brand-logo{
-        width:46px;
-        height:46px;
-      }
-
-      .brand-text strong{
-        font-size:1rem;
-      }
-
-      .brand-text span{
-        font-size:.78rem;
-      }
+      .hero{padding-top:34px}
+      .hero-card{padding:28px}
+      .hero-side{padding:18px}
+      .books-grid,
+      .timeline-grid,
+      .metrics{grid-template-columns:1fr}
+      .section-header{align-items:flex-start;flex-direction:column}
+      .cta-box{padding:24px}
+      .brand-logo{width:46px;height:46px}
+      .brand-text strong{font-size:1rem}
+      .brand-text span{font-size:.78rem}
+      .hero-actions,.search-box{flex-direction:column;align-items:stretch}
+      .btn{width:100%}
+      .container{width:min(calc(100% - 22px), var(--max))}
+      .mini-pill{font-size:.76rem}
+      .panel,
+      .feature-card,
+      .timeline-card,
+      .note-card,
+      .book-card,
+      .theme-box{padding:20px}
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="container nav-shell">
       <a href="../index.html" class="brand" aria-label="soloteo">
-        <img
-          src="../assets/img/logo-soloteo.png"
-          alt="Logo soloteo"
-          class="brand-logo"
-        />
+        <img src="../assets/img/logo-soloteo.png" alt="Logo soloteo" class="brand-logo" />
         <div class="brand-text">
           <strong>SOLOTEO</strong>
           <span>Teologia com profundidade, beleza e clareza</span>
         </div>
       </a>
 
-      <nav class="nav-links" aria-label="Principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="mobileMenu" aria-label="Principal">
         <a href="../index.html">Início</a>
         <a href="../categorias/categorias.html">Categorias</a>
         <a href="../categorias/livros-da-biblia.html" class="active">Livros da Bíblia</a>
         <a href="../categorias/trilhas-de-estudo.html">Trilhas</a>
         <a href="../categorias/apologetica.html">Apologética</a>
       </nav>
+
+      <div class="menu-overlay" id="menuOverlay"></div>
     </div>
   </header>
 
-  <main>
+  <main id="conteudo">
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-card">
-          <div class="eyebrow"><span class="dot"></span> Subcategoria</div>
+          <div class="eyebrow"><span class="dot"></span> Base do Antigo Testamento</div>
           <h1>Pentateuco</h1>
           <p class="hero-description">
-            Os cinco primeiros livros da Bíblia formam a base da revelação bíblica.
-            Aqui começa a história da criação, da queda, da aliança, da formação de Israel
-            e da lei dada por Deus ao seu povo. No soloteo, o estudo do Pentateuco é
-            organizado com clareza, profundidade e aplicação prática.
+            Os cinco primeiros livros da Bíblia apresentam o começo da história humana, a origem da aliança,
+            a formação de Israel, a entrega da lei e a pedagogia de Deus no deserto. Nesta página, o estudo do
+            Pentateuco foi elevado para um padrão mais profundo, elegante e organizado — com panorama, temas,
+            contexto, curiosidades históricas, observações arqueológicas e caminhos de leitura.
           </p>
+
+          <div class="hero-kicker">
+            <span class="mini-pill">Criação e queda</span>
+            <span class="mini-pill">Patriarcas e promessa</span>
+            <span class="mini-pill">Êxodo e aliança</span>
+            <span class="mini-pill">Santidade e culto</span>
+            <span class="mini-pill">Deserto e renovação</span>
+          </div>
 
           <div class="hero-actions">
             <a href="#livros" class="btn btn-primary">Explorar livros</a>
-            <a href="pentateuco-genesis.html" class="btn btn-secondary">Começar por Gênesis</a>
+            <a href="#curiosidades" class="btn btn-secondary">Ver curiosidades e contexto</a>
           </div>
         </div>
 
@@ -610,76 +1108,133 @@
           <div class="hero-side-card">
             <h2>O que você vai encontrar</h2>
             <p>
-              Introdução, contexto histórico, estrutura, personagens centrais, temas teológicos,
-              conexões bíblicas e aplicações para a vida cristã.
+              Introdução, panorama histórico, estrutura literária, temas centrais, fatos interessantes,
+              conexões teológicas e um mapa de estudo mais robusto para cada livro.
             </p>
           </div>
 
           <div class="hero-side-card">
             <h2>Busca visual</h2>
-            <p>Busque por nome do livro, tema ou palavra-chave do resumo abaixo.</p>
-
+            <p>Pesquise por nome do livro, tema ou palavra-chave para filtrar rapidamente os cartões abaixo.</p>
             <div class="search-box">
-              <input
-                type="text"
-                id="bookSearch"
-                placeholder="Ex.: gênesis, libertação, santidade, deserto, aliança"
-                aria-label="Buscar no Pentateuco"
-              />
+              <input type="text" id="bookSearch" placeholder="Ex.: gênesis, santidade, êxodo, deserto, aliança" aria-label="Buscar no Pentateuco" />
               <button type="button" id="searchButton" class="btn btn-primary">Buscar</button>
               <button type="button" id="clearButton" class="btn btn-secondary">Limpar</button>
             </div>
-
             <div class="search-status" id="searchStatus"></div>
+          </div>
+
+          <div class="hero-side-card">
+            <h2>Leitura orientada</h2>
+            <p>
+              O Pentateuco é chamado assim porque reúne cinco rolos: Gênesis, Êxodo, Levítico, Números e
+              Deuteronômio. Ele começa na criação e avança até as planícies de Moabe, às portas da terra prometida.
+            </p>
           </div>
         </aside>
       </div>
     </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="panel" data-reveal style="--delay:.02s;">
+          <div class="section-header" style="margin-bottom:18px;">
+            <div>
+              <h2>Panorama do Pentateuco</h2>
+            </div>
+            <p>
+              Mais do que uma introdução, o Pentateuco funciona como a base narrativa, legal e teológica do restante da Bíblia.
+            </p>
+          </div>
+          <p class="section-lead">
+            O nome “Pentateuco” vem da ideia de cinco pergaminhos reunidos em um conjunto. Tradicionalmente,
+            esses livros são associados a Moisés e registram desde a criação do universo, a história dos patriarcas,
+            a formação nacional de Israel e uma extensa legislação para a vida religiosa e civil do povo.
+          </p>
+          <div class="metrics">
+            <div class="metric" data-reveal style="--delay:.04s;"><strong>5</strong><span>livros fundacionais da Bíblia</span></div>
+            <div class="metric" data-reveal style="--delay:.10s;"><strong>3</strong><span>grandes eixos: narrativa, aliança e lei</span></div>
+            <div class="metric" data-reveal style="--delay:.16s;"><strong>1</strong><span>povo sendo formado diante de Deus</span></div>
+            <div class="metric" data-reveal style="--delay:.22s;"><strong>0</strong><span>entrada em Canaã antes do fechamento da seção</span></div>
+          </div>
+          <div class="callout" data-reveal style="--delay:.18s;">
+            <strong>Leitura-chave:</strong> no Pentateuco, Deus não apenas age na história; Ele também interpreta a história,
+            molda um povo e cria as categorias que o restante da Escritura irá desenvolver: pecado, expiação, promessa,
+            santidade, presença, sacerdócio, herança e aliança.
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="livros">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-reveal>
           <div>
             <h2>Livros do Pentateuco</h2>
           </div>
           <p>
-            Cada página foi pensada para unir profundidade teológica, leitura agradável e estrutura premium.
+            Cada página interna pode aprofundar o estudo de forma ainda maior. Aqui, a visão geral já foi refinada para ficar no nível do index.
           </p>
         </div>
 
-        <div class="grid" id="booksGrid">
-          <article class="book-card" data-title="Gênesis" data-keywords="genesis origens criação queda dilúvio babel patriarcas abraão isaque jacó josé promessa">
+        <div class="books-grid" id="booksGrid">
+          <article class="book-card" data-reveal style="--delay:.03s;" data-title="Gênesis" data-keywords="genesis gênesis origens criação queda diluvio dilúvio babel patriarcas abraão isaque jaco jacó jose josé promessa aliança">
             <span class="book-tag">Livro 1</span>
             <h3>Gênesis</h3>
-            <p>O livro das origens: criação, queda, dilúvio, Babel e os patriarcas.</p>
+            <p>Das origens do mundo à história dos patriarcas. O livro abre a Bíblia com criação, queda, juízo, graça e promessa.</p>
+            <div class="book-meta">
+              <span>Origens</span>
+              <span>Patriarcas</span>
+              <span>Promessa</span>
+            </div>
             <a class="book-link" href="pentateuco-genesis.html">Ler estudo completo →</a>
           </article>
 
-          <article class="book-card" data-title="Êxodo" data-keywords="exodo êxodo libertação aliança tabernáculo moisés egito páscoa deserto lei presença">
+          <article class="book-card" data-reveal style="--delay:.08s;" data-title="Êxodo" data-keywords="exodo êxodo libertação egito moises moisés pragas páscoa mar vermelho aliança sinai tabernaculo tabernáculo presença">
             <span class="book-tag">Livro 2</span>
             <h3>Êxodo</h3>
-            <p>Libertação, aliança, tabernáculo e a formação espiritual do povo de Deus.</p>
+            <p>Libertação do Egito, aliança no Sinai e o tabernáculo como sinal da presença de Deus no meio do povo.</p>
+            <div class="book-meta">
+              <span>Libertação</span>
+              <span>Sinai</span>
+              <span>Tabernáculo</span>
+            </div>
             <a class="book-link" href="pentateuco-exodo.html">Ler estudo completo →</a>
           </article>
 
-          <article class="book-card" data-title="Levítico" data-keywords="levitico levítico santidade culto sacrifícios pureza sacerdócio expiação">
+          <article class="book-card" data-reveal style="--delay:.13s;" data-title="Levítico" data-keywords="levitico levítico santidade culto sacrificios sacrifícios sacerdocio sacerdócio pureza expiação adoração">
             <span class="book-tag">Livro 3</span>
             <h3>Levítico</h3>
-            <p>Santidade, culto, sacrifícios e a separação do povo para Deus.</p>
+            <p>O manual da santidade, do culto e da aproximação reverente a Deus por meio de sacrifícios, sacerdotes e pureza.</p>
+            <div class="book-meta">
+              <span>Santidade</span>
+              <span>Culto</span>
+              <span>Expiação</span>
+            </div>
             <a class="book-link" href="pentateuco-levitico.html">Ler estudo completo →</a>
           </article>
 
-          <article class="book-card" data-title="Números" data-keywords="numeros números deserto rebeliões disciplina fidelidade jornada promessa geração">
+          <article class="book-card" data-reveal style="--delay:.18s;" data-title="Números" data-keywords="numeros números deserto censos murmuração rebelião rebeliões fidelidade disciplina geração jornada promessa">
             <span class="book-tag">Livro 4</span>
             <h3>Números</h3>
-            <p>Caminhada no deserto, rebeliões, disciplina e fidelidade divina.</p>
+            <p>A caminhada no deserto revela censos, organização, rebeliões, disciplina, julgamento e a persistente fidelidade divina.</p>
+            <div class="book-meta">
+              <span>Deserto</span>
+              <span>Disciplina</span>
+              <span>Jornada</span>
+            </div>
             <a class="book-link" href="pentateuco-numeros.html">Ler estudo completo →</a>
           </article>
 
-          <article class="book-card" data-title="Deuteronômio" data-keywords="deuteronomio deuteronômio renovação aliança exortação obediência memória coração terra prometida">
+          <article class="book-card" data-reveal style="--delay:.23s;" data-title="Deuteronômio" data-keywords="deuteronomio deuteronômio moabe aliança renovação discursos memoria memória obediência coração terra prometida">
             <span class="book-tag">Livro 5</span>
             <h3>Deuteronômio</h3>
-            <p>Renovação da aliança, exortação e preparação para entrar na terra prometida.</p>
+            <p>Moisés relembra a jornada, expõe a lei novamente e prepara a nova geração para entrar na terra prometida.</p>
+            <div class="book-meta">
+              <span>Moabe</span>
+              <span>Memória</span>
+              <span>Obediência</span>
+            </div>
             <a class="book-link" href="pentateuco-deuteronomio.html">Ler estudo completo →</a>
           </article>
         </div>
@@ -687,37 +1242,212 @@
     </section>
 
     <section class="section">
-      <div class="container content-grid">
-        <article class="info-card">
-          <h3>Por que o Pentateuco é tão importante?</h3>
+      <div class="container deep-grid">
+        <article class="panel" data-reveal style="--delay:.02s;">
+          <h2>Por que o Pentateuco é tão decisivo?</h2>
           <p>
-            O Pentateuco apresenta os fundamentos da cosmovisão bíblica. Nele aparecem os grandes temas
-            que percorrem toda a Escritura: criação, pecado, juízo, graça, aliança, redenção, santidade
-            e promessa.
+            Porque ele estabelece a gramática da fé bíblica. Quase tudo que aparecerá depois já começa aqui:
+            a bondade da criação, a tragédia do pecado, o juízo divino, a eleição de um povo, a aliança, o sacerdócio,
+            a santidade, a redenção e a esperança de uma herança futura.
           </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Temas centrais</h3>
           <ul>
-            <li>Deus como Criador e Senhor da história</li>
-            <li>A gravidade do pecado humano</li>
-            <li>A escolha de um povo para a aliança</li>
-            <li>A libertação e a presença de Deus com seu povo</li>
-            <li>A santidade como marca da vida diante do Senhor</li>
+            <li>Apresenta Deus como Criador, Legislador e Redentor.</li>
+            <li>Explica a origem da humanidade, da queda e da necessidade de reconciliação.</li>
+            <li>Mostra como Israel é formado não por mérito, mas por promessa e graça.</li>
+            <li>Conecta adoração, ética, justiça, pureza e vida comunitária.</li>
+            <li>Prepara o terreno para o restante do Antigo e do Novo Testamento.</li>
           </ul>
         </article>
+
+        <article class="panel" data-reveal style="--delay:.10s;">
+          <h2>Estrutura em grandes movimentos</h2>
+          <ul>
+            <li><strong>Gênesis 1–11:</strong> origens, queda, dilúvio e Babel.</li>
+            <li><strong>Gênesis 12–50:</strong> Abraão, Isaque, Jacó e José.</li>
+            <li><strong>Êxodo:</strong> libertação, Sinai e tabernáculo.</li>
+            <li><strong>Levítico:</strong> sacrifícios, sacerdócio, pureza e santidade.</li>
+            <li><strong>Números:</strong> organização, marcha e crises no deserto.</li>
+            <li><strong>Deuteronômio:</strong> releitura da lei antes da entrada em Canaã.</li>
+          </ul>
+          <div class="callout" data-reveal style="--delay:.18s;">
+            <strong>Visão de conjunto:</strong> o Pentateuco começa com o universo e termina com um povo ainda sem entrar na terra,
+            mostrando que a história bíblica é conduzida pela promessa e não pela pressa.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="curiosidades">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <h2>Curiosidades históricas, arqueológicas e fatos interessantes</h2>
+          </div>
+          <p>
+            Uma camada a mais de profundidade para transformar a página em estudo de verdade, sem copiar o texto do PDF.
+          </p>
+        </div>
+
+        <div class="notes-grid">
+          <article class="note-card" data-reveal style="--delay:.03s;">
+            <div class="icon">01</div>
+            <small>Forma do conjunto</small>
+            <h3>Cinco rolos, uma base</h3>
+            <p>
+              O próprio nome Pentateuco está ligado à ideia de cinco rolos reunidos. Isso ajuda a entender que não se trata de cinco textos soltos,
+              mas de uma unidade literária e teológica que vai da criação até a fronteira da terra prometida.
+            </p>
+          </article>
+
+          <article class="note-card" data-reveal style="--delay:.09s;">
+            <div class="icon">02</div>
+            <small>Ambiente do Êxodo</small>
+            <h3>Egito, opressão e libertação</h3>
+            <p>
+              O ambiente descrito em Êxodo ecoa a realidade de grandes impérios do antigo Oriente Próximo, em que trabalho forçado,
+              construções monumentais e controle estatal eram elementos conhecidos do mundo antigo.
+            </p>
+          </article>
+
+          <article class="note-card" data-reveal style="--delay:.15s;">
+            <div class="icon">03</div>
+            <small>Leis e mundo antigo</small>
+            <h3>Semelhanças e diferenças</h3>
+            <p>
+              Alguns mandamentos do Pentateuco dialogam com formas legais antigas, mas a moldura bíblica se destaca por unir culto,
+              ética, justiça social e santidade em torno do caráter do próprio Deus.
+            </p>
+          </article>
+
+          <article class="note-card" data-reveal style="--delay:.05s;">
+            <div class="icon">04</div>
+            <small>Deserto</small>
+            <h3>Uma escola espiritual</h3>
+            <p>
+              No Pentateuco, o deserto é mais do que cenário geográfico. Ele funciona como espaço de prova, dependência, purificação
+              e amadurecimento coletivo diante da presença divina.
+            </p>
+          </article>
+
+          <article class="note-card" data-reveal style="--delay:.11s;">
+            <div class="icon">05</div>
+            <small>Tabernáculo</small>
+            <h3>Teologia em forma de espaço</h3>
+            <p>
+              O tabernáculo não é apenas arquitetura religiosa. Sua estrutura ensina proximidade, mediação, reverência e a tensão entre
+              a santidade de Deus e a necessidade de expiação humana.
+            </p>
+          </article>
+
+          <article class="note-card" data-reveal style="--delay:.17s;">
+            <div class="icon">06</div>
+            <small>Memória e aliança</small>
+            <h3>Repetição com propósito</h3>
+            <p>
+              Deuteronômio repete e reaplica a lei porque a aliança precisava ser lembrada pela nova geração. A memória, na Bíblia,
+              não é nostalgia; é instrumento de fidelidade.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <h2>Linha de leitura do Pentateuco</h2>
+          </div>
+          <p>
+            Uma forma simples de enxergar o movimento total desses cinco livros antes de mergulhar nos estudos individuais.
+          </p>
+        </div>
+
+        <div class="timeline-grid">
+          <article class="timeline-card" data-reveal style="--delay:.03s;">
+            <div class="icon">A</div>
+            <small>Origens</small>
+            <h3>Criação a Babel</h3>
+            <p>O início da humanidade, a entrada do pecado na história e a expansão do mal antes do chamado de Abraão.</p>
+          </article>
+
+          <article class="timeline-card" data-reveal style="--delay:.09s;">
+            <div class="icon">B</div>
+            <small>Patriarcas</small>
+            <h3>Abraão a José</h3>
+            <p>Deus separa uma linhagem, renova promessas e conduz a família eleita até o Egito, preparando o palco da redenção histórica.</p>
+          </article>
+
+          <article class="timeline-card" data-reveal style="--delay:.15s;">
+            <div class="icon">C</div>
+            <small>Redenção</small>
+            <h3>Êxodo do Egito</h3>
+            <p>Israel é liberto por intervenção divina, atravessa o mar e aprende que salvação e aliança caminham juntas.</p>
+          </article>
+
+          <article class="timeline-card" data-reveal style="--delay:.05s;">
+            <div class="icon">D</div>
+            <small>Santidade</small>
+            <h3>Culto e vida diante de Deus</h3>
+            <p>Levítico mostra que o povo resgatado precisa aprender como viver, adorar e permanecer separado para o Senhor.</p>
+          </article>
+
+          <article class="timeline-card" data-reveal style="--delay:.11s;">
+            <div class="icon">E</div>
+            <small>Deserto</small>
+            <h3>Quedas, censos e disciplina</h3>
+            <p>Números expõe a lentidão do coração humano e a persistência da fidelidade divina na formação da nova geração.</p>
+          </article>
+
+          <article class="timeline-card" data-reveal style="--delay:.17s;">
+            <div class="icon">F</div>
+            <small>Transição</small>
+            <h3>Moabe e renovação</h3>
+            <p>Deuteronômio prepara o povo para a terra prometida, reafirmando a aliança com tom pastoral, profético e urgente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <h2>Temas teológicos que sustentam tudo</h2>
+          </div>
+          <p>
+            Estes temas aparecem repetidamente e ajudam a ler o Pentateuco como uma grande unidade.
+          </p>
+        </div>
+
+        <div class="themes-grid">
+          <article class="theme-box" data-reveal style="--delay:.04s;">
+            <h3>Criação, queda e promessa</h3>
+            <p>
+              Desde Gênesis, a Bíblia apresenta um mundo criado com ordem, bondade e propósito, mas ferido pela rebelião humana.
+              A promessa divina passa a sustentar toda a esperança posterior.
+            </p>
+          </article>
+
+          <article class="theme-box" data-reveal style="--delay:.10s;">
+            <h3>Aliança, lei e presença</h3>
+            <p>
+              O Pentateuco mostra que Deus não apenas salva; Ele também estabelece uma relação pactual, forma um povo e habita no meio dele,
+              exigindo resposta reverente e obediente.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="cta">
       <div class="container">
-        <div class="cta-box">
+        <div class="cta-box" data-reveal>
           <div>
             <h3>Comece por Gênesis</h3>
             <p>
-              A melhor porta de entrada para o Pentateuco é o estudo de Gênesis, porque ali estão
-              as origens da criação, do pecado, da promessa e da formação do povo de Deus.
+              A melhor porta de entrada para o Pentateuco é o estudo de Gênesis, porque ali estão as origens da criação,
+              do pecado, da promessa e da formação do povo de Deus.
             </p>
           </div>
           <a href="pentateuco-genesis.html" class="btn btn-primary">Abrir página de Gênesis</a>
@@ -732,14 +1462,25 @@
     </div>
   </footer>
 
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo">↑</button>
+
   <script>
     (function () {
+      const topbar = document.getElementById('topbar');
+      const progressBar = document.getElementById('progressBar');
+      const toTop = document.getElementById('toTop');
       const searchInput = document.getElementById('bookSearch');
       const searchButton = document.getElementById('searchButton');
       const clearButton = document.getElementById('clearButton');
       const searchStatus = document.getElementById('searchStatus');
       const booksSection = document.getElementById('livros');
       const cards = Array.from(document.querySelectorAll('.book-card'));
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuOverlay = document.getElementById('menuOverlay');
+      const menuLinks = mobileMenu.querySelectorAll('a');
+      const revealItems = document.querySelectorAll('[data-reveal]');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       function normalize(text) {
         return text
@@ -758,7 +1499,6 @@
           const title = normalize(card.dataset.title || '');
           const keywords = normalize(card.dataset.keywords || '');
           const combined = `${title} ${keywords}`;
-
           const matches = query === '' || combined.includes(query);
 
           card.classList.toggle('is-hidden', !matches);
@@ -771,40 +1511,134 @@
         });
 
         if (query === '') {
-          searchStatus.textContent = 'Mostrando todos os 5 livros do Pentateuco.';
-        } else if (visibleCount === 0) {
-          searchStatus.textContent = `Nenhum livro encontrado para "${searchInput.value}".`;
-        } else if (visibleCount === 1) {
-          searchStatus.textContent = `1 livro encontrado para "${searchInput.value}".`;
-        } else {
-          searchStatus.textContent = `${visibleCount} livros encontrados para "${searchInput.value}".`;
+          searchStatus.textContent = 'Todos os livros do Pentateuco estão visíveis.';
+          return;
         }
 
-        booksSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (visibleCount === 0) {
+          searchStatus.textContent = `Nenhum resultado encontrado para “${searchInput.value}”.`;
+          return;
+        }
 
-        if (firstVisibleCard && query !== '') {
+        searchStatus.textContent = `${visibleCount} resultado(s) encontrado(s) para “${searchInput.value}”.`;
+
+        if (firstVisibleCard) {
           firstVisibleCard.classList.add('is-highlight');
+          firstVisibleCard.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
         }
       }
 
       function clearSearch() {
         searchInput.value = '';
-        runSearch();
-        searchInput.focus();
+        cards.forEach((card) => {
+          card.classList.remove('is-hidden', 'is-highlight');
+        });
+        searchStatus.textContent = 'Todos os livros do Pentateuco estão visíveis.';
+      }
+
+      function updateProgressBar() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = `${Math.min(progress, 100)}%`;
+
+        topbar.classList.toggle('is-scrolled', scrollTop > 16);
+        toTop.classList.toggle('show', scrollTop > 420);
+      }
+
+      function openMenu() {
+        mobileMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        menuToggle.classList.add('is-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        menuToggle.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      function toggleMenu() {
+        if (mobileMenu.classList.contains('active')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+
+      function setupReveal() {
+        if (prefersReducedMotion) {
+          revealItems.forEach((item) => item.classList.add('is-visible'));
+          return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+        revealItems.forEach((item) => observer.observe(item));
       }
 
       searchButton.addEventListener('click', runSearch);
       clearButton.addEventListener('click', clearSearch);
-
-      searchInput.addEventListener('input', runSearch);
-      searchInput.addEventListener('keydown', function (event) {
+      searchInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
           event.preventDefault();
           runSearch();
         }
       });
 
-      runSearch();
+      menuToggle.addEventListener('click', toggleMenu);
+      menuOverlay.addEventListener('click', closeMenu);
+      menuLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+
+      window.addEventListener('scroll', updateProgressBar, { passive: true });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 940) {
+          closeMenu();
+        }
+      });
+
+      toTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      });
+
+      cards.forEach((card) => {
+        if (prefersReducedMotion) return;
+
+        card.addEventListener('mousemove', (event) => {
+          if (window.innerWidth <= 940) return;
+
+          const rect = card.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          const rotateY = ((x / rect.width) - 0.5) * 5;
+          const rotateX = ((y / rect.height) - 0.5) * -4;
+
+          card.style.transform = `translateY(-6px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+
+      searchStatus.textContent = 'Todos os livros do Pentateuco estão visíveis.';
+      updateProgressBar();
+      setupReveal();
     })();
   </script>
 </body>
