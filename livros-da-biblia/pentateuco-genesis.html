@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
@@ -492,20 +493,480 @@ body{
   }
 }
 
+
+
+/* ===== PREMIUM SECTION TRANSITIONS + COLLAPSIBLE CHAPTERS ===== */
+.section-header p{
+  max-width: 760px;
+  font-size: clamp(1rem, 1.35vw, 1.15rem);
+  line-height: 1.8;
+  color: var(--text-soft);
+}
+.section-header p::selection{background:rgba(107,17,38,.12)}
+.section + .section .section-header{
+  position: relative;
+}
+.section + .section .section-header::before{
+  content:"";
+  display:block;
+  width:100%;
+  max-width:170px;
+  height:1px;
+  margin:0 0 22px;
+  background:linear-gradient(90deg, rgba(200,163,95,.9), rgba(107,17,38,.22), transparent);
+}
+#capitulos .section-header p{
+  max-width: 820px;
+}
+.chapter-card{
+  padding: 0 !important;
+  overflow: hidden;
+}
+.chapter-card:hover{
+  transform: translateY(-3px);
+}
+.chapter-toggle{
+  width:100%;
+  border:0;
+  background:transparent;
+  text-align:left;
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  cursor:pointer;
+  color:inherit;
+}
+.chapter-toggle-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.chapter-toggle-title{
+  display:block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  line-height:1.18;
+  letter-spacing:-.03em;
+  color:#221714;
+}
+.chapter-toggle-summary{
+  display:block;
+  font-size:1rem;
+  line-height:1.8;
+  color:var(--text-soft);
+  max-width: 96%;
+}
+.chapter-toggle-icon{
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg, var(--wine), var(--wine-2));
+  color:#fff;
+  font-size:1.8rem;
+  flex-shrink:0;
+  box-shadow:0 18px 34px rgba(107,17,38,.18);
+  transition:transform .28s ease, box-shadow .28s ease;
+}
+.chapter-card.is-open .chapter-toggle-icon{
+  transform:rotate(45deg);
+  box-shadow:0 22px 40px rgba(107,17,38,.22);
+}
+.chapter-content{
+  padding:0 28px 28px;
+  border-top:1px solid rgba(107,17,38,.08);
+  background:linear-gradient(180deg, rgba(255,252,248,.72), rgba(255,248,241,.86));
+}
+.chapter-content[hidden]{display:none !important;}
+.chapter-card .chapter-grid,
+.chapter-card .study-expand,
+.chapter-card .insight{
+  margin-top:18px;
+}
+.chapter-card .study-expand{
+  padding-top:18px;
+}
+.toc a.active{
+  background:linear-gradient(135deg, var(--wine), var(--wine-2));
+  color:#fff;
+}
+@media (max-width:760px){
+  .chapter-toggle{padding:22px;gap:14px}
+  .chapter-content{padding:0 22px 22px}
+  .chapter-toggle-title{font-size: clamp(1.5rem, 7vw, 2.25rem)}
+  .chapter-toggle-summary{max-width:100%}
+  .chapter-toggle-icon{width:48px;height:48px;font-size:1.5rem}
+}
+
+/* ===== GENESIS INDEX-IDENTITY REFINEMENT ===== */
+.nav-shell{gap:22px}
+.nav-links{justify-content:center;flex:0 1 auto;gap:22px}
+.nav-links a{
+  padding:6px 0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  font-weight:600 !important;
+  letter-spacing:.01em;
+}
+.nav-links a::after{
+  left:0 !important;
+  right:0 !important;
+  bottom:-12px !important;
+  height:2px !important;
+}
+.nav-cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:54px;padding:0 28px;border-radius:999px;
+  background:linear-gradient(135deg,var(--wine),var(--gold));
+  color:#fff;font-weight:800;letter-spacing:-.01em;
+  box-shadow:0 16px 34px rgba(107,17,38,.16);
+  transition:transform .24s ease, box-shadow .24s ease;
+  white-space:nowrap;flex-shrink:0;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(107,17,38,.22)}
+.brand-text strong{
+  text-transform:none !important;
+  letter-spacing:-.02em !important;
+  font-size:1.95rem;
+  font-weight:900;
+}
+.brand-text span{font-size:.95rem;color:var(--text-soft)}
+.hero{
+  padding:32px 0 24px;
+}
+.hero-grid{
+  align-items:start;
+  gap:26px;
+}
+.hero-card,.hero-side{
+  background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,249,244,.84));
+  border:1px solid rgba(107,17,38,.08);
+  box-shadow:0 26px 70px rgba(73,21,35,.08);
+}
+.hero-card{
+  min-height:100%;
+  padding:46px 42px;
+}
+.hero-card h1{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif !important;
+  font-size:clamp(3.4rem, 7vw, 5.8rem) !important;
+  font-weight:900 !important;
+  line-height:.92 !important;
+  letter-spacing:-.07em !important;
+  margin-top:10px;
+}
+.hero-card h1 span{
+  display:block;
+  background:linear-gradient(135deg,var(--wine),var(--gold));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.breadcrumb{
+  margin-bottom:18px;
+  color:var(--text-faint);
+  font-weight:600;
+}
+.eyebrow,.section-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,246,234,.9));
+  border:1px solid rgba(200,163,95,.55);
+  color:var(--wine);
+  box-shadow:0 10px 24px rgba(73,21,35,.05);
+  font-size:.92rem;
+  font-weight:800;
+  letter-spacing:.02em;
+  text-transform:none;
+}
+.hero-description{
+  max-width:60ch;
+  font-size:1.08rem;
+  color:var(--text-soft);
+}
+.hero-kicker{margin-top:20px}
+.mini-pill{
+  font-size:.82rem;
+  font-weight:700;
+}
+.hero-actions{margin-top:28px}
+.hero-stats{
+  margin-top:24px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.hero-stat{
+  border-radius:26px;
+  background:rgba(255,255,255,.76);
+  border:1px solid rgba(107,17,38,.08);
+  box-shadow:0 10px 24px rgba(73,21,35,.05);
+}
+.hero-stat strong{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:1.7rem;
+  font-weight:900;
+}
+.hero-side{
+  padding:0;
+  background:transparent;
+  border:none;
+  box-shadow:none;
+  overflow:visible;
+}
+.hero-side-card{
+  padding:28px;
+  border-radius:34px;
+}
+.hero-side-card:nth-child(2){transform:translateX(40px)}
+.hero-side-card:nth-child(3){width:88%; margin-left:auto}
+.search-box{position:relative;top:auto;margin-top:18px}
+.search-box-inner{
+  border-radius:26px !important;
+  padding:12px !important;
+  background:rgba(255,255,255,.9) !important;
+  box-shadow:0 14px 32px rgba(73,21,35,.07) !important;
+}
+.search-box input{
+  font-size:1rem;
+  padding:18px 18px !important;
+}
+.search-status{margin-top:12px;color:var(--text-faint);font-size:.93rem}
+.section{padding:26px 0}
+.section-divider{
+  width:min(calc(100% - 32px), 1260px);
+  margin:8px auto 8px;
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(107,17,38,.12), transparent);
+}
+.section-shell,
+.panel,
+.people-card,
+.note-card,
+.theme-box,
+.timeline-card,
+.chapter-card,
+.cta-box{
+  border-radius:34px !important;
+}
+.section-header{
+  align-items:flex-start !important;
+  gap:18px;
+  margin-bottom:24px;
+}
+.section-header h2{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif !important;
+  font-size:clamp(2.35rem, 4vw, 4.1rem) !important;
+  line-height:.96 !important;
+  letter-spacing:-.05em !important;
+  font-weight:900 !important;
+  margin-top:14px !important;
+}
+.section-header p,
+.section-lead{
+  font-size:1.05rem;
+  color:var(--text-soft) !important;
+}
+.panel,.people-card,.note-card,.theme-box,.timeline-card{
+  padding:34px !important;
+}
+.metrics{
+  gap:16px;
+  margin-top:28px;
+}
+.metric{
+  border-radius:26px;
+  background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,248,242,.88));
+  border:1px solid rgba(107,17,38,.08);
+  box-shadow:0 10px 26px rgba(73,21,35,.05);
+}
+.metric strong{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:1.8rem;
+  font-weight:900;
+}
+main > .section:nth-of-type(4){
+  margin:34px 0;
+  padding:64px 0 72px;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(200,163,95,.18), transparent 18%),
+    linear-gradient(135deg, #2b0712 0%, #3e0918 55%, #20030d 100%);
+}
+main > .section:nth-of-type(4) .section-header,
+main > .section:nth-of-type(4) .timeline-card small,
+main > .section:nth-of-type(4) .timeline-card p{
+  color:rgba(255,245,241,.8) !important;
+}
+main > .section:nth-of-type(4) .section-chip{
+  background:rgba(255,255,255,.94);
+}
+main > .section:nth-of-type(4) .section-header h2,
+main > .section:nth-of-type(4) .timeline-card h3,
+main > .section:nth-of-type(4) .timeline-card .icon{
+  color:#fff !important;
+}
+main > .section:nth-of-type(4) .timeline-card{
+  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)) !important;
+  border:1px solid rgba(255,255,255,.12) !important;
+  box-shadow:none !important;
+}
+main > .section:nth-of-type(4) .timeline-card .icon{
+  background:rgba(255,255,255,.08) !important;
+}
+.toc{
+  padding:22px;
+  gap:12px;
+  background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,248,242,.9));
+}
+.toc a{
+  min-width:48px;
+  justify-content:center;
+  padding:12px 14px;
+  font-weight:800;
+}
+#capitulos .chapter-card,
+.chapter-card{
+  background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,249,244,.94)) !important;
+  border:1px solid rgba(107,17,38,.08) !important;
+  box-shadow:0 14px 34px rgba(73,21,35,.06) !important;
+}
+.chapter-toggle{
+  padding:30px 30px 24px !important;
+}
+.chapter-toggle-title{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.7rem, 3vw, 2.4rem) !important;
+  line-height:1.12;
+  color:#24171c;
+}
+.chapter-toggle-summary{
+  margin-top:14px !important;
+  color:var(--text-soft) !important;
+  font-size:1.02rem;
+}
+.chapter-label{
+  background:linear-gradient(180deg, rgba(107,17,38,.06), rgba(200,163,95,.10)) !important;
+  color:var(--wine) !important;
+}
+.chapter-card.is-open{
+  border-color:rgba(200,163,95,.42) !important;
+  box-shadow:0 22px 50px rgba(73,21,35,.09) !important;
+}
+.chapter-card .chapter-grid,
+.chapter-card .study-expand,
+.chapter-card .insight{
+  padding-left:30px;
+  padding-right:30px;
+}
+.chapter-card .chapter-content{padding-bottom:28px}
+.chapter-card .study-expand{
+  color:var(--text-soft) !important;
+}
+.insight{
+  border-radius:28px !important;
+}
+.note-card .icon{
+  width:88px !important;
+  height:88px !important;
+  font-size:2rem;
+  font-weight:900;
+  border-radius:28px !important;
+}
+.note-card h3,
+.people-card h3,
+.theme-box h3,
+.panel h2,
+.hero-side-card h2{
+  font-family:Georgia,"Times New Roman",serif;
+}
+.footer-premium{
+  margin-top:34px;
+  border-top:1px solid rgba(107,17,38,.1);
+  padding-top:30px;
+  background:linear-gradient(180deg, rgba(255,255,255,.62), rgba(255,248,242,.8));
+}
+.footer-grid-premium{
+  grid-template-columns:1.15fr .9fr .9fr;
+  gap:34px;
+}
+.footer-brand-link .brand-text strong{font-size:1.8rem}
+.footer-copy{
+  max-width:36ch;
+  color:var(--text-soft);
+  font-size:1.02rem;
+}
+.footer-links-col h4{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:1rem;
+  margin:8px 0 18px;
+}
+.footer-links-col a{
+  padding:6px 0;
+}
+.to-top{
+  width:68px;
+  height:68px;
+  right:24px;
+  bottom:24px;
+  font-size:1.45rem;
+  box-shadow:0 18px 40px rgba(107,17,38,.20);
+}
+@media (max-width:1100px){
+  .nav-links{gap:16px}
+  .brand-text strong{font-size:1.55rem}
+  .hero-side-card:nth-child(2),
+  .hero-side-card:nth-child(3){transform:none;width:100%;margin-left:0}
+  .hero-card h1{font-size:clamp(3rem, 8vw, 4.8rem) !important}
+}
+@media (max-width:940px){
+  .nav-cta{display:none}
+  .nav-links{
+    justify-content:flex-start;
+    background:rgba(255,255,255,.96) !important;
+    padding-top:104px !important;
+  }
+  .nav-links a{
+    padding:14px 16px !important;
+    border-radius:18px !important;
+  }
+  .nav-links a::after{display:none}
+  .brand-text strong{font-size:1.35rem}
+}
+@media (max-width:760px){
+  .hero-card{padding:30px 24px}
+  .hero-card h1{font-size:clamp(2.5rem, 13vw, 3.4rem) !important}
+  .hero-card h1 span{display:inline}
+  .section-header h2{font-size:clamp(2rem, 10vw, 3rem) !important}
+  .panel,.people-card,.note-card,.theme-box,.timeline-card{padding:24px !important}
+  .chapter-toggle{padding:24px 22px 20px !important}
+  .chapter-card .chapter-grid,
+  .chapter-card .study-expand,
+  .chapter-card .insight{padding-left:22px;padding-right:22px}
+  .note-card .icon{width:64px !important;height:64px !important;font-size:1.5rem}
+  .footer-grid-premium{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
-<div class="page-loader" id="pageLoader" aria-hidden="true">
-  <div class="loader-grain"></div>
-  <div class="loader-shell">
-    <div class="loader-mark">
-      <div class="loader-ring"></div>
-      <div class="loader-logo">ST</div>
-    </div>
-    <p class="loader-title">SoloTeo</p>
-    <p class="loader-subtitle">Gênesis com profundidade, beleza e presença.</p>
-    <div class="loader-bar"><div class="loader-progress"></div></div>
-  </div>
+<div aria-hidden="true" class="page-loader" id="pageLoader">
+<div class="loader-grain"></div>
+<div class="loader-shell">
+<div class="loader-mark">
+<div class="loader-ring"></div>
+<div class="loader-logo">ST</div>
+</div>
+<p class="loader-title">SoloTeo</p>
+<p class="loader-subtitle">Gênesis com profundidade, beleza e presença.</p>
+<div class="loader-bar"><div class="loader-progress"></div></div>
+</div>
 </div>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <div class="progress-bar" id="progressBar"></div>
@@ -514,7 +975,7 @@ body{
 <a aria-label="soloteo" class="brand" href="../index.html">
 <img alt="Logo soloteo" class="brand-logo" src="../assets/img/logo-soloteo.png"/>
 <div class="brand-text">
-<strong>SOLOTEO</strong>
+<strong>SoloTeo</strong>
 <span>Teologia com profundidade, beleza e clareza</span>
 </div>
 </a>
@@ -522,24 +983,25 @@ body{
 <span></span>
 </button>
 <nav aria-label="Principal" class="nav-links" id="mobileMenu">
-<a href="../index.html">Início</a>
-<a class="active" href="../categorias/livros-da-biblia.html">Livros da Bíblia</a>
-<a href="pentateuco.html">Pentateuco</a>
+<a href="#panorama">Seções</a>
 <a href="../categorias/trilhas-de-estudo.html">Trilhas</a>
-<a href="../categorias/apologetica.html">Apologética</a>
+<a href="../categorias/livros-da-biblia.html">Biblioteca</a>
+<a href="../monetizacao.html">Monetização</a>
+<a href="../sobre.html">Sobre</a>
 </nav>
+<a class="nav-cta" href="#capitulos">Explorar</a>
 <div class="menu-overlay" id="menuOverlay"></div>
 </div>
 </header>
 <main id="conteudo">
 <section class="hero reveal">
-<div class="hero-spotlight" aria-hidden="true"></div>
+<div aria-hidden="true" class="hero-spotlight"></div>
 <div class="container hero-grid">
 <div class="hero-card">
 <div class="breadcrumb"><a href="../index.html">Início</a><span>•</span><a href="../categorias/livros-da-biblia.html">Livros da Bíblia</a><span>•</span><a href="pentateuco.html">Pentateuco</a><span>•</span><span>Gênesis</span></div>
-<div class="eyebrow"><span class="dot"></span> Estudo ultra premium</div>
-<h1>Gênesis</h1>
-<p class="hero-description">Gênesis é o grande livro das origens e dos começos decisivos da história bíblica. Aqui surgem criação, queda, juízo, graça, alianças, patriarcas, promessas e a preservação da linhagem por meio da qual Deus conduz a história da redenção. Esta versão foi consolidada para publicação direta, com navegação imersiva, estrutura editorial refinada e estudo ampliado capítulo por capítulo.</p>
+<div class="eyebrow"><span class="dot"></span> Livro da Bíblia • Pentateuco</div>
+<h1>Gênesis <span>com profundidade, beleza e direção.</span></h1>
+<p class="hero-description">Gênesis é o grande livro das origens e dos começos decisivos da história bíblica. Aqui surgem criação, queda, juízo, graça, alianças, patriarcas, promessas e a preservação da linhagem por meio da qual Deus conduz a história da redenção. Toda a página foi reorganizada na identidade visual principal da SoloTeo, preservando o conteúdo completo e tornando a navegação mais elegante, imersiva e fluida.</p>
 <div class="hero-kicker">
 <span class="mini-pill">Criação e ordem</span>
 <span class="mini-pill">Queda e juízo</span>
@@ -551,7 +1013,7 @@ body{
 <a class="btn btn-primary" href="#capitulos">Ir para o estudo capítulo por capítulo</a>
 <a class="btn btn-secondary" href="#curiosidades">Ver curiosidades e contexto</a>
 </div>
-<div class="hero-stats" aria-label="Destaques de Gênesis">
+<div aria-label="Destaques de Gênesis" class="hero-stats">
 <div class="hero-stat"><strong>50</strong><span>capítulos comentados</span></div>
 <div class="hero-stat"><strong>4</strong><span>grandes blocos narrativos</span></div>
 <div class="hero-stat"><strong>100%</strong><span>pronto para publicar</span></div>
@@ -580,12 +1042,12 @@ body{
 </div>
 </section>
 <div class="section-divider"></div>
-<section class="section reveal">
+<section class="section reveal" id="panorama">
 <div class="container">
-<div class="panel" data-reveal="" style="--delay:.02s;">
+<div class="panel section-shell" data-reveal="" style="--delay:.02s;">
 <div class="section-header" style="margin-bottom:18px;">
-<div><h2>Panorama de Gênesis</h2></div>
-<p>O livro das origens, da promessa e dos fundamentos da história bíblica.</p>
+<div><span class="section-chip">Visão geral</span><h2>Panorama de Gênesis</h2></div>
+<p>Onde tudo começa — e onde a grande promessa começa a ganhar forma.</p>
 </div>
 <p class="section-lead">
 Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecado na história, mostra o aumento da corrupção humana, o juízo do dilúvio, a dispersão em Babel e então focaliza Abraão, Isaque, Jacó e José. O livro estabelece as categorias fundamentais da Bíblia: criação, imagem de Deus, pecado, graça, juízo, aliança, bênção, promessa, eleição, providência e esperança.
@@ -636,8 +1098,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <section class="section reveal">
 <div class="container">
 <div class="section-header" data-reveal="">
-<div><h2>Fluxo narrativo de Gênesis</h2></div>
-<p>Uma visão rápida do fluxo narrativo antes do estudo detalhado dos capítulos.</p>
+<div><span class="section-chip">Diferencial</span><h2>Fluxo narrativo de Gênesis</h2></div>
+<p>Antes do aprofundamento, veja o movimento da narrativa em uma única passagem.</p>
 </div>
 <div class="timeline-grid">
 <article class="timeline-card" data-reveal="" style="--delay:.03s;">
@@ -670,8 +1132,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <section class="section reveal">
 <div class="container">
 <div class="section-header" data-reveal="">
-<div><h2>Personagens centrais</h2></div>
-<p>Os rostos humanos por meio dos quais Gênesis desenvolve sua teologia.</p>
+<div><span class="section-chip">Personagens</span><h2>Personagens centrais</h2></div>
+<p>Cada nome carrega tensão, promessa, falha e direção dentro da história.</p>
 </div>
 <div class="people-grid">
 <article class="people-card" data-reveal="" style="--delay:.03s;">
@@ -696,8 +1158,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <section class="section reveal">
 <div class="narrow">
 <div class="section-header" data-reveal="">
-<div><h2>Mapa rápido dos capítulos</h2></div>
-<p>Use como navegação antes de descer para o estudo completo.</p>
+<div><span class="section-chip">Navegação</span><h2>Mapa rápido dos capítulos</h2></div>
+<p>Entre por qualquer capítulo e avance no seu próprio ritmo.</p>
 </div>
 <div class="toc" data-reveal="">
 <a href="#cap1">1</a><a href="#cap2">2</a><a href="#cap3">3</a><a href="#cap4">4</a><a href="#cap5">5</a><a href="#cap6">6</a><a href="#cap7">7</a><a href="#cap8">8</a><a href="#cap9">9</a><a href="#cap10">10</a><a href="#cap11">11</a><a href="#cap12">12</a><a href="#cap13">13</a><a href="#cap14">14</a><a href="#cap15">15</a><a href="#cap16">16</a><a href="#cap17">17</a><a href="#cap18">18</a><a href="#cap19">19</a><a href="#cap20">20</a><a href="#cap21">21</a><a href="#cap22">22</a><a href="#cap23">23</a><a href="#cap24">24</a><a href="#cap25">25</a><a href="#cap26">26</a><a href="#cap27">27</a><a href="#cap28">28</a><a href="#cap29">29</a><a href="#cap30">30</a><a href="#cap31">31</a><a href="#cap32">32</a><a href="#cap33">33</a><a href="#cap34">34</a><a href="#cap35">35</a><a href="#cap36">36</a><a href="#cap37">37</a><a href="#cap38">38</a><a href="#cap39">39</a><a href="#cap40">40</a><a href="#cap41">41</a><a href="#cap42">42</a><a href="#cap43">43</a><a href="#cap44">44</a><a href="#cap45">45</a><a href="#cap46">46</a><a href="#cap47">47</a><a href="#cap48">48</a><a href="#cap49">49</a><a href="#cap50">50</a>
@@ -707,15 +1169,11 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <section class="section reveal is-visible" id="capitulos">
 <div class="narrow">
 <div class="section-header" data-reveal="">
-<div><h2>Gênesis capítulo por capítulo</h2></div>
-<p>Estudo aprofundado, expandido e pronto para publicação direta.</p>
+<div><span class="section-chip">Estudo completo</span><h2>Gênesis capítulo por capítulo</h2></div>
+<p>Abra apenas o que quiser ler e percorra Gênesis com clareza, profundidade e leveza.</p>
 </div>
 <div class="chapters-grid">
-<article class="chapter-card" data-keywords="criação luz firmamento terra homem imagem" data-reveal="" data-title="Capítulo 1" id="cap1">
-<span class="chapter-label">Capítulo 1</span>
-<h3>Criação do cosmos e a soberania ordenadora de Deus</h3>
-<p>Gênesis 1 apresenta Deus criando por sua palavra, organizando caos, separando, nomeando e declarando bondade. O capítulo estabelece ordem, propósito e soberania absoluta desde o primeiro versículo.</p>
-<div class="chapter-grid">
+<article class="chapter-card" data-keywords="criação luz firmamento terra homem imagem" data-reveal="" data-title="Capítulo 1" id="cap1"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 1</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Criação do cosmos e a soberania ordenadora de Deus</span><span class="chapter-toggle-summary">Gênesis 1 apresenta Deus criando por sua palavra, organizando caos, separando, nomeando e declarando bondade. O capítulo estabelece ordem, propósito e soberania absoluta desde o primeiro versículo.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Dias da criação e progressão da ordem.</p>
@@ -724,14 +1182,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Deus cria sem rival, sem esforço e sem oposição equivalente. A criação já nasce orientada para sentido, ritmo e fecundidade. A imagem de Deus dá dignidade singular ao ser humano.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O texto inaugura a visão bíblica de realidade: Deus precede tudo, sustenta tudo e define a bondade do que cria. O capítulo também estabelece o ser humano como representante moral dentro da criação, não como centro autônomo dela.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A progressão dos dias revela um movimento de formação e plenitude: Deus prepara ambientes, instala governadores e culmina com o ser humano. O sábado, ao final da sequência, indica que a criação foi feita para ordem, adoração e ritmo santo.</div><div class="insight"><strong>Insight central:</strong> o universo bíblico não nasce do acaso, mas de palavra, ordem e propósito.</div>
-</article>
-<article class="chapter-card" data-keywords="eden jardim homem mulher aliança criação" data-reveal="" data-title="Capítulo 2" id="cap2">
-<span class="chapter-label">Capítulo 2</span>
-<h3>O jardim, a vocação humana e a intimidade original</h3>
-<p>Gênesis 2 aprofunda a criação do ser humano, o jardim do Éden, o trabalho, o mandamento, a solidão não ideal e a formação da mulher. O capítulo enfatiza proximidade, vocação e complementaridade.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O texto inaugura a visão bíblica de realidade: Deus precede tudo, sustenta tudo e define a bondade do que cria. O capítulo também estabelece o ser humano como representante moral dentro da criação, não como centro autônomo dela.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A progressão dos dias revela um movimento de formação e plenitude: Deus prepara ambientes, instala governadores e culmina com o ser humano. O sábado, ao final da sequência, indica que a criação foi feita para ordem, adoração e ritmo santo.</div><div class="insight"><strong>Insight central:</strong> o universo bíblico não nasce do acaso, mas de palavra, ordem e propósito.</div></div></article>
+<article class="chapter-card" data-keywords="eden jardim homem mulher aliança criação" data-reveal="" data-title="Capítulo 2" id="cap2"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 2</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">O jardim, a vocação humana e a intimidade original</span><span class="chapter-toggle-summary">Gênesis 2 aprofunda a criação do ser humano, o jardim do Éden, o trabalho, o mandamento, a solidão não ideal e a formação da mulher. O capítulo enfatiza proximidade, vocação e complementaridade.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Formação do homem, do jardim e da relação conjugal.</p>
@@ -740,14 +1192,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O capítulo não repete Gênesis 1; ele aproxima a câmera da relação entre Deus e humanidade. Trabalho aparece antes da queda como vocação digna. Casamento surge como aliança de unidade.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O Éden funciona como espaço de comunhão, responsabilidade e limite. Aqui aparecem trabalho, mandamento, relação homem-mulher e pertencimento, elementos que serão abalados pela queda no capítulo seguinte.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> O texto aproxima a narrativa da experiência humana concreta, mostrando terra, jardim, rios, vocação e limite moral. A união entre homem e mulher não aparece como detalhe periférico, mas como parte da estrutura original da vida diante de Deus.</div><div class="insight"><strong>Insight central:</strong> a vida humana foi pensada para comunhão com Deus, trabalho com sentido e vínculo relacional profundo.</div>
-</article>
-<article class="chapter-card" data-keywords="queda serpente fruto vergonha maldição promessa" data-reveal="" data-title="Capítulo 3" id="cap3">
-<span class="chapter-label">Capítulo 3</span>
-<h3>A queda e a entrada do pecado na história</h3>
-<p>O capítulo 3 narra a tentação, a desobediência, a vergonha, o medo, a transferência de culpa e a expulsão do jardim. A harmonia original é rompida em todas as direções.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O Éden funciona como espaço de comunhão, responsabilidade e limite. Aqui aparecem trabalho, mandamento, relação homem-mulher e pertencimento, elementos que serão abalados pela queda no capítulo seguinte.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> O texto aproxima a narrativa da experiência humana concreta, mostrando terra, jardim, rios, vocação e limite moral. A união entre homem e mulher não aparece como detalhe periférico, mas como parte da estrutura original da vida diante de Deus.</div><div class="insight"><strong>Insight central:</strong> a vida humana foi pensada para comunhão com Deus, trabalho com sentido e vínculo relacional profundo.</div></div></article>
+<article class="chapter-card" data-keywords="queda serpente fruto vergonha maldição promessa" data-reveal="" data-title="Capítulo 3" id="cap3"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 3</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">A queda e a entrada do pecado na história</span><span class="chapter-toggle-summary">O capítulo 3 narra a tentação, a desobediência, a vergonha, o medo, a transferência de culpa e a expulsão do jardim. A harmonia original é rompida em todas as direções.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Tentação, transgressão, juízo e expulsão.</p>
@@ -756,14 +1202,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O pecado não é mero erro; é ruptura da confiança em Deus. Vergonha e ocultação mostram desordem interior. Mesmo em juízo, aparece promessa de conflito futuro contra a serpente.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A narrativa explica por que medo, vergonha, dor, conflito e morte marcam a experiência humana. Ao mesmo tempo, o capítulo já insinua esperança ao mostrar que o juízo divino não elimina a história da redenção.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A sequência do capítulo mostra um efeito em cascata: distorção do desejo, ocultação, culpa, ruptura relacional e expulsão. Ainda assim, Deus continua falando, vestindo e delimitando a história, o que impede leitura puramente desesperada do capítulo.</div><div class="insight"><strong>Insight central:</strong> a Bíblia explica a tragédia humana não pela limitação da criação, mas pela rebelião moral do coração.</div>
-</article>
-<article class="chapter-card" data-keywords="caim abel homicidio inveja oferta violência" data-reveal="" data-title="Capítulo 4" id="cap4">
-<span class="chapter-label">Capítulo 4</span>
-<h3>Caim, Abel e a expansão do pecado na vida social</h3>
-<p>A história de Caim e Abel mostra que a queda rapidamente sai do interior e se manifesta em violência fraterna. O pecado passa a ferir a convivência social.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A narrativa explica por que medo, vergonha, dor, conflito e morte marcam a experiência humana. Ao mesmo tempo, o capítulo já insinua esperança ao mostrar que o juízo divino não elimina a história da redenção.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A sequência do capítulo mostra um efeito em cascata: distorção do desejo, ocultação, culpa, ruptura relacional e expulsão. Ainda assim, Deus continua falando, vestindo e delimitando a história, o que impede leitura puramente desesperada do capítulo.</div><div class="insight"><strong>Insight central:</strong> a Bíblia explica a tragédia humana não pela limitação da criação, mas pela rebelião moral do coração.</div></div></article>
+<article class="chapter-card" data-keywords="caim abel homicidio inveja oferta violência" data-reveal="" data-title="Capítulo 4" id="cap4"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 4</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Caim, Abel e a expansão do pecado na vida social</span><span class="chapter-toggle-summary">A história de Caim e Abel mostra que a queda rapidamente sai do interior e se manifesta em violência fraterna. O pecado passa a ferir a convivência social.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Ofertas, inveja e homicídio.</p>
@@ -772,14 +1212,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A questão central não é ritual vazio, mas interioridade desalinhada. O homicídio mostra o avanço rápido da corrupção humana. Mesmo no juízo de Caim, Deus ainda o preserva da destruição imediata.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A violência deixa de ser apenas interior e passa a estruturar a convivência humana. Caim se torna um retrato do coração que rejeita correção, enquanto Abel se torna memória da justiça ferida pela inveja.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A diferença entre as duas ofertas é menos ritualista do que existencial: a narrativa destaca coração, postura e reação diante da correção. A cidade fundada por Caim também sugere que realização cultural pode coexistir com alienação espiritual.</div><div class="insight"><strong>Insight central:</strong> o pecado que não é tratado diante de Deus tende a se transformar em agressão contra o próximo.</div>
-</article>
-<article class="chapter-card" data-keywords="genealogia sete morte enoque linhagem" data-reveal="" data-title="Capítulo 5" id="cap5">
-<span class="chapter-label">Capítulo 5</span>
-<h3>Genealogia de Adão e o avanço da mortalidade</h3>
-<p>Gênesis 5 parece apenas registrar nomes, mas seu refrão enfatiza a mortalidade humana após a queda. Ao mesmo tempo, Enoque introduz uma nota de esperança.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A violência deixa de ser apenas interior e passa a estruturar a convivência humana. Caim se torna um retrato do coração que rejeita correção, enquanto Abel se torna memória da justiça ferida pela inveja.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A diferença entre as duas ofertas é menos ritualista do que existencial: a narrativa destaca coração, postura e reação diante da correção. A cidade fundada por Caim também sugere que realização cultural pode coexistir com alienação espiritual.</div><div class="insight"><strong>Insight central:</strong> o pecado que não é tratado diante de Deus tende a se transformar em agressão contra o próximo.</div></div></article>
+<article class="chapter-card" data-keywords="genealogia sete morte enoque linhagem" data-reveal="" data-title="Capítulo 5" id="cap5"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 5</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Genealogia de Adão e o avanço da mortalidade</span><span class="chapter-toggle-summary">Gênesis 5 parece apenas registrar nomes, mas seu refrão enfatiza a mortalidade humana após a queda. Ao mesmo tempo, Enoque introduz uma nota de esperança.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Linha de Sete e repetição da morte.</p>
@@ -788,14 +1222,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A repetição da morte torna visível o peso do capítulo 3. Enoque aparece como sinal de comunhão excepcional com Deus. Genealogias bíblicas sustentam memória e continuidade da promessa.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A genealogia sustenta a continuidade histórica da humanidade e reforça o peso da sentença da morte. O destaque dado a Enoque introduz a ideia de uma vida marcada por comunhão singular com Deus em meio a uma geração mortal.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Ao repetir a fórmula da morte, o capítulo ecoa a gravidade da queda. Quando Enoque é destacado, o texto quebra o ritmo da genealogia para lembrar que a comunhão com Deus continua sendo possibilidade real dentro da história humana.</div><div class="insight"><strong>Insight central:</strong> mesmo sob o domínio da morte, a história da promessa continua avançando.</div>
-</article>
-<article class="chapter-card" data-keywords="noe noé arca violência diluvio corrupção" data-reveal="" data-title="Capítulo 6" id="cap6">
-<span class="chapter-label">Capítulo 6</span>
-<h3>Corrupção generalizada e a preparação do dilúvio</h3>
-<p>Gênesis 6 descreve um mundo moralmente corrompido, dominado pela violência. Deus anuncia juízo, mas distingue Noé como homem preservado pela graça.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A genealogia sustenta a continuidade histórica da humanidade e reforça o peso da sentença da morte. O destaque dado a Enoque introduz a ideia de uma vida marcada por comunhão singular com Deus em meio a uma geração mortal.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Ao repetir a fórmula da morte, o capítulo ecoa a gravidade da queda. Quando Enoque é destacado, o texto quebra o ritmo da genealogia para lembrar que a comunhão com Deus continua sendo possibilidade real dentro da história humana.</div><div class="insight"><strong>Insight central:</strong> mesmo sob o domínio da morte, a história da promessa continua avançando.</div></div></article>
+<article class="chapter-card" data-keywords="noe noé arca violência diluvio corrupção" data-reveal="" data-title="Capítulo 6" id="cap6"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 6</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Corrupção generalizada e a preparação do dilúvio</span><span class="chapter-toggle-summary">Gênesis 6 descreve um mundo moralmente corrompido, dominado pela violência. Deus anuncia juízo, mas distingue Noé como homem preservado pela graça.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Decisão divina, arca e graça para Noé.</p>
@@ -804,14 +1232,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O problema da humanidade é interior e abrangente. O juízo do dilúvio responde à corrupção totalizante. A eleição de Noé mostra graça antes de mérito.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O capítulo mostra que a corrupção não era superficial, mas penetrava intenções, relações e cultura. Noé aparece como sinal de preservação dentro de um cenário em que o juízo divino se torna inevitável.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A decisão divina de trazer o dilúvio não surge de arbitrariedade, mas de avaliação moral do estado da terra. Noé, sua família e a arca mostram que juízo e preservação caminham juntos na administração de Deus.</div><div class="insight"><strong>Insight central:</strong> o juízo divino não é capricho; é resposta moral à perversão persistente.</div>
-</article>
-<article class="chapter-card" data-keywords="arca aguas juízo juizo noé animais" data-reveal="" data-title="Capítulo 7" id="cap7">
-<span class="chapter-label">Capítulo 7</span>
-<h3>O dilúvio como juízo histórico e cósmico</h3>
-<p>O capítulo 7 executa o juízo anunciado. As águas cobrem a terra, a arca preserva a vida escolhida por Deus e a criação entra em colapso temporário.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O capítulo mostra que a corrupção não era superficial, mas penetrava intenções, relações e cultura. Noé aparece como sinal de preservação dentro de um cenário em que o juízo divino se torna inevitável.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A decisão divina de trazer o dilúvio não surge de arbitrariedade, mas de avaliação moral do estado da terra. Noé, sua família e a arca mostram que juízo e preservação caminham juntos na administração de Deus.</div><div class="insight"><strong>Insight central:</strong> o juízo divino não é capricho; é resposta moral à perversão persistente.</div></div></article>
+<article class="chapter-card" data-keywords="arca aguas juízo juizo noé animais" data-reveal="" data-title="Capítulo 7" id="cap7"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 7</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">O dilúvio como juízo histórico e cósmico</span><span class="chapter-toggle-summary">O capítulo 7 executa o juízo anunciado. As águas cobrem a terra, a arca preserva a vida escolhida por Deus e a criação entra em colapso temporário.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Entrada na arca e inundação.</p>
@@ -820,14 +1242,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A narrativa comunica gravidade moral, não apenas catástrofe natural. A arca é espaço de preservação em meio ao juízo. A criação retorna simbolicamente ao caos aquoso.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>As águas do dilúvio simbolizam desmantelamento da ordem criada e resposta santa de Deus ao mal. A arca, por sua vez, torna-se imagem de preservação em meio ao colapso generalizado.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A entrada na arca, o fechamento da porta e a subida das águas criam atmosfera de irreversibilidade. O texto insiste que o juízo tem escala abrangente porque a corrupção descrita nos capítulos anteriores também a tinha.</div><div class="insight"><strong>Insight central:</strong> o Deus que criou também julga, e o juízo nunca elimina sua capacidade de preservar.</div>
-</article>
-<article class="chapter-card" data-keywords="noé pomba altar recomeço aliança" data-reveal="" data-title="Capítulo 8" id="cap8">
-<span class="chapter-label">Capítulo 8</span>
-<h3>O recuo das águas e o começo de um novo mundo</h3>
-<p>As águas baixam, a arca repousa, Noé sai, oferece sacrifício e a história humana entra em nova fase. O capítulo une alívio e solenidade.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>As águas do dilúvio simbolizam desmantelamento da ordem criada e resposta santa de Deus ao mal. A arca, por sua vez, torna-se imagem de preservação em meio ao colapso generalizado.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A entrada na arca, o fechamento da porta e a subida das águas criam atmosfera de irreversibilidade. O texto insiste que o juízo tem escala abrangente porque a corrupção descrita nos capítulos anteriores também a tinha.</div><div class="insight"><strong>Insight central:</strong> o Deus que criou também julga, e o juízo nunca elimina sua capacidade de preservar.</div></div></article>
+<article class="chapter-card" data-keywords="noé pomba altar recomeço aliança" data-reveal="" data-title="Capítulo 8" id="cap8"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 8</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">O recuo das águas e o começo de um novo mundo</span><span class="chapter-toggle-summary">As águas baixam, a arca repousa, Noé sai, oferece sacrifício e a história humana entra em nova fase. O capítulo une alívio e solenidade.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Saída da arca, pomba e altar.</p>
@@ -836,14 +1252,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Deus se lembra não por esquecimento, mas por fidelidade ativa. O altar de Noé mostra resposta cultual ao livramento. A nova fase não elimina automaticamente a fragilidade humana.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O novo começo após o juízo não significa retorno pleno ao Éden, mas reinício sob graça e memória do juízo. O altar de Noé mostra que a história seguinte precisa ser lida à luz de adoração, dependência e misericórdia.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> O repouso da arca, o envio das aves e a saída para terra seca constroem cuidadosamente a sensação de recomeço. O capítulo ensina que reinícios bíblicos não se dão por ingenuidade, mas após atravessar memória concreta do juízo.</div><div class="insight"><strong>Insight central:</strong> recomeços bíblicos são reais, mas não ingênuos; nascem de graça no meio de uma humanidade ainda ferida.</div>
-</article>
-<article class="chapter-card" data-keywords="arco iris sangue noé cam maldição" data-reveal="" data-title="Capítulo 9" id="cap9">
-<span class="chapter-label">Capítulo 9</span>
-<h3>Aliança com Noé, dignidade humana e nova desordem</h3>
-<p>Gênesis 9 estabelece a aliança noética, o valor da vida humana e o sinal do arco. Mas o capítulo termina com vergonha e tensão na própria família de Noé.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O novo começo após o juízo não significa retorno pleno ao Éden, mas reinício sob graça e memória do juízo. O altar de Noé mostra que a história seguinte precisa ser lida à luz de adoração, dependência e misericórdia.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> O repouso da arca, o envio das aves e a saída para terra seca constroem cuidadosamente a sensação de recomeço. O capítulo ensina que reinícios bíblicos não se dão por ingenuidade, mas após atravessar memória concreta do juízo.</div><div class="insight"><strong>Insight central:</strong> recomeços bíblicos são reais, mas não ingênuos; nascem de graça no meio de uma humanidade ainda ferida.</div></div></article>
+<article class="chapter-card" data-keywords="arco iris sangue noé cam maldição" data-reveal="" data-title="Capítulo 9" id="cap9"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 9</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Aliança com Noé, dignidade humana e nova desordem</span><span class="chapter-toggle-summary">Gênesis 9 estabelece a aliança noética, o valor da vida humana e o sinal do arco. Mas o capítulo termina com vergonha e tensão na própria família de Noé.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Aliança, arco e crise doméstica.</p>
@@ -852,14 +1262,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Deus preserva a estabilidade do mundo após o dilúvio. A dignidade humana continua ancorada na imagem de Deus. O episódio final mostra que o pecado sobrevive ao dilúvio.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Mesmo após o dilúvio, a inclinação desordenada do coração humano reaparece. A aliança com Noé garante estabilidade para a história, mas o episódio final confirma que o problema central da humanidade ainda não foi removido.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A proibição do homicídio e a afirmação da imagem de Deus vinculam dignidade humana e responsabilidade ética. O arco nas nuvens sela um compromisso de preservação histórica, mas a embriaguez de Noé recorda a permanência da fragilidade humana.</div><div class="insight"><strong>Insight central:</strong> estruturas externas podem mudar, mas o coração humano ainda precisa de redenção mais profunda.</div>
-</article>
-<article class="chapter-card" data-keywords="nações povos tabela gentios genealogias" data-reveal="" data-title="Capítulo 10" id="cap10">
-<span class="chapter-label">Capítulo 10</span>
-<h3>As nações e a diversidade dos povos</h3>
-<p>O capítulo 10 organiza os povos descendentes de Noé e mostra a expansão da humanidade em terras, clãs e línguas. É um mapa teológico das nações.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Mesmo após o dilúvio, a inclinação desordenada do coração humano reaparece. A aliança com Noé garante estabilidade para a história, mas o episódio final confirma que o problema central da humanidade ainda não foi removido.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A proibição do homicídio e a afirmação da imagem de Deus vinculam dignidade humana e responsabilidade ética. O arco nas nuvens sela um compromisso de preservação histórica, mas a embriaguez de Noé recorda a permanência da fragilidade humana.</div><div class="insight"><strong>Insight central:</strong> estruturas externas podem mudar, mas o coração humano ainda precisa de redenção mais profunda.</div></div></article>
+<article class="chapter-card" data-keywords="nações povos tabela gentios genealogias" data-reveal="" data-title="Capítulo 10" id="cap10"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 10</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">As nações e a diversidade dos povos</span><span class="chapter-toggle-summary">O capítulo 10 organiza os povos descendentes de Noé e mostra a expansão da humanidade em terras, clãs e línguas. É um mapa teológico das nações.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Tabela das nações.</p>
@@ -868,14 +1272,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A diversidade humana entra no enredo bíblico desde cedo. As nações não são acidentais; fazem parte da história observada por Deus. A Bíblia integra geografia e povos à narrativa.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A tabela das nações mostra que a diversidade dos povos não escapa ao governo divino. O texto também fornece a moldura para entender como a promessa a Abraão terá alcance que ultrapassa uma única família.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Longe de ser um apêndice seco, a lista organiza o mundo conhecido a partir de famílias, territórios e línguas. O leitor percebe que a Bíblia trata povos e nações como parte do enredo da redenção, e não como cenário neutro.</div><div class="insight"><strong>Insight central:</strong> o Deus de Gênesis sempre esteve diante de toda a humanidade, não apenas de uma linhagem isolada.</div>
-</article>
-<article class="chapter-card" data-keywords="babel torre dispersão línguas orgulho" data-reveal="" data-title="Capítulo 11" id="cap11">
-<span class="chapter-label">Capítulo 11</span>
-<h3>Babel e o orgulho coletivo da humanidade</h3>
-<p>A humanidade tenta construir nome para si e evitar dispersão. Deus confunde as línguas e dispersa os povos. O capítulo prepara o chamado de Abraão.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A tabela das nações mostra que a diversidade dos povos não escapa ao governo divino. O texto também fornece a moldura para entender como a promessa a Abraão terá alcance que ultrapassa uma única família.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Longe de ser um apêndice seco, a lista organiza o mundo conhecido a partir de famílias, territórios e línguas. O leitor percebe que a Bíblia trata povos e nações como parte do enredo da redenção, e não como cenário neutro.</div><div class="insight"><strong>Insight central:</strong> o Deus de Gênesis sempre esteve diante de toda a humanidade, não apenas de uma linhagem isolada.</div></div></article>
+<article class="chapter-card" data-keywords="babel torre dispersão línguas orgulho" data-reveal="" data-title="Capítulo 11" id="cap11"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 11</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Babel e o orgulho coletivo da humanidade</span><span class="chapter-toggle-summary">A humanidade tenta construir nome para si e evitar dispersão. Deus confunde as línguas e dispersa os povos. O capítulo prepara o chamado de Abraão.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Projeto humano autônomo e dispersão.</p>
@@ -884,14 +1282,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Babel mostra unidade sem submissão a Deus. A ambição coletiva pode ser tão rebelde quanto a individual. A dispersão corrige a arrogância e reorganiza a história.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Babel resume a tentativa humana de construir segurança, nome e grandeza sem submissão a Deus. A confusão das línguas prepara o contraste com o chamado de Abraão, no qual Deus mesmo dará nome e futuro.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A torre expressa centralização, autoexaltação e resistência ao mandato de espalhar-se. Quando Deus desce para avaliar a obra, a ironia literária reduz a suposta grandeza humana à proporção real diante do céu.</div><div class="insight"><strong>Insight central:</strong> quando a humanidade tenta construir grandeza contra Deus, a própria unidade vira instrumento de desordem.</div>
-</article>
-<article class="chapter-card" data-keywords="abraão abram chamada promessa terra bênção" data-reveal="" data-title="Capítulo 12" id="cap12">
-<span class="chapter-label">Capítulo 12</span>
-<h3>Chamado de Abraão e começo explícito da promessa</h3>
-<p>Com Abraão, o foco da narrativa muda das nações para uma família. Deus o chama, promete terra, descendência e bênção para todas as famílias da terra.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Babel resume a tentativa humana de construir segurança, nome e grandeza sem submissão a Deus. A confusão das línguas prepara o contraste com o chamado de Abraão, no qual Deus mesmo dará nome e futuro.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A torre expressa centralização, autoexaltação e resistência ao mandato de espalhar-se. Quando Deus desce para avaliar a obra, a ironia literária reduz a suposta grandeza humana à proporção real diante do céu.</div><div class="insight"><strong>Insight central:</strong> quando a humanidade tenta construir grandeza contra Deus, a própria unidade vira instrumento de desordem.</div></div></article>
+<article class="chapter-card" data-keywords="abraão abram chamada promessa terra bênção" data-reveal="" data-title="Capítulo 12" id="cap12"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 12</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Chamado de Abraão e começo explícito da promessa</span><span class="chapter-toggle-summary">Com Abraão, o foco da narrativa muda das nações para uma família. Deus o chama, promete terra, descendência e bênção para todas as famílias da terra.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Saída, altar e promessa.</p>
@@ -900,14 +1292,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A eleição de Abraão não anula as nações; visa alcançá-las. A fé começa com deslocamento e confiança na palavra de Deus. O capítulo une promessa grandiosa e fragilidade humana imediata.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A promessa assume contornos claros: terra, descendência, bênção e missão. O capítulo inicia a transição do universal para o particular, focalizando a família por meio da qual Deus alcançará as nações.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A obediência de Abraão inaugura uma espiritualidade de deslocamento, confiança e dependência. O episódio no Egito já introduz a mistura de fé e fraqueza que acompanhará o patriarca ao longo de sua caminhada.</div><div class="insight"><strong>Insight central:</strong> Deus responde ao caos das nações chamando uma pessoa para iniciar uma história de promessa.</div>
-</article>
-<article class="chapter-card" data-keywords="ló abraão canaã generosidade separação" data-reveal="" data-title="Capítulo 13" id="cap13">
-<span class="chapter-label">Capítulo 13</span>
-<h3>Separação de Abraão e Ló e a pedagogia da escolha</h3>
-<p>Abraão e Ló se separam para evitar conflito. Ló escolhe pela aparência; Abraão permanece na terra da promessa e recebe reafirmação de Deus.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A promessa assume contornos claros: terra, descendência, bênção e missão. O capítulo inicia a transição do universal para o particular, focalizando a família por meio da qual Deus alcançará as nações.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A obediência de Abraão inaugura uma espiritualidade de deslocamento, confiança e dependência. O episódio no Egito já introduz a mistura de fé e fraqueza que acompanhará o patriarca ao longo de sua caminhada.</div><div class="insight"><strong>Insight central:</strong> Deus responde ao caos das nações chamando uma pessoa para iniciar uma história de promessa.</div></div></article>
+<article class="chapter-card" data-keywords="ló abraão canaã generosidade separação" data-reveal="" data-title="Capítulo 13" id="cap13"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 13</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Separação de Abraão e Ló e a pedagogia da escolha</span><span class="chapter-toggle-summary">Abraão e Ló se separam para evitar conflito. Ló escolhe pela aparência; Abraão permanece na terra da promessa e recebe reafirmação de Deus.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Separação e renovação da promessa.</p>
@@ -916,14 +1302,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Nem toda terra fértil visível é lugar de bênção real. Abraão aprende a confiar sem agarrar tudo com ansiedade. Sua generosidade contrasta com a lógica possessiva.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A separação entre Abraão e Ló mostra dois olhares: o que escolhe pela aparência imediata e o que espera pela palavra divina. A terra volta ao centro, agora como promessa recebida pela fé e não por cálculo meramente humano.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Enquanto Ló se orienta pelo que parece mais vantajoso aos olhos, Abraão permanece aberto à direção divina. A paisagem escolhida e a promessa reafirmada criam contraste entre aparente segurança e verdadeira herança.</div><div class="insight"><strong>Insight central:</strong> fé madura consegue soltar o visível porque sabe que a promessa depende de Deus.</div>
-</article>
-<article class="chapter-card" data-keywords="melquisedeque sodoma guerra reis lót" data-reveal="" data-title="Capítulo 14" id="cap14">
-<span class="chapter-label">Capítulo 14</span>
-<h3>Guerra de reis, resgate de Ló e Melquisedeque</h3>
-<p>Abraão resgata Ló, encontra Melquisedeque e rejeita ser enriquecido pelo rei de Sodoma. O capítulo combina coragem, culto e discernimento moral.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A separação entre Abraão e Ló mostra dois olhares: o que escolhe pela aparência imediata e o que espera pela palavra divina. A terra volta ao centro, agora como promessa recebida pela fé e não por cálculo meramente humano.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Enquanto Ló se orienta pelo que parece mais vantajoso aos olhos, Abraão permanece aberto à direção divina. A paisagem escolhida e a promessa reafirmada criam contraste entre aparente segurança e verdadeira herança.</div><div class="insight"><strong>Insight central:</strong> fé madura consegue soltar o visível porque sabe que a promessa depende de Deus.</div></div></article>
+<article class="chapter-card" data-keywords="melquisedeque sodoma guerra reis lót" data-reveal="" data-title="Capítulo 14" id="cap14"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 14</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Guerra de reis, resgate de Ló e Melquisedeque</span><span class="chapter-toggle-summary">Abraão resgata Ló, encontra Melquisedeque e rejeita ser enriquecido pelo rei de Sodoma. O capítulo combina coragem, culto e discernimento moral.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Batalha, resgate e encontro sacerdotal.</p>
@@ -932,14 +1312,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Abraão não é apenas contemplativo; ele age historicamente. Melquisedeque introduz um sacerdócio misterioso e elevado. A recusa ao rei de Sodoma preserva a pureza do testemunho de Abraão.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O capítulo combina cenário internacional, coragem prática e profundidade teológica. Melquisedeque surge como figura singular de sacerdócio e bênção, enquanto Abraão demonstra independência moral diante das vantagens de Sodoma.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Abraão aparece aqui não apenas como peregrino, mas como agente decisivo em cenário de guerra. Seu encontro com Melquisedeque introduz linguagem de bênção, sacerdócio e Deus Altíssimo em contexto de conflito político.</div><div class="insight"><strong>Insight central:</strong> é possível vencer batalhas sem se vender às alianças erradas depois da vitória.</div>
-</article>
-<article class="chapter-card" data-keywords="aliança estrelas descendência sacrifício tocha" data-reveal="" data-title="Capítulo 15" id="cap15">
-<span class="chapter-label">Capítulo 15</span>
-<h3>Aliança formalizada e a noite da promessa</h3>
-<p>Gênesis 15 é um dos capítulos teológicos mais decisivos do livro. Deus leva Abraão para olhar as estrelas, fala de descendência e sela a aliança de maneira solene.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O capítulo combina cenário internacional, coragem prática e profundidade teológica. Melquisedeque surge como figura singular de sacerdócio e bênção, enquanto Abraão demonstra independência moral diante das vantagens de Sodoma.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Abraão aparece aqui não apenas como peregrino, mas como agente decisivo em cenário de guerra. Seu encontro com Melquisedeque introduz linguagem de bênção, sacerdócio e Deus Altíssimo em contexto de conflito político.</div><div class="insight"><strong>Insight central:</strong> é possível vencer batalhas sem se vender às alianças erradas depois da vitória.</div></div></article>
+<article class="chapter-card" data-keywords="aliança estrelas descendência sacrifício tocha" data-reveal="" data-title="Capítulo 15" id="cap15"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 15</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Aliança formalizada e a noite da promessa</span><span class="chapter-toggle-summary">Gênesis 15 é um dos capítulos teológicos mais decisivos do livro. Deus leva Abraão para olhar as estrelas, fala de descendência e sela a aliança de maneira solene.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Promessa, fé e ratificação da aliança.</p>
@@ -948,14 +1322,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A fé de Abraão é contada como justiça. A aliança é sustentada pela iniciativa divina. O futuro do povo inclui também tempo de aflição antes do cumprimento maior.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A promessa deixa de ser apenas declarada e passa a ser ratificada em forma solene. O texto aprofunda a tensão entre espera e certeza, mostrando que a história da aliança caminha através do tempo, não da pressa.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> O temor de Abraão é respondido com palavra, visão e rito. A cena do forno fumegante e da tocha acesa sublinha que a fidelidade final da aliança depende da ação de Deus, mesmo quando o tempo da promessa será longo.</div><div class="insight"><strong>Insight central:</strong> a promessa de Deus pode ser mais segura que a evidência imediata do presente.</div>
-</article>
-<article class="chapter-card" data-keywords="hagar agar ismael sarai atalho promessa" data-reveal="" data-title="Capítulo 16" id="cap16">
-<span class="chapter-label">Capítulo 16</span>
-<h3>Hagar, Ismael e a tentativa de apressar a promessa</h3>
-<p>Sarai e Abraão tentam produzir por meios próprios o que Deus havia prometido. O capítulo revela tensão doméstica, sofrimento de Hagar e misericórdia divina.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A promessa deixa de ser apenas declarada e passa a ser ratificada em forma solene. O texto aprofunda a tensão entre espera e certeza, mostrando que a história da aliança caminha através do tempo, não da pressa.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> O temor de Abraão é respondido com palavra, visão e rito. A cena do forno fumegante e da tocha acesa sublinha que a fidelidade final da aliança depende da ação de Deus, mesmo quando o tempo da promessa será longo.</div><div class="insight"><strong>Insight central:</strong> a promessa de Deus pode ser mais segura que a evidência imediata do presente.</div></div></article>
+<article class="chapter-card" data-keywords="hagar agar ismael sarai atalho promessa" data-reveal="" data-title="Capítulo 16" id="cap16"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 16</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Hagar, Ismael e a tentativa de apressar a promessa</span><span class="chapter-toggle-summary">Sarai e Abraão tentam produzir por meios próprios o que Deus havia prometido. O capítulo revela tensão doméstica, sofrimento de Hagar e misericórdia divina.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Atalhos humanos e sofrimento relacional.</p>
@@ -964,14 +1332,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A espera mal conduzida produz dor relacional. Hagar mostra que Deus vê os vulneráveis à margem da casa patriarcal. Nem toda solução eficiente é fidelidade.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Hagar e Ismael revelam os efeitos de soluções humanas para problemas que deveriam ser entregues à fidelidade divina. O capítulo também mostra que Deus enxerga quem sofre à margem das disputas da casa de Abraão.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Sarai, Abrão e Hagar vivem a tensão entre promessa recebida e impaciência prática. No deserto, o Deus que vê e ouve se manifesta a uma serva ferida, ampliando o horizonte de atenção divina para além do núcleo principal da casa.</div><div class="insight"><strong>Insight central:</strong> apressar a promessa de Deus com métodos humanos costuma gerar feridas longas.</div>
-</article>
-<article class="chapter-card" data-keywords="circuncisão abraão sarah sara pacto nome" data-reveal="" data-title="Capítulo 17" id="cap17">
-<span class="chapter-label">Capítulo 17</span>
-<h3>Circuncisão e aprofundamento da aliança</h3>
-<p>Deus muda nomes, reafirma promessas e estabelece a circuncisão como sinal da aliança. O capítulo torna a promessa mais concreta e mais exigente.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Hagar e Ismael revelam os efeitos de soluções humanas para problemas que deveriam ser entregues à fidelidade divina. O capítulo também mostra que Deus enxerga quem sofre à margem das disputas da casa de Abraão.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Sarai, Abrão e Hagar vivem a tensão entre promessa recebida e impaciência prática. No deserto, o Deus que vê e ouve se manifesta a uma serva ferida, ampliando o horizonte de atenção divina para além do núcleo principal da casa.</div><div class="insight"><strong>Insight central:</strong> apressar a promessa de Deus com métodos humanos costuma gerar feridas longas.</div></div></article>
+<article class="chapter-card" data-keywords="circuncisão abraão sarah sara pacto nome" data-reveal="" data-title="Capítulo 17" id="cap17"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 17</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Circuncisão e aprofundamento da aliança</span><span class="chapter-toggle-summary">Deus muda nomes, reafirma promessas e estabelece a circuncisão como sinal da aliança. O capítulo torna a promessa mais concreta e mais exigente.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Novo nome, sinal e ampliação da promessa.</p>
@@ -980,14 +1342,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Abraão e Sara ganham nomes ligados à promessa. A aliança envolve corpo, família e futuro. A promessa parece impossível, mas Deus a reafirma justamente nesse ponto.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A aliança recebe sinal visível e marca identitária. O capítulo reforça que a promessa não depende apenas de descendência biológica ampla, mas da palavra específica de Deus quanto a Sara, Isaque e o futuro da linhagem.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A mudança de nomes de Abrão e Sarai sinaliza redefinição de identidade sob a aliança. A circuncisão liga corpo, memória e pertencimento, tornando visível no cotidiano a relação pactual com Deus.</div><div class="insight"><strong>Insight central:</strong> a aliança de Deus não é vaga; ela molda identidade, memória e pertencimento.</div>
-</article>
-<article class="chapter-card" data-keywords="sodoma sara riso visitantes intercessão" data-reveal="" data-title="Capítulo 18" id="cap18">
-<span class="chapter-label">Capítulo 18</span>
-<h3>Visita divina, promessa de Isaque e intercessão por Sodoma</h3>
-<p>Gênesis 18 une hospitalidade, promessa e intercessão. Deus visita Abraão, reafirma o nascimento de Isaque e depois o envolve na discussão sobre Sodoma.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A aliança recebe sinal visível e marca identitária. O capítulo reforça que a promessa não depende apenas de descendência biológica ampla, mas da palavra específica de Deus quanto a Sara, Isaque e o futuro da linhagem.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A mudança de nomes de Abrão e Sarai sinaliza redefinição de identidade sob a aliança. A circuncisão liga corpo, memória e pertencimento, tornando visível no cotidiano a relação pactual com Deus.</div><div class="insight"><strong>Insight central:</strong> a aliança de Deus não é vaga; ela molda identidade, memória e pertencimento.</div></div></article>
+<article class="chapter-card" data-keywords="sodoma sara riso visitantes intercessão" data-reveal="" data-title="Capítulo 18" id="cap18"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 18</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Visita divina, promessa de Isaque e intercessão por Sodoma</span><span class="chapter-toggle-summary">Gênesis 18 une hospitalidade, promessa e intercessão. Deus visita Abraão, reafirma o nascimento de Isaque e depois o envolve na discussão sobre Sodoma.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Mesa, riso e intercessão.</p>
@@ -996,14 +1352,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Abraão participa da tensão entre justiça e misericórdia. Sara ri diante do improvável, e o impossível é recolocado por Deus. O capítulo mostra proximidade relacional sem perder majestade.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A visita divina une intimidade, promessa e juízo iminente. Abraão aparece tanto como receptor de uma palavra impossível quanto como intercessor que discerne a seriedade moral da destruição de Sodoma.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A hospitalidade inicial contrasta com o juízo iminente sobre Sodoma. Entre refeição, anúncio e intercessão, o capítulo mostra Abraão aprendendo a viver na tensão entre promessa de vida e percepção do mal histórico.</div><div class="insight"><strong>Insight central:</strong> o Deus da promessa é também o Deus que ouve intercessão e julga com retidão.</div>
-</article>
-<article class="chapter-card" data-keywords="sodoma gomorra ló juízo sal" data-reveal="" data-title="Capítulo 19" id="cap19">
-<span class="chapter-label">Capítulo 19</span>
-<h3>Sodoma, Ló e a severidade do juízo</h3>
-<p>O capítulo 19 narra o colapso de Sodoma e Gomorra, a retirada de Ló e o peso moral da degradação social. A cena é dura, complexa e trágica.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A visita divina une intimidade, promessa e juízo iminente. Abraão aparece tanto como receptor de uma palavra impossível quanto como intercessor que discerne a seriedade moral da destruição de Sodoma.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A hospitalidade inicial contrasta com o juízo iminente sobre Sodoma. Entre refeição, anúncio e intercessão, o capítulo mostra Abraão aprendendo a viver na tensão entre promessa de vida e percepção do mal histórico.</div><div class="insight"><strong>Insight central:</strong> o Deus da promessa é também o Deus que ouve intercessão e julga com retidão.</div></div></article>
+<article class="chapter-card" data-keywords="sodoma gomorra ló juízo sal" data-reveal="" data-title="Capítulo 19" id="cap19"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 19</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Sodoma, Ló e a severidade do juízo</span><span class="chapter-toggle-summary">O capítulo 19 narra o colapso de Sodoma e Gomorra, a retirada de Ló e o peso moral da degradação social. A cena é dura, complexa e trágica.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Juízo e livramento tenso.</p>
@@ -1012,14 +1362,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Ló é salvo, mas sua história permanece marcada por ambiguidade. A destruição de Sodoma revela a seriedade do mal coletivo. Nem sair fisicamente de uma cidade corrompida significa sair sem marcas.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Sodoma encarna o colapso ético de uma sociedade inteira, enquanto Ló personifica compromissos ambíguos com um ambiente corrompido. O juízo é severo porque a maldade deixou de ser episódica e se tornou padrão coletivo.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A narrativa expõe degradação pública, hesitação privada e livramento misericordioso. Até a salvação de Ló carrega marcas de perda, ambivalência e consequências profundas para sua família.</div><div class="insight"><strong>Insight central:</strong> juízos bíblicos revelam que certos níveis de corrupção social não podem ser eternamente normalizados.</div>
-</article>
-<article class="chapter-card" data-keywords="abimeleque sara mentira medo preservação" data-reveal="" data-title="Capítulo 20" id="cap20">
-<span class="chapter-label">Capítulo 20</span>
-<h3>Abraão e Abimeleque: repetição de medo e preservação divina</h3>
-<p>Abraão volta a agir com medo em relação a Sara. O capítulo mostra fragilidade recorrente no patriarca e intervenção preservadora de Deus.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Sodoma encarna o colapso ético de uma sociedade inteira, enquanto Ló personifica compromissos ambíguos com um ambiente corrompido. O juízo é severo porque a maldade deixou de ser episódica e se tornou padrão coletivo.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A narrativa expõe degradação pública, hesitação privada e livramento misericordioso. Até a salvação de Ló carrega marcas de perda, ambivalência e consequências profundas para sua família.</div><div class="insight"><strong>Insight central:</strong> juízos bíblicos revelam que certos níveis de corrupção social não podem ser eternamente normalizados.</div></div></article>
+<article class="chapter-card" data-keywords="abimeleque sara mentira medo preservação" data-reveal="" data-title="Capítulo 20" id="cap20"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 20</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Abraão e Abimeleque: repetição de medo e preservação divina</span><span class="chapter-toggle-summary">Abraão volta a agir com medo em relação a Sara. O capítulo mostra fragilidade recorrente no patriarca e intervenção preservadora de Deus.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Medo repetido e promessa protegida.</p>
@@ -1028,14 +1372,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Homens de fé ainda carregam padrões de medo. Deus protege sua promessa apesar da instabilidade humana. A integridade do plano divino não depende da perfeição dos envolvidos.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O medo de Abraão reaparece, mas a fidelidade divina continua preservando a promessa apesar da fragilidade do patriarca. O capítulo evidencia que a segurança da aliança repousa mais em Deus do que na constância humana.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Abimeleque funciona como contraste moral incômodo ao patriarca em certos aspectos, aumentando a força do texto. A correção de Abraão vem pela providência que guarda Sara e impede que a promessa seja comprometida.</div><div class="insight"><strong>Insight central:</strong> a fidelidade de Deus é maior que a repetição das fraquezas humanas.</div>
-</article>
-<article class="chapter-card" data-keywords="isaque ismael hagar agar poço deserto" data-reveal="" data-title="Capítulo 21" id="cap21">
-<span class="chapter-label">Capítulo 21</span>
-<h3>Nascimento de Isaque e expulsão de Hagar</h3>
-<p>A promessa finalmente se concretiza com o nascimento de Isaque. Ao mesmo tempo, a tensão com Hagar e Ismael reaparece, e Deus novamente os vê e preserva.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O medo de Abraão reaparece, mas a fidelidade divina continua preservando a promessa apesar da fragilidade do patriarca. O capítulo evidencia que a segurança da aliança repousa mais em Deus do que na constância humana.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Abimeleque funciona como contraste moral incômodo ao patriarca em certos aspectos, aumentando a força do texto. A correção de Abraão vem pela providência que guarda Sara e impede que a promessa seja comprometida.</div><div class="insight"><strong>Insight central:</strong> a fidelidade de Deus é maior que a repetição das fraquezas humanas.</div></div></article>
+<article class="chapter-card" data-keywords="isaque ismael hagar agar poço deserto" data-reveal="" data-title="Capítulo 21" id="cap21"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 21</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Nascimento de Isaque e expulsão de Hagar</span><span class="chapter-toggle-summary">A promessa finalmente se concretiza com o nascimento de Isaque. Ao mesmo tempo, a tensão com Hagar e Ismael reaparece, e Deus novamente os vê e preserva.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Nascimento, expulsão e cuidado divino.</p>
@@ -1044,14 +1382,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O cumprimento da promessa não elimina toda tensão relacional. Sara ri agora de modo diferente: do improvável tornado real. Deus cuida até dos que estão fora do centro da linhagem pactuada.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O nascimento de Isaque transforma espera em concretização histórica. Ao mesmo tempo, a saída de Hagar e Ismael mostra que promessas cumpridas não eliminam dores paralelas nem dispensam o cuidado divino com os vulneráveis.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> O riso antes associado à incredulidade agora é transformado em riso de cumprimento. A tensão com Hagar relembra que a casa da promessa sempre carregou complexidades humanas que exigiram cuidado, verdade e intervenção de Deus.</div><div class="insight"><strong>Insight central:</strong> a fidelidade de Deus pode cumprir sua promessa sem deixar de enxergar quem sofre nas margens da história.</div>
-</article>
-<article class="chapter-card" data-keywords="moría moriah isaque cordeiro teste fé obediência" data-reveal="" data-title="Capítulo 22" id="cap22">
-<span class="chapter-label">Capítulo 22</span>
-<h3>O sacrifício de Isaque e o teste supremo da fé</h3>
-<p>Gênesis 22 está entre os capítulos mais profundos da Bíblia. Abraão é testado de forma extrema, sobe o monte com Isaque e encontra provisão divina no limite da prova.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O nascimento de Isaque transforma espera em concretização histórica. Ao mesmo tempo, a saída de Hagar e Ismael mostra que promessas cumpridas não eliminam dores paralelas nem dispensam o cuidado divino com os vulneráveis.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> O riso antes associado à incredulidade agora é transformado em riso de cumprimento. A tensão com Hagar relembra que a casa da promessa sempre carregou complexidades humanas que exigiram cuidado, verdade e intervenção de Deus.</div><div class="insight"><strong>Insight central:</strong> a fidelidade de Deus pode cumprir sua promessa sem deixar de enxergar quem sofre nas margens da história.</div></div></article>
+<article class="chapter-card" data-keywords="moría moriah isaque cordeiro teste fé obediência" data-reveal="" data-title="Capítulo 22" id="cap22"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 22</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">O sacrifício de Isaque e o teste supremo da fé</span><span class="chapter-toggle-summary">Gênesis 22 está entre os capítulos mais profundos da Bíblia. Abraão é testado de forma extrema, sobe o monte com Isaque e encontra provisão divina no limite da prova.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Subida ao monte e provisão do cordeiro.</p>
@@ -1060,14 +1392,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A promessa não pode ser possuída de forma idólatra. Abraão aprende que Deus é quem provê o cordeiro. O capítulo vincula obediência, confiança e futuro redentivo.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O texto não glorifica perda absurda, mas expõe a radicalidade da confiança em Deus. No desfecho, a provisão substitutiva e a renovação da promessa tornam o capítulo um dos cumes teológicos de Gênesis.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A subida ao monte é narrada com lentidão proposital, intensificando o peso do teste. O reconhecimento de que Deus proverá amplia o capítulo para além da prova individual e o torna eixo de confiança radical.</div><div class="insight"><strong>Insight central:</strong> a fé verdadeira confia em Deus até quando a própria promessa parece ameaçada.</div>
-</article>
-<article class="chapter-card" data-keywords="sara morte sepultura macpela cova" data-reveal="" data-title="Capítulo 23" id="cap23">
-<span class="chapter-label">Capítulo 23</span>
-<h3>Morte de Sara e a primeira posse em Canaã</h3>
-<p>A morte de Sara leva Abraão a adquirir o campo e a caverna de Macpela. É pouco território, mas profundamente significativo.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O texto não glorifica perda absurda, mas expõe a radicalidade da confiança em Deus. No desfecho, a provisão substitutiva e a renovação da promessa tornam o capítulo um dos cumes teológicos de Gênesis.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A subida ao monte é narrada com lentidão proposital, intensificando o peso do teste. O reconhecimento de que Deus proverá amplia o capítulo para além da prova individual e o torna eixo de confiança radical.</div><div class="insight"><strong>Insight central:</strong> a fé verdadeira confia em Deus até quando a própria promessa parece ameaçada.</div></div></article>
+<article class="chapter-card" data-keywords="sara morte sepultura macpela cova" data-reveal="" data-title="Capítulo 23" id="cap23"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 23</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Morte de Sara e a primeira posse em Canaã</span><span class="chapter-toggle-summary">A morte de Sara leva Abraão a adquirir o campo e a caverna de Macpela. É pouco território, mas profundamente significativo.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Luto e sepultura em Canaã.</p>
@@ -1076,14 +1402,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A promessa ainda não foi plenamente recebida, mas uma primeira posse real aparece. Sepultar Sara em Canaã é gesto de fé no futuro. O capítulo une dor presente e esperança territorial.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A compra do campo e da caverna introduz a primeira posse concreta de terra em Canaã. Mesmo em luto, o capítulo mostra a fé atuando historicamente, transformando promessa futura em marco material dentro da terra.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A negociação detalhada da sepultura mostra sobriedade jurídica e peso simbólico. A morte de Sara, paradoxalmente, fixa a família ainda mais na terra prometida por meio de posse adquirida com seriedade pública.</div><div class="insight"><strong>Insight central:</strong> às vezes a esperança bíblica se expressa em pequenos atos concretos de fidelidade no meio do luto.</div>
-</article>
-<article class="chapter-card" data-keywords="rebeca servo casamento isaque poço providência" data-reveal="" data-title="Capítulo 24" id="cap24">
-<span class="chapter-label">Capítulo 24</span>
-<h3>Rebeca e a continuidade providencial da linhagem</h3>
-<p>O casamento de Isaque com Rebeca mostra a providência de Deus na continuidade da promessa. O servo ora, observa e reconhece a condução divina.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A compra do campo e da caverna introduz a primeira posse concreta de terra em Canaã. Mesmo em luto, o capítulo mostra a fé atuando historicamente, transformando promessa futura em marco material dentro da terra.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A negociação detalhada da sepultura mostra sobriedade jurídica e peso simbólico. A morte de Sara, paradoxalmente, fixa a família ainda mais na terra prometida por meio de posse adquirida com seriedade pública.</div><div class="insight"><strong>Insight central:</strong> às vezes a esperança bíblica se expressa em pequenos atos concretos de fidelidade no meio do luto.</div></div></article>
+<article class="chapter-card" data-keywords="rebeca servo casamento isaque poço providência" data-reveal="" data-title="Capítulo 24" id="cap24"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 24</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Rebeca e a continuidade providencial da linhagem</span><span class="chapter-toggle-summary">O casamento de Isaque com Rebeca mostra a providência de Deus na continuidade da promessa. O servo ora, observa e reconhece a condução divina.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Busca, oração e encontro providencial.</p>
@@ -1092,14 +1412,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O futuro da promessa passa por decisões familiares concretas. A narrativa valoriza oração, discernimento e resposta pronta. Deus age também em encontros e vínculos domésticos.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A longa narrativa do casamento de Isaque sublinha providência, discernimento e continuidade da linhagem. Nada é tratado como casual: oração, viagem, encontro e decisão convergem para preservar o fio da promessa.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> O servo age com oração, prudência e observação atenta. Rebeca responde com prontidão e coragem, e o casamento preserva não só afeto doméstico, mas a continuidade histórica da promessa recebida por Abraão.</div><div class="insight"><strong>Insight central:</strong> a providência de Deus nem sempre aparece em milagre espetacular; muitas vezes aparece em condução detalhada.</div>
-</article>
-<article class="chapter-card" data-keywords="esaú esau jacó jacob primogenitura lentilhas" data-reveal="" data-title="Capítulo 25" id="cap25">
-<span class="chapter-label">Capítulo 25</span>
-<h3>Morte de Abraão, nascimento de Esaú e Jacó, e a venda da primogenitura</h3>
-<p>O capítulo fecha a vida de Abraão e abre a nova geração. Esaú e Jacó já aparecem em tensão desde o ventre, e a primogenitura é tratada de modo revelador.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A longa narrativa do casamento de Isaque sublinha providência, discernimento e continuidade da linhagem. Nada é tratado como casual: oração, viagem, encontro e decisão convergem para preservar o fio da promessa.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> O servo age com oração, prudência e observação atenta. Rebeca responde com prontidão e coragem, e o casamento preserva não só afeto doméstico, mas a continuidade histórica da promessa recebida por Abraão.</div><div class="insight"><strong>Insight central:</strong> a providência de Deus nem sempre aparece em milagre espetacular; muitas vezes aparece em condução detalhada.</div></div></article>
+<article class="chapter-card" data-keywords="esaú esau jacó jacob primogenitura lentilhas" data-reveal="" data-title="Capítulo 25" id="cap25"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 25</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Morte de Abraão, nascimento de Esaú e Jacó, e a venda da primogenitura</span><span class="chapter-toggle-summary">O capítulo fecha a vida de Abraão e abre a nova geração. Esaú e Jacó já aparecem em tensão desde o ventre, e a primogenitura é tratada de modo revelador.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Transição patriarcal e rivalidade fraterna.</p>
@@ -1108,14 +1422,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A promessa continua além da morte do patriarca. Esaú despreza o que deveria ter alto valor. Jacó deseja bênção, mas ainda de forma torta.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O capítulo fecha a geração de Abraão e abre conflitos que marcarão a seguinte. A tensão entre Esaú e Jacó já demonstra que a linhagem da promessa não seguirá apenas expectativas naturais de primogenitura.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A morte de Abraão encerra uma era, enquanto o nascimento dos gêmeos anuncia disputas futuras. A troca da primogenitura evidencia que desprezo pelo que é santo pode acontecer em decisões aparentemente banais.</div><div class="insight"><strong>Insight central:</strong> a nova geração já mostra que a promessa avança, mas não sem conflitos profundos de caráter.</div>
-</article>
-<article class="chapter-card" data-keywords="isaque poços abimeleque fome gerara" data-reveal="" data-title="Capítulo 26" id="cap26">
-<span class="chapter-label">Capítulo 26</span>
-<h3>Isaque entre repetição, promessa e poços</h3>
-<p>Isaque vive fome, tensão com Abimeleque e reabertura de poços. O capítulo mostra continuidade da promessa e repetição de certos padrões familiares.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O capítulo fecha a geração de Abraão e abre conflitos que marcarão a seguinte. A tensão entre Esaú e Jacó já demonstra que a linhagem da promessa não seguirá apenas expectativas naturais de primogenitura.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A morte de Abraão encerra uma era, enquanto o nascimento dos gêmeos anuncia disputas futuras. A troca da primogenitura evidencia que desprezo pelo que é santo pode acontecer em decisões aparentemente banais.</div><div class="insight"><strong>Insight central:</strong> a nova geração já mostra que a promessa avança, mas não sem conflitos profundos de caráter.</div></div></article>
+<article class="chapter-card" data-keywords="isaque poços abimeleque fome gerara" data-reveal="" data-title="Capítulo 26" id="cap26"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 26</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Isaque entre repetição, promessa e poços</span><span class="chapter-toggle-summary">Isaque vive fome, tensão com Abimeleque e reabertura de poços. O capítulo mostra continuidade da promessa e repetição de certos padrões familiares.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Poços, contendas e estabilidade.</p>
@@ -1124,14 +1432,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Deus reafirma a promessa a Isaque. Poços representam vida, espaço e continuidade. Isaque demonstra firmeza silenciosa em meio a contendas.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Em Isaque, temas de Abraão reaparecem: fome, deslocamento, medo, promessa e disputa por espaço. Os poços simbolizam perseverança pacífica em meio a tensões, enquanto Deus reafirma continuidade entre gerações.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> As repetições em torno de fome, mulheres e território mostram continuidade e também amadurecimento parcial. Os poços reabertos e cavados funcionam como sinais concretos de perseverança e de busca por espaço sem guerra desnecessária.</div><div class="insight"><strong>Insight central:</strong> permanecer no lugar da promessa pode exigir paciência e perseverança mais do que brilho imediato.</div>
-</article>
-<article class="chapter-card" data-keywords="bênção engano rebeca isaque esaú jacó" data-reveal="" data-title="Capítulo 27" id="cap27">
-<span class="chapter-label">Capítulo 27</span>
-<h3>A bênção roubada e a complexidade da família pactual</h3>
-<p>A bênção de Isaque é recebida por Jacó por meio de engano. O capítulo é intenso, desconfortável e cheio de ambiguidades morais.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Em Isaque, temas de Abraão reaparecem: fome, deslocamento, medo, promessa e disputa por espaço. Os poços simbolizam perseverança pacífica em meio a tensões, enquanto Deus reafirma continuidade entre gerações.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> As repetições em torno de fome, mulheres e território mostram continuidade e também amadurecimento parcial. Os poços reabertos e cavados funcionam como sinais concretos de perseverança e de busca por espaço sem guerra desnecessária.</div><div class="insight"><strong>Insight central:</strong> permanecer no lugar da promessa pode exigir paciência e perseverança mais do que brilho imediato.</div></div></article>
+<article class="chapter-card" data-keywords="bênção engano rebeca isaque esaú jacó" data-reveal="" data-title="Capítulo 27" id="cap27"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 27</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">A bênção roubada e a complexidade da família pactual</span><span class="chapter-toggle-summary">A bênção de Isaque é recebida por Jacó por meio de engano. O capítulo é intenso, desconfortável e cheio de ambiguidades morais.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Engano no centro da casa.</p>
@@ -1140,14 +1442,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Desejo por bênção não justifica manipulação. A família da promessa está longe de idealização. Mesmo em cenário torto, Deus segue conduzindo a história.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A bênção é buscada em ambiente de manipulação, favoritismo e cegueira relacional. Ainda assim, a narrativa mostra que a eleição divina atravessa famílias quebradas sem aprovar os meios tortuosos usados por seus membros.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Cada personagem age a partir de desejos parciais, medos ou preferências. O resultado é uma bênção irreversível alcançada por caminhos tortos, mostrando que a soberania divina não depende da pureza moral da família.</div><div class="insight"><strong>Insight central:</strong> a graça de Deus não aprova o pecado, mas consegue trabalhar mesmo através de histórias quebradas.</div>
-</article>
-<article class="chapter-card" data-keywords="betel sonho escada jacó presença" data-reveal="" data-title="Capítulo 28" id="cap28">
-<span class="chapter-label">Capítulo 28</span>
-<h3>A escada de Jacó e a presença de Deus no exílio pessoal</h3>
-<p>Fugindo, Jacó dorme ao relento e recebe uma visão em Betel. O lugar de medo vira lugar de promessa e presença.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A bênção é buscada em ambiente de manipulação, favoritismo e cegueira relacional. Ainda assim, a narrativa mostra que a eleição divina atravessa famílias quebradas sem aprovar os meios tortuosos usados por seus membros.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Cada personagem age a partir de desejos parciais, medos ou preferências. O resultado é uma bênção irreversível alcançada por caminhos tortos, mostrando que a soberania divina não depende da pureza moral da família.</div><div class="insight"><strong>Insight central:</strong> a graça de Deus não aprova o pecado, mas consegue trabalhar mesmo através de histórias quebradas.</div></div></article>
+<article class="chapter-card" data-keywords="betel sonho escada jacó presença" data-reveal="" data-title="Capítulo 28" id="cap28"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 28</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">A escada de Jacó e a presença de Deus no exílio pessoal</span><span class="chapter-toggle-summary">Fugindo, Jacó dorme ao relento e recebe uma visão em Betel. O lugar de medo vira lugar de promessa e presença.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Betel e céu aberto.</p>
@@ -1156,14 +1452,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Deus se aproxima de Jacó quando ele está vulnerável e deslocado. A promessa abraâmica é reafirmada à nova geração. O céu aberto sobre um fugitivo mostra graça surpreendente.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A visão da escada transforma fuga em revelação. Betel se torna lugar de memória teológica: Jacó descobre que Deus pode se fazer presente justamente quando o futuro parece instável e o patriarca está deslocado.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A pedra, o sonho e o voto constroem um momento fundador na experiência pessoal de Jacó. O Deus de Abraão e Isaque se apresenta a ele de modo direto, transformando estrada e exílio em lugar teológico.</div><div class="insight"><strong>Insight central:</strong> Deus encontra pessoas em fuga e transforma lugares de medo em marcos de presença.</div>
-</article>
-<article class="chapter-card" data-keywords="labão lia raquel casamento trabalho" data-reveal="" data-title="Capítulo 29" id="cap29">
-<span class="chapter-label">Capítulo 29</span>
-<h3>Jacó, Labão, Lia e Raquel</h3>
-<p>A história de Jacó entra em nova fase. Ele ama Raquel, mas recebe Lia, servindo muitos anos em meio a tensões afetivas e familiares.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A visão da escada transforma fuga em revelação. Betel se torna lugar de memória teológica: Jacó descobre que Deus pode se fazer presente justamente quando o futuro parece instável e o patriarca está deslocado.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A pedra, o sonho e o voto constroem um momento fundador na experiência pessoal de Jacó. O Deus de Abraão e Isaque se apresenta a ele de modo direto, transformando estrada e exílio em lugar teológico.</div><div class="insight"><strong>Insight central:</strong> Deus encontra pessoas em fuga e transforma lugares de medo em marcos de presença.</div></div></article>
+<article class="chapter-card" data-keywords="labão lia raquel casamento trabalho" data-reveal="" data-title="Capítulo 29" id="cap29"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 29</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Jacó, Labão, Lia e Raquel</span><span class="chapter-toggle-summary">A história de Jacó entra em nova fase. Ele ama Raquel, mas recebe Lia, servindo muitos anos em meio a tensões afetivas e familiares.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Serviço, amor e frustração.</p>
@@ -1172,14 +1462,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O enganador agora experimenta ser enganado. Lia surge como figura muitas vezes não escolhida, mas vista por Deus. A família da promessa cresce em contexto sem romantização.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O encontro com Labão inaugura um ciclo em que Jacó provará do mesmo tipo de complexidade que antes praticara. Casamento, afetos e frustrações passam a integrar o modo pelo qual Deus o forma ao longo do caminho.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> O amor de Jacó por Raquel, a entrega de Lia e o serviço repetido criam ambiente de frustração e formação. Deus também intervém no campo da fecundidade, deslocando o foco do afeto humano para a sua atuação soberana.</div><div class="insight"><strong>Insight central:</strong> Deus trabalha profundamente pessoas que precisam aprender através das próprias dores relacionais.</div>
-</article>
-<article class="chapter-card" data-keywords="raquel lia filhos mandrágoras rebanhos" data-reveal="" data-title="Capítulo 30" id="cap30">
-<span class="chapter-label">Capítulo 30</span>
-<h3>Filhos, rivalidades e prosperidade em meio ao conflito</h3>
-<p>Gênesis 30 mostra uma família em crescimento, marcada por rivalidade, desejo, infertilidade e intervenção divina. José nasce nesse cenário.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O encontro com Labão inaugura um ciclo em que Jacó provará do mesmo tipo de complexidade que antes praticara. Casamento, afetos e frustrações passam a integrar o modo pelo qual Deus o forma ao longo do caminho.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> O amor de Jacó por Raquel, a entrega de Lia e o serviço repetido criam ambiente de frustração e formação. Deus também intervém no campo da fecundidade, deslocando o foco do afeto humano para a sua atuação soberana.</div><div class="insight"><strong>Insight central:</strong> Deus trabalha profundamente pessoas que precisam aprender através das próprias dores relacionais.</div></div></article>
+<article class="chapter-card" data-keywords="raquel lia filhos mandrágoras rebanhos" data-reveal="" data-title="Capítulo 30" id="cap30"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 30</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Filhos, rivalidades e prosperidade em meio ao conflito</span><span class="chapter-toggle-summary">Gênesis 30 mostra uma família em crescimento, marcada por rivalidade, desejo, infertilidade e intervenção divina. José nasce nesse cenário.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Fecundidade e tensão doméstica.</p>
@@ -1188,14 +1472,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Deus age em meio ao caos doméstico. A promessa de descendência avança através de relações tensas e imperfeitas. Prosperidade material e conflito caminham lado a lado.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A fecundidade da casa de Jacó e a tensão entre as esposas mostram que crescimento numérico não significa paz doméstica. Ainda assim, em meio a rivalidades e negociações, a família da promessa continua aumentando.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A corrida por filhos, o uso das servas e os acordos por mandrágoras revelam atmosfera doméstica fragmentada. Mesmo assim, a família cresce e o rebanho prospera, mostrando que Deus age em contextos longe de serem ideais.</div><div class="insight"><strong>Insight central:</strong> a fidelidade de Deus não depende de famílias idealizadas; ela avança mesmo em casas atravessadas por disputa.</div>
-</article>
-<article class="chapter-card" data-keywords="fuga jacó labão pacto mispá gileade" data-reveal="" data-title="Capítulo 31" id="cap31">
-<span class="chapter-label">Capítulo 31</span>
-<h3>Separação de Jacó e Labão</h3>
-<p>Jacó decide partir, Labão o alcança e o conflito é encerrado com pacto e fronteira. O capítulo trabalha libertação, limites e nova etapa.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A fecundidade da casa de Jacó e a tensão entre as esposas mostram que crescimento numérico não significa paz doméstica. Ainda assim, em meio a rivalidades e negociações, a família da promessa continua aumentando.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A corrida por filhos, o uso das servas e os acordos por mandrágoras revelam atmosfera doméstica fragmentada. Mesmo assim, a família cresce e o rebanho prospera, mostrando que Deus age em contextos longe de serem ideais.</div><div class="insight"><strong>Insight central:</strong> a fidelidade de Deus não depende de famílias idealizadas; ela avança mesmo em casas atravessadas por disputa.</div></div></article>
+<article class="chapter-card" data-keywords="fuga jacó labão pacto mispá gileade" data-reveal="" data-title="Capítulo 31" id="cap31"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 31</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Separação de Jacó e Labão</span><span class="chapter-toggle-summary">Jacó decide partir, Labão o alcança e o conflito é encerrado com pacto e fronteira. O capítulo trabalha libertação, limites e nova etapa.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Saída, confronto e delimitação.</p>
@@ -1204,14 +1482,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Jacó amadurece e deixa para trás um ciclo de exploração. O pacto final coloca limites claros entre os lados. A narrativa prepara o retorno à terra e o confronto com Esaú.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A saída da casa de Labão marca transição decisiva rumo ao retorno. O capítulo combina conflito econômico, memória de abuso, proteção divina e delimitação de fronteiras, encerrando um período de dependência tensa.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Sonhos, negociações e acusação de furto mostram que a ruptura entre Jacó e Labão não poderia ser simples. O pacto final com marcos de pedra estabelece memória, limite e encerramento de convivência carregada de tensão.</div><div class="insight"><strong>Insight central:</strong> há momentos em que a fidelidade exige sair, delimitar e seguir adiante.</div>
-</article>
-<article class="chapter-card" data-keywords="jaboque israel luta anjo mancar nome" data-reveal="" data-title="Capítulo 32" id="cap32">
-<span class="chapter-label">Capítulo 32</span>
-<h3>Luta no vau de Jaboque e a transformação de Jacó</h3>
-<p>Antes de encontrar Esaú, Jacó luta à noite e recebe novo nome: Israel. O capítulo é um dos mais densos da vida patriarcal.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A saída da casa de Labão marca transição decisiva rumo ao retorno. O capítulo combina conflito econômico, memória de abuso, proteção divina e delimitação de fronteiras, encerrando um período de dependência tensa.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Sonhos, negociações e acusação de furto mostram que a ruptura entre Jacó e Labão não poderia ser simples. O pacto final com marcos de pedra estabelece memória, limite e encerramento de convivência carregada de tensão.</div><div class="insight"><strong>Insight central:</strong> há momentos em que a fidelidade exige sair, delimitar e seguir adiante.</div></div></article>
+<article class="chapter-card" data-keywords="jaboque israel luta anjo mancar nome" data-reveal="" data-title="Capítulo 32" id="cap32"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 32</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Luta no vau de Jaboque e a transformação de Jacó</span><span class="chapter-toggle-summary">Antes de encontrar Esaú, Jacó luta à noite e recebe novo nome: Israel. O capítulo é um dos mais densos da vida patriarcal.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Luta, ferida e nova identidade.</p>
@@ -1220,14 +1492,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Jacó passa de estrategista a homem ferido e transformado. O novo nome sinaliza mudança profunda de identidade. A bênção vem junto com marca e mancar.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Jaboque é o ponto em que Jacó deixa de apenas sobreviver pela astúcia e passa a carregar marcas de encontro. A mudança de nome expressa transformação profunda, ainda que não instantânea, do patriarca.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Antes de encontrar Esaú, Jacó encontra a si mesmo diante de Deus. O mancar resultante da luta funciona como memória física de que verdadeira força pactual nasce de dependência e não de cálculo.</div><div class="insight"><strong>Insight central:</strong> encontros reais com Deus frequentemente transformam mais do que confortam.</div>
-</article>
-<article class="chapter-card" data-keywords="esaú jacó reconciliação abraço perdão" data-reveal="" data-title="Capítulo 33" id="cap33">
-<span class="chapter-label">Capítulo 33</span>
-<h3>Reconciliação com Esaú</h3>
-<p>O encontro entre Jacó e Esaú surpreende. Em vez de vingança imediata, há abraço, lágrimas e reconfiguração da relação.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Jaboque é o ponto em que Jacó deixa de apenas sobreviver pela astúcia e passa a carregar marcas de encontro. A mudança de nome expressa transformação profunda, ainda que não instantânea, do patriarca.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Antes de encontrar Esaú, Jacó encontra a si mesmo diante de Deus. O mancar resultante da luta funciona como memória física de que verdadeira força pactual nasce de dependência e não de cálculo.</div><div class="insight"><strong>Insight central:</strong> encontros reais com Deus frequentemente transformam mais do que confortam.</div></div></article>
+<article class="chapter-card" data-keywords="esaú jacó reconciliação abraço perdão" data-reveal="" data-title="Capítulo 33" id="cap33"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 33</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Reconciliação com Esaú</span><span class="chapter-toggle-summary">O encontro entre Jacó e Esaú surpreende. Em vez de vingança imediata, há abraço, lágrimas e reconfiguração da relação.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Encontro com o passado.</p>
@@ -1236,14 +1502,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Jacó é obrigado a encarar o passado que ajudou a criar. A reconciliação não apaga tudo, mas interrompe a destruição esperada. O capítulo mostra graça relacional no mundo patriarcal.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A reconciliação não apaga o passado, mas impede que ele determine totalmente o futuro. O capítulo mostra prudência, emoção contida e a possibilidade de coexistência pacífica depois de longo histórico de hostilidade.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> O gesto de Esaú surpreende porque rompe a expectativa de confronto violento. Ainda assim, a narrativa preserva certa distância prudente entre os irmãos, indicando reconciliação real, porém não ingênua.</div><div class="insight"><strong>Insight central:</strong> às vezes o lugar que mais temíamos encarar se torna espaço inesperado de alívio.</div>
-</article>
-<article class="chapter-card" data-keywords="diná siquém simeão levi violência vingança" data-reveal="" data-title="Capítulo 34" id="cap34">
-<span class="chapter-label">Capítulo 34</span>
-<h3>Diná, violência e zelo desordenado</h3>
-<p>Gênesis 34 é um capítulo duro, marcado por abuso, negociação, engano e vingança sangrenta. Ele expõe a fragilidade moral da família patriarcal.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A reconciliação não apaga o passado, mas impede que ele determine totalmente o futuro. O capítulo mostra prudência, emoção contida e a possibilidade de coexistência pacífica depois de longo histórico de hostilidade.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> O gesto de Esaú surpreende porque rompe a expectativa de confronto violento. Ainda assim, a narrativa preserva certa distância prudente entre os irmãos, indicando reconciliação real, porém não ingênua.</div><div class="insight"><strong>Insight central:</strong> às vezes o lugar que mais temíamos encarar se torna espaço inesperado de alívio.</div></div></article>
+<article class="chapter-card" data-keywords="diná siquém simeão levi violência vingança" data-reveal="" data-title="Capítulo 34" id="cap34"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 34</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Diná, violência e zelo desordenado</span><span class="chapter-toggle-summary">Gênesis 34 é um capítulo duro, marcado por abuso, negociação, engano e vingança sangrenta. Ele expõe a fragilidade moral da família patriarcal.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Abuso e resposta desordenada.</p>
@@ -1252,14 +1512,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O texto não romantiza nem o abuso nem a vingança. O zelo sem freio produz nova violência. A família da promessa continua profundamente imperfeita.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O episódio de Diná evidencia como violência, honra e vingança podem se combinar de forma destrutiva. A indignação legítima dos irmãos se mistura a crueldade calculada, expondo a desordem moral da família.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Siquém, Hamor, Simeão e Levi revelam como honra violada pode gerar respostas ainda mais desordenadas. O capítulo se destaca por sua dureza justamente porque impede idealização da família escolhida.</div><div class="insight"><strong>Insight central:</strong> indignação justa pode se deformar quando perde medida, sabedoria e submissão a Deus.</div>
-</article>
-<article class="chapter-card" data-keywords="betel purificação raquel benjamim morte" data-reveal="" data-title="Capítulo 35" id="cap35">
-<span class="chapter-label">Capítulo 35</span>
-<h3>Retorno a Betel, purificação e perdas na jornada</h3>
-<p>Jacó volta a Betel, remove ídolos do meio da casa e reafirma sua identidade diante de Deus. Ao mesmo tempo, o capítulo é atravessado por perdas.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O episódio de Diná evidencia como violência, honra e vingança podem se combinar de forma destrutiva. A indignação legítima dos irmãos se mistura a crueldade calculada, expondo a desordem moral da família.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Siquém, Hamor, Simeão e Levi revelam como honra violada pode gerar respostas ainda mais desordenadas. O capítulo se destaca por sua dureza justamente porque impede idealização da família escolhida.</div><div class="insight"><strong>Insight central:</strong> indignação justa pode se deformar quando perde medida, sabedoria e submissão a Deus.</div></div></article>
+<article class="chapter-card" data-keywords="betel purificação raquel benjamim morte" data-reveal="" data-title="Capítulo 35" id="cap35"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 35</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Retorno a Betel, purificação e perdas na jornada</span><span class="chapter-toggle-summary">Jacó volta a Betel, remove ídolos do meio da casa e reafirma sua identidade diante de Deus. Ao mesmo tempo, o capítulo é atravessado por perdas.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Purificação, adoração e luto.</p>
@@ -1268,14 +1522,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Betel volta a ser lugar de encontro e redefinição. A remoção de ídolos sinaliza reorganização espiritual da casa. Raquel morre, e a jornada amadurece em meio à dor.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Retornar a Betel significa voltar ao lugar da promessa com abandono de ídolos e reordenação do culto. O capítulo também reúne perda, nascimento e morte, mostrando que fidelidade e dor caminham lado a lado.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A purificação da casa mostra que voltar ao lugar da promessa requer revisão concreta de lealdades. As mortes de Débora e Raquel inserem o retorno em atmosfera agridoce, marcada por adoração e perda.</div><div class="insight"><strong>Insight central:</strong> amadurecimento espiritual muitas vezes caminha junto com purificação e luto.</div>
-</article>
-<article class="chapter-card" data-keywords="esaú edom genealogia reis chefes" data-reveal="" data-title="Capítulo 36" id="cap36">
-<span class="chapter-label">Capítulo 36</span>
-<h3>Genealogia de Esaú e o povo de Edom</h3>
-<p>O capítulo 36 organiza a descendência de Esaú. Embora à primeira vista pareça lateral, ele mostra que a Bíblia acompanha também linhagens paralelas.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Retornar a Betel significa voltar ao lugar da promessa com abandono de ídolos e reordenação do culto. O capítulo também reúne perda, nascimento e morte, mostrando que fidelidade e dor caminham lado a lado.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A purificação da casa mostra que voltar ao lugar da promessa requer revisão concreta de lealdades. As mortes de Débora e Raquel inserem o retorno em atmosfera agridoce, marcada por adoração e perda.</div><div class="insight"><strong>Insight central:</strong> amadurecimento espiritual muitas vezes caminha junto com purificação e luto.</div></div></article>
+<article class="chapter-card" data-keywords="esaú edom genealogia reis chefes" data-reveal="" data-title="Capítulo 36" id="cap36"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 36</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Genealogia de Esaú e o povo de Edom</span><span class="chapter-toggle-summary">O capítulo 36 organiza a descendência de Esaú. Embora à primeira vista pareça lateral, ele mostra que a Bíblia acompanha também linhagens paralelas.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Edom e memória ampliada.</p>
@@ -1284,14 +1532,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A história não ignora o outro ramo da família. Genealogias mostram expansão histórica real. A promessa específica não apaga a relevância de povos relacionados.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A genealogia de Esaú reconhece que fora da linhagem da promessa também há expansão, chefes e história. O texto organiza o cenário de Edom para que o leitor compreenda relações futuras entre povos aparentados.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A extensão da genealogia de Esaú também funciona como contraponto à peregrinação de Jacó. Enquanto um ramo já se organiza politicamente, o outro ainda avança sustentado pela promessa e pela espera.</div><div class="insight"><strong>Insight central:</strong> mesmo fora da linhagem central, Deus continua observando a formação histórica das nações.</div>
-</article>
-<article class="chapter-card" data-keywords="josé sonhos túnica irmãos poço venda" data-reveal="" data-title="Capítulo 37" id="cap37">
-<span class="chapter-label">Capítulo 37</span>
-<h3>José vendido pelos irmãos e o início da grande descida</h3>
-<p>José surge como filho amado, sonhador e odiado. Os irmãos o vendem, e a narrativa entra em uma longa descida providencial.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A genealogia de Esaú reconhece que fora da linhagem da promessa também há expansão, chefes e história. O texto organiza o cenário de Edom para que o leitor compreenda relações futuras entre povos aparentados.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A extensão da genealogia de Esaú também funciona como contraponto à peregrinação de Jacó. Enquanto um ramo já se organiza politicamente, o outro ainda avança sustentado pela promessa e pela espera.</div><div class="insight"><strong>Insight central:</strong> mesmo fora da linhagem central, Deus continua observando a formação histórica das nações.</div></div></article>
+<article class="chapter-card" data-keywords="josé sonhos túnica irmãos poço venda" data-reveal="" data-title="Capítulo 37" id="cap37"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 37</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">José vendido pelos irmãos e o início da grande descida</span><span class="chapter-toggle-summary">José surge como filho amado, sonhador e odiado. Os irmãos o vendem, e a narrativa entra em uma longa descida providencial.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Sonhos, inveja e poço.</p>
@@ -1300,14 +1542,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Sonhos de exaltação provocam reação violenta. A história parece desmoronar, mas a providência já está agindo. O sofrimento de José abrirá caminho para preservação futura.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A descida de José começa com sonhos e termina em cisterna, venda e luto enganado. O capítulo inicia uma longa demonstração de que a providência de Deus costuma operar por vias ocultas e dolorosas.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A túnica, os sonhos e o ódio crescente compõem cenário de preferência e ressentimento. Quando José desce ao poço e depois ao Egito, o texto abre o caminho para um enredo em que queda aparente antecederá exaltação.</div><div class="insight"><strong>Insight central:</strong> capítulos que parecem apenas tragédia podem ser o começo escondido de uma grande preservação.</div>
-</article>
-<article class="chapter-card" data-keywords="judá tamar perez justiça vergonha" data-reveal="" data-title="Capítulo 38" id="cap38">
-<span class="chapter-label">Capítulo 38</span>
-<h3>Judá e Tamar: desordem moral e continuidade inesperada</h3>
-<p>Inserido no ciclo de José, Gênesis 38 mostra Judá em crise moral e Tamar agindo de maneira ousada. O texto é complexo, mas decisivo.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A descida de José começa com sonhos e termina em cisterna, venda e luto enganado. O capítulo inicia uma longa demonstração de que a providência de Deus costuma operar por vias ocultas e dolorosas.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A túnica, os sonhos e o ódio crescente compõem cenário de preferência e ressentimento. Quando José desce ao poço e depois ao Egito, o texto abre o caminho para um enredo em que queda aparente antecederá exaltação.</div><div class="insight"><strong>Insight central:</strong> capítulos que parecem apenas tragédia podem ser o começo escondido de uma grande preservação.</div></div></article>
+<article class="chapter-card" data-keywords="judá tamar perez justiça vergonha" data-reveal="" data-title="Capítulo 38" id="cap38"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 38</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Judá e Tamar: desordem moral e continuidade inesperada</span><span class="chapter-toggle-summary">Inserido no ciclo de José, Gênesis 38 mostra Judá em crise moral e Tamar agindo de maneira ousada. O texto é complexo, mas decisivo.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Exposição de Judá e continuidade da linhagem.</p>
@@ -1316,14 +1552,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A linhagem central passa por episódios moralmente tensos. Judá é desnudado em sua incoerência. Mesmo em histórias embaraçosas, a Bíblia preserva a verdade sem maquiagem.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Intercalado na narrativa de José, o episódio de Judá e Tamar revela decadência moral dentro da própria família pactual. Ao mesmo tempo, prepara silenciosamente a relevância posterior de Judá no desenvolvimento do livro.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A narrativa interrompe José para mostrar que a história da promessa não depende de personagens impecáveis. Tamar age de modo chocante dentro de um contexto igualmente perverso, e o desfecho expõe culpa em Judá.</div><div class="insight"><strong>Insight central:</strong> a Bíblia não protege a reputação artificial dos seus protagonistas; ela mostra a necessidade universal de graça.</div>
-</article>
-<article class="chapter-card" data-keywords="potifar tentação prisão integridade" data-reveal="" data-title="Capítulo 39" id="cap39">
-<span class="chapter-label">Capítulo 39</span>
-<h3>José na casa de Potifar: integridade sob pressão</h3>
-<p>José prospera como servo, resiste à tentação e acaba preso injustamente. O capítulo combina integridade, presença de Deus e sofrimento.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Intercalado na narrativa de José, o episódio de Judá e Tamar revela decadência moral dentro da própria família pactual. Ao mesmo tempo, prepara silenciosamente a relevância posterior de Judá no desenvolvimento do livro.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A narrativa interrompe José para mostrar que a história da promessa não depende de personagens impecáveis. Tamar age de modo chocante dentro de um contexto igualmente perverso, e o desfecho expõe culpa em Judá.</div><div class="insight"><strong>Insight central:</strong> a Bíblia não protege a reputação artificial dos seus protagonistas; ela mostra a necessidade universal de graça.</div></div></article>
+<article class="chapter-card" data-keywords="potifar tentação prisão integridade" data-reveal="" data-title="Capítulo 39" id="cap39"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 39</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">José na casa de Potifar: integridade sob pressão</span><span class="chapter-toggle-summary">José prospera como servo, resiste à tentação e acaba preso injustamente. O capítulo combina integridade, presença de Deus e sofrimento.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Fidelidade sem recompensa imediata.</p>
@@ -1332,14 +1562,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Obediência não impede injustiça temporária. A presença de Deus com José aparece repetidamente. O caráter de José se fortalece em contextos adversos.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>José enfrenta sucesso e tentação no mesmo capítulo, e sua fidelidade produz tanto confiança quanto injustiça. A presença de Deus não o impede de sofrer, mas redefine o significado de sua permanência em cada lugar.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A fórmula “o Senhor era com José” organiza todo o capítulo. O texto ensina que integridade pode custar posição e liberdade, mas não anula o propósito divino nem a presença de Deus com o justo.</div><div class="insight"><strong>Insight central:</strong> fidelidade a Deus nem sempre livra da prova, mas preserva a integridade dentro dela.</div>
-</article>
-<article class="chapter-card" data-keywords="copeiro padeiro prisão sonhos" data-reveal="" data-title="Capítulo 40" id="cap40">
-<span class="chapter-label">Capítulo 40</span>
-<h3>José interpreta os sonhos na prisão</h3>
-<p>Na prisão, José volta a lidar com sonhos. Um copeiro e um padeiro recebem interpretações distintas, e José permanece esquecido por um tempo.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>José enfrenta sucesso e tentação no mesmo capítulo, e sua fidelidade produz tanto confiança quanto injustiça. A presença de Deus não o impede de sofrer, mas redefine o significado de sua permanência em cada lugar.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A fórmula “o Senhor era com José” organiza todo o capítulo. O texto ensina que integridade pode custar posição e liberdade, mas não anula o propósito divino nem a presença de Deus com o justo.</div><div class="insight"><strong>Insight central:</strong> fidelidade a Deus nem sempre livra da prova, mas preserva a integridade dentro dela.</div></div></article>
+<article class="chapter-card" data-keywords="copeiro padeiro prisão sonhos" data-reveal="" data-title="Capítulo 40" id="cap40"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 40</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">José interpreta os sonhos na prisão</span><span class="chapter-toggle-summary">Na prisão, José volta a lidar com sonhos. Um copeiro e um padeiro recebem interpretações distintas, e José permanece esquecido por um tempo.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Dons na limitação.</p>
@@ -1348,14 +1572,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O dom de José continua ativo mesmo em ambiente de confinamento. Ser útil não significa ser lembrado imediatamente. A narrativa trabalha tensão entre promessa e demora.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Na prisão, José continua exercendo discernimento e serviço. O esquecimento temporário por parte do copeiro mostra que a providência divina nem sempre se move no ritmo que o sofrimento humano desejaria.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Mesmo sem sinais externos de avanço, José permanece atento ao sofrimento alheio e ao dom recebido. O adiamento do cumprimento reforça a pedagogia da espera que atravessa várias histórias de Gênesis.</div><div class="insight"><strong>Insight central:</strong> dons podem florescer até em ambientes onde nossa vida parece suspensa.</div>
-</article>
-<article class="chapter-card" data-keywords="faraó sonho vacas espigas governo egito" data-reveal="" data-title="Capítulo 41" id="cap41">
-<span class="chapter-label">Capítulo 41</span>
-<h3>José diante de Faraó e a elevação inesperada</h3>
-<p>José sai da prisão para o palácio e interpreta os sonhos de Faraó. O capítulo mostra ascensão súbita após longo preparo oculto.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Na prisão, José continua exercendo discernimento e serviço. O esquecimento temporário por parte do copeiro mostra que a providência divina nem sempre se move no ritmo que o sofrimento humano desejaria.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Mesmo sem sinais externos de avanço, José permanece atento ao sofrimento alheio e ao dom recebido. O adiamento do cumprimento reforça a pedagogia da espera que atravessa várias histórias de Gênesis.</div><div class="insight"><strong>Insight central:</strong> dons podem florescer até em ambientes onde nossa vida parece suspensa.</div></div></article>
+<article class="chapter-card" data-keywords="faraó sonho vacas espigas governo egito" data-reveal="" data-title="Capítulo 41" id="cap41"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 41</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">José diante de Faraó e a elevação inesperada</span><span class="chapter-toggle-summary">José sai da prisão para o palácio e interpreta os sonhos de Faraó. O capítulo mostra ascensão súbita após longo preparo oculto.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Exaltação e administração sábia.</p>
@@ -1364,14 +1582,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Deus usa José para preservar povos inteiros. Sabedoria administrativa acompanha discernimento espiritual. A exaltação revela reversão providencial impressionante.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A promoção de José une dom recebido, sabedoria administrativa e oportunidade providencial. O capítulo mostra que a exaltação pode chegar de modo abrupto, mas costuma estar sendo preparada em silêncio há muito tempo.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Os dois sonhos de Faraó, a interpretação e o plano administrativo ligam revelação e responsabilidade prática. José não apenas entende o futuro; ele age de forma estratégica para preservar vidas em larga escala.</div><div class="insight"><strong>Insight central:</strong> Deus pode transformar anos de humilhação em preparação para responsabilidades amplas.</div>
-</article>
-<article class="chapter-card" data-keywords="irmãos egito benjamim simeão fome" data-reveal="" data-title="Capítulo 42" id="cap42">
-<span class="chapter-label">Capítulo 42</span>
-<h3>Primeira descida dos irmãos ao Egito</h3>
-<p>A fome leva os irmãos ao Egito, onde José os reconhece sem ser reconhecido. O capítulo reacende culpa antiga.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A promoção de José une dom recebido, sabedoria administrativa e oportunidade providencial. O capítulo mostra que a exaltação pode chegar de modo abrupto, mas costuma estar sendo preparada em silêncio há muito tempo.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Os dois sonhos de Faraó, a interpretação e o plano administrativo ligam revelação e responsabilidade prática. José não apenas entende o futuro; ele age de forma estratégica para preservar vidas em larga escala.</div><div class="insight"><strong>Insight central:</strong> Deus pode transformar anos de humilhação em preparação para responsabilidades amplas.</div></div></article>
+<article class="chapter-card" data-keywords="irmãos egito benjamim simeão fome" data-reveal="" data-title="Capítulo 42" id="cap42"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 42</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Primeira descida dos irmãos ao Egito</span><span class="chapter-toggle-summary">A fome leva os irmãos ao Egito, onde José os reconhece sem ser reconhecido. O capítulo reacende culpa antiga.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Fome e memória do pecado.</p>
@@ -1380,14 +1592,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O passado que parecia enterrado volta à superfície. José começa a testar o coração dos irmãos. A fome externa expõe carências internas antigas.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O reencontro inicial é duro porque a história ainda precisa atravessar verdade, memória e culpa. José testa os irmãos não por capricho, mas para discernir se houve transformação real no coração da família.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A prisão temporária, a devolução do dinheiro e o foco em Simeão criam ambiente de consciência perturbada. O passado que os irmãos tentaram enterrar reaparece agora como peso moral impossível de ignorar.</div><div class="insight"><strong>Insight central:</strong> Deus frequentemente usa crises presentes para trazer à tona pecados antigos que ainda precisam ser enfrentados.</div>
-</article>
-<article class="chapter-card" data-keywords="benjamim judá refeição egito" data-reveal="" data-title="Capítulo 43" id="cap43">
-<span class="chapter-label">Capítulo 43</span>
-<h3>Segunda ida ao Egito e a presença de Benjamim</h3>
-<p>Agora Benjamim desce ao Egito, e a narrativa se aproxima da revelação. O capítulo aumenta a tensão emocional e moral.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>O reencontro inicial é duro porque a história ainda precisa atravessar verdade, memória e culpa. José testa os irmãos não por capricho, mas para discernir se houve transformação real no coração da família.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A prisão temporária, a devolução do dinheiro e o foco em Simeão criam ambiente de consciência perturbada. O passado que os irmãos tentaram enterrar reaparece agora como peso moral impossível de ignorar.</div><div class="insight"><strong>Insight central:</strong> Deus frequentemente usa crises presentes para trazer à tona pecados antigos que ainda precisam ser enfrentados.</div></div></article>
+<article class="chapter-card" data-keywords="benjamim judá refeição egito" data-reveal="" data-title="Capítulo 43" id="cap43"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 43</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Segunda ida ao Egito e a presença de Benjamim</span><span class="chapter-toggle-summary">Agora Benjamim desce ao Egito, e a narrativa se aproxima da revelação. O capítulo aumenta a tensão emocional e moral.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Risco, refeição e reencontro parcial.</p>
@@ -1396,14 +1602,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>A família precisa abrir mão do filho mais protegido. Judá assume novo tom de responsabilidade. José vê Benjamim e a história ganha densidade afetiva.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A presença de Benjamim intensifica a tensão e reabre feridas do passado. Ao mesmo tempo, a mesa preparada por José antecipa reconciliação, mesmo antes de a identidade dele ser plenamente conhecida.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> Judá assume responsabilidade por Benjamim e a família atravessa novamente a fronteira do medo. A hospitalidade de José introduz sinais de graça, mas a narrativa mantém suspense suficiente para testar o coração dos irmãos.</div><div class="insight"><strong>Insight central:</strong> reconciliações profundas exigem que pessoas e medos antigos sejam finalmente colocados diante da realidade.</div>
-</article>
-<article class="chapter-card" data-keywords="taça judá benjamim substituição" data-reveal="" data-title="Capítulo 44" id="cap44">
-<span class="chapter-label">Capítulo 44</span>
-<h3>A taça de José e a intercessão de Judá</h3>
-<p>José encena mais uma prova, e Judá oferece a si mesmo em lugar de Benjamim. A transformação moral da família se torna visível.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A presença de Benjamim intensifica a tensão e reabre feridas do passado. Ao mesmo tempo, a mesa preparada por José antecipa reconciliação, mesmo antes de a identidade dele ser plenamente conhecida.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> Judá assume responsabilidade por Benjamim e a família atravessa novamente a fronteira do medo. A hospitalidade de José introduz sinais de graça, mas a narrativa mantém suspense suficiente para testar o coração dos irmãos.</div><div class="insight"><strong>Insight central:</strong> reconciliações profundas exigem que pessoas e medos antigos sejam finalmente colocados diante da realidade.</div></div></article>
+<article class="chapter-card" data-keywords="taça judá benjamim substituição" data-reveal="" data-title="Capítulo 44" id="cap44"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 44</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">A taça de José e a intercessão de Judá</span><span class="chapter-toggle-summary">José encena mais uma prova, e Judá oferece a si mesmo em lugar de Benjamim. A transformação moral da família se torna visível.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Prova final e substituição.</p>
@@ -1412,14 +1612,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Judá já não é o mesmo homem do passado. A disposição substitutiva marca novo estágio da história. A família começa a ser refeita moralmente.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Judá emerge como intercessor disposto a se oferecer pelo irmão. O capítulo contrasta fortemente com a postura da geração anterior e prepara o momento em que a reconciliação poderá acontecer com verdade.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A crise final é organizada com precisão emocional: o irmão preferido está ameaçado, e o antigo padrão de abandono poderia se repetir. A fala de Judá prova que algo profundo mudou no interior dos irmãos.</div><div class="insight"><strong>Insight central:</strong> arrependimento verdadeiro aparece quando alguém deixa de proteger a si mesmo para preservar o outro.</div>
-</article>
-<article class="chapter-card" data-keywords="josé revelação providência perdão irmãos" data-reveal="" data-title="Capítulo 45" id="cap45">
-<span class="chapter-label">Capítulo 45</span>
-<h3>José se revela e interpreta a própria história</h3>
-<p>José finalmente se revela aos irmãos. O capítulo é um dos grandes textos bíblicos sobre providência e perdão.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Judá emerge como intercessor disposto a se oferecer pelo irmão. O capítulo contrasta fortemente com a postura da geração anterior e prepara o momento em que a reconciliação poderá acontecer com verdade.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A crise final é organizada com precisão emocional: o irmão preferido está ameaçado, e o antigo padrão de abandono poderia se repetir. A fala de Judá prova que algo profundo mudou no interior dos irmãos.</div><div class="insight"><strong>Insight central:</strong> arrependimento verdadeiro aparece quando alguém deixa de proteger a si mesmo para preservar o outro.</div></div></article>
+<article class="chapter-card" data-keywords="josé revelação providência perdão irmãos" data-reveal="" data-title="Capítulo 45" id="cap45"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 45</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">José se revela e interpreta a própria história</span><span class="chapter-toggle-summary">José finalmente se revela aos irmãos. O capítulo é um dos grandes textos bíblicos sobre providência e perdão.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Revelação e releitura do sofrimento.</p>
@@ -1428,14 +1622,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>José relê sua dor à luz da ação maior de Deus. Perdoar não nega a maldade do ato; a reposiciona sob providência superior. A reconciliação abre caminho para preservação da família inteira.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Ao revelar-se, José interpreta sua trajetória em chave de providência e preservação. O mal praticado pelos irmãos permanece real, mas não consegue frustrar o projeto de Deus para a família da promessa.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> O choro de José e seu discurso unem emoção e interpretação teológica. O capítulo evita reduzir providência a frieza, mostrando que Deus conduz a história sem apagar a intensidade afetiva dos envolvidos.</div><div class="insight"><strong>Insight central:</strong> maturidade espiritual é conseguir ver a mão de Deus sem negar a gravidade do mal sofrido.</div>
-</article>
-<article class="chapter-card" data-keywords="beersheba egito jacó israel família" data-reveal="" data-title="Capítulo 46" id="cap46">
-<span class="chapter-label">Capítulo 46</span>
-<h3>Jacó desce ao Egito</h3>
-<p>Jacó parte para o Egito e Deus fala com ele no caminho. A ida ao Egito não é desvio da promessa, mas parte dela.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Ao revelar-se, José interpreta sua trajetória em chave de providência e preservação. O mal praticado pelos irmãos permanece real, mas não consegue frustrar o projeto de Deus para a família da promessa.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> O choro de José e seu discurso unem emoção e interpretação teológica. O capítulo evita reduzir providência a frieza, mostrando que Deus conduz a história sem apagar a intensidade afetiva dos envolvidos.</div><div class="insight"><strong>Insight central:</strong> maturidade espiritual é conseguir ver a mão de Deus sem negar a gravidade do mal sofrido.</div></div></article>
+<article class="chapter-card" data-keywords="beersheba egito jacó israel família" data-reveal="" data-title="Capítulo 46" id="cap46"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 46</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Jacó desce ao Egito</span><span class="chapter-toggle-summary">Jacó parte para o Egito e Deus fala com ele no caminho. A ida ao Egito não é desvio da promessa, mas parte dela.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Deslocamento autorizado por Deus.</p>
@@ -1444,14 +1632,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O Egito entra oficialmente no destino da família pactual. Genealogias confirmam continuidade concreta da casa de Israel. A promessa muda de cenário sem ser abandonada.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A descida ao Egito é apresentada não como acidente, mas como passo autorizado por Deus. O capítulo conserva a tensão entre promessa da terra e deslocamento necessário para preservação da família.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A visão noturna dada a Jacó serve como confirmação para uma mudança de enorme peso histórico. A genealogia inserida aqui reforça que o povo que desce ao Egito não é massa anônima, mas família em formação.</div><div class="insight"><strong>Insight central:</strong> Deus pode conduzir seu povo por geografias inesperadas sem perder o controle da promessa.</div>
-</article>
-<article class="chapter-card" data-keywords="gósen faraó fome administração" data-reveal="" data-title="Capítulo 47" id="cap47">
-<span class="chapter-label">Capítulo 47</span>
-<h3>A família de Jacó se estabelece em Gósen</h3>
-<p>A família é estabelecida em Gósen, e José administra a crise de fome com grande alcance político e econômico.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A descida ao Egito é apresentada não como acidente, mas como passo autorizado por Deus. O capítulo conserva a tensão entre promessa da terra e deslocamento necessário para preservação da família.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A visão noturna dada a Jacó serve como confirmação para uma mudança de enorme peso histórico. A genealogia inserida aqui reforça que o povo que desce ao Egito não é massa anônima, mas família em formação.</div><div class="insight"><strong>Insight central:</strong> Deus pode conduzir seu povo por geografias inesperadas sem perder o controle da promessa.</div></div></article>
+<article class="chapter-card" data-keywords="gósen faraó fome administração" data-reveal="" data-title="Capítulo 47" id="cap47"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 47</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">A família de Jacó se estabelece em Gósen</span><span class="chapter-toggle-summary">A família é estabelecida em Gósen, e José administra a crise de fome com grande alcance político e econômico.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Instalação e sobrevivência.</p>
@@ -1460,14 +1642,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>O povo da promessa agora está no Egito de forma organizada. A providência de Deus opera por meio de gestão concreta. Jacó envelhece em terra estrangeira aguardando o futuro de Deus.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>Gósen se torna espaço de sobrevivência e estabilidade em tempos de fome. Em paralelo, a política econômica de José altera profundamente o Egito, mostrando a amplitude de sua administração em escala nacional.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> José administra fome, terra, trabalho e preservação de vidas, enquanto Jacó se aproxima do fim. O capítulo coloca lado a lado a estabilidade provisória no Egito e a consciência de que o destino final ainda é Canaã.</div><div class="insight"><strong>Insight central:</strong> a fidelidade de Deus também se expressa em sustento, estrutura e sobrevivência histórica.</div>
-</article>
-<article class="chapter-card" data-keywords="efraim manassés mãos cruzadas bênção" data-reveal="" data-title="Capítulo 48" id="cap48">
-<span class="chapter-label">Capítulo 48</span>
-<h3>Jacó abençoa Efraim e Manassés</h3>
-<p>Jacó abençoa os filhos de José e inverte as expectativas ao cruzar as mãos. O capítulo reforça a liberdade soberana de Deus na eleição.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>Gósen se torna espaço de sobrevivência e estabilidade em tempos de fome. Em paralelo, a política econômica de José altera profundamente o Egito, mostrando a amplitude de sua administração em escala nacional.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> José administra fome, terra, trabalho e preservação de vidas, enquanto Jacó se aproxima do fim. O capítulo coloca lado a lado a estabilidade provisória no Egito e a consciência de que o destino final ainda é Canaã.</div><div class="insight"><strong>Insight central:</strong> a fidelidade de Deus também se expressa em sustento, estrutura e sobrevivência histórica.</div></div></article>
+<article class="chapter-card" data-keywords="efraim manassés mãos cruzadas bênção" data-reveal="" data-title="Capítulo 48" id="cap48"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 48</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Jacó abençoa Efraim e Manassés</span><span class="chapter-toggle-summary">Jacó abençoa os filhos de José e inverte as expectativas ao cruzar as mãos. O capítulo reforça a liberdade soberana de Deus na eleição.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Bênção e surpresa.</p>
@@ -1476,14 +1652,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>Nem sempre a lógica humana define a direção da bênção. Jacó age como patriarca no fim da vida com discernimento significativo. A promessa continua avançando por caminhos nem sempre intuitivos.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>A bênção sobre Efraim e Manassés mostra novamente que Deus não está preso às hierarquias costumeiras. O gesto de Jacó relembra ao leitor que a história da promessa avança por escolha divina surpreendente.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A cruzada das mãos de Jacó dramatiza a liberdade da escolha divina. Ao abençoar os netos de José, o patriarca também integra essa nova geração à memória das promessas dadas a Abraão e Isaque.</div><div class="insight"><strong>Insight central:</strong> Deus não está preso às hierarquias humanas quando distribui sua bênção.</div>
-</article>
-<article class="chapter-card" data-keywords="bênçãos tribos judá josé profecia" data-reveal="" data-title="Capítulo 49" id="cap49">
-<span class="chapter-label">Capítulo 49</span>
-<h3>As palavras finais de Jacó sobre os filhos</h3>
-<p>Jacó reúne os filhos e fala sobre o futuro das tribos. O capítulo combina avaliação moral, discernimento e projeção histórica.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>A bênção sobre Efraim e Manassés mostra novamente que Deus não está preso às hierarquias costumeiras. O gesto de Jacó relembra ao leitor que a história da promessa avança por escolha divina surpreendente.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A cruzada das mãos de Jacó dramatiza a liberdade da escolha divina. Ao abençoar os netos de José, o patriarca também integra essa nova geração à memória das promessas dadas a Abraão e Isaque.</div><div class="insight"><strong>Insight central:</strong> Deus não está preso às hierarquias humanas quando distribui sua bênção.</div></div></article>
+<article class="chapter-card" data-keywords="bênçãos tribos judá josé profecia" data-reveal="" data-title="Capítulo 49" id="cap49"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 49</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">As palavras finais de Jacó sobre os filhos</span><span class="chapter-toggle-summary">Jacó reúne os filhos e fala sobre o futuro das tribos. O capítulo combina avaliação moral, discernimento e projeção histórica.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Palavra final do patriarca.</p>
@@ -1492,14 +1662,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>As tribos são vistas com realismo, não idealização. Judá ganha destaque especial na linha de liderança. José continua sendo figura de fecundidade e preservação.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>As palavras finais de Jacó combinam memória, avaliação moral e antecipação profética. Entre todos os filhos, Judá recebe destaque que será decisivo para o desenvolvimento posterior da esperança bíblica.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> As palavras sobre Rúben, Simeão, Levi, Judá, José e os demais filhos articulam caráter, consequência e futuro. O texto funciona como ponte entre história familiar imediata e destinos tribais que se desenvolverão depois.</div><div class="insight"><strong>Insight central:</strong> a bênção bíblica não é cegueira sentimental; ela enxerga caráter, história e futuro.</div>
-</article>
-<article class="chapter-card" data-keywords="jacó josé caixão egito perdão fim" data-reveal="" data-title="Capítulo 50" id="cap50">
-<span class="chapter-label">Capítulo 50</span>
-<h3>Morte de Jacó, perdão reafirmado e fim do livro</h3>
-<p>Gênesis termina com sepultamento, medo dos irmãos, perdão reafirmado e a morte de José. O livro fecha no Egito, com promessa ainda aberta.</p>
-<div class="chapter-grid">
+<div class="subbox"><h4>Conexões centrais</h4><p>As palavras finais de Jacó combinam memória, avaliação moral e antecipação profética. Entre todos os filhos, Judá recebe destaque que será decisivo para o desenvolvimento posterior da esperança bíblica.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> As palavras sobre Rúben, Simeão, Levi, Judá, José e os demais filhos articulam caráter, consequência e futuro. O texto funciona como ponte entre história familiar imediata e destinos tribais que se desenvolverão depois.</div><div class="insight"><strong>Insight central:</strong> a bênção bíblica não é cegueira sentimental; ela enxerga caráter, história e futuro.</div></div></article>
+<article class="chapter-card" data-keywords="jacó josé caixão egito perdão fim" data-reveal="" data-title="Capítulo 50" id="cap50"><button aria-expanded="false" class="chapter-toggle" type="button"><span class="chapter-toggle-top"><span class="chapter-label">Capítulo 50</span><span aria-hidden="true" class="chapter-toggle-icon">+</span></span><span class="chapter-toggle-title">Morte de Jacó, perdão reafirmado e fim do livro</span><span class="chapter-toggle-summary">Gênesis termina com sepultamento, medo dos irmãos, perdão reafirmado e a morte de José. O livro fecha no Egito, com promessa ainda aberta.</span></button><div class="chapter-content" hidden=""><div class="chapter-grid">
 <div class="subbox">
 <h4>Núcleo do capítulo</h4>
 <p>Fim em esperança incompleta.</p>
@@ -1508,17 +1672,15 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <h4>Síntese teológica</h4>
 <p>José reafirma leitura providencial do passado. O povo ainda não está na posse final da terra. O caixão no Egito aponta para continuação futura em Êxodo.</p>
 </div>
-<div class="subbox"><h4>Conexões centrais</h4><p>O livro termina com luto, reconciliação e espera. José reafirma o perdão, mas também aponta para o futuro, deixando claro que a história da promessa ainda não alcançou seu destino final.</p></div></div>
-<div class="study-expand"><strong>Ampliação do estudo:</strong> A longa conclusão impede um final apressado. Sepultamento, temor dos irmãos e esperança ligada aos ossos de José mostram que Gênesis termina com fé no futuro, não com conclusão total da promessa.</div><div class="insight"><strong>Insight central:</strong> Gênesis termina sem resolver tudo, mas deixa claro que a história da promessa continua viva.</div>
-</article>
+<div class="subbox"><h4>Conexões centrais</h4><p>O livro termina com luto, reconciliação e espera. José reafirma o perdão, mas também aponta para o futuro, deixando claro que a história da promessa ainda não alcançou seu destino final.</p></div></div><div class="study-expand"><strong>Ampliação do estudo:</strong> A longa conclusão impede um final apressado. Sepultamento, temor dos irmãos e esperança ligada aos ossos de José mostram que Gênesis termina com fé no futuro, não com conclusão total da promessa.</div><div class="insight"><strong>Insight central:</strong> Gênesis termina sem resolver tudo, mas deixa claro que a história da promessa continua viva.</div></div></article>
 </div>
 </div>
 </section>
 <section class="section reveal" id="curiosidades">
 <div class="container">
 <div class="section-header" data-reveal="">
-<div><h2>Curiosidades históricas e fatos interessantes</h2></div>
-<p>Camadas extras para transformar a página em estudo realmente aprofundado.</p>
+<div><span class="section-chip">Camadas extras</span><h2>Curiosidades históricas e fatos interessantes</h2></div>
+<p>Agora, a leitura se aprofunda: contexto, bastidores e detalhes que ampliam a compreensão.</p>
 </div>
 <div class="notes-grid">
 <article class="note-card" data-reveal="" style="--delay:.03s;">
@@ -1563,8 +1725,8 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 <section class="section reveal">
 <div class="container">
 <div class="section-header" data-reveal="">
-<div><h2>Temas teológicos centrais</h2></div>
-<p>Gênesis é vasto, narrativo e teologicamente decisivo.</p>
+<div><span class="section-chip">Arquitetura interna</span><h2>Temas teológicos centrais</h2></div>
+<p>Quanto mais se observa Gênesis, mais sua arquitetura interna se revela.</p>
 </div>
 <div class="themes-grid">
 <article class="theme-box" data-reveal="" style="--delay:.04s;">
@@ -1614,36 +1776,34 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
 </div>
 </section>
 </main>
-
 <footer class="footer-premium">
 <div class="container footer-grid-premium">
 <div>
 <a aria-label="SoloTeo" class="brand footer-brand-link" href="../index.html">
 <img alt="Logo SoloTeo" class="brand-logo" src="../assets/img/logo-soloteo.png"/>
 <div class="brand-text">
-<strong>SOLOTEO</strong>
+<strong>SoloTeo</strong>
 <span>Teologia com profundidade, beleza e clareza</span>
 </div>
 </a>
-<p class="footer-copy">Uma biblioteca digital pensada para unir beleza editorial, profundidade bíblica e navegação premium.</p>
+<p class="footer-copy">Uma plataforma pensada para organizar a teologia com profundidade, beleza, clareza e experiência editorial premium.</p>
 </div>
 <div class="footer-links-col">
-<h4>Navegação</h4>
-<a href="../index.html">Início</a>
-<a href="../categorias/livros-da-biblia.html">Livros da Bíblia</a>
-<a href="#capitulos">Capítulos</a>
+<h4>Principais áreas</h4>
+<a href="#panorama">Panorama de Gênesis</a>
+<a href="#capitulos">Capítulo por capítulo</a>
 <a href="#curiosidades">Curiosidades</a>
+<a href="../categorias/livros-da-biblia.html">Biblioteca</a>
 </div>
 <div class="footer-links-col">
-<h4>Pentateuco</h4>
-<a href="pentateuco.html">Visão geral</a>
-<a href="pentateuco.html">Êxodo em breve</a>
-<a href="pentateuco.html">Levítico em breve</a>
-<a href="pentateuco.html">Números e Deuteronômio em breve</a>
+<h4>Projeto</h4>
+<a href="pentateuco.html">Pentateuco</a>
+<a href="../index.html">Explorar SoloTeo</a>
+<a href="../sobre.html">Sobre</a>
+<a href="../monetizacao.html">Monetização</a>
 </div>
 </div>
 </footer>
-
 <button aria-label="Voltar ao topo" class="to-top" id="toTop">↑</button>
 <script>
 (function () {
@@ -1692,7 +1852,7 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
     });
 
     if (query === '') {
-      searchStatus.textContent = 'Todos os 50 capítulos estão visíveis.';
+      searchStatus.textContent = 'Os capítulos estão recolhidos para uma navegação mais leve. Abra apenas o que quiser ler.';
       return;
     }
     if (visibleCount === 0) {
@@ -1703,6 +1863,7 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
     searchStatus.textContent = `${visibleCount} resultado(s) encontrado(s) para “${searchInput.value}”.`;
     if (firstVisibleCard) {
       firstVisibleCard.classList.add('is-highlight');
+      openChapter(firstVisibleCard, false);
       firstVisibleCard.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
     }
   }
@@ -1710,7 +1871,7 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
   function clearSearch() {
     searchInput.value = '';
     cards.forEach((card) => card.classList.remove('is-hidden', 'is-highlight'));
-    searchStatus.textContent = 'Todos os 50 capítulos estão visíveis.';
+    searchStatus.textContent = 'Os capítulos estão recolhidos para uma navegação mais leve. Abra apenas o que quiser ler.';
     searchInput.focus();
   }
 
@@ -1827,6 +1988,64 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
     });
   }
 
+
+
+  function closeAllChapters(exceptCard = null) {
+    cards.forEach((card) => {
+      if (exceptCard && card === exceptCard) return;
+      const toggle = card.querySelector('.chapter-toggle');
+      const content = card.querySelector('.chapter-content');
+      if (!toggle || !content) return;
+      card.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      content.hidden = true;
+    });
+  }
+
+  function openChapter(card, scrollIntoView = false) {
+    if (!card) return;
+    const toggle = card.querySelector('.chapter-toggle');
+    const content = card.querySelector('.chapter-content');
+    if (!toggle || !content) return;
+    closeAllChapters(card);
+    card.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    content.hidden = false;
+    if (scrollIntoView) {
+      card.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+    }
+  }
+
+  function setupChapterAccordions() {
+    cards.forEach((card, index) => {
+      const toggle = card.querySelector('.chapter-toggle');
+      const content = card.querySelector('.chapter-content');
+      if (!toggle || !content) return;
+
+      toggle.addEventListener('click', () => {
+        const isOpen = card.classList.contains('is-open');
+        if (isOpen) {
+          card.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          content.hidden = true;
+          return;
+        }
+        openChapter(card);
+      });
+
+      if (index === 0) {
+        openChapter(card);
+      }
+    });
+
+    tocLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const targetId = link.getAttribute('href');
+        const targetCard = document.querySelector(targetId);
+        if (targetCard) openChapter(targetCard, false);
+      });
+    });
+  }
   function setupCardTilt() {
     if (prefersReducedMotion) return;
     cards.forEach((card) => {
@@ -1878,6 +2097,7 @@ Gênesis começa com Deus criando todas as coisas, segue para a entrada do pecad
   updateProgressBar();
   setupReveal();
   setupScrollSpy();
+  setupChapterAccordions();
   setupSurfaceGlow();
   setupKeyboardShortcuts();
   setupHeroMotion();
