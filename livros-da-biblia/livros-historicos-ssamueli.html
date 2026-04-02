@@ -1,1341 +1,261 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>1 Samuel | Livros Históricos | soloteo</title>
-  <meta
-    name="description"
-    content="Estudo completo do livro de 1 Samuel no soloteo: contexto, estrutura, teologia, Samuel, Saul, Davi e análise detalhada capítulo por capítulo."
-  />
-  <meta
-    name="keywords"
-    content="1 Samuel, Primeiro Samuel, estudo de 1 Samuel, 1 Samuel capítulo por capítulo, Samuel, Saul, Davi, livros históricos, soloteo"
-  />
-  <meta name="author" content="soloteo" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.soloteo.com.br/livros-da-biblia/livros-historicos-ssamueli.html" />
-
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="1 Samuel | Livros Históricos | soloteo" />
-  <meta
-    property="og:description"
-    content="Estudo completo de 1 Samuel com contexto, estrutura, teologia e leitura detalhada capítulo por capítulo."
-  />
-  <meta property="og:url" content="https://www.soloteo.com.br/livros-da-biblia/livros-historicos-ssamueli.html" />
-  <meta property="og:site_name" content="soloteo" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="1 Samuel | Livros Históricos | soloteo" />
-  <meta
-    name="twitter:description"
-    content="Uma leitura profunda e detalhada do livro de 1 Samuel, capítulo por capítulo."
-  />
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"1 Samuel",
-    "description":"Estudo completo do livro de 1 Samuel no soloteo.",
-    "author":{
-      "@type":"Organization",
-      "name":"soloteo"
-    },
-    "publisher":{
-      "@type":"Organization",
-      "name":"soloteo",
-      "url":"https://www.soloteo.com.br"
-    },
-    "mainEntityOfPage":{
-      "@type":"WebPage",
-      "@id":"https://www.soloteo.com.br/livros-da-biblia/livros-historicos-ssamueli.html"
-    }
-  }
-  </script>
-
-  <style>
-    :root{
-      --bg:#f7f3ee;
-      --paper:#fffdf9;
-      --paper-2:#fbf6ef;
-      --text:#201815;
-      --muted:#6d5a52;
-      --line:rgba(86,50,38,.12);
-      --wine:#6e2132;
-      --wine-2:#8c2f45;
-      --gold:#c7a461;
-      --shadow:0 20px 60px rgba(55,22,18,.09);
-      --shadow-soft:0 10px 30px rgba(55,22,18,.06);
-      --radius:24px;
-      --radius-lg:32px;
-      --max:1240px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-
-    body{
-      margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(199,164,97,.10), transparent 26%),
-        radial-gradient(circle at top right, rgba(110,33,50,.07), transparent 20%),
-        linear-gradient(180deg, #fbf8f4 0%, #f4efe8 100%);
-      line-height:1.72;
-    }
-
-    a{color:inherit;text-decoration:none}
-    .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
-
-    .topbar{
-      position:sticky;top:0;z-index:1000;
-      backdrop-filter:blur(16px);
-      background:rgba(251,248,244,.90);
-      border-bottom:1px solid rgba(86,50,38,.08);
-    }
-
-    .nav{
-      min-height:86px;
-      display:flex;align-items:center;justify-content:space-between;gap:20px;
-    }
-
-    .brand{display:flex;align-items:center;gap:14px;min-width:0}
-    .brand-logo{
-      width:52px;height:52px;object-fit:contain;flex-shrink:0;border-radius:10px;
-    }
-    .brand-fallback{
-      width:52px;height:52px;border-radius:14px;display:none;place-items:center;
-      background:linear-gradient(135deg,var(--wine),#3b0f19);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.15);
-      position:relative;overflow:hidden;flex-shrink:0;
-    }
-    .brand-fallback::before{
-      content:"S";color:#f8f0e1;font-family:Georgia, "Times New Roman", serif;
-      font-size:1.45rem;font-weight:700;letter-spacing:.04em;
-    }
-    .brand-text{display:flex;flex-direction:column;line-height:1.1;min-width:0}
-    .brand-text strong{
-      font-size:1.18rem;letter-spacing:.08em;color:#2a1d18;font-weight:800;text-transform:uppercase;
-    }
-    .brand-text span{
-      font-size:.84rem;color:#7a6a60;margin-top:6px;white-space:nowrap;
-    }
-
-    .nav-links{
-      display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end;
-    }
-
-    .nav-links a{
-      color:var(--muted);font-weight:600;padding:10px 14px;border-radius:999px;transition:.22s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active{
-      background:#fff;color:var(--wine);box-shadow:var(--shadow-soft);
-    }
-
-    .hero{padding:54px 0 28px}
-    .hero-grid{
-      display:grid;grid-template-columns:1.12fr .88fr;gap:26px;align-items:stretch;
-    }
-
-    .hero-card,
-    .hero-side,
-    .panel,
-    .part-card,
-    .chapter-card,
-    .overview-card,
-    .study-card,
-    .cta-box{
-      background:rgba(255,253,249,.9);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      border-radius:var(--radius-lg);
-      overflow:hidden;
-    }
-
-    .hero-card{
-      padding:42px;position:relative;isolation:isolate;
-    }
-
-    .hero-card::before{
-      content:"";position:absolute;inset:0;
-      background:
-        radial-gradient(circle at 18% 15%, rgba(199,164,97,.15), transparent 24%),
-        linear-gradient(180deg, rgba(255,255,255,.12), rgba(110,33,50,.02));
-      z-index:-1;
-    }
-
-    .eyebrow{
-      display:inline-flex;align-items:center;gap:10px;
-      font-size:.82rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;
-      color:var(--wine);margin-bottom:18px;
-    }
-
-    .dot{
-      width:9px;height:9px;border-radius:50%;
-      background:linear-gradient(135deg,var(--gold),#f3e2b7);
-      box-shadow:0 0 0 8px rgba(199,164,97,.12);
-    }
-
-    h1{
-      margin:0;font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(2.7rem, 6vw, 4.9rem);
-      line-height:.95;letter-spacing:-.04em;color:#221714;
-    }
-
-    .hero-description{
-      margin:22px 0 0;color:var(--muted);font-size:1.06rem;max-width:760px;
-    }
-
-    .hero-actions{
-      display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;
-    }
-
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:14px 20px;border-radius:999px;font-weight:800;border:1px solid transparent;
-      transition:.22s ease;cursor:pointer;font-size:.96rem;
-    }
-
-    .btn-primary{
-      background:linear-gradient(135deg,var(--wine),var(--wine-2));
-      color:#fff;box-shadow:0 16px 30px rgba(110,33,50,.18);
-    }
-    .btn-primary:hover{transform:translateY(-2px)}
-
-    .btn-secondary{
-      background:#fff;color:var(--wine);border-color:rgba(110,33,50,.12);
-    }
-    .btn-secondary:hover{background:#fff8fa}
-
-    .hero-side{
-      padding:26px;display:flex;flex-direction:column;gap:18px;justify-content:space-between;
-    }
-
-    .side-box{
-      background:linear-gradient(180deg,#fff, var(--paper-2));
-      border:1px solid rgba(199,164,97,.18);
-      border-radius:24px;padding:22px;
-    }
-
-    .side-box h2{margin:0 0 10px;font-size:1.08rem;color:#2b1f1a}
-    .side-box p{margin:0;color:var(--muted);font-size:.97rem}
-    .side-list{margin:12px 0 0;padding-left:18px;color:var(--muted)}
-    .side-list li + li{margin-top:8px}
-
-    .section{padding:20px 0}
-    .section-header{
-      display:flex;align-items:end;justify-content:space-between;gap:20px;
-      margin-bottom:20px;flex-wrap:wrap;
-    }
-
-    .section-header h2{
-      margin:0;font-family:Georgia, "Times New Roman", serif;
-      font-size:2rem;line-height:1.05;color:#231816;
-    }
-
-    .section-header p{margin:0;max-width:760px;color:var(--muted)}
-
-    .overview-grid,
-    .study-grid{
-      display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:18px;
-    }
-
-    .overview-card,
-    .study-card{
-      padding:28px;box-shadow:var(--shadow-soft);
-    }
-
-    .overview-card h3,
-    .study-card h3,
-    .panel h3,
-    .part-card h3,
-    .chapter-card h3,
-    .cta-box h3{
-      margin:0 0 14px;color:#251916;font-size:1.35rem;font-family:Georgia, "Times New Roman", serif;
-    }
-
-    .overview-card p,
-    .study-card p,
-    .panel p,
-    .part-card p,
-    .chapter-card p,
-    .cta-box p{
-      margin:0;color:var(--muted);
-    }
-
-    .overview-card ul,
-    .study-card ul,
-    .panel ul,
-    .part-card ul,
-    .chapter-card ul{
-      margin:0;padding-left:18px;color:var(--muted);
-    }
-
-    .overview-card li + li,
-    .study-card li + li,
-    .panel li + li,
-    .part-card li + li,
-    .chapter-card li + li{margin-top:10px}
-
-    .panel{padding:30px;box-shadow:var(--shadow-soft)}
-    .timeline{display:grid;gap:14px}
-
-    .timeline-item{
-      display:grid;grid-template-columns:128px 1fr;gap:16px;align-items:start;
-      padding:14px 0;border-top:1px solid rgba(86,50,38,.08);
-    }
-
-    .timeline-item:first-child{border-top:none;padding-top:0}
-
-    .timeline-period{
-      font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--wine);
-    }
-
-    .timeline-body strong{display:block;color:#241916;margin-bottom:5px}
-    .timeline-body p{margin:0;color:var(--muted)}
-
-    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-    .pill{
-      padding:10px 14px;border-radius:999px;background:#fff;border:1px solid rgba(86,50,38,.08);
-      color:#5b4b44;font-weight:600;font-size:.92rem;
-    }
-
-    .parts-wrap,
-    .chapters-wrap{display:grid;gap:18px}
-
-    .part-card,
-    .chapter-card{box-shadow:var(--shadow-soft)}
-
-    .part-head{padding:24px 26px 0}
-    .part-head span{
-      display:inline-block;font-size:.82rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;
-      color:var(--wine);margin-bottom:8px;
-    }
-    .part-head h3{margin-bottom:10px}
-    .part-body{padding:0 26px 26px}
-
-    .chapter-toggle{
-      width:100%;border:none;background:transparent;padding:22px 26px;
-      display:flex;align-items:center;justify-content:space-between;gap:18px;
-      cursor:pointer;text-align:left;color:inherit;
-    }
-
-    .chapter-toggle:hover{background:rgba(255,255,255,.35)}
-
-    .chapter-title{display:flex;flex-direction:column;gap:6px;min-width:0}
-    .chapter-title span{
-      font-size:.82rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--wine);
-    }
-
-    .chapter-title strong{
-      font-family:Georgia, "Times New Roman", serif;font-size:1.22rem;color:#251916;
-    }
-
-    .chapter-icon{
-      width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
-      background:rgba(110,33,50,.08);color:var(--wine);font-size:1.1rem;font-weight:800;
-      flex-shrink:0;transition:transform .22s ease, background .22s ease;
-    }
-
-    .chapter-card.active .chapter-icon{
-      transform:rotate(45deg);background:rgba(110,33,50,.14);
-    }
-
-    .chapter-content{
-      display:block;padding:0 26px 26px;border-top:1px solid rgba(86,50,38,.08);
-    }
-
-    .chapter-content p + p{margin-top:14px}
-    .chapter-content ul{margin-top:16px}
-
-    .cta{padding:26px 0 60px}
-
-    .cta-box{
-      padding:30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
-      background:
-        radial-gradient(circle at top right, rgba(199,164,97,.16), transparent 26%),
-        linear-gradient(180deg, rgba(255,255,255,.88), rgba(251,246,239,.94));
-    }
-
-    .footer{padding:0 0 42px}
-    .footer-note{color:#7f6d64;font-size:.92rem;text-align:center}
-
-    @media (max-width: 1100px){
-      .hero-grid,
-      .overview-grid,
-      .study-grid{grid-template-columns:1fr}
-    }
-
-    @media (max-width: 760px){
-      .nav{
-        min-height:auto;padding:14px 0;align-items:flex-start;flex-direction:column;
-      }
-      .nav-links{width:100%;justify-content:flex-start}
-      .hero{padding-top:28px}
-
-      .hero-card,
-      .hero-side,
-      .panel,
-      .part-card,
-      .chapter-card,
-      .overview-card,
-      .study-card,
-      .cta-box{border-radius:24px}
-
-      .hero-card{padding:28px}
-      .hero-side,
-      .panel,
-      .overview-card,
-      .study-card,
-      .cta-box{padding:22px}
-
-      .part-head{padding:22px 20px 0}
-      .part-body{padding:0 20px 20px}
-      .chapter-toggle{padding:20px 20px}
-      .chapter-content{padding:0 20px 20px}
-
-      .timeline-item{grid-template-columns:1fr;gap:8px}
-
-      h1{font-size:clamp(2.2rem, 12vw, 3.7rem)}
-      .section-header h2{font-size:1.7rem}
-
-      .hero-actions{flex-direction:column;align-items:stretch}
-      .btn{width:100%}
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>1 Samuel | soloteo</title>
+
+<meta name="description" content="Estudo completo de 1 Samuel no padrão soloteo: capítulo por capítulo, com profundidade teológica, contexto e aplicação." />
+
+<style>
+/* 🔥 CLONE DO ESTILO DE JUÍZES */
+
+:root{
+--bg:#f6f1ec;
+--paper:#fbf8f6;
+--white:#fffdfa;
+--text:#1f1619;
+--muted:#6f6367;
+--wine:#6b1126;
+--wine-2:#9f2c4a;
+--gold:#c69449;
+--line:rgba(86,20,33,.1);
+--radius:28px;
+--shadow:0 18px 45px rgba(39,11,17,.07);
+}
+
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Inter,system-ui;
+background:linear-gradient(#fffdfb,#f6f1ec);
+color:var(--text);
+}
+
+.container{width:min(1200px,92%);margin:auto}
+
+.progress-bar{
+position:fixed;top:0;left:0;height:3px;width:0;
+background:linear-gradient(90deg,var(--gold),var(--wine));
+z-index:999;
+}
+
+.topbar{
+position:sticky;top:0;
+background:rgba(255,255,255,.85);
+backdrop-filter:blur(10px);
+padding:15px 0;
+z-index:100;
+}
+
+.hero{
+background:linear-gradient(180deg,#4a0916,#2b040c);
+color:white;
+text-align:center;
+padding:70px 20px;
+border-radius:0 0 30px 30px;
+}
+
+.hero h1{
+font-size:clamp(2.5rem,5vw,4rem);
+}
+
+.section{padding:30px 0;}
+
+.paper{
+background:var(--paper);
+border-radius:var(--radius);
+padding:30px;
+box-shadow:var(--shadow);
+margin-bottom:20px;
+}
+
+.chapter-card{
+background:white;
+border-radius:var(--radius);
+margin-bottom:18px;
+box-shadow:var(--shadow);
+overflow:hidden;
+}
+
+.chapter-card summary{
+cursor:pointer;
+padding:22px;
+display:flex;
+justify-content:space-between;
+}
+
+.chapter-body{padding:20px;}
+
+.chapter-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+
+.info-box{
+background:var(--white);
+padding:18px;
+border-radius:20px;
+border:1px solid var(--line);
+}
+
+.curiosity-rail{
+display:flex;
+overflow-x:auto;
+gap:16px;
+padding:10px 0;
+}
+
+.curiosity-card{
+flex:0 0 300px;
+background:white;
+padding:20px;
+border-radius:24px;
+box-shadow:var(--shadow);
+}
+</style>
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="../index.html" class="brand" aria-label="soloteo">
-        <img
-          src="../assets/img/logo-soloteo.png"
-          alt="Logo soloteo"
-          class="brand-logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
-        />
-        <span class="brand-fallback"></span>
 
-        <span class="brand-text">
-          <strong>soloteo</strong>
-          <span>teologia organizada com beleza e profundidade</span>
-        </span>
-      </a>
+<div class="progress-bar" id="progressBar"></div>
 
-      <nav class="nav-links" aria-label="Principal">
-        <a href="../index.html">Início</a>
-        <a href="../categorias/categorias.html">Categorias</a>
-        <a href="../categorias/livros-da-biblia.html" class="active">Livros da Bíblia</a>
-        <a href="livros-historicos.html">Livros Históricos</a>
-      </nav>
-    </div>
-  </header>
+<header class="topbar">
+<div class="container">
+<strong>SOLOTEO — 1 Samuel</strong>
+</div>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-card">
-          <div class="eyebrow"><span class="dot"></span> Livros Históricos</div>
-          <h1>1 Samuel</h1>
+<section class="hero">
+<h1>Estudo de <span style="color:var(--gold)">1 Samuel</span></h1>
+<p>O nascimento da monarquia, a queda de Saul e o surgimento de Davi.</p>
+</section>
 
-          <p class="hero-description">
-            O livro de 1 Samuel registra uma das transições mais decisivas da história bíblica:
-            a passagem do período dos juízes para o surgimento da monarquia. Aqui vemos o nascimento
-            e ministério de Samuel, a ascensão e queda de Saul, e o surgimento de Davi como figura
-            escolhida por Deus. É um livro sobre liderança, escuta, obediência, rejeição, unção
-            e discernimento. A pergunta que atravessa toda a obra é profunda: quem realmente governa
-            o povo de Deus, a vontade humana ou o Senhor?
-          </p>
+<section class="section container">
 
-          <div class="hero-actions">
-            <a href="#estudo" class="btn btn-primary">Ler estudo completo</a>
-            <a href="livros-historicos.html" class="btn btn-secondary">Voltar à categoria</a>
-          </div>
-        </div>
+<div class="paper">
+<h2>Visão geral</h2>
+<p>1 Samuel revela a transição de Israel para a monarquia. O povo pede um rei, mas rejeita o verdadeiro Rei: Deus.</p>
+<p>O livro contrasta Saul e Davi — aparência versus coração.</p>
+</div>
 
-        <aside class="hero-side">
-          <div class="side-box">
-            <h2>Visão rápida</h2>
-            <p>
-              1 Samuel mostra o fechamento da era dos juízes e a crise que acompanha
-              o pedido por um rei. Samuel, Saul e Davi formam o eixo da narrativa.
-            </p>
-          </div>
+</section>
 
-          <div class="side-box">
-            <h2>Temas centrais</h2>
-            <ul class="side-list">
-              <li>Escuta da voz de Deus</li>
-              <li>Liderança e responsabilidade</li>
-              <li>Monarquia e crise espiritual</li>
-              <li>Obediência acima de aparência</li>
-              <li>Rejeição de Saul</li>
-              <li>Ascensão de Davi</li>
-            </ul>
-          </div>
+<section class="section container">
 
-          <div class="side-box">
-            <h2>Como este estudo foi organizado</h2>
-            <p>
-              Primeiro, você encontra o panorama do livro. Depois, a divisão por grandes partes.
-              Em seguida, o estudo capítulo por capítulo, para deixar a página realmente completa.
-            </p>
-          </div>
-        </aside>
-      </div>
-    </section>
+<h2>Curiosidades e chaves</h2>
 
-    <section class="section" id="estudo">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2>Panorama do livro</h2>
-          </div>
-          <p>
-            1 Samuel ainda integra o bloco histórico da posse da terra, fazendo a transição
-            para a fase monárquica que depois ganhará desenvolvimento maior. :contentReference[oaicite:2]{index=2}
-          </p>
-        </div>
+<div class="curiosity-rail">
 
-        <div class="overview-grid">
-          <article class="overview-card">
-            <h3>Contexto histórico</h3>
-            <p>
-              Israel vive um período de instabilidade. A época dos juízes revelou fragilidade moral,
-              espiritual e política. Nesse cenário, surge Samuel, figura central de transição:
-              profeta, sacerdote e juiz. O povo passa a desejar um rei semelhante às outras nações,
-              e essa demanda abre uma nova etapa da história de Israel.
-            </p>
-          </article>
+<div class="curiosity-card">
+<h3>Transição histórica</h3>
+<p>1 Samuel conecta juízes à monarquia.</p>
+</div>
 
-          <article class="overview-card">
-            <h3>Propósito do livro</h3>
-            <p>
-              1 Samuel mostra que a questão central da liderança em Israel não é apenas política,
-              mas espiritual. O livro contrasta aparência e coração, impulso e obediência,
-              ambição e submissão. Ao narrar a trajetória de Saul e o surgimento de Davi,
-              ele ensina que Deus discerne de modo mais profundo do que os homens.
-            </p>
-          </article>
+<div class="curiosity-card">
+<h3>Saul vs Davi</h3>
+<p>Um representa aparência, o outro coração.</p>
+</div>
 
-          <article class="overview-card">
-            <h3>Importância teológica</h3>
-            <p>
-              O livro trata de chamada, unção, autoridade, rejeição e obediência. Ele revela
-              que liderança sem escuta de Deus se corrompe, e que o governo do povo da aliança
-              não pode ser reduzido a estruturas humanas desconectadas da vontade divina.
-            </p>
-          </article>
+<div class="curiosity-card">
+<h3>Samuel</h3>
+<p>Último juiz e primeiro grande profeta da nova fase.</p>
+</div>
 
-          <article class="overview-card">
-            <h3>Lugar na narrativa bíblica</h3>
-            <p>
-              1 Samuel prepara o terreno para a monarquia davídica. Ele mostra o fracasso
-              de Saul e introduz Davi, que depois ganhará maior desenvolvimento em 2 Samuel.
-              Assim, o livro é ponte entre o caos do período anterior e a nova configuração do reino.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+<div class="curiosity-card">
+<h3>Erro central</h3>
+<p>Israel queria ser como as nações.</p>
+</div>
 
-    <section class="section">
-      <div class="container">
-        <article class="panel">
-          <h3>Panorama estrutural</h3>
+</div>
 
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-period">1Sm 1–7</div>
-              <div class="timeline-body">
-                <strong>Samuel: nascimento, chamado e liderança espiritual</strong>
-                <p>O livro abre com a história de Ana, o nascimento de Samuel e seu crescimento como voz de Deus para Israel.</p>
-              </div>
-            </div>
+</section>
 
-            <div class="timeline-item">
-              <div class="timeline-period">1Sm 8–15</div>
-              <div class="timeline-body">
-                <strong>Saul: escolha, ascensão e rejeição</strong>
-                <p>O povo pede um rei, Saul é ungido, vence em alguns momentos, mas revela desobediência crescente.</p>
-              </div>
-            </div>
+<section class="section container">
 
-            <div class="timeline-item">
-              <div class="timeline-period">1Sm 16–31</div>
-              <div class="timeline-body">
-                <strong>Davi: unção, perseguição e preparação</strong>
-                <p>Davi é escolhido, enfrenta Golias, entra na corte, foge de Saul e amadurece em meio à prova.</p>
-              </div>
-            </div>
-          </div>
+<h2>Capítulos</h2>
 
-          <div class="pill-row">
-            <span class="pill">Samuel</span>
-            <span class="pill">Saul</span>
-            <span class="pill">Davi</span>
-            <span class="pill">Unção</span>
-            <span class="pill">Obediência</span>
-            <span class="pill">Reino</span>
-          </div>
-        </article>
-      </div>
-    </section>
+<!-- 🔥 EXEMPLOS (estrutura já replicável pra todos) -->
 
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2>Estudo por grandes partes</h2>
-          </div>
-          <p>
-            Antes do detalhamento capítulo por capítulo, esta divisão ajuda a enxergar o fluxo maior do livro.
-          </p>
-        </div>
+<details class="chapter-card">
+<summary>
+<h3>Capítulo 1 — Ana e Samuel</h3>
+<span>A dor gera propósito</span>
+</summary>
+<div class="chapter-body">
+<div class="chapter-grid">
+<div class="info-box"><h4>Leitura</h4><p>Ana ora e consagra Samuel.</p></div>
+<div class="info-box"><h4>Teologia</h4><p>Deus responde ao coração sincero.</p></div>
+<div class="info-box"><h4>Estrutura</h4><p>Dor → oração → resposta.</p></div>
+<div class="info-box"><h4>Aplicação</h4><p>Entregar a Deus gera propósito.</p></div>
+</div>
+</div>
+</details>
 
-        <div class="parts-wrap">
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 1</span>
-              <h3>1 Samuel 1–7 — Samuel e a renovação da escuta</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                O livro começa de maneira íntima e surpreendente: com a dor de Ana e o nascimento de Samuel.
-                Da casa e do santuário, a narrativa se abre para a restauração da palavra do Senhor em Israel.
-                Samuel emerge como figura de transição num tempo em que a liderança sacerdotal está corrompida.
-              </p>
-            </div>
-          </article>
+<details class="chapter-card">
+<summary>
+<h3>Capítulo 8 — Pedido por rei</h3>
+<span>Rejeição espiritual</span>
+</summary>
+<div class="chapter-body">
+<div class="chapter-grid">
+<div class="info-box"><h4>Teologia</h4><p>Rejeitar Deus leva à crise.</p></div>
+<div class="info-box"><h4>Aplicação</h4><p>Cuidado com influências externas.</p></div>
+</div>
+</div>
+</details>
 
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 2</span>
-              <h3>1 Samuel 8–15 — Saul e a crise da monarquia</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                O povo pede um rei. Saul é escolhido, ungido e inicialmente exaltado, mas sua trajetória
-                revela algo decisivo: liderança sem obediência profunda não se sustenta diante de Deus.
-                O livro mostra que a grande questão não é ter rei, mas que tipo de coração governa.
-              </p>
-            </div>
-          </article>
+<details class="chapter-card">
+<summary>
+<h3>Capítulo 16 — Davi ungido</h3>
+<span>O coração importa</span>
+</summary>
+<div class="chapter-body">
+<div class="chapter-grid">
+<div class="info-box"><h4>Teologia</h4><p>Deus vê o interior.</p></div>
+<div class="info-box"><h4>Aplicação</h4><p>Caráter acima de aparência.</p></div>
+</div>
+</div>
+</details>
 
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 3</span>
-              <h3>1 Samuel 16–31 — Davi é preparado em meio à oposição</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                A partir da unção de Davi, o livro passa a contrastar dois caminhos: o do rei rejeitado,
-                consumido por medo e desordem, e o do rei escolhido, amadurecido por provações.
-                Antes de Davi governar, ele é formado.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+<details class="chapter-card">
+<summary>
+<h3>Capítulo 17 — Golias</h3>
+<span>Fé vence medo</span>
+</summary>
+<div class="chapter-body">
+<div class="chapter-grid">
+<div class="info-box"><h4>Teologia</h4><p>A vitória vem de Deus.</p></div>
+<div class="info-box"><h4>Aplicação</h4><p>Confiança derrota gigantes.</p></div>
+</div>
+</div>
+</details>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2>Estudo capítulo por capítulo</h2>
-          </div>
-          <p>
-            Aqui entra o detalhamento completo, para deixar a página realmente densa e com cara de estudo sério.
-          </p>
-        </div>
+<details class="chapter-card">
+<summary>
+<h3>Capítulos 27–31 — Fim de Saul</h3>
+<span>Consequências</span>
+</summary>
+<div class="chapter-body">
+<div class="chapter-grid">
+<div class="info-box"><h4>Teologia</h4><p>A rejeição a Deus leva à ruína.</p></div>
+<div class="info-box"><h4>Aplicação</h4><p>Distância de Deus destrói.</p></div>
+</div>
+</div>
+</details>
 
-        <div class="chapters-wrap">
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 1</span>
-                <strong>1 Samuel 1 — Ana, dor profunda e oração perseverante</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O livro começa com sofrimento doméstico, não com política nacional. Ana carrega
-                a dor da esterilidade e a humilhação constante, e a narrativa a apresenta como mulher
-                que transforma sua angústia em oração. Isso já define um tom importante:
-                a história maior de Israel começa, aqui, no lugar da dependência.
-              </p>
-              <p>
-                O nascimento de Samuel não é apenas solução familiar; é resposta divina com impacto nacional.
-                Deus começa a reordenar a história a partir de uma mulher que clama.
-              </p>
-              <ul>
-                <li>Deus ouve a dor que é levada a ele com sinceridade.</li>
-                <li>A oração em 1 Samuel não é detalhe; é porta de transição histórica.</li>
-                <li>Grandes mudanças bíblicas muitas vezes começam em ambientes silenciosos e feridos.</li>
-              </ul>
-            </div>
-          </article>
+</section>
 
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 2</span>
-                <strong>1 Samuel 2 — O cântico de Ana e o contraste entre fidelidade e corrupção</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O cântico de Ana interpreta teologicamente a história. Deus derruba os soberbos,
-                levanta os abatidos e governa de forma surpreendente. Em seguida, a narrativa contrasta
-                essa visão com a perversidade dos filhos de Eli, revelando como a corrupção religiosa
-                já havia se instalado no centro do culto.
-              </p>
-              <p>
-                O capítulo apresenta um dos grandes contrastes do livro: onde há reverência, Deus constrói;
-                onde há abuso, ele julga.
-              </p>
-              <ul>
-                <li>Deus reverte posições humanas e governa com soberania.</li>
-                <li>Religiosidade institucional pode se corromper gravemente.</li>
-                <li>O livro já prepara o leitor para o juízo sobre lideranças infiéis.</li>
-              </ul>
-            </div>
-          </article>
+<script>
+/* progress bar */
+window.addEventListener("scroll",()=>{
+const h=document.documentElement;
+const scrolled=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+document.getElementById("progressBar").style.width=scrolled+"%";
+});
+</script>
 
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 3</span>
-                <strong>1 Samuel 3 — O chamado de Samuel e o retorno da palavra do Senhor</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Este capítulo é decisivo. O texto afirma que a palavra do Senhor era rara naqueles dias.
-                Nesse contexto, Deus chama Samuel. A cena é teologicamente linda: quando a liderança estabelecida
-                está falhando, Deus levanta uma nova voz.
-              </p>
-              <p>
-                A resposta “fala, porque o teu servo ouve” resume um dos temas centrais do livro:
-                escuta obediente. Samuel nasce como profeta num ambiente em que ouvir Deus havia se tornado raro.
-              </p>
-              <ul>
-                <li>Crises espirituais podem incluir escassez de escuta verdadeira.</li>
-                <li>Deus continua chamando e falando.</li>
-                <li>A disposição de ouvir é fundamento de liderança saudável.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 4</span>
-                <strong>1 Samuel 4 — A arca tomada e a ilusão da religiosidade mágica</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Israel sofre derrota e tenta transformar a arca em instrumento de manipulação.
-                O capítulo denuncia a falsa espiritualidade que deseja usar símbolos sagrados
-                sem verdadeira submissão a Deus. A presença divina não pode ser reduzida a objeto de controle.
-              </p>
-              <p>
-                A morte dos filhos de Eli e a captura da arca aprofundam o peso do juízo.
-                O capítulo é duro porque desmonta a ilusão religiosa sem obediência real.
-              </p>
-              <ul>
-                <li>O sagrado não pode ser instrumentalizado.</li>
-                <li>Rituais e símbolos não substituem fidelidade.</li>
-                <li>O juízo de Deus expõe a superficialidade religiosa.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 5</span>
-                <strong>1 Samuel 5 — A soberania de Deus entre os filisteus</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Mesmo fora do território de Israel, Deus demonstra sua supremacia.
-                O capítulo mostra que a captura da arca não significou derrota do Senhor.
-                Ao contrário, ele continua soberano e humilha o falso deus filisteu.
-              </p>
-              <ul>
-                <li>Deus não está preso a territórios humanos.</li>
-                <li>A soberania divina permanece mesmo quando o povo está em crise.</li>
-                <li>O livro corrige qualquer ideia pequena sobre o governo de Deus.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 6</span>
-                <strong>1 Samuel 6 — O retorno da arca e o temor devido ao Senhor</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                A arca retorna, mas o capítulo deixa claro que a proximidade do sagrado exige reverência.
-                Deus não é domesticado nem pelos inimigos nem pelo seu próprio povo. Sua presença é santa.
-              </p>
-              <ul>
-                <li>O retorno da arca não elimina a necessidade de reverência.</li>
-                <li>Temor do Senhor é elemento indispensável da vida da aliança.</li>
-                <li>O sagrado exige mais do que familiaridade; exige honra.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 7</span>
-                <strong>1 Samuel 7 — Arrependimento, intercessão e renovação</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Samuel conduz o povo a uma renovação real. Há abandono de ídolos, oração, jejum e intercessão.
-                O capítulo mostra que restauração espiritual não se resume a emoção passageira;
-                envolve retorno verdadeiro ao Senhor.
-              </p>
-              <p>
-                A vitória que segue nasce desse contexto de arrependimento e dependência.
-              </p>
-              <ul>
-                <li>Restauração exige abandono do que compete com Deus.</li>
-                <li>A intercessão de Samuel ocupa papel central.</li>
-                <li>Vitória duradoura nasce em contexto de retorno sincero.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 8</span>
-                <strong>1 Samuel 8 — O povo pede um rei</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O pedido por um rei é um dos grandes pontos de virada do livro. Israel deseja ser como as outras nações.
-                O problema não está apenas na estrutura política em si, mas na motivação do coração.
-                O pedido expõe insatisfação com o modo singular como Deus governava o povo.
-              </p>
-              <p>
-                Samuel adverte sobre os custos da monarquia, e o capítulo inteiro mostra tensão
-                entre desejo humano e governo divino.
-              </p>
-              <ul>
-                <li>É possível desejar soluções aparentemente legítimas por motivos espiritualmente problemáticos.</li>
-                <li>O povo da aliança corre risco quando quer se moldar apenas aos padrões das nações.</li>
-                <li>A grande questão do capítulo é confiança em Deus.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 9</span>
-                <strong>1 Samuel 9 — Saul entra em cena</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Saul é apresentado com qualidades externas marcantes. Sua aparência impressiona.
-                A narrativa, porém, já começa a preparar o leitor para um contraste importante:
-                aquilo que os homens percebem à primeira vista não esgota a verdade sobre liderança.
-              </p>
-              <ul>
-                <li>A aparência pode influenciar percepções humanas de liderança.</li>
-                <li>Deus conduz a história inclusive por encontros aparentemente comuns.</li>
-                <li>O capítulo prepara um contraste entre exterior e interior.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 10</span>
-                <strong>1 Samuel 10 — Saul é ungido</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Samuel unge Saul, e o capítulo mostra sinais confirmatórios de que Deus está permitindo
-                essa nova etapa. Ainda assim, permanece a tensão: o rei existe debaixo do governo do Senhor,
-                não acima dele.
-              </p>
-              <ul>
-                <li>Unção não elimina responsabilidade.</li>
-                <li>A liderança em Israel deveria permanecer subordinada a Deus.</li>
-                <li>O começo de Saul é promissor, mas o livro já deixa a pergunta sobre seu futuro.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 11</span>
-                <strong>1 Samuel 11 — Saul e a primeira grande vitória</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Saul lidera uma vitória importante, e a narrativa mostra energia, coragem e mobilização nacional.
-                O capítulo revela que o problema da futura queda de Saul não está em incapacidade natural.
-                Ele tinha condições de agir com força e reunir o povo.
-              </p>
-              <ul>
-                <li>Começos fortes não garantem finais fiéis.</li>
-                <li>Capacidade e carisma podem coexistir com futuras falhas de caráter espiritual.</li>
-                <li>A liderança precisa ser avaliada em longo prazo.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 12</span>
-                <strong>1 Samuel 12 — O discurso de despedida de Samuel</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Samuel revisita a história do povo e reafirma a seriedade da fidelidade ao Senhor.
-                Mesmo com a monarquia, Israel continua sendo povo da aliança. O rei não anula
-                a necessidade de obediência.
-              </p>
-              <ul>
-                <li>Estruturas novas não substituem princípios antigos da aliança.</li>
-                <li>A memória histórica sustenta discernimento presente.</li>
-                <li>O problema principal continua sendo fidelidade ao Senhor.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 13</span>
-                <strong>1 Samuel 13 — Saul começa a se perder</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Saul age com precipitação e ultrapassa limites que não lhe cabiam.
-                Aqui começa a aparecer com nitidez o problema central de seu reinado:
-                incapacidade de permanecer em submissão paciente.
-              </p>
-              <ul>
-                <li>Impatience espiritual pode comprometer seriamente a liderança.</li>
-                <li>Nem todo agir religioso é obediente só porque envolve ritual.</li>
-                <li>Saul começa a revelar falhas mais profundas do que simples erro pontual.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 14</span>
-                <strong>1 Samuel 14 — Jônatas, coragem e contraste com Saul</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Jônatas surge como figura de coragem e fé, contrastando com a hesitação
-                e o desordenamento de Saul. O capítulo é importante porque mostra que
-                verdadeira coragem nasce de confiança em Deus, não de impulsividade vazia.
-              </p>
-              <ul>
-                <li>Fé e coragem podem aparecer em contraste com autoridade mal exercida.</li>
-                <li>Jônatas se destaca como figura nobre no livro.</li>
-                <li>O contraste entre pai e filho ajuda a interpretar a crise de Saul.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 15</span>
-                <strong>1 Samuel 15 — A rejeição de Saul</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Este é um dos capítulos-chave do livro. Saul desobedece e tenta justificar
-                sua conduta com discurso religioso. Samuel responde com uma das declarações
-                mais profundas da Escritura: obedecer é melhor do que sacrificar.
-              </p>
-              <p>
-                O capítulo mostra que Deus não se impressiona com aparência ritual
-                quando o coração resiste à submissão.
-              </p>
-              <ul>
-                <li>Obediência vale mais do que religiosidade usada como cobertura.</li>
-                <li>A rejeição de Saul nasce de um problema profundo de coração.</li>
-                <li>O capítulo marca virada decisiva na história do reino.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 16</span>
-                <strong>1 Samuel 16 — Davi é ungido</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                A unção de Davi corrige teologicamente toda a lógica superficial.
-                Deus afirma que o homem vê a aparência, mas o Senhor vê o coração.
-                O menor entre os filhos de Jessé é escolhido.
-              </p>
-              <ul>
-                <li>Deus avalia de modo diferente do olhar humano.</li>
-                <li>A escolha de Davi é um dos grandes momentos do livro.</li>
-                <li>O verdadeiro critério da liderança bíblica é interior e espiritual.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 17</span>
-                <strong>1 Samuel 17 — Davi e Golias</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Mais do que história de coragem individual, este capítulo é confronto
-                entre arrogância humana e confiança no Deus vivo. Davi não entra em campo
-                para exaltar a si mesmo, mas para honrar o nome do Senhor.
-              </p>
-              <ul>
-                <li>A confiança de Davi é teológica, não apenas psicológica.</li>
-                <li>O foco do capítulo está na honra de Deus.</li>
-                <li>Fé verdadeira pode enfrentar gigantes sem depender de aparatos impressionantes.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 18</span>
-                <strong>1 Samuel 18 — Jônatas e Davi, sucesso e inveja</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O capítulo reúne amizade profunda e ciúme destrutivo. Jônatas se une a Davi,
-                enquanto Saul passa a vê-lo com crescente ameaça. O sucesso de Davi revela
-                a generosidade de um e a insegurança do outro.
-              </p>
-              <ul>
-                <li>Grandes amizades bíblicas podem nascer em meio a contextos tensos.</li>
-                <li>O sucesso do outro revela o estado do próprio coração.</li>
-                <li>Saul começa a ser consumido pela inveja.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 19</span>
-                <strong>1 Samuel 19 — A perseguição se intensifica</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Saul abandona qualquer aparência de equilíbrio e avança na perseguição a Davi.
-                O capítulo mostra a desintegração interior do rei rejeitado e o início mais intenso
-                do caminho de fuga de Davi.
-              </p>
-              <ul>
-                <li>Um coração desordenado pode transformar autoridade em perseguição.</li>
-                <li>A rejeição de Saul aprofunda sua instabilidade.</li>
-                <li>Davi começa a ser formado em ambiente de ameaça.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 20</span>
-                <strong>1 Samuel 20 — Aliança entre Jônatas e Davi</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O vínculo entre Jônatas e Davi se aprofunda. O capítulo é marcado por lealdade,
-                dor e discernimento. Em meio à crise da casa real, a amizade aparece como sinal
-                de nobreza moral e fidelidade.
-              </p>
-              <ul>
-                <li>Lealdade verdadeira pode florescer mesmo em contextos de poder corrompido.</li>
-                <li>Jônatas se destaca por honra e grandeza interior.</li>
-                <li>O capítulo mostra beleza humana em meio a cenário difícil.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulos 21–24</span>
-                <strong>Davi fugitivo: provisão, proteção e contenção</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Esses capítulos mostram Davi em fuga, vulnerável e ainda não entronizado.
-                Ele passa por necessidade, se move entre perigos e aprende a sobreviver
-                sem tomar pela força o que lhe foi prometido. Isso é decisivo: Davi é treinado
-                na contenção.
-              </p>
-              <p>
-                Quando tem oportunidade de eliminar Saul, ele não o faz. O livro mostra
-                que possuir promessa não autoriza atropelar o tempo de Deus.
-              </p>
-              <ul>
-                <li>Davi é formado pela prova e não apenas pela unção.</li>
-                <li>Promessa não legitima impulsividade.</li>
-                <li>Esperar o tempo de Deus é parte da maturidade espiritual.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulos 25–26</span>
-                <strong>Nabal, Abigail e novo contraste moral</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                A narrativa de Nabal e Abigail mostra um momento em que Davi quase cede ao impulso,
-                mas é freado por discernimento vindo de fora. Abigail aparece como figura de sabedoria.
-                Em seguida, Davi novamente poupa Saul. O contraste entre poder impulsivo e contenção justa
-                continua sendo trabalhado.
-              </p>
-              <ul>
-                <li>Até Davi precisa ser corrigido e contido.</li>
-                <li>Sabedoria prática tem papel enorme na preservação da justiça.</li>
-                <li>O livro continua moldando Davi antes do trono.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulos 27–29</span>
-                <strong>Ambiguidade, refúgio entre filisteus e tensão crescente</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Davi vive fase de tensão e ambiguidade, buscando refúgio em território filisteu.
-                O capítulo mostra que o caminho até a promessa nem sempre é linear ou simples.
-                O livro preserva complexidade, sem idealizar a trajetória do futuro rei.
-              </p>
-              <ul>
-                <li>A caminhada até o propósito de Deus pode incluir zonas difíceis e tensas.</li>
-                <li>A Bíblia não simplifica a formação de seus personagens.</li>
-                <li>Davi continua sendo preparado em cenário instável.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 30</span>
-                <strong>1 Samuel 30 — Ziclague, dor e fortalecimento no Senhor</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                Davi enfrenta grande aflição, mas o texto destaca algo precioso:
-                ele se fortalece no Senhor. Esse detalhe resume muito do que o livro vem formando nele.
-                Em vez de colapsar, Davi volta-se para Deus e busca direção.
-              </p>
-              <ul>
-                <li>Fortalecer-se no Senhor é marca decisiva de maturidade espiritual.</li>
-                <li>Crises revelam onde o coração realmente busca apoio.</li>
-                <li>Davi aparece como líder que aprende a depender, não só a agir.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 31</span>
-                <strong>1 Samuel 31 — A morte de Saul e o fim de uma era</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O livro termina com a morte de Saul e de seus filhos. É um encerramento pesado,
-                coerente com a trajetória de desintegração do rei rejeitado. A queda final de Saul
-                marca o fim de uma etapa e abre espaço para a próxima fase da história de Davi.
-              </p>
-              <ul>
-                <li>Trajetórias espirituais desordenadas podem terminar em colapso trágico.</li>
-                <li>O fim de Saul encerra a primeira experiência monárquica de Israel.</li>
-                <li>1 Samuel termina deixando o leitor diante da transição para um novo momento.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container study-grid">
-        <article class="study-card">
-          <h3>Personagens centrais</h3>
-          <ul>
-            <li><strong>Samuel:</strong> profeta, juiz e ponte entre dois períodos históricos.</li>
-            <li><strong>Ana:</strong> figura de oração, fé e entrega.</li>
-            <li><strong>Saul:</strong> primeiro rei, marcado por início promissor e queda progressiva.</li>
-            <li><strong>Jônatas:</strong> homem de coragem, lealdade e nobreza.</li>
-            <li><strong>Davi:</strong> escolhido por Deus, formado antes de reinar.</li>
-            <li><strong>Abigail:</strong> exemplo de discernimento e sabedoria prática.</li>
-          </ul>
-        </article>
-
-        <article class="study-card">
-          <h3>Aplicações práticas</h3>
-          <ul>
-            <li>Deus vê o coração onde os homens veem aparência.</li>
-            <li>Obediência vale mais do que religiosidade sem submissão.</li>
-            <li>O sucesso externo não compensa a desordem interior.</li>
-            <li>Promessa recebida não autoriza antecipação carnal do tempo de Deus.</li>
-            <li>Fortalecer-se no Senhor é uma das marcas mais preciosas de maturidade espiritual.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <article class="panel">
-          <h3>Conclusão teológica</h3>
-          <p>
-            1 Samuel é um livro de transição, mas não apenas institucional. Ele mostra
-            uma profunda transição espiritual: de uma liderança corrompida para uma nova voz profética,
-            de um rei escolhido conforme a expectativa humana para um rei escolhido conforme o olhar de Deus,
-            de uma autoridade marcada por aparência para uma liderança formada em dependência.
-          </p>
-          <p style="margin-top:14px;">
-            Por isso, 1 Samuel permanece atual. Ele confronta a fascinação pelo visível,
-            denuncia a desobediência disfarçada de religiosidade e ensina que Deus continua
-            formando seus servos em processos longos, muitas vezes duros, antes de colocá-los
-            em lugares de responsabilidade. É um livro sobre ouvir, esperar e ser moldado.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container">
-        <div class="cta-box">
-          <div>
-            <h3>Próximo livro: 2 Samuel</h3>
-            <p>
-              Em 2 Samuel, veremos Davi já no trono, o estabelecimento do reino,
-              conquistas, alianças, glória, pecado, crise e restauração.
-            </p>
-          </div>
-
-          <a href="livros-historicos-ssamuelii.html" class="btn btn-primary">Abrir 2 Samuel</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p class="footer-note">
-        soloteo — teologia organizada com profundidade, beleza e reverência.
-      </p>
-    </div>
-  </footer>
-
-  <script>
-    (function () {
-      const chapterCards = document.querySelectorAll('.chapter-card');
-
-      chapterCards.forEach((card) => {
-        const button = card.querySelector('.chapter-toggle');
-        const content = card.querySelector('.chapter-content');
-
-        button.addEventListener('click', () => {
-          const isOpen = card.classList.contains('active');
-
-          if (isOpen) {
-            card.classList.remove('active');
-            content.style.display = 'none';
-          } else {
-            card.classList.add('active');
-            content.style.display = 'block';
-          }
-        });
-      });
-    })();
-  </script>
 </body>
 </html>

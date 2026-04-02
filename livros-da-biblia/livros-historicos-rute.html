@@ -3,1212 +3,764 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Rute | Livros Históricos | soloteo</title>
-  <meta
-    name="description"
-    content="Estudo completo do livro de Rute no soloteo: contexto, estrutura, teologia, redenção, providência divina e análise detalhada capítulo por capítulo."
-  />
-  <meta
-    name="keywords"
-    content="Rute, livro de Rute, estudo de Rute, Rute capítulo por capítulo, Boaz, Noemi, redenção, livros históricos, soloteo"
-  />
+  <title>Rute | soloteo</title>
+  <meta name="description" content="Página premium de Rute no estilo do soloteo, com estudo aprofundado capítulo por capítulo, curiosidades bíblicas e navegação refinada." />
+  <meta name="keywords" content="Rute, Bíblia, livros históricos, estudo bíblico, Boaz, Noemi, redenção, soloteo" />
   <meta name="author" content="soloteo" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.soloteo.com.br/livros-da-biblia/livros-historicos-rute.html" />
-
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Rute | Livros Históricos | soloteo" />
-  <meta
-    property="og:description"
-    content="Estudo completo de Rute com contexto, estrutura, teologia e leitura detalhada capítulo por capítulo."
-  />
-  <meta property="og:url" content="https://www.soloteo.com.br/livros-da-biblia/livros-historicos-rute.html" />
-  <meta property="og:site_name" content="soloteo" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rute | Livros Históricos | soloteo" />
-  <meta
-    name="twitter:description"
-    content="Uma leitura profunda e detalhada do livro de Rute, capítulo por capítulo."
-  />
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Rute",
-    "description":"Estudo completo do livro de Rute no soloteo.",
-    "author":{
-      "@type":"Organization",
-      "name":"soloteo"
-    },
-    "publisher":{
-      "@type":"Organization",
-      "name":"soloteo",
-      "url":"https://www.soloteo.com.br"
-    },
-    "mainEntityOfPage":{
-      "@type":"WebPage",
-      "@id":"https://www.soloteo.com.br/livros-da-biblia/livros-historicos-rute.html"
-    }
-  }
-  </script>
 
   <style>
-    :root{
-      --bg:#f7f3ee;
-      --paper:#fffdf9;
-      --paper-2:#fbf6ef;
-      --text:#201815;
-      --muted:#6d5a52;
-      --line:rgba(86,50,38,.12);
-      --wine:#6e2132;
-      --wine-2:#8c2f45;
-      --gold:#c7a461;
-      --shadow:0 20px 60px rgba(55,22,18,.09);
-      --shadow-soft:0 10px 30px rgba(55,22,18,.06);
-      --radius:24px;
-      --radius-lg:32px;
-      --max:1240px;
+    :root {
+      --bg:#f6f1ec;
+      --bg-strong:#4a0916;
+      --paper:#f8f5f2;
+      --card:#fbf8f6;
+      --white:#fffdfa;
+      --text:#1f1619;
+      --muted:#6f6367;
+      --line:rgba(86,20,33,.10);
+      --wine:#6b1126;
+      --wine-2:#9f2c4a;
+      --gold:#c69449;
+      --gold-2:#d8aa66;
+      --shadow:0 18px 45px rgba(39,11,17,.07);
+      --shadow-lg:0 28px 80px rgba(39,11,17,.11);
+      --radius:28px;
+      --radius-lg:38px;
+      --max:1260px;
+      --narrow:1120px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-
-    body{
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:110px; }
+    body {
       margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--text);
       background:
-        radial-gradient(circle at top left, rgba(199,164,97,.10), transparent 26%),
-        radial-gradient(circle at top right, rgba(110,33,50,.07), transparent 20%),
-        linear-gradient(180deg, #fbf8f4 0%, #f4efe8 100%);
+        radial-gradient(circle at top left, rgba(198,148,73,.10), transparent 0 18%),
+        linear-gradient(180deg,#fffdfb 0%, #f6f1ec 42%, #fffaf7 100%);
       line-height:1.72;
+      overflow-x:hidden;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-    .container{
-      width:min(calc(100% - 32px), var(--max));
-      margin:0 auto;
-    }
-
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(16px);
-      background:rgba(251,248,244,.90);
-      border-bottom:1px solid rgba(86,50,38,.08);
-    }
-
-    .nav{
-      min-height:86px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
-    }
-
-    .brand-logo{
-      width:52px;
-      height:52px;
-      object-fit:contain;
-      flex-shrink:0;
-      border-radius:10px;
-    }
-
-    .brand-fallback{
-      width:52px;
-      height:52px;
-      border-radius:14px;
-      display:none;
-      place-items:center;
-      background:linear-gradient(135deg,var(--wine),#3b0f19);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.15);
-      position:relative;
-      overflow:hidden;
-      flex-shrink:0;
-    }
-
-    .brand-fallback::before{
-      content:"S";
-      color:#f8f0e1;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:1.45rem;
-      font-weight:700;
-      letter-spacing:.04em;
-    }
-
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      line-height:1.1;
-      min-width:0;
-    }
-
-    .brand-text strong{
-      font-size:1.18rem;
-      letter-spacing:.08em;
-      color:#2a1d18;
-      font-weight:800;
-      text-transform:uppercase;
-    }
-
-    .brand-text span{
-      font-size:.84rem;
-      color:#7a6a60;
-      margin-top:6px;
-      white-space:nowrap;
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-
-    .nav-links a{
-      color:var(--muted);
-      font-weight:600;
-      padding:10px 14px;
-      border-radius:999px;
-      transition:.22s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active{
-      background:#fff;
-      color:var(--wine);
-      box-shadow:var(--shadow-soft);
-    }
-
-    .hero{
-      padding:54px 0 28px;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.12fr .88fr;
-      gap:26px;
-      align-items:stretch;
-    }
-
-    .hero-card,
-    .hero-side,
-    .panel,
-    .part-card,
-    .chapter-card,
-    .overview-card,
-    .study-card,
-    .cta-box{
-      background:rgba(255,253,249,.9);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      border-radius:var(--radius-lg);
-      overflow:hidden;
-    }
-
-    .hero-card{
-      padding:42px;
-      position:relative;
-      isolation:isolate;
-    }
-
-    .hero-card::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(circle at 18% 15%, rgba(199,164,97,.15), transparent 24%),
-        linear-gradient(180deg, rgba(255,255,255,.12), rgba(110,33,50,.02));
-      z-index:-1;
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.13em;
-      text-transform:uppercase;
-      color:var(--wine);
-      margin-bottom:18px;
-    }
-
-    .dot{
-      width:9px;
-      height:9px;
-      border-radius:50%;
-      background:linear-gradient(135deg,var(--gold),#f3e2b7);
-      box-shadow:0 0 0 8px rgba(199,164,97,.12);
-    }
-
-    h1{
-      margin:0;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(2.7rem, 6vw, 4.9rem);
-      line-height:.95;
+    h1,h2,h3,h4 {
+      margin:0 0 12px;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       letter-spacing:-.04em;
-      color:#221714;
+      line-height:.96;
+      color:#181215;
+      font-weight:900;
     }
 
-    .hero-description{
-      margin:22px 0 0;
-      color:var(--muted);
-      font-size:1.06rem;
-      max-width:760px;
+    h1 { font-size:clamp(3rem, 5.5vw, 5.5rem); max-width:8.5ch; }
+    h2 { font-size:clamp(2rem, 4vw, 3.6rem); max-width:12ch; }
+    h3 { font-size:1.35rem; letter-spacing:-.03em; line-height:1.08; }
+    h4 { font-size:1rem; letter-spacing:-.02em; line-height:1.1; }
+
+    p { margin:0 0 14px; }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
+    button, input { font:inherit; }
+
+    .container { width:min(calc(100% - 34px), var(--max)); margin:0 auto; }
+    .narrow { width:min(calc(100% - 34px), var(--narrow)); margin:0 auto; }
+
+    .progress-bar {
+      position:fixed; top:0; left:0; width:0; height:3px; z-index:2200;
+      background:linear-gradient(90deg,var(--gold),var(--wine),var(--gold));
+      box-shadow:0 0 18px rgba(107,17,38,.28);
     }
 
-    .hero-actions{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:30px;
+    .topbar {
+      position:sticky; top:0; z-index:1200;
+      backdrop-filter:blur(14px) saturate(130%);
+      background:rgba(255,252,248,.84);
+      border-bottom:1px solid rgba(86,20,33,.06);
+      transition:.25s ease;
+    }
+    .topbar.is-scrolled { box-shadow:0 10px 28px rgba(0,0,0,.06); }
+
+    .nav-shell {
+      min-height:92px;
+      display:flex; align-items:center; justify-content:space-between; gap:18px;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:14px 20px;
-      border-radius:999px;
-      font-weight:800;
-      border:1px solid transparent;
-      transition:.22s ease;
-      cursor:pointer;
-      font-size:.96rem;
+    .brand { display:flex; align-items:center; gap:14px; min-width:0; }
+    .brand-logo {
+      width:48px; height:48px; border-radius:15px; object-fit:contain; padding:6px;
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,246,236,.88));
+      border:1px solid rgba(90,15,30,.08);
+      box-shadow:0 10px 24px rgba(39,11,17,.06);
+    }
+    .brand-text strong {
+      display:block; letter-spacing:.16em; font-size:1rem; color:#2a171b;
+    }
+    .brand-text span {
+      display:block; color:var(--muted); font-size:.78rem;
     }
 
-    .btn-primary{
-      background:linear-gradient(135deg,var(--wine),var(--wine-2));
+    .nav-links { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .nav-links a {
+      padding:11px 15px; border-radius:999px; color:var(--muted); font-weight:700; transition:.22s ease;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color:var(--wine); background:rgba(255,255,255,.72);
+    }
+
+    .hero { padding:28px 0 20px; }
+    .hero-shell {
+      background:
+        radial-gradient(circle at 14% 0%, rgba(255,255,255,.08), transparent 25%),
+        linear-gradient(180deg, #4a0916 0%, #34050f 100%);
+      color:#fff9f5;
+      border-radius:0 0 34px 34px;
+      position:relative;
+      overflow:hidden;
+      margin-bottom:28px;
+    }
+    .hero-shell::after {
+      content:"";
+      position:absolute; inset:auto -8% -18% auto;
+      width:360px; height:360px; border-radius:50%;
+      background:radial-gradient(circle, rgba(198,148,73,.12), transparent 70%);
+      pointer-events:none;
+    }
+    .hero-inner {
+      width:min(calc(100% - 34px), var(--max));
+      margin:0 auto;
+      padding:54px 0 62px;
+      text-align:center;
+    }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:10px;
+      margin-bottom:18px; padding:10px 18px; border-radius:999px;
+      background:#fff9ef; color:var(--wine);
+      border:1px solid rgba(198,148,73,.35);
+      font-weight:800; font-size:.86rem;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    .dot {
+      width:8px; height:8px; border-radius:50%;
+      background:linear-gradient(135deg,var(--gold),#f0ddb9);
+      box-shadow:0 0 0 7px rgba(198,148,73,.15);
+    }
+    .hero-inner h1 {
+      color:#fff8f4;
+      max-width:8ch;
+      margin:0 auto 18px;
+    }
+    .hero-highlight { color:#c69449; }
+    .hero-description {
+      max-width:760px; margin:0 auto 28px;
+      color:rgba(255,242,236,.82);
+      font-size:1.12rem;
+      line-height:1.8;
+    }
+    .hero-actions {
+      display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:24px;
+    }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center;
+      min-height:54px; padding:14px 22px; border-radius:999px; border:1px solid transparent;
+      font-weight:800; transition:.22s ease; cursor:pointer;
+    }
+    .btn-primary {
       color:#fff;
-      box-shadow:0 16px 30px rgba(110,33,50,.18);
+      background:linear-gradient(135deg,var(--wine-2),var(--gold));
+      box-shadow:0 18px 36px rgba(159,44,74,.24);
+    }
+    .btn-secondary {
+      color:#fff1eb; background:transparent; border-color:rgba(255,255,255,.3);
+    }
+    .btn:hover { transform:translateY(-2px); }
+
+    .section { padding:24px 0 18px; }
+    .section-header {
+      display:flex; align-items:end; justify-content:space-between; gap:18px; margin-bottom:22px;
+    }
+    .section-header h2 { max-width:12ch; }
+    .section-header p { color:var(--muted); max-width:44ch; }
+
+    .paper {
+      background:linear-gradient(180deg, rgba(251,248,246,.95), rgba(247,242,238,.92));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
     }
 
-    .btn-primary:hover{
-      transform:translateY(-2px);
-    }
-
-    .btn-secondary{
-      background:#fff;
-      color:var(--wine);
-      border-color:rgba(110,33,50,.12);
-    }
-
-    .btn-secondary:hover{
-      background:#fff8fa;
-    }
-
-    .hero-side{
-      padding:26px;
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-      justify-content:space-between;
-    }
-
-    .side-box{
-      background:linear-gradient(180deg,#fff, var(--paper-2));
-      border:1px solid rgba(199,164,97,.18);
-      border-radius:24px;
-      padding:22px;
-    }
-
-    .side-box h2{
-      margin:0 0 10px;
-      font-size:1.08rem;
-      color:#2b1f1a;
-    }
-
-    .side-box p{
-      margin:0;
-      color:var(--muted);
-      font-size:.97rem;
-    }
-
-    .side-list{
-      margin:12px 0 0;
-      padding-left:18px;
-      color:var(--muted);
-    }
-
-    .side-list li + li{
-      margin-top:8px;
-    }
-
-    .section{
-      padding:20px 0;
-    }
-
-    .section-header{
-      display:flex;
-      align-items:end;
-      justify-content:space-between;
-      gap:20px;
-      margin-bottom:20px;
-      flex-wrap:wrap;
-    }
-
-    .section-header h2{
-      margin:0;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:2rem;
-      line-height:1.05;
-      color:#231816;
-    }
-
-    .section-header p{
-      margin:0;
-      max-width:760px;
-      color:var(--muted);
-    }
-
-    .overview-grid,
-    .study-grid{
+    .overview-grid {
       display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
+      grid-template-columns:1fr 1fr;
       gap:18px;
     }
 
-    .overview-card,
-    .study-card{
-      padding:28px;
-      box-shadow:var(--shadow-soft);
-    }
+    .panel { padding:30px; }
+    .panel p, .chapter-copy p, .info-box p, .chapter-note, .carousel-note { color:var(--muted); }
 
-    .overview-card h3,
-    .study-card h3,
-    .panel h3,
-    .part-card h3,
-    .chapter-card h3,
-    .cta-box h3{
-      margin:0 0 14px;
-      color:#251916;
-      font-size:1.35rem;
-      font-family:Georgia, "Times New Roman", serif;
-    }
-
-    .overview-card p,
-    .study-card p,
-    .panel p,
-    .part-card p,
-    .chapter-card p,
-    .cta-box p{
-      margin:0;
+    .callout {
+      margin-top:18px;
+      padding:18px 20px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,242,214,.60), rgba(255,255,255,.92));
+      border-left:4px solid var(--gold);
       color:var(--muted);
     }
 
-    .overview-card ul,
-    .study-card ul,
-    .panel ul,
-    .part-card ul,
-    .chapter-card ul{
-      margin:0;
-      padding-left:18px;
-      color:var(--muted);
-    }
-
-    .overview-card li + li,
-    .study-card li + li,
-    .panel li + li,
-    .part-card li + li,
-    .chapter-card li + li{
-      margin-top:10px;
-    }
-
-    .panel{
-      padding:30px;
-      box-shadow:var(--shadow-soft);
-    }
-
-    .timeline{
+    .metrics {
       display:grid;
+      grid-template-columns:repeat(4,1fr);
       gap:14px;
+      margin-top:22px;
     }
+    .metric {
+      padding:20px 16px;
+      border-radius:22px;
+      background:var(--white);
+      border:1px solid rgba(86,20,33,.08);
+      box-shadow:0 10px 24px rgba(39,11,17,.05);
+    }
+    .metric strong {
+      display:block; font-size:1.9rem; line-height:1; margin-bottom:8px;
+      font-weight:900; letter-spacing:-.04em; color:#171214;
+    }
+    .metric span { display:block; color:var(--muted); font-weight:700; font-size:.92rem; }
 
-    .timeline-item{
+    .toc-section { padding-top:8px; }
+    .toc-card { padding:24px; }
+    .toc-card h3 {
+      font-size:1.9rem;
+      margin-bottom:8px;
+      letter-spacing:-.04em;
+      font-weight:900;
+      color:#181215;
+    }
+    .toc-grid {
       display:grid;
-      grid-template-columns:128px 1fr;
-      gap:16px;
-      align-items:start;
-      padding:14px 0;
-      border-top:1px solid rgba(86,50,38,.08);
-    }
-
-    .timeline-item:first-child{
-      border-top:none;
-      padding-top:0;
-    }
-
-    .timeline-period{
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:var(--wine);
-    }
-
-    .timeline-body strong{
-      display:block;
-      color:#241916;
-      margin-bottom:5px;
-    }
-
-    .timeline-body p{
-      margin:0;
-      color:var(--muted);
-    }
-
-    .pill-row{
-      display:flex;
-      flex-wrap:wrap;
+      grid-template-columns:repeat(4, minmax(0,1fr));
       gap:10px;
       margin-top:18px;
     }
-
-    .pill{
-      padding:10px 14px;
-      border-radius:999px;
+    .toc-link {
+      display:flex; align-items:center; justify-content:center;
+      min-height:52px; border-radius:16px;
+      background:#f1ece9; color:var(--wine);
+      font-weight:900; transition:.2s ease;
+      border:1px solid rgba(86,20,33,.06);
+    }
+    .toc-link:hover {
+      transform:translateY(-2px);
       background:#fff;
-      border:1px solid rgba(86,50,38,.08);
-      color:#5b4b44;
-      font-weight:600;
-      font-size:.92rem;
+      box-shadow:0 10px 20px rgba(39,11,17,.06);
     }
 
-    .parts-wrap,
-    .chapters-wrap{
-      display:grid;
-      gap:18px;
+    .curiosity-wrap { position:relative; }
+    .carousel-toolbar {
+      display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:18px;
     }
-
-    .part-card,
-    .chapter-card{
-      box-shadow:var(--shadow-soft);
+    .carousel-actions { display:flex; align-items:center; gap:10px; }
+    .carousel-btn {
+      width:44px; height:44px; border:none; border-radius:50%;
+      background:#fff; color:var(--wine);
+      box-shadow:0 10px 20px rgba(39,11,17,.07);
+      font-size:1.1rem; cursor:pointer; transition:.2s ease;
+      flex:0 0 auto;
     }
-
-    .part-head{
-      padding:24px 26px 0;
+    .carousel-btn:hover { transform:translateY(-2px); }
+    .curiosity-rail {
+      display:flex; gap:18px;
+      overflow-x:auto; overflow-y:hidden;
+      scroll-snap-type:x proximity;
+      padding:4px 4px 14px;
+      scrollbar-width:none;
     }
-
-    .part-head span{
-      display:inline-block;
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.11em;
-      text-transform:uppercase;
+    .curiosity-rail::-webkit-scrollbar { display:none; }
+    .curiosity-card {
+      flex:0 0 min(360px, 84vw);
+      scroll-snap-align:start;
+      padding:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(248,243,239,.92));
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+    .mini-tag {
+      display:inline-flex;
+      margin-bottom:12px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:rgba(107,17,38,.07);
       color:var(--wine);
-      margin-bottom:8px;
+      font-size:.76rem;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
     }
 
-    .part-head h3{
-      margin-bottom:10px;
+    .chapters-wrap { display:block; }
+    .chapter-card {
+      margin-bottom:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,243,239,.94));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
     }
-
-    .part-body{
-      padding:0 26px 26px;
-    }
-
-    .chapter-toggle{
-      width:100%;
-      border:none;
-      background:transparent;
-      padding:22px 26px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
+    .chapter-card summary {
+      list-style:none;
       cursor:pointer;
-      text-align:left;
-      color:inherit;
+      display:flex; align-items:center; justify-content:space-between; gap:18px;
+      padding:22px 24px;
     }
-
-    .chapter-toggle:hover{
-      background:rgba(255,255,255,.35);
+    .chapter-card summary::-webkit-details-marker { display:none; }
+    .chapter-head { display:flex; align-items:flex-start; gap:18px; min-width:0; }
+    .chapter-number {
+      flex:0 0 68px; width:68px; height:68px;
+      display:grid; place-items:center; border-radius:22px;
+      background:#f2ece8;
+      border:1px solid rgba(86,20,33,.07);
+      box-shadow:0 10px 20px rgba(39,11,17,.05);
+      font-size:1.48rem; font-weight:900; letter-spacing:-.04em; color:#211519;
     }
-
-    .chapter-title{
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-      min-width:0;
+    .chapter-action {
+      display:inline-flex; align-items:center; gap:10px; color:var(--wine); font-weight:800; white-space:nowrap;
     }
-
-    .chapter-title span{
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.11em;
-      text-transform:uppercase;
-      color:var(--wine);
+    .chapter-action::after {
+      content:"+";
+      width:30px; height:30px; display:grid; place-items:center; border-radius:50%;
+      background:rgba(107,17,38,.08);
     }
-
-    .chapter-title strong{
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:1.22rem;
-      color:#251916;
-    }
-
-    .chapter-icon{
-      width:38px;
-      height:38px;
-      border-radius:50%;
+    .chapter-card[open] .chapter-action::after { content:"–"; }
+    .chapter-body { padding:0 24px 24px; }
+    .chapter-grid {
       display:grid;
-      place-items:center;
-      background:rgba(110,33,50,.08);
-      color:var(--wine);
-      font-size:1.1rem;
-      font-weight:800;
-      flex-shrink:0;
-      transition:transform .22s ease, background .22s ease;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+    .info-box {
+      padding:18px;
+      border-radius:22px;
+      background:#fffdfa;
+      border:1px solid rgba(86,20,33,.08);
     }
 
-    .chapter-card.active .chapter-icon{
-      transform:rotate(45deg);
-      background:rgba(110,33,50,.14);
+    .footer {
+      margin-top:48px;
+      padding:44px 0 50px;
+      background:linear-gradient(180deg, rgba(71,12,26,.98), rgba(49,8,19,1));
+      color:rgba(255,241,234,.92);
+    }
+    .footer-grid {
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      gap:28px;
+    }
+    .footer-copy { color:rgba(255,241,234,.76); max-width:44ch; }
+    .footer-links h4 { color:#fff; margin-bottom:14px; }
+    .footer-links a {
+      display:block; margin-bottom:10px; color:rgba(255,241,234,.76);
+    }
+    .footer-links a:hover { color:#fff; }
+
+    .to-top {
+      position:fixed; right:18px; bottom:18px; width:54px; height:54px; display:none;
+      place-items:center; border:none; border-radius:50%;
+      background:linear-gradient(135deg,var(--wine),var(--wine-2)); color:#fff; font-size:1.1rem;
+      box-shadow:0 18px 34px rgba(126,25,48,.24);
+      cursor:pointer; z-index:1400;
     }
 
-    .chapter-content{
-      display:block;
-      padding:0 26px 26px;
-      border-top:1px solid rgba(86,50,38,.08);
+    .reveal {
+      opacity:0; transform:translateY(22px);
+      transition:opacity .66s ease, transform .66s ease;
+    }
+    .reveal.is-visible { opacity:1; transform:none; }
+
+    @media (max-width:1180px) {
+      .overview-grid { grid-template-columns:1fr; }
+      .metrics { grid-template-columns:repeat(2,1fr); }
     }
 
-    .chapter-content p + p{
-      margin-top:14px;
-    }
-
-    .chapter-content ul{
-      margin-top:16px;
-    }
-
-    .cta{
-      padding:26px 0 60px;
-    }
-
-    .cta-box{
-      padding:30px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-      background:
-        radial-gradient(circle at top right, rgba(199,164,97,.16), transparent 26%),
-        linear-gradient(180deg, rgba(255,255,255,.88), rgba(251,246,239,.94));
-    }
-
-    .footer{
-      padding:0 0 42px;
-    }
-
-    .footer-note{
-      color:#7f6d64;
-      font-size:.92rem;
-      text-align:center;
-    }
-
-    @media (max-width: 1100px){
-      .hero-grid,
-      .overview-grid,
-      .study-grid{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 760px){
-      .nav{
-        min-height:auto;
-        padding:14px 0;
-        align-items:flex-start;
-        flex-direction:column;
-      }
-
-      .nav-links{
-        width:100%;
-        justify-content:flex-start;
-      }
-
-      .hero{
-        padding-top:28px;
-      }
-
-      .hero-card,
-      .hero-side,
-      .panel,
-      .part-card,
-      .chapter-card,
-      .overview-card,
-      .study-card,
-      .cta-box{
-        border-radius:24px;
-      }
-
-      .hero-card{
-        padding:28px;
-      }
-
-      .hero-side,
-      .panel,
-      .overview-card,
-      .study-card,
-      .cta-box{
-        padding:22px;
-      }
-
-      .part-head{
-        padding:22px 20px 0;
-      }
-
-      .part-body{
-        padding:0 20px 20px;
-      }
-
-      .chapter-toggle{
-        padding:20px 20px;
-      }
-
-      .chapter-content{
-        padding:0 20px 20px;
-      }
-
-      .timeline-item{
-        grid-template-columns:1fr;
-        gap:8px;
-      }
-
-      h1{
-        font-size:clamp(2.2rem, 12vw, 3.7rem);
-      }
-
-      .section-header h2{
-        font-size:1.7rem;
-      }
-
-      .hero-actions{
-        flex-direction:column;
-        align-items:stretch;
-      }
-
-      .btn{
-        width:100%;
-      }
+    @media (max-width:860px) {
+      .nav-links { display:none; }
+      .hero-inner { padding:46px 0 54px; }
+      .hero-description { font-size:1rem; }
+      .hero-actions { flex-direction:column; align-items:stretch; }
+      .btn { width:100%; }
+      .section-header { flex-direction:column; align-items:flex-start; }
+      .metrics, .chapter-grid, .footer-grid, .toc-grid { grid-template-columns:1fr; }
+      .chapter-card summary, .chapter-head, .carousel-toolbar { flex-direction:column; align-items:flex-start; }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="../index.html" class="brand" aria-label="soloteo">
-        <img
-          src="../assets/img/logo-soloteo.png"
-          alt="Logo soloteo"
-          class="brand-logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
-        />
-        <span class="brand-fallback"></span>
+  <div class="progress-bar" id="progressBar"></div>
 
-        <span class="brand-text">
-          <strong>soloteo</strong>
-          <span>teologia organizada com beleza e profundidade</span>
-        </span>
+  <header class="topbar" id="topbar">
+    <div class="container nav-shell">
+      <a class="brand" href="../index.html" aria-label="soloteo">
+        <img class="brand-logo" src="../assets/img/logo-soloteo.png" alt="Logo soloteo" />
+        <div class="brand-text">
+          <strong>SOLOTEO</strong>
+          <span>Teologia com profundidade, beleza e direção</span>
+        </div>
       </a>
 
       <nav class="nav-links" aria-label="Principal">
         <a href="../index.html">Início</a>
-        <a href="../categorias/categorias.html">Categorias</a>
         <a href="../categorias/livros-da-biblia.html" class="active">Livros da Bíblia</a>
-        <a href="livros-historicos.html">Livros Históricos</a>
+        <a href="./livros-historicos.html">Livros Históricos</a>
+        <a href="../categorias/trilhas-de-estudo.html">Trilhas</a>
+        <a href="../categorias/apologetica.html">Apologética</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="conteudo">
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-card">
-          <div class="eyebrow"><span class="dot"></span> Livros Históricos</div>
-          <h1>Rute</h1>
-
+      <div class="hero-shell">
+        <div class="hero-inner">
+          <div class="eyebrow"><span class="dot"></span> Jornadas guiadas</div>
+          <h1>Estudo de <span class="hero-highlight">Rute</span> com profundidade</h1>
           <p class="hero-description">
-            O livro de Rute é pequeno em extensão, mas imenso em densidade teológica.
-            Em meio ao cenário áspero do período dos juízes, ele oferece uma narrativa
-            de fidelidade, ternura, providência e redenção. Em vez de grandes batalhas,
-            vemos campos, colheitas, perdas, decisões silenciosas e vínculos de lealdade.
-            Rute mostra que Deus não age apenas em eventos grandiosos; ele também governa
-            com delicadeza a vida comum, transformando dor em esperança e fidelidade em linhagem redentora.
+            Aqui você vai encontrar um estudo aprofundado sobre o livro de Rute, capítulo por capítulo, com foco em fidelidade, redenção, providência divina, restauração familiar e esperança no meio da crise. Um estudo belo e sólido, no mesmo estilo premium das páginas anteriores.
           </p>
-
           <div class="hero-actions">
-            <a href="#estudo" class="btn btn-primary">Ler estudo completo</a>
-            <a href="livros-historicos.html" class="btn btn-secondary">Voltar à categoria</a>
+            <a href="#capitulos" class="btn btn-primary">Explorar capítulos</a>
+            <a href="#curiosidades" class="btn btn-secondary">Ver curiosidades</a>
           </div>
-        </div>
-
-        <aside class="hero-side">
-          <div class="side-box">
-            <h2>Visão rápida</h2>
-            <p>
-              Rute é uma história de perda, acolhimento e redenção. Em contraste com o caos de Juízes,
-              o livro mostra a beleza de uma fidelidade vivida no cotidiano.
-            </p>
-          </div>
-
-          <div class="side-box">
-            <h2>Temas centrais</h2>
-            <ul class="side-list">
-              <li>Providência divina</li>
-              <li>Lealdade e hesed</li>
-              <li>Redenção familiar</li>
-              <li>Graça para a estrangeira</li>
-              <li>Esperança em meio à perda</li>
-              <li>Linhagem de Davi</li>
-            </ul>
-          </div>
-
-          <div class="side-box">
-            <h2>Como este estudo foi organizado</h2>
-            <p>
-              Primeiro vem o panorama do livro. Depois, a divisão por grandes movimentos.
-              Em seguida, o estudo capítulo por capítulo, para ficar realmente completo.
-            </p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="estudo">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2>Panorama do livro</h2>
-          </div>
-          <p>
-            Rute está situado dentro do mesmo período histórico dos juízes,
-            funcionando como uma joia narrativa no interior dessa fase. :contentReference[oaicite:2]{index=2}
-          </p>
-        </div>
-
-        <div class="overview-grid">
-          <article class="overview-card">
-            <h3>Contexto histórico</h3>
-            <p>
-              O livro acontece nos dias em que os juízes governavam, um período marcado
-              por instabilidade espiritual e social. Justamente por isso, Rute se destaca:
-              no meio de um cenário nacional caótico, a narrativa se concentra em uma família,
-              numa estrangeira viúva, em campos de cevada e em atos discretos de fidelidade.
-            </p>
-          </article>
-
-          <article class="overview-card">
-            <h3>Propósito do livro</h3>
-            <p>
-              Rute mostra que Deus continua agindo mesmo quando o contexto geral parece sombrio.
-              O livro revela providência, acolhimento, redenção e continuidade da promessa.
-              Também mostra que a graça divina alcança uma moabita e a integra à história
-              que desembocará na linhagem de Davi.
-            </p>
-          </article>
-
-          <article class="overview-card">
-            <h3>Importância teológica</h3>
-            <p>
-              O livro destaca a providência silenciosa de Deus, a beleza da lealdade concreta
-              e a centralidade da redenção. Ele mostra que a história da salvação avança
-              não apenas em grandes atos públicos, mas também em decisões cotidianas moldadas
-              por fidelidade e compaixão.
-            </p>
-          </article>
-
-          <article class="overview-card">
-            <h3>Lugar na narrativa bíblica</h3>
-            <p>
-              Rute funciona como ponte delicada entre o caos de Juízes e a história que levará
-              à monarquia davídica. O final genealógico do livro deixa claro que essa pequena narrativa
-              participa de um horizonte muito maior do que parece à primeira vista.
-            </p>
-          </article>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <article class="panel">
-          <h3>Panorama estrutural</h3>
-
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-period">Rute 1</div>
-              <div class="timeline-body">
-                <strong>Perda, retorno e decisão de fidelidade</strong>
-                <p>Noemi retorna esvaziada, e Rute escolhe permanecer com ela em lealdade profunda.</p>
-              </div>
+      <div class="narrow">
+        <div class="overview-grid reveal">
+          <article class="paper panel">
+            <div class="section-header" style="margin-bottom:14px;">
+              <div><h2>Panorama de Rute</h2></div>
             </div>
+            <p>Rute é um livro curto, mas extremamente rico. Em apenas quatro capítulos, ele mostra como Deus trabalha em períodos de instabilidade nacional por meio de pessoas aparentemente comuns. Enquanto Juízes exibe decadência moral e espiritual, Rute revela que a graça de Deus continua agindo silenciosamente.</p>
+            <p>O livro une luto, imigração, pobreza, lealdade, trabalho, redenção e genealogia. Não é apenas uma história bonita; é um retrato da providência divina conduzindo a dor até a restauração, e preparando o caminho para a linhagem de Davi.</p>
+            <div class="callout">Rute mostra que Deus pode transformar escassez em colheita, vazio em família e crise em começo de uma nova história.</div>
+          </article>
 
-            <div class="timeline-item">
-              <div class="timeline-period">Rute 2</div>
-              <div class="timeline-body">
-                <strong>Providência nos campos de Boaz</strong>
-                <p>Rute encontra favor no campo de Boaz, e a providência divina começa a se tornar visível.</p>
-              </div>
+          <article class="paper panel">
+            <div class="section-header" style="margin-bottom:14px;">
+              <div><h2>Chaves de leitura</h2></div>
             </div>
-
-            <div class="timeline-item">
-              <div class="timeline-period">Rute 3</div>
-              <div class="timeline-body">
-                <strong>Pedido de redenção</strong>
-                <p>A narrativa avança para a esperança de restauração por meio do resgatador.</p>
-              </div>
+            <p>Para ler Rute com profundidade, vale observar quatro fios principais: a fidelidade de Rute, a amargura e restauração de Noemi, a honra de Boaz e a ação invisível de Deus em cada detalhe do caminho.</p>
+            <p>O livro não depende de grandes milagres visíveis. A sua força está na forma como a providência aparece em coincidências providenciais, decisões corretas, alianças preservadas e desfechos redentores.</p>
+            <div class="metrics">
+              <div class="metric"><strong>4</strong><span>capítulos</span></div>
+              <div class="metric"><strong>3</strong><span>personagens centrais</span></div>
+              <div class="metric"><strong>1</strong><span>grande tema: redenção</span></div>
+              <div class="metric"><strong>Davi</strong><span>linhagem preparada</span></div>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <div class="timeline-item">
-              <div class="timeline-period">Rute 4</div>
-              <div class="timeline-body">
-                <strong>Redenção consumada e linhagem preservada</strong>
-                <p>Boaz redime, a casa é restaurada e a história se abre para a descendência de Davi.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="pill-row">
-            <span class="pill">Lealdade</span>
-            <span class="pill">Providência</span>
-            <span class="pill">Boaz</span>
-            <span class="pill">Noemi</span>
-            <span class="pill">Redenção</span>
-            <span class="pill">Davi</span>
+    <section class="section toc-section">
+      <div class="narrow">
+        <article class="paper toc-card reveal">
+          <h3>Navegação rápida</h3>
+          <div class="toc-grid">
+            <a href="#cap-1" class="toc-link">1</a>
+            <a href="#cap-2" class="toc-link">2</a>
+            <a href="#cap-3" class="toc-link">3</a>
+            <a href="#cap-4" class="toc-link">4</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2>Estudo por grandes partes</h2>
+    <section class="section" id="curiosidades">
+      <div class="container curiosity-wrap">
+        <div class="carousel-toolbar reveal">
+          <div class="section-header" style="margin-bottom:0; width:100%;">
+            <div><h2>Curiosidades, fatos históricos e observações</h2></div>
           </div>
-          <p>
-            Antes do detalhe capítulo por capítulo, esta divisão ajuda a ver o fluxo maior do livro.
-          </p>
-        </div>
-
-        <div class="parts-wrap">
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 1</span>
-              <h3>Rute 1 — A dor da perda e a força da lealdade</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                O livro começa com fome, deslocamento, morte e amargura. Noemi retorna a Belém
-                profundamente ferida, e é nesse contexto que a decisão de Rute se torna tão poderosa.
-                Sua lealdade rompe o cálculo frio da conveniência e inaugura uma história em que
-                a fidelidade humana se entrelaça com a providência divina.
-              </p>
-            </div>
-          </article>
-
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 2</span>
-              <h3>Rute 2 — A providência discreta começa a aparecer</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                Nos campos de Boaz, o livro mostra que Deus pode conduzir encontros, circunstâncias
-                e oportunidades sem precisar de cenas espetaculares. A providência se move com delicadeza,
-                e a narrativa faz o leitor perceber que o acaso aparente está sob governo divino.
-              </p>
-            </div>
-          </article>
-
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 3</span>
-              <h3>Rute 3 — Esperança de resgate</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                A narrativa se aproxima do seu centro teológico. Boaz aparece não apenas como homem generoso,
-                mas como possível resgatador. O tema da redenção deixa de ser pano de fundo e passa a ocupar
-                o coração da história.
-              </p>
-            </div>
-          </article>
-
-          <article class="part-card">
-            <div class="part-head">
-              <span>Parte 4</span>
-              <h3>Rute 4 — Redenção, restauração e futuro</h3>
-            </div>
-            <div class="part-body">
-              <p>
-                O final do livro mostra que a fidelidade cultivada no cotidiano participa de algo muito maior.
-                A casa de Noemi é restaurada, Rute é acolhida plenamente, Boaz redime e a linhagem chega até Davi.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2>Estudo capítulo por capítulo</h2>
+          <div class="carousel-actions" aria-label="Controles do carrossel">
+            <button class="carousel-btn" id="curioPrev" type="button" aria-label="Rolar curiosidades para a esquerda">←</button>
+            <button class="carousel-btn" id="curioNext" type="button" aria-label="Rolar curiosidades para a direita">→</button>
           </div>
-          <p>
-            Agora o detalhamento completo do livro, para a página ficar densa, madura e com cara de estudo real.
-          </p>
         </div>
 
-        <div class="chapters-wrap">
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 1</span>
-                <strong>Rute 1 — Fome, luto, retorno e a decisão que muda a história</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O primeiro capítulo começa em clima de escassez. A fome leva Elimeleque e sua família
-                a sair de Belém para Moabe, e o que parecia busca de sobrevivência se transforma
-                em cenário de perdas sucessivas. Elimeleque morre. Depois, também morrem Malom e Quiliom.
-                O livro não disfarça a dureza da vida. Antes de falar em redenção, ele nos faz passar
-                pela experiência do vazio.
-              </p>
-              <p>
-                Noemi decide voltar. Seu retorno é profundamente carregado de amargura.
-                Ela não volta triunfante, mas ferida. O texto é honesto: a fé bíblica não exige
-                maquiagem emocional. Noemi verbaliza sua dor, e isso torna a narrativa ainda mais humana.
-              </p>
-              <p>
-                É nesse contexto que a decisão de Rute brilha. Sua famosa declaração de lealdade
-                não é uma frase bonita isolada; é uma escolha concreta de permanência, identidade e compromisso.
-                Rute não segue Noemi por conveniência. Ela escolhe vínculo, povo e Deus.
-                Nesse gesto, o livro mostra que a fidelidade humana pode florescer em meio à ruína.
-              </p>
-              <ul>
-                <li>Rute começa no terreno real da dor, não no da idealização.</li>
-                <li>A lealdade de Rute é uma das grandes belezas teológicas do livro.</li>
-                <li>Deus começa a conduzir a história mesmo quando os personagens ainda enxergam apenas perda.</li>
-              </ul>
-            </div>
+        <div class="curiosity-rail reveal" id="curiosityRail">
+          <article class="curiosity-card">
+            <span class="mini-tag">Contexto</span>
+            <h3>Rute acontece nos dias dos juízes</h3>
+            <p>Isso torna o livro ainda mais impressionante. Em um período marcado por desordem nacional, ele mostra uma pequena história de fidelidade, honra e temor de Deus.</p>
           </article>
 
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 2</span>
-                <strong>Rute 2 — Os campos de Boaz e a providência silenciosa</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O segundo capítulo é uma obra-prima de providência discreta. Rute vai recolher espigas
-                como estrangeira pobre e vulnerável. Humanamente, o gesto parece simples: ela busca sustento.
-                Literariamente e teologicamente, porém, o capítulo faz o leitor perceber que o ordinário
-                está sendo guiado por Deus.
-              </p>
-              <p>
-                Boaz entra em cena como homem íntegro, atento e generoso. Sua postura com Rute não é apenas
-                cortesia social; revela caráter, sensibilidade e fidelidade aos princípios da aliança.
-                Ele enxerga Rute não como ameaça, mas como pessoa digna de acolhimento.
-              </p>
-              <p>
-                O capítulo ensina algo precioso: a providência divina muitas vezes opera por meios comuns,
-                sem espetáculo, sem ruptura dramática, mas com precisão admirável. O encontro com Boaz
-                não surge como acaso cego, e sim como parte da direção silenciosa de Deus.
-              </p>
-              <ul>
-                <li>Deus pode conduzir a história por meio de acontecimentos aparentemente simples.</li>
-                <li>Boaz encarna generosidade, honra e responsabilidade.</li>
-                <li>A providência divina nem sempre grita; muitas vezes ela costura.</li>
-              </ul>
-            </div>
+          <article class="curiosity-card">
+            <span class="mini-tag">Estrangeira</span>
+            <h3>Rute era moabita</h3>
+            <p>Ela vem de fora de Israel, mas entra na história da redenção pela fé, pela aliança e pela lealdade. O livro já aponta que o alcance da graça de Deus ultrapassa barreiras étnicas.</p>
           </article>
 
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 3</span>
-                <strong>Rute 3 — O pedido de cobertura e a esperança do resgatador</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O terceiro capítulo leva a narrativa ao seu centro emocional e teológico.
-                Noemi percebe uma possibilidade real de restauração e orienta Rute a se apresentar
-                a Boaz em gesto carregado de significado. O pedido de cobertura não deve ser lido
-                superficialmente; ele toca o tema da proteção, do compromisso e da redenção.
-              </p>
-              <p>
-                Boaz responde com honra. Em vez de manipular a situação, ele age com integridade.
-                Isso é importante porque o livro inteiro se sustenta numa ética de fidelidade.
-                Rute é leal. Boaz é íntegro. Noemi aprende a esperar. E Deus conduz a história.
-              </p>
-              <p>
-                O capítulo está cheio de tensão boa: ainda não há solução final, mas há esperança real.
-                O resgate já não é apenas desejo distante; tornou-se possibilidade concreta.
-              </p>
-              <ul>
-                <li>Redenção, em Rute, nunca é tratada de forma vulgar ou apressada.</li>
-                <li>Boaz responde com integridade, não com impulso.</li>
-                <li>A esperança cresce quando fidelidade e honra se encontram.</li>
-              </ul>
-            </div>
+          <article class="curiosity-card">
+            <span class="mini-tag">Providência</span>
+            <h3>O “por acaso” em Rute é teológico</h3>
+            <p>Quando o texto diz que Rute foi justamente ao campo de Boaz, a narrativa quer mostrar que Deus guia discretamente os passos dos seus, mesmo quando tudo parece comum.</p>
           </article>
 
-          <article class="chapter-card active">
-            <button class="chapter-toggle" type="button">
-              <div class="chapter-title">
-                <span>Capítulo 4</span>
-                <strong>Rute 4 — A redenção se consuma e a história se abre para Davi</strong>
-              </div>
-              <span class="chapter-icon">+</span>
-            </button>
-            <div class="chapter-content">
-              <p>
-                O último capítulo resolve a tensão do livro com beleza e profundidade.
-                Boaz assume publicamente seu papel, trata a questão com justiça diante das testemunhas
-                e realiza a redenção de forma correta. O texto deixa claro que a restauração não é improvisada;
-                ela é assumida com responsabilidade.
-              </p>
-              <p>
-                Noemi, que havia voltado amarga e esvaziada, agora experimenta restauração.
-                Rute, a estrangeira moabita, não apenas é acolhida: ela se torna parte decisiva
-                da continuidade da história de Israel. O nascimento de Obede sela essa reversão
-                da perda para a esperança.
-              </p>
-              <p>
-                O encerramento genealógico amplia o horizonte do leitor. A pequena história doméstica
-                entra na grande história da redenção. Rute e Boaz se tornam ancestrais de Davi.
-                O livro, assim, mostra que Deus escreve a história maior também por meio de fidelidades pequenas,
-                de lágrimas reais e de gestos silenciosos de aliança.
-              </p>
-              <ul>
-                <li>A redenção em Rute é pública, responsável e restauradora.</li>
-                <li>Deus transforma vazio em futuro e perda em continuidade.</li>
-                <li>A pequena história de Rute participa da grande história da promessa.</li>
-              </ul>
-            </div>
+          <article class="curiosity-card">
+            <span class="mini-tag">Resgate</span>
+            <h3>Boaz atua como resgatador</h3>
+            <p>O papel do resgatador envolve responsabilidade familiar, proteção de herança e restauração do nome. Em Rute, esse tema ganha profundidade afetiva, social e espiritual.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Noite na eira</span>
+            <h3>Rute 3 não é uma cena vulgar</h3>
+            <p>O capítulo trabalha tensão, honra e ousadia responsável. O foco não é sensualidade, mas pedido de cobertura, aliança e redenção dentro de um quadro de integridade.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Linhagem</span>
+            <h3>O final aponta para Davi</h3>
+            <p>O fechamento genealógico mostra que a história de Rute não é isolada. Deus estava preparando, por meio dela, uma etapa decisiva na história do seu povo.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Noemi</span>
+            <h3>Amargura não é o último capítulo</h3>
+            <p>Noemi começa o livro esvaziada, mas termina recebendo consolo, descendência e novo fôlego. Rute também é uma história de restauração emocional e familiar.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Cristologia</span>
+            <h3>Boaz antecipa a ideia do redentor</h3>
+            <p>Sem forçar o texto, muitos leitores enxergam em Boaz uma bela antecipação do redentor que age com direito, custo, ternura e restauração completa.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container study-grid">
-        <article class="study-card">
-          <h3>Personagens centrais</h3>
-          <ul>
-            <li><strong>Rute:</strong> exemplo de lealdade, coragem e abertura à aliança.</li>
-            <li><strong>Noemi:</strong> mulher marcada pela perda, mas conduzida da amargura à restauração.</li>
-            <li><strong>Boaz:</strong> homem íntegro, generoso e figura-chave da redenção no livro.</li>
-            <li><strong>Obede:</strong> filho que sela a restauração da casa e abre a genealogia davídica.</li>
-          </ul>
-        </article>
+    <section class="section" id="capitulos">
+      <div class="narrow chapters-wrap">
+        <div class="section-header reveal">
+          <div><h2>Rute capítulo por capítulo</h2></div>
+        </div>
 
-        <article class="study-card">
-          <h3>Aplicações práticas</h3>
-          <ul>
-            <li>Deus pode agir profundamente em contextos comuns e silenciosos.</li>
-            <li>Fidelidade concreta vale mais do que religiosidade vazia.</li>
-            <li>A graça de Deus alcança quem parecia estar fora do centro da história.</li>
-            <li>Perdas reais não impedem futuros restaurados.</li>
-            <li>Pequenas escolhas de lealdade podem participar de propósitos imensos.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <article class="panel">
-          <h3>Conclusão teológica</h3>
-          <p>
-            Rute é um livro de delicadeza forte. Ele não depende de guerra, de grandes discursos
-            nem de milagres espetaculares para revelar a ação de Deus. Sua força está em mostrar
-            que a providência divina governa o cotidiano, honra a fidelidade, acolhe a estrangeira
-            e transforma histórias quebradas em linhagens redentoras.
-          </p>
-          <p style="margin-top:14px;">
-            Em contraste com a escuridão de Juízes, Rute mostra que a graça de Deus continua operando.
-            Ele preserva futuro, constrói redenção e costura esperança até mesmo em cenários marcados
-            por fome, luto e vulnerabilidade. Por isso, Rute permanece atual: ele nos ensina a ver
-            a mão de Deus não apenas no extraordinário, mas também na fidelidade silenciosa do comum.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container">
-        <div class="cta-box">
-          <div>
-            <h3>Próximo livro: 1 Samuel</h3>
-            <p>
-              Depois de Rute, a narrativa histórica avança para 1 Samuel, onde veremos
-              a transição para a monarquia, o ministério de Samuel, o surgimento de Saul e o início de Davi.
-            </p>
+        <details class="chapter-card reveal" id="cap-1" data-title="Capítulo 1" data-keywords="rute capitulo 1 noemi rute moabe belém">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">01</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 1 — Perda, retorno e aliança</h3>
+                <p>A história começa em meio à fome, ao luto e a uma decisão que muda tudo.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>O capítulo apresenta Noemi saindo de Belém por causa da fome e indo para Moabe com sua família. Ali ela perde o marido e os filhos. Quando decide voltar, Orfa retorna ao seu povo, mas Rute se apega a Noemi com uma das declarações de lealdade mais marcantes da Bíblia.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>Rute 1 mostra que Deus continua agindo mesmo quando sua ação não é imediatamente percebida. O cenário é de vazio, mas o capítulo planta as sementes da redenção por meio da fidelidade de Rute e do retorno à terra da promessa.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>O capítulo vai da saída da terra à volta para Belém. É um movimento de descida e retorno, de perda e esperança. O centro emocional está na escolha de Rute de unir sua vida ao povo e ao Deus de Noemi.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Rute 1 ensina que a fidelidade pode surgir justamente no meio da dor. Mesmo em estações de luto e amargura, Deus ainda pode estar conduzindo a história para restauração.</p>
+              </article>
+            </div>
           </div>
+        </details>
 
-          <a href="livros-historicos-ssamueli.html" class="btn btn-primary">Abrir 1 Samuel</a>
-        </div>
+        <details class="chapter-card reveal" id="cap-2" data-title="Capítulo 2" data-keywords="rute capitulo 2 boaz campo espigas providencia">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">02</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 2 — Providência no campo de Boaz</h3>
+                <p>Deus começa a transformar a escassez em favor concreto.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Rute vai respigar nos campos para sustentar a si mesma e Noemi. Ela acaba no campo de Boaz, parente de Elimeleque. Boaz a acolhe, protege, fala com bondade e ordena que haja provisão abundante para ela.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>O capítulo mostra a providência de Deus em ação por meio de estruturas legais, decisões justas e bondade humana. Boaz não age apenas como homem rico; ele encarna misericórdia, honra e temor de Deus.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>O texto sai da necessidade prática de alimento e chega ao reconhecimento de que a mão de Deus está abrindo portas. O encontro entre Rute e Boaz é apresentado com suavidade, mas carregado de significado redentor.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Rute 2 lembra que Deus pode cuidar dos seus por meios discretos e ordinários. Um campo, uma conversa e um gesto de honra podem se tornar instrumentos poderosos da graça divina.</p>
+              </article>
+            </div>
+          </div>
+        </details>
+
+        <details class="chapter-card reveal" id="cap-3" data-title="Capítulo 3" data-keywords="rute capitulo 3 eira cobertura resgatador">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">03</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 3 — O pedido de cobertura e redenção</h3>
+                <p>Noemi orienta, Rute obedece e Boaz responde com honra.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Noemi orienta Rute a ir à eira e se apresentar a Boaz como alguém que busca redenção. Rute segue as instruções, e Boaz recebe o gesto com seriedade, bondade e respeito. Ele reconhece o pedido, mas informa que existe um resgatador mais próximo.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>Rute 3 trata de risco, confiança e honra. A redenção não acontece por impulso carnal, mas por aliança responsável. O capítulo revela que a verdadeira integridade permanece firme até em cenas de grande vulnerabilidade.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>O capítulo constrói tensão narrativa: preparação, ida à eira, conversa noturna e promessa de resolução. Em vez de escândalo, o texto produz expectativa santa em torno do desfecho jurídico e familiar.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Rute 3 ensina que ousadia bíblica não é precipitação. É possível agir com coragem, sabedoria e pureza ao mesmo tempo, confiando que Deus dirige o processo da redenção.</p>
+              </article>
+            </div>
+          </div>
+        </details>
+
+        <details class="chapter-card reveal" id="cap-4" data-title="Capítulo 4" data-keywords="rute capitulo 4 boaz resgate casamento obed linhagem">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">04</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 4 — Resgate consumado e esperança restaurada</h3>
+                <p>Boaz assume o resgate, Rute é restaurada e a história desemboca na linhagem de Davi.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Boaz vai à porta da cidade, trata legalmente da questão com o resgatador mais próximo e assume o direito de resgate. Ele se casa com Rute, e o capítulo termina com o nascimento de Obede, trazendo consolo para Noemi e fechando a narrativa com uma genealogia que conduz até Davi.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>O desfecho mostra que a redenção divina alcança nome, herança, família, futuro e memória. O Deus que acompanhou o luto no início agora conduz a história para plenitude, honra e continuidade.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>O capítulo começa com negociação pública e termina com celebração familiar e visão histórica ampla. O particular se abre para o nacional: uma casa restaurada passa a fazer parte do grande plano de Deus para Israel.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Rute 4 lembra que Deus não desperdiça histórias pequenas. Aquilo que parece apenas um recomeço doméstico pode fazer parte de algo muito maior na arquitetura da redenção.</p>
+              </article>
+            </div>
+          </div>
+        </details>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p class="footer-note">
-        soloteo — teologia organizada com profundidade, beleza e reverência.
-      </p>
+    <div class="container footer-grid">
+      <div>
+        <h3 style="color:#fff;">SOLOTEO</h3>
+        <p class="footer-copy">Uma biblioteca bíblica visual, profunda e organizada para transformar estudo em jornada. Rute mostra que a providência de Deus trabalha até nos detalhes mais silenciosos.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <a href="../index.html">Início</a>
+        <a href="../categorias/livros-da-biblia.html">Livros da Bíblia</a>
+        <a href="./livros-historicos.html">Livros Históricos</a>
+      </div>
+      <div class="footer-links">
+        <h4>Próximos livros</h4>
+        <a href="./livros-historicos-juizes.html">Juízes</a>
+        <a href="./livros-historicos-1samuel.html">1 Samuel</a>
+        <a href="./livros-historicos-2samuel.html">2 Samuel</a>
+      </div>
     </div>
   </footer>
 
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo">↑</button>
+
   <script>
-    (function () {
-      const chapterCards = document.querySelectorAll('.chapter-card');
+    (() => {
+      const progressBar = document.getElementById('progressBar');
+      const topbar = document.getElementById('topbar');
+      const toTop = document.getElementById('toTop');
+      const rail = document.getElementById('curiosityRail');
+      const prevBtn = document.getElementById('curioPrev');
+      const nextBtn = document.getElementById('curioNext');
+      const revealItems = document.querySelectorAll('.reveal');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      chapterCards.forEach((card) => {
-        const button = card.querySelector('.chapter-toggle');
-        const content = card.querySelector('.chapter-content');
+      function updateProgressBar() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+        topbar.classList.toggle('is-scrolled', scrollTop > 8);
+        toTop.style.display = scrollTop > 460 ? 'grid' : 'none';
+      }
 
-        button.addEventListener('click', () => {
-          const isOpen = card.classList.contains('active');
+      function setupReveal() {
+        if (prefersReducedMotion) {
+          revealItems.forEach((item) => item.classList.add('is-visible'));
+          return;
+        }
 
-          if (isOpen) {
-            card.classList.remove('active');
-            content.style.display = 'none';
-          } else {
-            card.classList.add('active');
-            content.style.display = 'block';
-          }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+        revealItems.forEach((item) => observer.observe(item));
+      }
+
+      function scrollRail(direction) {
+        if (!rail) return;
+        const amount = Math.min(rail.clientWidth * 0.88, 420);
+        rail.scrollBy({
+          left: direction * amount,
+          behavior: prefersReducedMotion ? 'auto' : 'smooth'
         });
+      }
+
+      if (prevBtn) prevBtn.addEventListener('click', () => scrollRail(-1));
+      if (nextBtn) nextBtn.addEventListener('click', () => scrollRail(1));
+
+      toTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
       });
+
+      window.addEventListener('scroll', updateProgressBar, { passive: true });
+      updateProgressBar();
+      setupReveal();
     })();
   </script>
 </body>

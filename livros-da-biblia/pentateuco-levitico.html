@@ -3,1273 +3,1592 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Levítico | Estudo completo capítulo por capítulo | soloteo</title>
-  <meta name="description" content="Estudo completo de Levítico, capítulo por capítulo, com introdução, contexto, estrutura, temas teológicos, aplicações práticas e leitura detalhada pronta para o site soloteo." />
-  <meta name="keywords" content="Levítico, estudo de Levítico, Levítico capítulo por capítulo, Pentateuco, estudo bíblico, soloteo" />
+  <title>Levítico | soloteo</title>
+  <meta name="description" content="Página premium de Levítico no estilo do index do soloteo, com estudo completo, curiosidades bíblicas e navegação refinada." />
+  <meta name="keywords" content="Levítico, Bíblia, Pentateuco, estudo bíblico, santidade, sacerdócio, sacrifícios, soloteo" />
   <meta name="author" content="soloteo" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.soloteo.com.br/livros-da-biblia/pentateuco-levitico.html" />
-
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Levítico | Estudo completo capítulo por capítulo | soloteo" />
-  <meta property="og:description" content="Um estudo completo, original e detalhado do livro de Levítico, pronto para publicação no site." />
-  <meta property="og:url" content="https://www.soloteo.com.br/livros-da-biblia/pentateuco-levitico.html" />
-  <meta property="og:site_name" content="soloteo" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Levítico | Estudo completo capítulo por capítulo | soloteo" />
-  <meta name="twitter:description" content="Estudo detalhado, longo e original de Levítico, pronto para o site." />
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Levítico | Estudo completo capítulo por capítulo",
-    "description":"Estudo completo e detalhado do livro de Levítico no soloteo.",
-    "author":{
-      "@type":"Organization",
-      "name":"soloteo"
-    },
-    "publisher":{
-      "@type":"Organization",
-      "name":"soloteo",
-      "url":"https://www.soloteo.com.br"
-    },
-    "mainEntityOfPage":{
-      "@type":"WebPage",
-      "@id":"https://www.soloteo.com.br/livros-da-biblia/pentateuco-levitico.html"
-    }
-  }
-  </script>
 
   <style>
-    :root{
-      --bg:#f7f3ee;
-      --paper:#fffdf9;
-      --paper-2:#fbf6ef;
-      --text:#201815;
-      --muted:#6d5a52;
-      --line:rgba(86,50,38,.12);
-      --wine:#6e2132;
-      --wine-2:#8c2f45;
-      --gold:#c7a461;
-      --shadow:0 20px 60px rgba(55,22,18,.09);
-      --radius:24px;
-      --radius-lg:32px;
-      --max:1320px;
+    :root {
+      --bg:#f6f1ec;
+      --bg-strong:#4a0916;
+      --paper:#f8f5f2;
+      --card:#fbf8f6;
+      --white:#fffdfa;
+      --text:#1f1619;
+      --muted:#6f6367;
+      --line:rgba(86,20,33,.10);
+      --wine:#6b1126;
+      --wine-2:#9f2c4a;
+      --gold:#c69449;
+      --gold-2:#d8aa66;
+      --shadow:0 18px 45px rgba(39,11,17,.07);
+      --shadow-lg:0 28px 80px rgba(39,11,17,.11);
+      --radius:28px;
+      --radius-lg:38px;
+      --max:1260px;
+      --narrow:1120px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:110px; }
+    body {
       margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--text);
       background:
-        radial-gradient(circle at top left, rgba(199,164,97,.10), transparent 26%),
-        radial-gradient(circle at top right, rgba(110,33,50,.07), transparent 20%),
-        linear-gradient(180deg, #fbf8f4 0%, #f4efe8 100%);
+        radial-gradient(circle at top left, rgba(198,148,73,.10), transparent 0 18%),
+        linear-gradient(180deg,#fffdfb 0%, #f6f1ec 42%, #fffaf7 100%);
       line-height:1.72;
+      overflow-x:hidden;
     }
 
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    .container{
-      width:min(calc(100% - 32px), var(--max));
-      margin:0 auto;
+    h1,h2,h3,h4 {
+      margin:0 0 12px;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing:-.04em;
+      line-height:.96;
+      color:#181215;
+      font-weight:900;
     }
 
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(16px);
-      background:rgba(251,248,244,.90);
-      border-bottom:1px solid rgba(86,50,38,.08);
+    h1 { font-size:clamp(3rem, 5.5vw, 5.5rem); max-width:8.5ch; }
+    h2 { font-size:clamp(2rem, 4vw, 3.6rem); max-width:12ch; }
+    h3 { font-size:1.35rem; letter-spacing:-.03em; line-height:1.08; }
+    h4 { font-size:1rem; letter-spacing:-.02em; line-height:1.1; }
+
+    p { margin:0 0 14px; }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
+    button, input { font:inherit; }
+
+    .container { width:min(calc(100% - 34px), var(--max)); margin:0 auto; }
+    .narrow { width:min(calc(100% - 34px), var(--narrow)); margin:0 auto; }
+
+    .progress-bar {
+      position:fixed; top:0; left:0; width:0; height:3px; z-index:2200;
+      background:linear-gradient(90deg,var(--gold),var(--wine),var(--gold));
+      box-shadow:0 0 18px rgba(107,17,38,.28);
     }
 
-    .nav{
-      min-height:86px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+    .topbar {
+      position:sticky; top:0; z-index:1200;
+      backdrop-filter:blur(14px) saturate(130%);
+      background:rgba(255,252,248,.84);
+      border-bottom:1px solid rgba(86,20,33,.06);
+      transition:.25s ease;
+    }
+    .topbar.is-scrolled { box-shadow:0 10px 28px rgba(0,0,0,.06); }
+
+    .nav-shell {
+      min-height:92px;
+      display:flex; align-items:center; justify-content:space-between; gap:18px;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
+    .brand { display:flex; align-items:center; gap:14px; min-width:0; }
+    .brand-logo {
+      width:48px; height:48px; border-radius:15px; object-fit:contain; padding:6px;
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,246,236,.88));
+      border:1px solid rgba(90,15,30,.08);
+      box-shadow:0 10px 24px rgba(39,11,17,.06);
+    }
+    .brand-text strong {
+      display:block; letter-spacing:.16em; font-size:1rem; color:#2a171b;
+    }
+    .brand-text span {
+      display:block; color:var(--muted); font-size:.78rem;
     }
 
-    .brand-logo{
-      width:52px;
-      height:52px;
-      object-fit:contain;
-      flex-shrink:0;
-      border-radius:10px;
+    .nav-links { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .nav-links a {
+      padding:11px 15px; border-radius:999px; color:var(--muted); font-weight:700; transition:.22s ease;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color:var(--wine); background:rgba(255,255,255,.72);
     }
 
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      line-height:1.1;
-      min-width:0;
+    .hero {
+      padding:28px 0 20px;
     }
 
-    .brand-text strong{
-      font-size:1.18rem;
-      letter-spacing:.08em;
-      color:#2a1d18;
-      font-weight:800;
-    }
-
-    .brand-text span{
-      font-size:.84rem;
-      color:#7a6a60;
-      margin-top:6px;
-      white-space:nowrap;
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-
-    .nav-links a{
-      color:var(--muted);
-      font-weight:600;
-      padding:10px 14px;
-      border-radius:999px;
-      transition:.22s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active{
-      background:#fff;
-      color:var(--wine);
-      box-shadow:var(--shadow);
-    }
-
-    .hero{
-      padding:48px 0 24px;
-    }
-
-    .hero-card{
-      background:rgba(255,253,249,.92);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      border-radius:var(--radius-lg);
-      padding:42px;
+    .hero-shell {
+      background:
+        radial-gradient(circle at 14% 0%, rgba(255,255,255,.08), transparent 25%),
+        linear-gradient(180deg, #4a0916 0%, #34050f 100%);
+      color:#fff9f5;
+      border-radius:0 0 34px 34px;
       position:relative;
       overflow:hidden;
+      margin-bottom:28px;
     }
 
-    .hero-card::before{
+    .hero-shell::after {
       content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(circle at 18% 15%, rgba(199,164,97,.15), transparent 24%),
-        linear-gradient(180deg, rgba(255,255,255,.1), rgba(110,33,50,.02));
+      position:absolute; inset:auto -8% -18% auto;
+      width:360px; height:360px; border-radius:50%;
+      background:radial-gradient(circle, rgba(198,148,73,.12), transparent 70%);
       pointer-events:none;
     }
 
-    .breadcrumbs{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      color:var(--muted);
-      font-size:.92rem;
-      margin-bottom:18px;
-      position:relative;
-      z-index:1;
+    .hero-inner {
+      width:min(calc(100% - 34px), var(--max));
+      margin:0 auto;
+      padding:54px 0 62px;
+      text-align:center;
     }
 
-    .breadcrumbs a:hover{color:var(--wine)}
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.13em;
-      text-transform:uppercase;
-      color:var(--wine);
-      margin-bottom:16px;
-      position:relative;
-      z-index:1;
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:10px;
+      margin-bottom:18px; padding:10px 18px; border-radius:999px;
+      background:#fff9ef; color:var(--wine);
+      border:1px solid rgba(198,148,73,.35);
+      font-weight:800; font-size:.86rem;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
     }
 
-    .dot{
-      width:9px;
-      height:9px;
-      border-radius:50%;
-      background:linear-gradient(135deg,var(--gold),#f3e2b7);
-      box-shadow:0 0 0 8px rgba(199,164,97,.12);
+    .dot {
+      width:8px; height:8px; border-radius:50%;
+      background:linear-gradient(135deg,var(--gold),#f0ddb9);
+      box-shadow:0 0 0 7px rgba(198,148,73,.15);
     }
 
-    h1{
-      margin:0;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(2.8rem, 6vw, 5.1rem);
-      line-height:.94;
-      letter-spacing:-.04em;
-      color:#221714;
-      position:relative;
-      z-index:1;
+    .hero-inner h1 {
+      color:#fff8f4;
+      max-width:9ch;
+      margin:0 auto 18px;
     }
 
-    .hero-description{
-      margin:22px 0 0;
-      color:var(--muted);
-      font-size:1.06rem;
-      max-width:980px;
-      position:relative;
-      z-index:1;
+    .hero-highlight {
+      color:#c69449;
     }
 
-    .hero-top-actions{
-      margin-top:24px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      position:relative;
-      z-index:1;
+    .hero-description {
+      max-width:760px; margin:0 auto 28px;
+      color:rgba(255,242,236,.82);
+      font-size:1.12rem;
+      line-height:1.8;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:14px 20px;
-      border-radius:999px;
-      font-weight:800;
-      border:1px solid transparent;
-      transition:.22s ease;
-      cursor:pointer;
-      background:#fff;
-      color:var(--wine);
+    .hero-actions {
+      display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:24px;
     }
 
-    .btn-primary{
-      background:linear-gradient(135deg,var(--wine),var(--wine-2));
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center;
+      min-height:54px; padding:14px 22px; border-radius:999px; border:1px solid transparent;
+      font-weight:800; transition:.22s ease; cursor:pointer;
+    }
+    .btn-primary {
       color:#fff;
-      box-shadow:0 16px 30px rgba(110,33,50,.18);
+      background:linear-gradient(135deg,var(--wine-2),var(--gold));
+      box-shadow:0 18px 36px rgba(159,44,74,.24);
+    }
+    .btn-secondary {
+      color:#fff1eb; background:transparent; border-color:rgba(255,255,255,.3);
+    }
+    .btn:hover { transform:translateY(-2px); }
+
+    .section { padding:24px 0 18px; }
+    .section-header {
+      display:flex; align-items:end; justify-content:space-between; gap:18px; margin-bottom:22px;
+    }
+    .section-header h2 {
+      max-width:12ch;
+    }
+    .section-header p {
+      color:var(--muted); max-width:44ch;
     }
 
-    .btn-primary:hover{
-      transform:translateY(-2px);
-    }
-
-    .btn-secondary{
-      background:#fff;
-      color:var(--wine);
-      border-color:rgba(110,33,50,.12);
-    }
-
-    .hero-stats{
-      margin-top:28px;
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:16px;
-      position:relative;
-      z-index:1;
-    }
-
-    .stat{
-      background:rgba(255,255,255,.9);
-      border:1px solid rgba(86,50,38,.08);
-      border-radius:20px;
-      padding:18px;
-    }
-
-    .stat strong{
-      display:block;
-      color:var(--wine);
-      font-size:.8rem;
-      text-transform:uppercase;
-      letter-spacing:.09em;
-      margin-bottom:6px;
-    }
-
-    .stat span{
-      color:#2a1d18;
-      font-weight:700;
-      font-size:.98rem;
-    }
-
-    .layout{
-      display:grid;
-      grid-template-columns:300px minmax(0,1fr);
-      gap:24px;
-      padding:24px 0 80px;
-      align-items:start;
-    }
-
-    .sidebar{
-      position:sticky;
-      top:104px;
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
-
-    .side-card,
-    .content-card{
-      background:rgba(255,253,249,.94);
+    .paper {
+      background:linear-gradient(180deg, rgba(251,248,246,.95), rgba(247,242,238,.92));
       border:1px solid var(--line);
-      border-radius:28px;
+      border-radius:var(--radius);
       box-shadow:var(--shadow);
     }
 
-    .side-card{
+    .overview-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .panel { padding:30px; }
+    .panel p, .chapter-copy p, .info-box p, .chapter-note, .carousel-note {
+      color:var(--muted);
+    }
+
+    .callout {
+      margin-top:18px;
+      padding:18px 20px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,242,214,.60), rgba(255,255,255,.92));
+      border-left:4px solid var(--gold);
+      color:var(--muted);
+    }
+
+    .metrics {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:22px;
+    }
+    .metric {
+      padding:20px 16px;
+      border-radius:22px;
+      background:var(--white);
+      border:1px solid rgba(86,20,33,.08);
+      box-shadow:0 10px 24px rgba(39,11,17,.05);
+    }
+    .metric strong {
+      display:block; font-size:1.9rem; line-height:1; margin-bottom:8px;
+      font-weight:900; letter-spacing:-.04em; color:#171214;
+    }
+    .metric span {
+      display:block; color:var(--muted); font-weight:700; font-size:.92rem;
+    }
+
+    .toc-section {
+      padding-top:8px;
+    }
+
+    .toc-card {
       padding:24px;
     }
 
-    .side-card h2{
-      margin:0 0 12px;
-      font-size:1.02rem;
-      color:var(--wine);
+    .toc-card h3 {
+      font-size:1.9rem;
+      margin-bottom:8px;
+      letter-spacing:-.04em;
+      font-weight:900;
+      color:#181215;
     }
 
-    .search-box{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .search-box input{
-      flex:1 1 100%;
-      min-width:0;
-      border:none;
-      outline:none;
-      padding:14px 16px;
-      border-radius:16px;
-      border:1px solid rgba(86,50,38,.1);
-      background:#fff;
-      color:var(--text);
-      font-size:1rem;
-    }
-
-    .search-status{
-      margin-top:12px;
-      min-height:20px;
-      color:var(--muted);
-      font-size:.9rem;
-      font-weight:600;
-    }
-
-    .toc{
+    .toc-grid {
       display:grid;
-      gap:8px;
+      grid-template-columns:repeat(10, minmax(0,1fr));
+      gap:10px;
+      margin-top:18px;
     }
 
-    .toc a{
-      padding:10px 12px;
-      border-radius:14px;
-      color:var(--muted);
-      font-weight:600;
-      transition:.2s ease;
+    .toc-link {
+      display:flex; align-items:center; justify-content:center;
+      min-height:48px; border-radius:16px;
+      background:#f1ece9; color:var(--wine);
+      font-weight:900; transition:.2s ease;
+      border:1px solid rgba(86,20,33,.06);
     }
-
-    .toc a:hover,
-    .toc a.is-match{
+    .toc-link:hover {
+      transform:translateY(-2px);
       background:#fff;
+      box-shadow:0 10px 20px rgba(39,11,17,.06);
+    }
+
+    .curiosity-wrap {
+      position:relative;
+    }
+
+    .carousel-toolbar {
+      display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:18px;
+    }
+
+    .carousel-actions {
+      display:flex; align-items:center; gap:10px;
+    }
+
+    .carousel-btn {
+      width:44px; height:44px; border:none; border-radius:50%;
+      background:#fff; color:var(--wine);
+      box-shadow:0 10px 20px rgba(39,11,17,.07);
+      font-size:1.1rem; cursor:pointer; transition:.2s ease;
+      flex:0 0 auto;
+    }
+    .carousel-btn:hover { transform:translateY(-2px); }
+
+    .curiosity-rail {
+      display:flex; gap:18px;
+      overflow-x:auto; overflow-y:hidden;
+      scroll-snap-type:x proximity;
+      padding:4px 4px 14px;
+      scrollbar-width:none;
+    }
+    .curiosity-rail::-webkit-scrollbar { display:none; }
+
+    .curiosity-card {
+      flex:0 0 min(360px, 84vw);
+      scroll-snap-align:start;
+      padding:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(248,243,239,.92));
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+    .mini-tag {
+      display:inline-flex;
+      margin-bottom:12px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:rgba(107,17,38,.07);
       color:var(--wine);
+      font-size:.76rem;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
     }
 
-    .content{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
+    .chapters-wrap {
+      display:block;
     }
 
-    .content-card{
-      padding:32px;
-      transition:.2s ease;
+    .chapter-card {
+      margin-bottom:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,243,239,.94));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
     }
 
-    .content-card h2{
-      margin:0 0 14px;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:2rem;
-      letter-spacing:-.02em;
-      color:#241916;
+    .chapter-card summary {
+      list-style:none;
+      cursor:pointer;
+      display:flex; align-items:center; justify-content:space-between; gap:18px;
+      padding:22px 24px;
+    }
+    .chapter-card summary::-webkit-details-marker { display:none; }
+
+    .chapter-head {
+      display:flex; align-items:flex-start; gap:18px; min-width:0;
     }
 
-    .content-card h3{
-      margin:24px 0 10px;
-      font-size:1.08rem;
-      color:var(--wine);
+    .chapter-number {
+      flex:0 0 68px; width:68px; height:68px;
+      display:grid; place-items:center; border-radius:22px;
+      background:#f2ece8;
+      border:1px solid rgba(86,20,33,.07);
+      box-shadow:0 10px 20px rgba(39,11,17,.05);
+      font-size:1.48rem; font-weight:900; letter-spacing:-.04em; color:#211519;
     }
 
-    .content-card p{
-      margin:0 0 14px;
-      color:var(--muted);
+    .chapter-action {
+      display:inline-flex; align-items:center; gap:10px; color:var(--wine); font-weight:800; white-space:nowrap;
     }
-
-    .content-card ul{
-      margin:0;
-      padding-left:18px;
-      color:var(--muted);
+    .chapter-action::after {
+      content:"+";
+      width:30px; height:30px; display:grid; place-items:center; border-radius:50%;
+      background:rgba(107,17,38,.08);
     }
+    .chapter-card[open] .chapter-action::after { content:"–"; }
 
-    .content-card li + li{
-      margin-top:8px;
+    .chapter-body {
+      padding:0 24px 24px;
     }
-
-    .content-card.is-hidden{
-      display:none;
-    }
-
-    .content-card.is-highlight{
-      border-color:rgba(110,33,50,.3);
-      box-shadow:0 24px 50px rgba(110,33,50,.10);
-    }
-
-    .mini-grid{
+    .chapter-grid {
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:16px;
-      margin-top:18px;
     }
-
-    .mini-box{
-      background:linear-gradient(180deg,#fff,#fbf7f1);
-      border:1px solid rgba(199,164,97,.18);
-      border-radius:22px;
-      padding:20px;
-    }
-
-    .mini-box h3{
-      margin:0 0 10px;
-      color:var(--wine);
-      font-size:1rem;
-    }
-
-    .quote-box{
-      margin-top:18px;
-      padding:22px;
-      border-radius:22px;
-      background:linear-gradient(135deg, rgba(199,164,97,.12), rgba(110,33,50,.04));
-      border:1px solid rgba(199,164,97,.18);
-      color:#2a1d18;
-      font-weight:600;
-    }
-
-    .key-list{
-      display:grid;
-      gap:12px;
-      margin-top:14px;
-    }
-
-    .key-item{
-      padding:16px 18px;
-      border-radius:18px;
-      background:#fff;
-      border:1px solid rgba(86,50,38,.08);
-      color:var(--muted);
-    }
-
-    .chapters-grid{
-      display:grid;
-      gap:14px;
-      margin-top:18px;
-    }
-
-    details.chapter{
-      background:linear-gradient(180deg,#fff,#fcf8f2);
-      border:1px solid rgba(199,164,97,.18);
-      border-radius:20px;
-      overflow:hidden;
-      transition:.2s ease;
-    }
-
-    details.chapter.is-hidden{
-      display:none;
-    }
-
-    details.chapter.is-highlight{
-      border-color:rgba(110,33,50,.3);
-      box-shadow:0 20px 40px rgba(110,33,50,.08);
-    }
-
-    details.chapter summary{
-      list-style:none;
-      cursor:pointer;
-      padding:18px 20px;
-      font-weight:800;
-      color:#2a1d18;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-
-    details.chapter summary::-webkit-details-marker{
-      display:none;
-    }
-
-    .chapter-label{
-      color:var(--wine);
-      font-size:.88rem;
-      letter-spacing:.06em;
-      text-transform:uppercase;
-      font-weight:800;
-    }
-
-    .chapter-body{
-      padding:0 20px 20px;
-      color:var(--muted);
-      border-top:1px solid rgba(86,50,38,.08);
-    }
-
-    .chapter-body p{
-      margin:14px 0 0;
-    }
-
-    .chapter-body .focus{
-      margin-top:14px;
-      padding:14px 16px;
-      background:#fff;
-      border:1px solid rgba(86,50,38,.08);
-      border-radius:16px;
-      color:#5f4f48;
-    }
-
-    .qa-list{
-      display:grid;
-      gap:14px;
-      margin-top:16px;
-    }
-
-    .qa-item{
-      background:linear-gradient(180deg,#fff,#fcf8f2);
-      border:1px solid rgba(199,164,97,.18);
-      border-radius:20px;
+    .info-box {
       padding:18px;
+      border-radius:22px;
+      background:#fffdfa;
+      border:1px solid rgba(86,20,33,.08);
     }
 
-    .qa-item strong{
-      display:block;
-      color:#2a1d18;
-      margin-bottom:8px;
+    .footer {
+      margin-top:48px;
+      padding:44px 0 50px;
+      background:linear-gradient(180deg, rgba(71,12,26,.98), rgba(49,8,19,1));
+      color:rgba(255,241,234,.92);
+    }
+    .footer-grid {
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      gap:28px;
+    }
+    .footer-copy {
+      color:rgba(255,241,234,.76);
+      max-width:44ch;
+    }
+    .footer-links h4 {
+      color:#fff; margin-bottom:14px;
+    }
+    .footer-links a {
+      display:block; margin-bottom:10px; color:rgba(255,241,234,.76);
+    }
+    .footer-links a:hover { color:#fff; }
+
+    .to-top {
+      position:fixed; right:18px; bottom:18px; width:54px; height:54px; display:none;
+      place-items:center; border:none; border-radius:50%;
+      background:linear-gradient(135deg,var(--wine),var(--wine-2)); color:#fff; font-size:1.1rem;
+      box-shadow:0 18px 34px rgba(126,25,48,.24);
+      cursor:pointer; z-index:1400;
     }
 
-    .next-prev{
-      display:flex;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
-      margin-top:4px;
+    .reveal {
+      opacity:0; transform:translateY(22px);
+      transition:opacity .66s ease, transform .66s ease;
     }
-
-    .nav-card{
-      flex:1 1 260px;
-      background:rgba(255,253,249,.92);
-      border:1px solid var(--line);
-      border-radius:24px;
-      box-shadow:var(--shadow);
-      padding:22px;
+    .reveal.is-visible {
+      opacity:1; transform:none;
     }
+    .is-hidden { display:none !important; }
 
-    .nav-card small{
-      display:block;
-      color:var(--muted);
-      margin-bottom:6px;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      font-weight:700;
-    }
-
-    .nav-card strong{
-      color:var(--wine);
-      font-size:1.08rem;
-    }
-
-    footer{
-      padding:0 0 42px;
-      color:var(--muted);
-      font-size:.95rem;
-    }
-
-    @media (max-width:1100px){
-      .hero-stats{
+    @media (max-width:1180px) {
+      .overview-grid {
+        grid-template-columns:1fr;
+      }
+      .metrics {
         grid-template-columns:repeat(2,1fr);
       }
-      .layout{
-        grid-template-columns:1fr;
-      }
-      .sidebar{
-        position:static;
+      .toc-grid {
+        grid-template-columns:repeat(8, minmax(0,1fr));
       }
     }
 
-    @media (max-width:860px){
-      .nav{
-        padding:14px 0;
-        align-items:flex-start;
-        flex-direction:column;
+    @media (max-width:860px) {
+      .nav-links { display:none; }
+      .hero-inner {
+        padding:46px 0 54px;
       }
-      .nav-links{
-        width:100%;
-      }
-      .brand-text span{
-        white-space:normal;
-      }
-    }
-
-    @media (max-width:760px){
-      .hero{
-        padding-top:36px;
-      }
-      .hero-card,
-      .content-card{
-        padding:24px;
-      }
-      .hero-stats,
-      .mini-grid{
-        grid-template-columns:1fr;
-      }
-      .brand-logo{
-        width:46px;
-        height:46px;
-      }
-      .brand-text strong{
+      .hero-description {
         font-size:1rem;
       }
-      .brand-text span{
-        font-size:.78rem;
+      .hero-actions {
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .btn {
+        width:100%;
+      }
+      .section-header {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .metrics, .chapter-grid, .footer-grid {
+        grid-template-columns:1fr;
+      }
+      .toc-grid {
+        grid-template-columns:repeat(5, minmax(0,1fr));
+      }
+      .chapter-card summary {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .chapter-head {
+        flex-direction:column;
+      }
+      .carousel-toolbar {
+        flex-direction:column;
+        align-items:flex-start;
       }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="../index.html" class="brand" aria-label="soloteo">
-        <img src="../assets/img/logo-soloteo.png" alt="Logo soloteo" class="brand-logo" />
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="container nav-shell">
+      <a class="brand" href="../../index.html" aria-label="soloteo">
+       <img src="../assets/img/logo-soloteo.png" alt="Logo soloteo" class="brand-logo" />
         <div class="brand-text">
           <strong>SOLOTEO</strong>
-          <span>Teologia com profundidade, beleza e clareza</span>
+          <span>Teologia com profundidade, beleza e direção</span>
         </div>
       </a>
 
       <nav class="nav-links" aria-label="Principal">
-        <a href="../index.html">Início</a>
-        <a href="../categorias/categorias.html">Categorias</a>
-        <a href="../categorias/livros-da-biblia.html" class="active">Livros da Bíblia</a>
-        <a href="pentateuco.html">Pentateuco</a>
-        <a href="../categorias/apologetica.html">Apologética</a>
+        <a href="../../index.html">Início</a>
+        <a href="../../categorias/livros-da-biblia.html" class="active">Livros da Bíblia</a>
+        <a href="./pentateuco.html">Pentateuco</a>
+        <a href="../../categorias/trilhas-de-estudo.html">Trilhas</a>
+        <a href="../../categorias/apologetica.html">Apologética</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  
+  <main id="conteudo">
     <section class="hero">
-      <div class="container">
-        <div class="hero-card">
-          <div class="breadcrumbs">
-            <a href="../index.html">Início</a>
-            <span>•</span>
-            <a href="../categorias/livros-da-biblia.html">Livros da Bíblia</a>
-            <span>•</span>
-            <a href="pentateuco.html">Pentateuco</a>
-            <span>•</span>
-            <span>Levítico</span>
-          </div>
-
-          <div class="eyebrow"><span class="dot"></span> Estudo do livro</div>
-          <h1>Levítico</h1>
-          <p class="hero-description">
-            Levítico é o grande livro da santidade, do culto e da vida diante de Deus. Se Êxodo mostra a libertação e a formação inicial do povo, Levítico mostra como esse povo deve viver na presença do Senhor. Aqui aprendemos que redenção sem santidade é incompleta, e que proximidade com Deus exige reverência, pureza, obediência e adoração ordenada.
-          </p>
-
-          <div class="hero-top-actions">
-            <a href="#capitulos" class="btn btn-primary">Ir para os capítulos</a>
-            <a href="pentateuco-numeros.html" class="btn btn-secondary">Próximo livro: Números</a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat">
-              <strong>Categoria</strong>
-              <span>Pentateuco</span>
-            </div>
-            <div class="stat">
-              <strong>Ênfase</strong>
-              <span>Santidade, culto e pureza</span>
-            </div>
-            <div class="stat">
-              <strong>Estrutura</strong>
-              <span>27 capítulos</span>
-            </div>
-            <div class="stat">
-              <strong>Visão central</strong>
-              <span>Um povo santo diante de um Deus santo</span>
-            </div>
-          </div>
+      <div class="hero-shell">
+        <div class="hero-inner">
+        <div class="eyebrow"><span class="dot"></span> Jornadas guiadas</div>
+        <h1>Estudo de <span class="hero-highlight">Levítico</span> com profundidade</h1>
+        <p class="hero-description">
+          Aqui você vai encontrar um estudo aprofundado sobre o livro de Levítico, capítulo a capítulo, além de curiosidades, contexto bíblico e observações teológicas. Um acervo pensado para compreender santidade, adoração, expiação, sacerdócio e a presença de Deus no meio do seu povo.
+        </p>
+        <div class="hero-actions">
+          <a href="#capitulos" class="btn btn-primary">Explorar capítulos</a>
+          <a href="#curiosidades" class="btn btn-secondary">Ver curiosidades</a>
         </div>
       </div>
     </section>
 
-    <section class="container layout">
-      <aside class="sidebar">
-        <div class="side-card">
-          <h2>Buscar neste estudo</h2>
-          <div class="search-box">
-            <input
-              type="text"
-              id="pageSearch"
-              placeholder="Ex.: santidade, sacrifício, expiação, sacerdote, pureza, jubileu"
-              aria-label="Buscar em Levítico"
-            />
-            <button type="button" id="searchButton" class="btn btn-primary">Buscar</button>
-            <button type="button" id="clearButton" class="btn btn-secondary">Limpar</button>
+    <section class="section toc-section">
+      <div class="narrow">
+        <article class="paper toc-card reveal">
+          <h3>Navegação rápida</h3>
+          <div class="toc-grid"><a href="#cap-1" class="toc-link">1</a><a href="#cap-2" class="toc-link">2</a><a href="#cap-3" class="toc-link">3</a><a href="#cap-4" class="toc-link">4</a><a href="#cap-5" class="toc-link">5</a><a href="#cap-6" class="toc-link">6</a><a href="#cap-7" class="toc-link">7</a><a href="#cap-8" class="toc-link">8</a><a href="#cap-9" class="toc-link">9</a><a href="#cap-10" class="toc-link">10</a><a href="#cap-11" class="toc-link">11</a><a href="#cap-12" class="toc-link">12</a><a href="#cap-13" class="toc-link">13</a><a href="#cap-14" class="toc-link">14</a><a href="#cap-15" class="toc-link">15</a><a href="#cap-16" class="toc-link">16</a><a href="#cap-17" class="toc-link">17</a><a href="#cap-18" class="toc-link">18</a><a href="#cap-19" class="toc-link">19</a><a href="#cap-20" class="toc-link">20</a><a href="#cap-21" class="toc-link">21</a><a href="#cap-22" class="toc-link">22</a><a href="#cap-23" class="toc-link">23</a><a href="#cap-24" class="toc-link">24</a><a href="#cap-25" class="toc-link">25</a><a href="#cap-26" class="toc-link">26</a><a href="#cap-27" class="toc-link">27</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="curiosidades">
+      <div class="container curiosity-wrap">
+        <div class="carousel-toolbar reveal">
+          <div class="section-header" style="margin-bottom:0; width:100%;">
+            <div><h2>Curiosidades, fatos históricos e observações arqueológicas</h2></div>
           </div>
-          <div class="search-status" id="searchStatus"></div>
+          <div class="carousel-actions" aria-label="Controles do carrossel">
+            <button class="carousel-btn" id="curioPrev" type="button" aria-label="Rolar curiosidades para a esquerda">←</button>
+            <button class="carousel-btn" id="curioNext" type="button" aria-label="Rolar curiosidades para a direita">→</button>
+          </div>
         </div>
 
-        <div class="side-card">
-          <h2>Nesta página</h2>
-          <nav class="toc" id="tocLinks">
-            <a href="#introducao">Introdução geral</a>
-            <a href="#contexto">Contexto e propósito</a>
-            <a href="#estrutura">Estrutura do livro</a>
-            <a href="#temas">Temas centrais</a>
-            <a href="#como-ler">Como ler Levítico</a>
-            <a href="#capitulos">Estudo capítulo por capítulo</a>
-            <a href="#aplicacoes">Aplicações gerais</a>
-            <a href="#perguntas">Perguntas para estudo</a>
-            <a href="#cristo">Conexão com Cristo</a>
-          </nav>
+        <div class="curiosity-rail reveal" id="curiosityRail">
+          <article class="curiosity-card">
+            <span class="mini-tag">Santuário</span>
+            <h3>Levítico nasce no centro do acampamento</h3>
+            <p>Depois que a glória do Senhor enche o tabernáculo no fim de Êxodo, Levítico mostra como o povo pode se aproximar de um Deus santo sem ser consumido. O livro funciona como ponte entre presença e aproximação.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Sacrifícios</span>
+            <h3>As ofertas não são repetições sem sentido</h3>
+            <p>Holocausto, oferta de cereal, oferta pacífica, oferta pelo pecado e oferta pela culpa têm funções diferentes. Juntas, elas ensinam substituição, consagração, gratidão, reparação e comunhão.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Sacerdócio</span>
+            <h3>O sacerdote é mediador, não celebridade</h3>
+            <p>Levítico apresenta o sacerdote como servo da santidade divina. Sua função é discernir, ensinar, interceder e guardar a pureza do culto, não construir prestígio pessoal.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Pureza</span>
+            <h3>Impureza nem sempre significa pecado moral direto</h3>
+            <p>Muitas leis de pureza tratam de estados corporais, doenças e contatos que tornam alguém ritualmente impuro. O livro ensina que nem toda impureza é rebelião moral, embora toda aproximação de Deus exija ordem e discernimento.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Dia da Expiação</span>
+            <h3>Levítico 16 é o coração teológico do livro</h3>
+            <p>O Dia da Expiação reúne sangue, purificação do santuário, confissão de pecados e o envio do bode emissário. É o grande retrato da necessidade de expiação para que Deus continue habitando no meio do povo.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Santidade</span>
+            <h3>“Sede santos” alcança toda a vida</h3>
+            <p>Levítico não limita santidade ao altar. O livro fala de sexo, comida, trabalho, justiça, calendário, família, liderança e trato com o próximo. A santidade bíblica é total.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Tempo sagrado</span>
+            <h3>As festas moldam a memória coletiva</h3>
+            <p>As festas de Levítico não são apenas pausas sociais. Elas reorganizam o tempo do povo em torno da redenção, provisão, peregrinação, colheita, expiação e alegria diante do Senhor.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Final do livro</span>
+            <h3>Levítico termina falando de consagração e valor</h3>
+            <p>O livro fecha com votos, resgates e coisas dedicadas ao Senhor. Isso mostra que a santidade não é apenas sentimento; ela alcança compromissos concretos, bens e decisões práticas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="capitulos">
+      <div class="narrow chapters-wrap">
+        <div class="section-header reveal">
+          <div><h2>Levítico capítulo por capítulo</h2></div>
         </div>
 
-        <div class="side-card">
-          <h2>Navegação</h2>
-          <nav class="toc">
-            <a href="pentateuco-exodo.html">← Livro anterior: Êxodo</a>
-            <a href="pentateuco.html">Voltar ao Pentateuco</a>
-            <a href="pentateuco-numeros.html">Próximo livro: Números →</a>
-          </nav>
-        </div>
-      </aside>
+        <details class="chapter-card reveal" id="cap-1" data-title="Capítulo 1" data-keywords="levítico levitico capitulo 1 holocausto altar sacrifício">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">01</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 1 — O holocausto</h3>
+        <p>A aproximação começa com uma oferta totalmente entregue ao Senhor.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Levítico se abre com Deus falando da tenda da congregação e ensinando como o ofertante deve trazer um animal para holocausto. A oferta é colocada sobre o altar, o sangue é aspergido e a vítima é queimada por completo. O capítulo descreve diferentes possibilidades conforme as posses do ofertante, mas preserva o mesmo sentido: aproximar-se de Deus por meio de uma vida oferecida.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O holocausto comunica consagração total, substituição e aceitação diante de Deus. O ofertante não chega de mãos vazias nem nos próprios termos; aproxima-se por meio do sacrifício. Isso já mostra que, depois de Êxodo, a presença de Deus no meio do povo exige mediação santa.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo vai do princípio geral da oferta aos tipos possíveis de animal, mostrando ordem, acessibilidade e reverência. Há repetição ritual porque o texto quer formar a imaginação do povo: aproximar-se de Deus não é improviso.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 1 lembra que adoração verdadeira envolve entrega, custo e submissão. Aproximar-se de Deus não é apenas sentir algo, mas reconhecer que toda a vida deve ser colocada diante dele.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-      <div class="content" id="contentArea">
-        <article class="content-card" id="introducao" data-search="introdução geral levitico levítico santidade culto vida diante de deus povo santo pureza reverência ética">
-          <h2>Introdução geral</h2>
-          <p>
-            Levítico costuma ser visto como um livro difícil, mas ele é central para entender a vida da aliança. O ponto principal é simples e profundo: Deus habita no meio do seu povo, e por isso esse povo precisa aprender a viver em santidade.
-          </p>
-          <p>
-            O livro mostra que adoração, pureza, sacrifício, perdão, reverência e ética não são partes separadas da fé. Tudo está integrado. Levítico ensina que o relacionamento com Deus transforma culto, corpo, comunidade, liderança, calendário e consciência moral.
-          </p>
-          <div class="quote-box">
-            Levítico responde a uma pergunta essencial: como um povo imperfeito pode viver diante de um Deus santo?
-          </div>
-        </article>
+<details class="chapter-card reveal" id="cap-2" data-title="Capítulo 2" data-keywords="levítico levitico capitulo 2 oferta cereal farinha azeite">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">02</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 2 — A oferta de cereal</h3>
+        <p>Gratidão, sustento e trabalho humano também são colocados diante do Senhor.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo trata da oferta de cereal, feita com farinha, azeite, incenso e, em alguns casos, preparada de diferentes formas. Parte é queimada como memorial e parte fica para os sacerdotes. O texto também proíbe fermento e exige sal.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A oferta de cereal mostra que adoração não envolve apenas sangue, mas também fruto do trabalho humano consagrado a Deus. Ela aponta para gratidão, dependência e reconhecimento de que o sustento vem do Senhor. O sal da aliança reforça estabilidade, fidelidade e compromisso pactual.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O movimento do capítulo vai dos elementos da oferta às suas formas de preparo e aos limites estabelecidos. A intenção é ensinar que até aquilo que parece comum — farinha, azeite, pão — pode ser santificado.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 2 ensina que o cotidiano, o trabalho e o alimento também pertencem a Deus. Gratidão bíblica é concreta: oferece a ele não só palavras, mas os frutos da vida.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-        <article class="content-card" id="contexto" data-search="contexto propósito levítico tabernáculo aproximação expiação sacerdócio pureza presença de deus">
-          <h2>Contexto e propósito</h2>
-          <p>
-            Depois da construção do tabernáculo em Êxodo, surge a necessidade prática e espiritual de ensinar o povo a se aproximar de Deus corretamente. Levítico ocupa esse espaço. Ele não é um desvio da narrativa, mas seu aprofundamento.
-          </p>
-          <p>
-            O propósito do livro é formar uma comunidade santa, ensinar os meios de expiação, regular o sacerdócio, estabelecer padrões de pureza e mostrar que a presença de Deus exige distinção moral e reverência constante.
-          </p>
-          <div class="mini-grid">
-            <div class="mini-box">
-              <h3>Função espiritual</h3>
-              <p>Ensinar como o povo redimido deve viver em santidade diante de Deus.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Função comunitária</h3>
-              <p>Organizar culto, pureza, liderança e vida social sob a aliança.</p>
-            </div>
-          </div>
-        </article>
+<details class="chapter-card reveal" id="cap-3" data-title="Capítulo 3" data-keywords="levítico levitico capitulo 3 oferta pacífica comunhão">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">03</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 3 — A oferta pacífica</h3>
+        <p>Comunhão e paz diante de Deus são celebradas ao redor do altar.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>A oferta pacífica podia ser apresentada do gado ou do rebanho, macho ou fêmea sem defeito. O sangue era aspergido, a gordura era dedicada ao Senhor, e a refeição associada à oferta carregava forte sentido de comunhão.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Se o holocausto enfatiza total entrega, a oferta pacífica destaca comunhão, gratidão e alegria diante de Deus. Não é mera cessação de conflito; é paz relacional, celebrada na presença do Senhor. O altar, portanto, não é só lugar de juízo, mas também de comunhão restaurada.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo apresenta variações da oferta sem alterar sua essência. A gordura, considerada a melhor parte, pertence exclusivamente a Deus. A repetição reforça que paz verdadeira nasce de ordem sagrada.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 3 mostra que Deus não quer apenas perdoar; quer restaurar comunhão. A vida com ele inclui alegria reverente, celebração e partilha que brotam da reconciliação.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-        <article class="content-card" id="estrutura" data-search="estrutura levítico capítulos 1 7 8 10 11 16 17 22 23 25 26 27">
-          <h2>Estrutura do livro</h2>
-          <div class="mini-grid">
-            <div class="mini-box">
-              <h3>Capítulos 1–7</h3>
-              <p>Leis dos sacrifícios e princípios do culto.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Capítulos 8–10</h3>
-              <p>Consagração do sacerdócio e juízo sobre irreverência.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Capítulos 11–16</h3>
-              <p>Pureza ritual e o Dia da Expiação.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Capítulos 17–22</h3>
-              <p>Santidade na vida diária, moral e sacerdotal.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Capítulos 23–25</h3>
-              <p>Festas, calendário santo e princípios de descanso e redenção.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Capítulos 26–27</h3>
-              <p>Bênçãos, advertências e votos dedicados ao Senhor.</p>
-            </div>
-          </div>
-        </article>
+<details class="chapter-card reveal" id="cap-4" data-title="Capítulo 4" data-keywords="levítico levitico capitulo 4 pecado expiação sacerdote">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">04</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 4 — A oferta pelo pecado</h3>
+        <p>Quando o pecado contamina, Deus provê caminho de expiação.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo trata do pecado involuntário cometido pelo sacerdote ungido, por toda a congregação, por um líder ou por alguém do povo. O tipo de animal e o procedimento variam conforme a posição da pessoa, mas a lógica central permanece: o pecado contamina e requer expiação.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Aqui Levítico mostra que pecado não é apenas erro privado; ele afeta a relação com Deus e contamina o espaço santo. A gravidade varia conforme a responsabilidade de quem peca, mas ninguém está acima da necessidade de expiação. O livro ensina uma ética de responsabilidade espiritual.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto se organiza por categorias de pessoas e adapta o rito de acordo com a gravidade representativa do pecado. Isso cria sensibilidade para perceber que liderança e proximidade do sagrado ampliam responsabilidade.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 4 nos chama a abandonar a trivialização do pecado. Mesmo falhas sem intenção exigem seriedade, confissão e retorno à ordem de Deus.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-        <article class="content-card" id="temas" data-search="temas centrais santidade sacrifício pureza sacerdócio expiação vida comunitária">
-          <h2>Temas centrais de Levítico</h2>
-          <div class="key-list">
-            <div class="key-item">Santidade: Deus é santo, e seu povo deve refletir essa realidade.</div>
-            <div class="key-item">Sacrifício: aproximação de Deus exige expiação, consagração e reverência.</div>
-            <div class="key-item">Pureza: a vida diante de Deus envolve distinção e ordem.</div>
-            <div class="key-item">Sacerdócio: mediação, responsabilidade e serviço santo são levados a sério.</div>
-            <div class="key-item">Expiação: o pecado não é tratado como detalhe, mas como realidade grave que precisa de cobertura.</div>
-            <div class="key-item">Vida comunitária: santidade não se limita ao santuário; alcança a vida inteira.</div>
-          </div>
-        </article>
+<details class="chapter-card reveal" id="cap-5" data-title="Capítulo 5" data-keywords="levítico levitico capitulo 5 culpa confissão reparação">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">05</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 5 — Culpa, confissão e reparação</h3>
+        <p>O pecado precisa ser confessado e, quando cabível, reparado.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo reúne casos diversos de culpa: omissão de testemunho, contato impuro, juramentos precipitados e transgressões em coisas sagradas ou contra o próximo. Há espaço para oferta proporcional às posses, o que mostra a justiça misericordiosa da lei.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Levítico aprofunda aqui a relação entre culpa e confissão. Não basta reconhecer internamente; o pecador precisa assumir a transgressão e entrar no caminho da expiação. Além disso, algumas faltas exigem reparação concreta. A santidade de Deus não separa espiritualidade de responsabilidade prática.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo transita entre culpa ritual, ética e econômica, mostrando que o pecado atinge palavra, corpo, culto e relacionamentos. A gradação das ofertas torna o acesso ao perdão possível para pobres e ricos.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 5 ensina que confissão sem responsabilidade é incompleta. A restauração bíblica inclui verdade diante de Deus e, quando necessário, reparação diante do próximo.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-        <article class="content-card" id="como-ler" data-search="como ler levítico proximidade com deus regras antigas mediação santidade beleza do culto">
-          <h2>Como ler Levítico</h2>
-          <p>
-            O melhor modo de ler Levítico é enxergá-lo como um livro sobre proximidade com Deus. Em vez de tratá-lo apenas como lista de regras antigas, é melhor perceber sua lógica central: um Deus santo escolheu habitar no meio do povo, então tudo precisa ser ordenado à luz dessa realidade.
-          </p>
-          <p>
-            Também é importante ler o livro em duas direções ao mesmo tempo: primeiro, como instrução concreta para Israel; segundo, como revelação da seriedade do pecado, da necessidade de mediação e da beleza da santidade.
-          </p>
-        </article>
+<details class="chapter-card reveal" id="cap-6" data-title="Capítulo 6" data-keywords="levítico levitico capitulo 6 altar fogo sacerdotes">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">06</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 6 — Leis adicionais das ofertas</h3>
+        <p>O altar precisa permanecer aceso, e o serviço santo requer regularidade.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo traz instruções complementares aos sacerdotes sobre holocausto, oferta de cereal e oferta pelo pecado, além de tratar de fraude, mentira e reparação. O fogo do altar deveria permanecer continuamente aceso.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A ênfase recai sobre continuidade, vigilância e santidade do serviço. O culto não pode depender de improviso emocional; precisa de constância. O fogo perpétuo simboliza uma adoração sustentada, não esporádica. Já a seção sobre fraude mostra que o pecado contra o próximo também é ofensa ao Senhor.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto alterna entre leis sacerdotais internas e deveres éticos do povo. Assim, Levítico costura altar e vida comum: ambos pertencem ao domínio da santidade.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 6 desafia uma espiritualidade intermitente. O fogo no altar lembra que devoção exige perseverança, enquanto a restituição lembra que a fé precisa atingir a honestidade diária.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-        <article class="content-card" id="capitulos" data-search="capítulos capítulo por capítulo estudo detalhado levítico">
-          <h2>Estudo capítulo por capítulo</h2>
-          <div class="chapters-grid">
+<details class="chapter-card reveal" id="cap-7" data-title="Capítulo 7" data-keywords="levítico levitico capitulo 7 ofertas sacerdotais porções">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">07</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 7 — O manual sacerdotal se completa</h3>
+        <p>Santidade, porções sagradas e limites alimentares organizam o culto.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo conclui a seção dos sacrifícios com instruções sobre a oferta pela culpa, a oferta pacífica e as porções reservadas aos sacerdotes. Também define o que pode ou não ser comido, por quem e em que circunstâncias.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A teologia do capítulo mostra que o sagrado precisa de fronteiras. Nem toda carne sacrificada pode ser tratada como refeição comum. O culto cria um mundo moral e simbólico ordenado, onde comunhão, pureza e distinção caminham juntas.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto fecha o bloco inicial de Levítico resumindo a legislação das ofertas e reforçando participação sacerdotal, tempos adequados e proibições. É como um manual de aproximação santa.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 7 ensina que adoração madura inclui discernimento. Nem tudo é “tanto faz” diante de Deus. A graça que abre caminho também ensina reverência e limite.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 1 holocausto entrega completa aproximação reverência mediação">
-              <summary><span>Capítulo 1</span><span class="chapter-label">Holocausto</span></summary>
-              <div class="chapter-body">
-                <p>O livro começa com o holocausto, oferta que simboliza entrega completa. O sacrifício não é tratado como gesto mágico, mas como ato de aproximação reverente diante de Deus.</p>
-                <p>Esse início é significativo: a vida diante do Senhor começa com reconhecimento de que o ser humano não se aproxima de Deus de qualquer maneira.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> aproximação de Deus exige reverência, entrega e mediação.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-8" data-title="Capítulo 8" data-keywords="levítico levitico capitulo 8 consagração sacerdócio">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">08</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 8 — A consagração de Arão e seus filhos</h3>
+        <p>O sacerdócio é estabelecido publicamente diante do povo.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Moisés reúne a congregação, veste Arão e seus filhos com as vestes sagradas, unge o tabernáculo e realiza os sacrifícios de consagração. O processo dura sete dias e coloca o sacerdócio sob ordem rigorosa.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O sacerdócio não nasce de autoescolha; é instituído por Deus. A consagração mostra que servir perto do altar exige separação, unção, sangue e obediência. Aproximação privilegiada do santo nunca reduz responsabilidade — aumenta.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo tem ritmo litúrgico e solene: assembleia, vestes, unção, sacrifícios, permanência. A intenção é gravar no povo que mediação sacerdotal é assunto público, visível e cuidadosamente regulado.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 8 lembra que servir a Deus não é questão de carisma desgovernado. Todo ministério sério precisa nascer de chamado, preparo, submissão e santificação.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 2 oferta de cereais gratidão provisão consagração">
-              <summary><span>Capítulo 2</span><span class="chapter-label">Oferta de cereais</span></summary>
-              <div class="chapter-body">
-                <p>A oferta de cereais amplia a visão do culto, mostrando que adoração também envolve reconhecimento da provisão divina e dedicação dos frutos da vida.</p>
-                <p>Nem tudo no culto gira em torno de culpa; há também gratidão, consagração e honra prestada ao Senhor com aquilo que sustenta a existência diária.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> adoração inclui gratidão concreta e consagração do sustento recebido.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-9" data-title="Capítulo 9" data-keywords="levítico levitico capitulo 9 glória fogo altar">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">09</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 9 — O início do ministério sacerdotal</h3>
+        <p>Depois da consagração, a glória de Deus responde ao culto obediente.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>No oitavo dia, Arão oferece os sacrifícios ordenados por Deus por si mesmo e pelo povo. Ao final, a glória do Senhor aparece e fogo sai de diante dele para consumir a oferta sobre o altar, levando o povo a gritar e prostrar-se.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A resposta divina mostra aceitação, presença e aprovação do culto obediente. O fogo que consome a oferta não é espetáculo vazio; é sinal de que Deus está no centro do sistema sacrificial. A santidade não é apenas exigência, mas também presença que se manifesta.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo se move do rito inaugural ao clímax da glória divina. Depois dos longos preparativos dos capítulos anteriores, chega o momento da confirmação pública.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 9 ensina que a obediência humilde abre espaço para alegria reverente. Quando Deus está no centro, o culto produz assombro, não banalidade.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 3 oferta pacífica comunhão paz reconciliação">
-              <summary><span>Capítulo 3</span><span class="chapter-label">Oferta pacífica</span></summary>
-              <div class="chapter-body">
-                <p>A oferta pacífica destaca comunhão. O culto não trata apenas de perdão; também aponta para relação restaurada e convivência diante de Deus.</p>
-                <p>Esse capítulo ensina que a presença divina não é apenas tribunal; é também lugar de paz e comunhão pactuada.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a reconciliação com Deus conduz à comunhão e à paz.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-10" data-title="Capítulo 10" data-keywords="levítico levitico capitulo 10 nadabe abiú fogo estranho">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">10</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 10 — Nadabe e Abiú</h3>
+        <p>Santidade desprezada transforma privilégio em juízo.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Nadabe e Abiú, filhos de Arão, oferecem fogo estranho perante o Senhor, algo que ele não lhes ordenara. Fogo sai da presença divina e os consome. Depois disso, Arão e seus filhos recebem instruções severas sobre discernimento, sobriedade e responsabilidade sacerdotal.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O capítulo mostra que proximidade de Deus não autoriza criatividade irreverente. O problema não é apenas ritual; é tratar o santo como se pudesse ser manipulado. O Senhor afirma: serei santificado naqueles que se chegam a mim. Quanto mais perto do altar, maior o peso da obediência.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>A narrativa passa abruptamente da glória do capítulo 9 ao juízo do capítulo 10. Esse contraste é deliberado: a mesma presença que aceita o culto obediente julga o culto presunçoso.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 10 é um chamado duro à reverência. Experiência espiritual sem temor de Deus pode se tornar arrogância religiosa. O santo continua sendo santo.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 4 oferta pelo pecado culpa impureza expiação">
-              <summary><span>Capítulo 4</span><span class="chapter-label">Oferta pelo pecado</span></summary>
-              <div class="chapter-body">
-                <p>Levítico mostra aqui a gravidade do pecado, inclusive quando ele ocorre sem plena consciência imediata. Isso revela que a santidade de Deus não é medida apenas pela intenção subjetiva do ser humano.</p>
-                <p>O capítulo comunica que o pecado contamina, rompe e precisa ser tratado seriamente para que a vida diante de Deus continue possível.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> o pecado tem peso real e precisa de expiação verdadeira.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-11" data-title="Capítulo 11" data-keywords="levítico levitico capitulo 11 animais limpos impuros">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">11</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 11 — Animais limpos e imundos</h3>
+        <p>O povo aprende a discernir santidade até na alimentação.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo lista animais permitidos e proibidos entre os terrestres, aquáticos, aves e pequenos animais. A alimentação torna-se campo de distinção pactual e pedagógica.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>As leis alimentares mostram que santidade não fica restrita ao tabernáculo. O corpo, a mesa e os hábitos cotidianos também entram no horizonte da obediência. Israel aprenderia, todos os dias, que pertencia a Deus e que distinção santa marca até o apetite.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto classifica os animais por categorias e repete a lógica do discernimento. Ao fim, o fundamento é explicitado: sede santos, porque eu sou santo. A ética alimentar está enraizada no caráter de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 11 nos lembra que discipulado bíblico alcança práticas concretas. A vida santa não é abstrata; ela educa desejos, hábitos e rotinas.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 5 oferta pela culpa reparação responsabilidade moral">
-              <summary><span>Capítulo 5</span><span class="chapter-label">Oferta pela culpa</span></summary>
-              <div class="chapter-body">
-                <p>O livro avança mostrando que culpa espiritual e reparação prática caminham juntas. Pecado não é apenas problema abstrato; ele atinge relações, responsabilidade e consciência.</p>
-                <p>A adoração bíblica não separa perdão de responsabilidade moral. Onde houve dano, a consciência da culpa precisa levar também à reparação devida.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> perdão não elimina a responsabilidade de lidar seriamente com a culpa.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-12" data-title="Capítulo 12" data-keywords="levítico levitico capitulo 12 parto purificação">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">12</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 12 — Purificação após o parto</h3>
+        <p>A vida que nasce também lembra a necessidade de purificação ritual.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo regula o período de purificação da mulher após o parto, com tempos diferentes no caso de menino ou menina e com oferta prevista ao final, inclusive alternativa para quem fosse pobre.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Levítico não trata o parto como pecado, mas como realidade que envolve fluxos, sangue e contato com a fragilidade da condição humana. A pureza ritual ensina que mesmo experiências boas e naturais acontecem num mundo marcado por finitude e necessidade de aproximação ordenada de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto é breve e direto, mostrando tempos, circuncisão do menino e oferta final. A concisão destaca seu caráter regulador dentro de um sistema maior de pureza.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 12 ensina que a Bíblia consegue afirmar o valor da vida e, ao mesmo tempo, manter sensibilidade para a santidade divina. O cotidiano mais íntimo também entra sob a pedagogia de Deus.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulos 6 7 sacrifícios regras complementares ordem disciplina culto">
-              <summary><span>Capítulos 6–7</span><span class="chapter-label">Regras complementares dos sacrifícios</span></summary>
-              <div class="chapter-body">
-                <p>Esses capítulos detalham o funcionamento do sistema sacrificial e a responsabilidade sacerdotal nele. A repetição não é excesso; é pedagogia.</p>
-                <p>Deus ensina o povo a tratar o sagrado com constância, cuidado e precisão. A vida de adoração não pode ser improvisada.</p>
-                <div class="focus"><strong>Foco dos capítulos:</strong> o culto exige ordem, disciplina e respeito pelo que Deus estabeleceu.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-13" data-title="Capítulo 13" data-keywords="levítico levitico capitulo 13 lepra manchas sacerdote">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">13</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 13 — Diagnóstico de doenças e manchas</h3>
+        <p>O sacerdote discerne sinais de impureza na pele, nas roupas e na comunidade.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo descreve detalhadamente manchas, inchaços, feridas, alterações de pelos e sinais em tecidos. O sacerdote examina, isola, reavalia e declara puro ou impuro.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Aqui a santidade assume forma diagnóstica. O sacerdote não é apenas sacrificador; é também guardião do discernimento comunitário. O objetivo não é humilhar o doente, mas proteger o acampamento e preservar a ordem do santo no meio do povo.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo funciona como manual de inspeção, com repetições minuciosas. Essa minúcia forma uma comunidade atenta, capaz de distinguir entre casos semelhantes sem agir por impulsividade.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 13 nos ensina o valor do discernimento paciente. Nem tudo pode ser resolvido por impressão rápida; às vezes é preciso examinar, esperar e julgar com responsabilidade.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 8 consagração arão filhos sacerdócio serviço santo">
-              <summary><span>Capítulo 8</span><span class="chapter-label">Consagração de Arão e seus filhos</span></summary>
-              <div class="chapter-body">
-                <p>O sacerdócio é formalmente consagrado. O capítulo mostra que servir diante de Deus não é apenas executar função religiosa, mas entrar numa responsabilidade santa.</p>
-                <p>A consagração revela separação, preparação e submissão. Quem ministra no sagrado deve primeiro ser moldado por ele.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> serviço santo exige consagração, não apenas capacidade técnica.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-14" data-title="Capítulo 14" data-keywords="levítico levitico capitulo 14 purificação leproso casa">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">14</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 14 — Purificação do leproso e da casa</h3>
+        <p>Quando há restauração, ela também precisa ser reconhecida publicamente.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo mostra o rito de purificação para quem foi curado da doença de pele, incluindo aves, madeira de cedro, hissopo, lavagem, sacrifícios e unção. Também trata de casas com sinais persistentes de contaminação.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Levítico 14 revela que Deus não se ocupa apenas de diagnosticar impureza; também provê caminho de reintegração. A pureza restaurada precisa ser declarada e celebrada. Até a casa pode entrar na lógica da santidade, mostrando que espaço e comunidade se afetam mutuamente.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo parte do exame externo, avança para os ritos de readmissão e depois amplia a lógica para as casas. A ordem mostra que pureza é assunto pessoal e comunitário.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 14 ensina que restauração verdadeira não é invisível. Deus também se importa com o retorno, a readmissão e a cura reconhecida dentro da comunidade.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 9 glória do senhor presença sacerdotes ministério">
-              <summary><span>Capítulo 9</span><span class="chapter-label">Início do ministério sacerdotal</span></summary>
-              <div class="chapter-body">
-                <p>Os sacerdotes entram em serviço, e a glória do Senhor se manifesta. O capítulo mostra que o culto ordenado, segundo a vontade de Deus, resulta em confirmação da presença divina.</p>
-                <p>Há aqui um equilíbrio importante: reverência humana e resposta divina. O culto não é espetáculo humano, mas encontro regulado pelo próprio Deus.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> quando Deus é honrado como deseja, sua presença se manifesta com peso e beleza.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-15" data-title="Capítulo 15" data-keywords="levítico levitico capitulo 15 fluxos impureza corpo">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">15</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 15 — Fluxos corporais e impureza</h3>
+        <p>A fragilidade do corpo humano exige cuidado e discernimento diante do santo.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo trata de fluxos masculinos e femininos, estabelecendo tempos, lavagens e procedimentos para quem se torna ritualmente impuro por essas condições.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A intenção não é produzir vergonha corporal, mas ensinar que a vida humana, em sua dimensão física, participa da realidade da impureza num mundo quebrado. Deus educa o povo a lidar com o corpo com seriedade, sem banalizar a aproximação do sagrado.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto organiza casos masculinos e femininos, distinguindo fluxos habituais e anormais. A repetição reforça atenção e responsabilidade na vida comum.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 15 nos lembra que a Bíblia não trata o corpo como algo irrelevante. Espiritualidade madura inclui respeito pela realidade concreta da existência humana.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 10 nadabe abiú irreverência fogo estranho juízo">
-              <summary><span>Capítulo 10</span><span class="chapter-label">Nadabe e Abiú</span></summary>
-              <div class="chapter-body">
-                <p>O juízo sobre Nadabe e Abiú é severo e marcante. O capítulo mostra que irreverência no trato com o sagrado não é questão pequena.</p>
-                <p>Levítico deixa claro que proximidade com Deus não autoriza trivialização da santidade. Quanto maior a proximidade, maior a responsabilidade.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> santidade divina não pode ser tratada com improviso irreverente.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-16" data-title="Capítulo 16" data-keywords="levítico levitico capitulo 16 dia expiação bode emissário">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">16</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 16 — O Dia da Expiação</h3>
+        <p>O grande centro de Levítico mostra como a culpa do povo e a impureza do santuário são tratadas.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>No contexto da morte de Nadabe e Abiú, Deus regula a entrada do sumo sacerdote no Santo dos Santos. Uma vez por ano, com sangue e ritos específicos, Arão deveria purificar o santuário, expiar por si e pelo povo, e enviar o bode emissário ao deserto após confessar sobre ele as iniquidades de Israel.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Levítico 16 é o coração teológico do livro. A presença de Deus no centro do acampamento exige expiação contínua porque o pecado do povo contamina até o santuário. O Dia da Expiação mostra substituição, remoção de culpa e renovação da possibilidade de habitação divina entre os israelitas.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo vai do perigo da entrada irreverente à ordem da entrada anual, depois aos sacrifícios, à purificação do santuário e ao envio do bode emissário. O movimento inteiro comunica seriedade e graça.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 16 nos ensina que perdão não é algo superficial. A reconciliação com Deus é custosa, santa e profundamente necessária. Sem expiação, a comunhão se desfaz.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 11 animais puros impuros distinção identidade povo santo">
-              <summary><span>Capítulo 11</span><span class="chapter-label">Animais puros e impuros</span></summary>
-              <div class="chapter-body">
-                <p>Esse capítulo trata de distinções alimentares e pureza ritual. Mais do que dieta, ele ensina discernimento, separação e consciência de pertencimento.</p>
-                <p>O povo é chamado a viver de maneira distinta porque pertence a um Deus santo. A santidade atinge até práticas aparentemente comuns.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a identidade do povo de Deus se expressa também em distinções concretas do cotidiano.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-17" data-title="Capítulo 17" data-keywords="levítico levitico capitulo 17 sangue altar vida">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">17</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 17 — O sangue pertence a Deus</h3>
+        <p>Sacrifício, alimento e expiação são reorganizados ao redor do santuário.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo proíbe oferecer sacrifícios fora do tabernáculo e veta o consumo de sangue. Também trata do uso apropriado do sangue em animais caçados e de sua cobertura com terra.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O sangue simboliza vida e é dado por Deus sobre o altar para fazer expiação. Por isso, não pode ser consumido trivialmente. Levítico conecta centralização do culto, rejeição à idolatria e respeito pela vida como dons pertencentes ao Senhor.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto parte da proibição de sacrifícios paralelos, combate práticas idólatras e culmina na teologia do sangue. O centro não é restrição arbitrária, mas reverência diante da vida dada por Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 17 confronta a banalização do sagrado. Nem vida, nem culto, nem mesa podem ser organizados como se Deus não tivesse reivindicação sobre eles.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 12 purificação parto pureza ritual vida">
-              <summary><span>Capítulo 12</span><span class="chapter-label">Purificação após parto</span></summary>
-              <div class="chapter-body">
-                <p>O capítulo regula processos ligados à pureza ritual após o nascimento. Ele não desvaloriza a vida, mas mostra que o sistema de culto tratava com seriedade as fronteiras entre puro e impuro.</p>
-                <p>Levítico ensina que o acesso ao sagrado precisa ser discernido e ordenado, mesmo em momentos associados à alegria e continuidade da vida.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> até os ciclos normais da vida precisam ser compreendidos à luz da santidade de Deus.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-18" data-title="Capítulo 18" data-keywords="levítico levitico capitulo 18 sexualidade pureza">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">18</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 18 — Santidade sexual</h3>
+        <p>O povo de Deus não deve reproduzir a moral desordenada das nações.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo proíbe uma série de relações sexuais ilícitas, incluindo incesto, adultério, práticas pagãs e outras formas de perversão que caracterizavam o Egito e Canaã.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A santidade aqui alcança intimidade, desejo e estrutura familiar. Deus não trata a sexualidade como campo autônomo; ela deve ser vivida dentro de limites santos. O motivo é pactual: Israel pertence ao Senhor e não pode imitar os padrões das nações ao redor.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto começa com a ordem para não viver segundo Egito e Canaã, expõe as proibições e conclui lembrando que essas práticas contaminaram a terra. Santidade pessoal e estabilidade comunitária estão ligadas.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 18 ensina que liberdade sem ordem de Deus produz degradação. A pureza sexual bíblica não é repressão vazia, mas proteção da aliança, da família e da dignidade humana.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulos 13 14 doenças de pele purificação reintegração impureza">
-              <summary><span>Capítulos 13–14</span><span class="chapter-label">Doenças de pele e purificação</span></summary>
-              <div class="chapter-body">
-                <p>Esses capítulos tratam de impurezas visíveis e do processo de diagnóstico e reintegração. A preocupação não é apenas médica, mas simbólica e comunitária.</p>
-                <p>O pecado e a impureza, na pedagogia do livro, não devem ser banalizados. A restauração, porém, também é parte importante do processo. O isolado pode ser reintegrado mediante purificação.</p>
-                <div class="focus"><strong>Foco dos capítulos:</strong> a comunidade santa precisa lidar com impureza de modo sério, mas também com caminhos de restauração.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-19" data-title="Capítulo 19" data-keywords="levítico levitico capitulo 19 amor próximo justiça">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">19</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 19 — Santidade em todas as áreas</h3>
+        <p>O capítulo reúne um mosaico de mandamentos que mostram a abrangência da vida santa.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Aqui aparecem mandamentos sobre pais, sábado, idolatria, colheita, mentira, justiça, tratamento do pobre, do estrangeiro, relações sociais, sexualidade, comércio e amor ao próximo.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Levítico 19 é uma vitrine da santidade integral. O mesmo Deus que regula o altar também regula campo, balança, tribunal, fala, trabalho e vizinhança. A expressão “eu sou o Senhor” costura o capítulo, lembrando que toda ética nasce da identidade de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto alterna temas cúlticos, familiares, econômicos e judiciais, criando um retrato amplo da vida pactual. Não se trata de moral fragmentada, mas de uma existência inteira organizada pelo Senhor.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 19 é um antídoto contra a religiosidade de compartimentos. Quem pertence a Deus deve revelar esse pertencimento na devoção e na convivência.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 15 fluxos corporais corpo pureza vida concreta">
-              <summary><span>Capítulo 15</span><span class="chapter-label">Fluxos corporais e pureza</span></summary>
-              <div class="chapter-body">
-                <p>O texto continua mostrando que o corpo e seus processos não estão fora da atenção espiritual da aliança. Levítico não separa radicalmente vida corporal e vida diante de Deus.</p>
-                <p>Isso não significa desprezo pelo corpo, mas o reconhecimento de que o sagrado exige ordem, consciência e distinção.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a santidade bíblica alcança o corpo e a vida concreta, não apenas a esfera interior.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-20" data-title="Capítulo 20" data-keywords="levítico levitico capitulo 20 penas idolatria">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">20</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 20 — Penas e seriedade da santidade</h3>
+        <p>Alguns pecados ameaçam de tal modo a comunidade que exigem sanções máximas.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo retoma várias proibições, especialmente ligadas à idolatria e à sexualidade, agora enfatizando as penas correspondentes. Também reforça a distinção entre Israel e as nações.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A teologia aqui é dura porque a santidade comunitária está em jogo. Levítico ensina que certas práticas não são apenas desvios privados; corroem a aliança e contaminam o povo como corpo coletivo. O juízo protege a identidade santa da comunidade.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo funciona como contraponto ao 18: lá vieram as proibições, aqui vêm as consequências. Essa dupla mostra que a lei de Deus carrega peso real.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 20 nos obriga a abandonar a ideia de que Deus trata o mal com indiferença. A santidade não é decoração ética; é questão de vida comunitária diante do Senhor.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 16 dia da expiação culpa mediação substituição">
-              <summary><span>Capítulo 16</span><span class="chapter-label">Dia da Expiação</span></summary>
-              <div class="chapter-body">
-                <p>Este é um dos capítulos centrais de Levítico. O Dia da Expiação concentra a necessidade de purificação do santuário, do sacerdócio e do povo.</p>
-                <p>O capítulo mostra que o pecado não pode ser ignorado e que a reconciliação exige mediação, substituição e expiação. É o ponto alto da lógica sacrificial do livro.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a culpa humana exige tratamento sério, e Deus provê caminho de expiação.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-21" data-title="Capítulo 21" data-keywords="levítico levitico capitulo 21 sacerdotes santidade">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">21</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 21 — Santidade dos sacerdotes</h3>
+        <p>Quem ministra diante de Deus assume padrões ainda mais rigorosos.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo estabelece restrições especiais para os sacerdotes em relação a luto, casamento, pureza e integridade corporal no serviço. O sumo sacerdote recebe exigências ainda mais elevadas.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A proximidade do altar amplia responsabilidade. O sacerdócio representa o povo diante de Deus, por isso sua vida precisa refletir separação específica. Levítico mostra que liderança espiritual não reduz exigência moral; intensifica-a.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto vai dos sacerdotes em geral ao sumo sacerdote e depois às limitações de quem poderia se aproximar do pão de Deus. A progressão evidencia graus de responsabilidade dentro do serviço sagrado.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 21 fala com força a todo tipo de liderança: proximidade de coisas santas nunca deve ser tratada como licença para relaxamento moral.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 17 sangue santidade vida expiação">
-              <summary><span>Capítulo 17</span><span class="chapter-label">Sangue e santidade da vida</span></summary>
-              <div class="chapter-body">
-                <p>O sangue é tratado com reverência porque está ligado à vida. O capítulo protege o valor da vida e reforça a seriedade da expiação.</p>
-                <p>Levítico ensina que a vida pertence a Deus e não pode ser tratada de maneira banal, seja no culto, seja nas práticas do povo.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a vida é sagrada porque pertence ao Deus que a dá.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-22" data-title="Capítulo 22" data-keywords="levítico levitico capitulo 22 ofertas sem defeito">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">22</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 22 — Ofertas santas e reverência</h3>
+        <p>Os sacerdotes devem tratar as coisas santas com máxima seriedade.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo regula quem pode comer das porções sagradas, em que condições, e quais animais podem ser oferecidos. O foco é evitar profanação do que foi separado para o Senhor.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A santidade de Deus se expressa também na integridade do culto. O que é oferecido a ele não pode ser defeituoso, e o que lhe pertence não pode ser manipulado de modo casual. Reverência é qualidade essencial da adoração.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto une pureza sacerdotal e qualidade das ofertas, mostrando que tanto o ministro quanto aquilo que é trazido ao altar precisam corresponder à santidade divina.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 22 ensina que excelência diante de Deus não é performance estética, mas integridade reverente. O santo não deve receber o resto, o defeituoso ou o negligenciado.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 18 pureza moral sexualidade família limites">
-              <summary><span>Capítulo 18</span><span class="chapter-label">Pureza moral e sexual</span></summary>
-              <div class="chapter-body">
-                <p>O capítulo deixa claro que santidade não é apenas ritual; ela também é moral. O povo não deve copiar os padrões corrompidos das nações ao redor.</p>
-                <p>Levítico mostra que o corpo, a sexualidade e os vínculos familiares devem ser vividos dentro dos limites estabelecidos por Deus.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a aliança com Deus exige santidade também na vida moral e sexual.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-23" data-title="Capítulo 23" data-keywords="levítico levitico capitulo 23 festas calendário">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">23</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 23 — As festas do Senhor</h3>
+        <p>O tempo do povo é reorganizado pela memória da redenção e da presença de Deus.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo apresenta o sábado e as festas anuais: Páscoa, Pães Asmos, Primícias, Semanas, Trombetas, Dia da Expiação e Tabernáculos. O calendário inteiro ganha significado teológico.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>As festas fazem o povo viver no ritmo da aliança. O tempo deixa de ser apenas sucessão natural e se torna espaço de memória, gratidão, descanso, arrependimento e alegria diante do Senhor. Deus santifica não só pessoas e lugares, mas também tempos.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O movimento do capítulo vai do ritmo semanal às grandes celebrações anuais, conduzindo o povo por um ciclo de redenção, colheita, expiação e peregrinação.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 23 nos lembra que o tempo também discipula. Quem não organiza seus dias diante de Deus acaba sendo moldado por outros altares.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 19 código de santidade amor ao próximo justiça verdade">
-              <summary><span>Capítulo 19</span><span class="chapter-label">Código de santidade</span></summary>
-              <div class="chapter-body">
-                <p>Esse capítulo é uma das passagens mais ricas do livro. Ele une santidade, justiça, verdade, amor ao próximo, respeito, reverência e responsabilidade social.</p>
-                <p>Aqui se vê claramente que a santidade bíblica não se limita ao altar. Ela alcança comércio, relações, vulneráveis, fala, julgamento e convivência.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> ser santo é refletir o caráter de Deus na vida inteira.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-24" data-title="Capítulo 24" data-keywords="levítico levitico capitulo 24 nome de Deus blasfêmia">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">24</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 24 — Lâmpadas, pão e o nome santo</h3>
+        <p>A luz, a provisão e a reverência pelo nome de Deus são reafirmadas.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo fala do azeite para o candelabro, do pão da proposição e do caso do homem que blasfemou o nome do Senhor, resultando em juízo. Também reafirma princípios de justiça proporcional.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O nome de Deus é santo e não pode ser tratado com desprezo. Ao lado disso, a luz contínua e o pão diante do Senhor lembram presença constante, provisão e ordem cultual. O capítulo une adoração contínua e seriedade da fala sobre Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>Primeiro vem a manutenção do santuário, depois o caso judicial e por fim a reafirmação de princípios de justiça. O contraste mostra que culto e ética pública estão integrados.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 24 ensina que a maneira como falamos de Deus revela o estado do coração. Reverência verdadeira aparece na boca, no culto e no juízo justo.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 20 penas seriedade da aliança pecado grave">
-              <summary><span>Capítulo 20</span><span class="chapter-label">Penas e seriedade da aliança</span></summary>
-              <div class="chapter-body">
-                <p>O capítulo apresenta sanções severas para pecados graves. O objetivo não é crueldade arbitrária, mas mostrar a profundidade da santidade da aliança.</p>
-                <p>Levítico insiste que o pecado destrói não apenas indivíduos, mas a comunidade inteira. Por isso, ele não pode ser relativizado.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> Deus leva a sério aquilo que ameaça corromper profundamente o povo da aliança.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-25" data-title="Capítulo 25" data-keywords="levítico levitico capitulo 25 jubileu ano sabático">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">25</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 25 — Ano sabático e jubileu</h3>
+        <p>A terra, o tempo, a economia e a liberdade pertencem ao Senhor.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo estabelece o descanso da terra a cada sétimo ano e o jubileu no quinquagésimo ano, quando propriedades retornam, servidões são limitadas e o povo relembra que a terra não lhes pertence de forma absoluta.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Aqui Levítico revela uma teologia econômica poderosa. Deus é o dono final da terra, do tempo e da história. O jubileu combate acumulação definitiva, miséria perpétua e esquecimento da libertação. Israel deveria viver economicamente como povo redimido.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto avança do descanso da terra para o jubileu, depois para resgates de propriedades e regras de servidão. A lógica central é que ninguém pode organizar a vida econômica ignorando a redenção.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 25 confronta sociedades marcadas por exploração sem freio. Deus deseja que sua redenção tenha efeitos concretos na forma como lidamos com bens, dívidas e pessoas.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulos 21 22 sacerdócio ofertas integridade reverência">
-              <summary><span>Capítulos 21–22</span><span class="chapter-label">Santidade sacerdotal e ofertas aceitáveis</span></summary>
-              <div class="chapter-body">
-                <p>Esses capítulos tratam da santidade exigida dos sacerdotes e da integridade das ofertas. Quem serve mais perto do sagrado carrega maior responsabilidade.</p>
-                <p>Também se reforça que Deus não deve receber o que é tratado com descuido ou desprezo. O culto envolve honra real.</p>
-                <div class="focus"><strong>Foco dos capítulos:</strong> proximidade com Deus exige integridade e reverência maiores, não menores.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-26" data-title="Capítulo 26" data-keywords="levítico levitico capitulo 26 bênçãos maldições aliança">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">26</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 26 — Bênçãos e advertências da aliança</h3>
+        <p>A obediência e a rebelião têm consequências históricas reais.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo apresenta bênçãos para a obediência — chuva, colheita, paz, presença divina — e advertências progressivas para a desobediência, incluindo medo, devastação, exílio e desolação da terra. Ainda assim, o capítulo termina com esperança de lembrança da aliança.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Levítico 26 mostra que a aliança não é abstrata. Ela molda a história concreta do povo. A presença de Deus traz vida; a rebelião persistente conduz a disciplina severa. Mesmo no juízo, porém, a fidelidade pactual não desaparece totalmente: Deus ainda pode lembrar sua aliança.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto se divide em bênçãos, ciclos de advertência crescente e nota final de esperança. A progressão das maldições mostra a pedagogia dolorosa da disciplina divina.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 26 nos chama a sério realismo espiritual: escolhas diante de Deus têm consequências. Ao mesmo tempo, o capítulo impede o desespero final, porque a aliança ainda oferece caminho de retorno.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 23 festas calendário santo memória tempo">
-              <summary><span>Capítulo 23</span><span class="chapter-label">Festas do Senhor</span></summary>
-              <div class="chapter-body">
-                <p>O calendário sagrado organiza o tempo do povo. As festas lembram que a espiritualidade bíblica não vive só de momentos isolados, mas de ritmos formadores.</p>
-                <p>O tempo também pertence a Deus. Celebrar, lembrar e parar fazem parte da formação do coração do povo.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a santidade também reorganiza o tempo e a memória da comunidade.</div>
-              </div>
-            </details>
+<details class="chapter-card reveal" id="cap-27" data-title="Capítulo 27" data-keywords="levítico levitico capitulo 27 votos consagração dízimos">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">27</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 27 — Votos e coisas consagradas</h3>
+        <p>O livro termina mostrando que santidade alcança promessas, bens e avaliações concretas.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo regula votos pessoais, dedicação de pessoas, animais, casas, campos e dízimos, definindo como coisas consagradas poderiam ser avaliadas, resgatadas ou mantidas separadas para o Senhor.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O encerramento é significativo: depois de falar de sacrifício, pureza, sacerdócio, ética e festas, Levítico fecha com consagrações concretas. A santidade bíblica não termina em emoção religiosa; ela atinge compromissos materiais e decisões objetivas.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo funciona como apêndice final, mas teologicamente fecha bem o livro ao mostrar que tudo pode ser colocado sob a reivindicação de Deus, desde pessoas até propriedades.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Levítico 27 ensina que devoção não se mede apenas por grandes momentos espirituais. Ela também se manifesta em compromissos assumidos com seriedade, integridade e temor do Senhor.</p>
+      </article>
+    </div>
+  </div>
+</details>
 
-            <details class="chapter" open data-search="capítulo 24 lâmpadas pães blasfêmia nome do senhor">
-              <summary><span>Capítulo 24</span><span class="chapter-label">Lâmpadas, pães e blasfêmia</span></summary>
-              <div class="chapter-body">
-                <p>O capítulo une elementos do culto contínuo com um caso grave de blasfêmia. A mensagem é clara: a vida diante de Deus envolve honra constante e cuidado com o nome do Senhor.</p>
-                <p>O sagrado não é apenas o espaço do tabernáculo, mas também a fala, o respeito e a postura pública do povo.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a honra ao nome de Deus deve ser refletida tanto no culto quanto na fala e na convivência.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 25 jubileu ano sabático terra descanso redenção economia">
-              <summary><span>Capítulo 25</span><span class="chapter-label">Ano sabático e jubileu</span></summary>
-              <div class="chapter-body">
-                <p>O capítulo mostra que a aliança também regula terra, trabalho, dívidas e liberdade. O jubileu é um lembrete poderoso de que a economia do povo não deve reproduzir opressões sem fim.</p>
-                <p>Descanso da terra, libertação e restituição revelam que Deus quer uma comunidade marcada por memória de redenção e limites contra a exploração.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a santidade da aliança alcança também economia, terra e justiça social.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 26 bênçãos advertências obediência infidelidade arrependimento">
-              <summary><span>Capítulo 26</span><span class="chapter-label">Bênçãos e advertências</span></summary>
-              <div class="chapter-body">
-                <p>Levítico apresenta consequências da obediência e da infidelidade. O capítulo não trata Deus como máquina de recompensas, mas mostra que a aliança tem peso real e histórico.</p>
-                <p>Há bênçãos para a fidelidade e advertências para a rebelião. Ainda assim, o texto também deixa espaço para restauração mediante arrependimento.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a vida de aliança traz responsabilidade real, mas também espaço para retorno a Deus.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 27 votos coisas consagradas compromisso seriedade">
-              <summary><span>Capítulo 27</span><span class="chapter-label">Votos e coisas consagradas</span></summary>
-              <div class="chapter-body">
-                <p>O livro termina tratando de votos e dedicações. Isso mostra que a consagração ao Senhor não deve ser leviana ou emocionalmente improvisada.</p>
-                <p>Levítico fecha reforçando a seriedade do pertencimento a Deus. O que é dedicado ao Senhor deve ser tratado com fidelidade e reverência.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> compromisso com Deus não deve ser feito de forma superficial, mas com seriedade e integridade.</div>
-              </div>
-            </details>
-
-          </div>
-        </article>
-
-        <article class="content-card" id="aplicacoes" data-search="aplicações gerais superficialidade espiritual adoração moral comunidade consciência">
-          <h2>Aplicações gerais de Levítico</h2>
-          <p>
-            Levítico continua profundamente atual porque combate a superficialidade espiritual. Ele nos lembra que Deus não é comum, que o pecado não é leve, que a adoração não é entretenimento e que santidade não é detalhe opcional.
-          </p>
-          <div class="mini-grid">
-            <div class="mini-box">
-              <h3>Para a adoração</h3>
-              <p>Adorar a Deus exige reverência, seriedade e coração alinhado com sua santidade.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Para a vida moral</h3>
-              <p>Não existe espiritualidade madura sem obediência prática e distinção ética.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Para a comunidade</h3>
-              <p>A santidade bíblica alcança justiça, responsabilidade, cuidado mútuo e respeito ao próximo.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Para a consciência</h3>
-              <p>Levítico ensina a levar o pecado a sério e a valorizar profundamente a reconciliação com Deus.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="content-card" id="perguntas" data-search="perguntas estudo reflexão levítico sistema sacrificial dia da expiação fé">
-          <h2>Perguntas para estudo</h2>
-          <div class="qa-list">
-            <div class="qa-item">
-              <strong>1. Por que Levítico é tão importante dentro do Pentateuco?</strong>
-              <p>Porque ele mostra como o povo redimido deve viver na presença do Deus que o libertou.</p>
-            </div>
-            <div class="qa-item">
-              <strong>2. O que o sistema sacrificial ensina sobre o pecado?</strong>
-              <p>Que o pecado tem gravidade real e não pode ser tratado com leveza ou banalidade.</p>
-            </div>
-            <div class="qa-item">
-              <strong>3. Como Levítico amplia a ideia de santidade?</strong>
-              <p>Mostrando que santidade alcança culto, corpo, moral, justiça, tempo e comunidade.</p>
-            </div>
-            <div class="qa-item">
-              <strong>4. O que o Dia da Expiação revela sobre reconciliação com Deus?</strong>
-              <p>Que a culpa precisa de expiação e que a aproximação de Deus exige mediação provida por ele.</p>
-            </div>
-            <div class="qa-item">
-              <strong>5. Como Levítico corrige uma visão superficial da fé?</strong>
-              <p>Ele mostra que adoração verdadeira não é emoção solta, mas vida moldada pela santidade de Deus.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="content-card" id="cristo" data-search="cristo conexão expiação mediação sacerdócio sacrifício santidade">
-          <h2>Conexão com Cristo</h2>
-          <p>
-            Levítico prepara o leitor para Cristo ao aprofundar temas como expiação, mediação, sacerdócio, sacrifício e santidade. O livro ensina que a culpa humana precisa ser tratada, que a presença de Deus exige mediação e que a reconciliação não é barata.
-          </p>
-          <p>
-            Ele também mostra que o povo precisa de algo maior do que ritos repetidos: precisa de solução profunda para o problema do pecado e de acesso real à presença de Deus.
-          </p>
-          <div class="quote-box">
-            Levítico mostra que viver perto de Deus exige expiação, santidade e mediação — e isso prepara o coração do leitor para uma redenção ainda mais plena.
-          </div>
-        </article>
-
-        <div class="next-prev">
-          <a href="pentateuco-exodo.html" class="nav-card">
-            <small>Livro anterior</small>
-            <strong>Êxodo</strong>
-          </a>
-
-          <a href="pentateuco-numeros.html" class="nav-card">
-            <small>Próximo livro</small>
-            <strong>Números</strong>
-          </a>
-        </div>
       </div>
     </section>
   </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;">
+          <img src="../assets/img/logo-soloteo.png" alt="Logo soloteo" class="brand-logo" />
+          <div class="brand-text">
+            <strong>SOLOTEO</strong>
+            <span>Teologia com profundidade, beleza e direção</span>
+          </div>
+        </div>
+        <p class="footer-copy">
+          Uma biblioteca viva para estudar as Escrituras com seriedade, clareza, organização e beleza visual.
+        </p>
+      </div>
 
-  <footer>
-    <div class="container">
-      © 2026 soloteo — Teologia profunda, clara e viva.
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <a href="../../index.html">Início</a>
+        <a href="../../categorias/livros-da-biblia.html">Livros da Bíblia</a>
+        <a href="./pentateuco.html">Pentateuco</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Continuar</h4>
+        <a href="./pentateuco-numeros.html">Números</a>
+        <a href="../../categorias/trilhas-de-estudo.html">Trilhas</a>
+        <a href="../../categorias/apologetica.html">Apologética</a>
+      </div>
     </div>
   </footer>
 
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo">↑</button>
+
   <script>
     (function () {
-      const searchInput = document.getElementById('pageSearch');
-      const searchButton = document.getElementById('searchButton');
-      const clearButton = document.getElementById('clearButton');
-      const searchStatus = document.getElementById('searchStatus');
-      const contentCards = Array.from(document.querySelectorAll('.content-card'));
-      const chapterBlocks = Array.from(document.querySelectorAll('details.chapter'));
-      const tocLinks = Array.from(document.querySelectorAll('#tocLinks a'));
-      const chaptersSection = document.getElementById('capitulos');
+      const progressBar = document.getElementById('progressBar');
+      const topbar = document.getElementById('topbar');
+      const toTop = document.getElementById('toTop');
+      const rail = document.getElementById('curiosityRail');
+      const prevBtn = document.getElementById('curioPrev');
+      const nextBtn = document.getElementById('curioNext');
+      const revealItems = document.querySelectorAll('.reveal');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      function normalize(text) {
-        return text
-          .toLowerCase()
-          .normalize('NFD')
-          .replace(/[\u0300-\u036f]/g, '')
-          .trim();
+      function updateProgressBar() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+        topbar.classList.toggle('is-scrolled', scrollTop > 8);
+        toTop.style.display = scrollTop > 460 ? 'grid' : 'none';
       }
 
-      function clearHighlights() {
-        contentCards.forEach(card => card.classList.remove('is-highlight'));
-        chapterBlocks.forEach(block => block.classList.remove('is-highlight'));
-        tocLinks.forEach(link => link.classList.remove('is-match'));
-        chaptersSection.classList.remove('is-highlight');
-      }
-
-      function runSearch() {
-        const query = normalize(searchInput.value);
-        clearHighlights();
-
-        if (query === '') {
-          contentCards.forEach(card => card.classList.remove('is-hidden'));
-          chapterBlocks.forEach(block => block.classList.remove('is-hidden'));
-          searchStatus.textContent = 'Mostrando o estudo completo de Levítico.';
+      function setupReveal() {
+        if (prefersReducedMotion) {
+          revealItems.forEach((item) => item.classList.add('is-visible'));
           return;
         }
 
-        let visibleSections = 0;
-        let visibleChapters = 0;
-        let firstMatch = null;
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
 
-        contentCards.forEach(card => {
-          if (card.id === 'capitulos') {
-            card.classList.remove('is-hidden');
-            return;
-          }
-
-          const text = normalize((card.dataset.search || '') + ' ' + card.textContent);
-          const matched = text.includes(query);
-
-          card.classList.toggle('is-hidden', !matched);
-
-          if (matched) {
-            visibleSections += 1;
-            card.classList.add('is-highlight');
-            if (!firstMatch) firstMatch = card;
-            const link = document.querySelector('#tocLinks a[href="#' + card.id + '"]');
-            if (link) link.classList.add('is-match');
-          }
-        });
-
-        chapterBlocks.forEach(block => {
-          const text = normalize((block.dataset.search || '') + ' ' + block.textContent);
-          const matched = text.includes(query);
-
-          block.classList.toggle('is-hidden', !matched);
-
-          if (matched) {
-            visibleChapters += 1;
-            block.classList.add('is-highlight');
-            block.open = true;
-            if (!firstMatch) firstMatch = block;
-            chaptersSection.classList.add('is-highlight');
-            const link = document.querySelector('#tocLinks a[href="#capitulos"]');
-            if (link) link.classList.add('is-match');
-          }
-        });
-
-        if (!firstMatch) {
-          searchStatus.textContent = 'Nenhum trecho encontrado para "' + searchInput.value + '".';
-          return;
-        }
-
-        const totalMatches = visibleSections + visibleChapters;
-        if (totalMatches === 1) {
-          searchStatus.textContent = '1 resultado encontrado para "' + searchInput.value + '".';
-        } else {
-          searchStatus.textContent = totalMatches + ' resultados encontrados para "' + searchInput.value + '".';
-        }
-
-        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        revealItems.forEach((item) => observer.observe(item));
       }
 
-      function clearSearch() {
-        searchInput.value = '';
-        clearHighlights();
-        contentCards.forEach(card => card.classList.remove('is-hidden'));
-        chapterBlocks.forEach(block => block.classList.remove('is-hidden'));
-        searchStatus.textContent = 'Mostrando o estudo completo de Levítico.';
-        searchInput.focus();
+      function scrollRail(direction) {
+        if (!rail) return;
+        const amount = Math.min(rail.clientWidth * 0.88, 420);
+        rail.scrollBy({
+          left: direction * amount,
+          behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
       }
 
-      searchButton.addEventListener('click', runSearch);
-      clearButton.addEventListener('click', clearSearch);
-      searchInput.addEventListener('input', runSearch);
-      searchInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-          event.preventDefault();
-          runSearch();
-        }
+      if (prevBtn) prevBtn.addEventListener('click', () => scrollRail(-1));
+      if (nextBtn) nextBtn.addEventListener('click', () => scrollRail(1));
+
+      toTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
       });
 
-      clearSearch();
+      window.addEventListener('scroll', updateProgressBar, { passive: true });
+      updateProgressBar();
+      setupReveal();
     })();
   </script>
 </body>

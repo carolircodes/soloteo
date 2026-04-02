@@ -3,1382 +3,2081 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Êxodo | Estudo completo capítulo por capítulo | soloteo</title>
-  <meta name="description" content="Estudo completo de Êxodo, capítulo por capítulo, com introdução, contexto, estrutura, temas teológicos, aplicações práticas e leitura detalhada pronta para o site soloteo." />
-  <meta name="keywords" content="Êxodo, estudo de Êxodo, Êxodo capítulo por capítulo, Pentateuco, estudo bíblico, soloteo" />
+  <title>Êxodo | soloteo</title>
+  <meta name="description" content="Página premium de Êxodo no estilo do index do soloteo, com estudo completo, curiosidades históricas e navegação refinada." />
+  <meta name="keywords" content="Êxodo, Bíblia, Pentateuco, estudo bíblico, curiosidades bíblicas, arqueologia bíblica, soloteo" />
   <meta name="author" content="soloteo" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.soloteo.com.br/livros-da-biblia/pentateuco-exodo.html" />
-
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Êxodo | Estudo completo capítulo por capítulo | soloteo" />
-  <meta property="og:description" content="Um estudo completo, original e detalhado do livro de Êxodo, pronto para publicação no site." />
-  <meta property="og:url" content="https://www.soloteo.com.br/livros-da-biblia/pentateuco-exodo.html" />
-  <meta property="og:site_name" content="soloteo" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Êxodo | Estudo completo capítulo por capítulo | soloteo" />
-  <meta name="twitter:description" content="Estudo detalhado, longo e original de Êxodo, pronto para o site." />
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Êxodo | Estudo completo capítulo por capítulo",
-    "description":"Estudo completo e detalhado do livro de Êxodo no soloteo.",
-    "author":{
-      "@type":"Organization",
-      "name":"soloteo"
-    },
-    "publisher":{
-      "@type":"Organization",
-      "name":"soloteo",
-      "url":"https://www.soloteo.com.br"
-    },
-    "mainEntityOfPage":{
-      "@type":"WebPage",
-      "@id":"https://www.soloteo.com.br/livros-da-biblia/pentateuco-exodo.html"
-    }
-  }
-  </script>
 
   <style>
-    :root{
-      --bg:#f7f3ee;
-      --paper:#fffdf9;
-      --paper-2:#fbf6ef;
-      --text:#201815;
-      --muted:#6d5a52;
-      --line:rgba(86,50,38,.12);
-      --wine:#6e2132;
-      --wine-2:#8c2f45;
-      --gold:#c7a461;
-      --shadow:0 20px 60px rgba(55,22,18,.09);
-      --radius:24px;
-      --radius-lg:32px;
-      --max:1320px;
+    :root {
+      --bg:#f6f1ec;
+      --bg-strong:#4a0916;
+      --paper:#f8f5f2;
+      --card:#fbf8f6;
+      --white:#fffdfa;
+      --text:#1f1619;
+      --muted:#6f6367;
+      --line:rgba(86,20,33,.10);
+      --wine:#6b1126;
+      --wine-2:#9f2c4a;
+      --gold:#c69449;
+      --gold-2:#d8aa66;
+      --shadow:0 18px 45px rgba(39,11,17,.07);
+      --shadow-lg:0 28px 80px rgba(39,11,17,.11);
+      --radius:28px;
+      --radius-lg:38px;
+      --max:1260px;
+      --narrow:1120px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:110px; }
+    body {
       margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--text);
       background:
-        radial-gradient(circle at top left, rgba(199,164,97,.10), transparent 26%),
-        radial-gradient(circle at top right, rgba(110,33,50,.07), transparent 20%),
-        linear-gradient(180deg, #fbf8f4 0%, #f4efe8 100%);
+        radial-gradient(circle at top left, rgba(198,148,73,.10), transparent 0 18%),
+        linear-gradient(180deg,#fffdfb 0%, #f6f1ec 42%, #fffaf7 100%);
       line-height:1.72;
+      overflow-x:hidden;
     }
 
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    .container{
-      width:min(calc(100% - 32px), var(--max));
-      margin:0 auto;
+    h1,h2,h3,h4 {
+      margin:0 0 12px;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing:-.04em;
+      line-height:.96;
+      color:#181215;
+      font-weight:900;
     }
 
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(16px);
-      background:rgba(251,248,244,.90);
-      border-bottom:1px solid rgba(86,50,38,.08);
+    h1 { font-size:clamp(3rem, 5.5vw, 5.5rem); max-width:8.5ch; }
+    h2 { font-size:clamp(2rem, 4vw, 3.6rem); max-width:12ch; }
+    h3 { font-size:1.35rem; letter-spacing:-.03em; line-height:1.08; }
+    h4 { font-size:1rem; letter-spacing:-.02em; line-height:1.1; }
+
+    p { margin:0 0 14px; }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
+    button, input { font:inherit; }
+
+    .container { width:min(calc(100% - 34px), var(--max)); margin:0 auto; }
+    .narrow { width:min(calc(100% - 34px), var(--narrow)); margin:0 auto; }
+
+    .progress-bar {
+      position:fixed; top:0; left:0; width:0; height:3px; z-index:2200;
+      background:linear-gradient(90deg,var(--gold),var(--wine),var(--gold));
+      box-shadow:0 0 18px rgba(107,17,38,.28);
     }
 
-    .nav{
-      min-height:86px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+    .topbar {
+      position:sticky; top:0; z-index:1200;
+      backdrop-filter:blur(14px) saturate(130%);
+      background:rgba(255,252,248,.84);
+      border-bottom:1px solid rgba(86,20,33,.06);
+      transition:.25s ease;
+    }
+    .topbar.is-scrolled { box-shadow:0 10px 28px rgba(0,0,0,.06); }
+
+    .nav-shell {
+      min-height:92px;
+      display:flex; align-items:center; justify-content:space-between; gap:18px;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
+    .brand { display:flex; align-items:center; gap:14px; min-width:0; }
+    .brand-logo {
+      width:48px; height:48px; border-radius:15px; object-fit:contain; padding:6px;
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,246,236,.88));
+      border:1px solid rgba(90,15,30,.08);
+      box-shadow:0 10px 24px rgba(39,11,17,.06);
+    }
+    .brand-text strong {
+      display:block; letter-spacing:.16em; font-size:1rem; color:#2a171b;
+    }
+    .brand-text span {
+      display:block; color:var(--muted); font-size:.78rem;
     }
 
-    .brand-logo{
-      width:52px;
-      height:52px;
-      object-fit:contain;
-      flex-shrink:0;
-      border-radius:10px;
+    .nav-links { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .nav-links a {
+      padding:11px 15px; border-radius:999px; color:var(--muted); font-weight:700; transition:.22s ease;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color:var(--wine); background:rgba(255,255,255,.72);
     }
 
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      line-height:1.1;
-      min-width:0;
+    .hero {
+      padding:28px 0 20px;
     }
 
-    .brand-text strong{
-      font-size:1.18rem;
-      letter-spacing:.08em;
-      color:#2a1d18;
-      font-weight:800;
-    }
-
-    .brand-text span{
-      font-size:.84rem;
-      color:#7a6a60;
-      margin-top:6px;
-      white-space:nowrap;
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-
-    .nav-links a{
-      color:var(--muted);
-      font-weight:600;
-      padding:10px 14px;
-      border-radius:999px;
-      transition:.22s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active{
-      background:#fff;
-      color:var(--wine);
-      box-shadow:var(--shadow);
-    }
-
-    .hero{
-      padding:48px 0 24px;
-    }
-
-    .hero-card{
-      background:rgba(255,253,249,.92);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      border-radius:var(--radius-lg);
-      padding:42px;
+    .hero-shell {
+      background:
+        radial-gradient(circle at 14% 0%, rgba(255,255,255,.08), transparent 25%),
+        linear-gradient(180deg, #4a0916 0%, #34050f 100%);
+      color:#fff9f5;
+      border-radius:0 0 34px 34px;
       position:relative;
       overflow:hidden;
+      margin-bottom:28px;
     }
 
-    .hero-card::before{
+    .hero-shell::after {
       content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(circle at 18% 15%, rgba(199,164,97,.15), transparent 24%),
-        linear-gradient(180deg, rgba(255,255,255,.1), rgba(110,33,50,.02));
+      position:absolute; inset:auto -8% -18% auto;
+      width:360px; height:360px; border-radius:50%;
+      background:radial-gradient(circle, rgba(198,148,73,.12), transparent 70%);
       pointer-events:none;
     }
 
-    .breadcrumbs{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      color:var(--muted);
-      font-size:.92rem;
-      margin-bottom:18px;
-      position:relative;
-      z-index:1;
+    .hero-inner {
+      width:min(calc(100% - 34px), var(--max));
+      margin:0 auto;
+      padding:54px 0 62px;
+      text-align:center;
     }
 
-    .breadcrumbs a:hover{color:var(--wine)}
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.13em;
-      text-transform:uppercase;
-      color:var(--wine);
-      margin-bottom:16px;
-      position:relative;
-      z-index:1;
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:10px;
+      margin-bottom:18px; padding:10px 18px; border-radius:999px;
+      background:#fff9ef; color:var(--wine);
+      border:1px solid rgba(198,148,73,.35);
+      font-weight:800; font-size:.86rem;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
     }
 
-    .dot{
-      width:9px;
-      height:9px;
-      border-radius:50%;
-      background:linear-gradient(135deg,var(--gold),#f3e2b7);
-      box-shadow:0 0 0 8px rgba(199,164,97,.12);
+    .dot {
+      width:8px; height:8px; border-radius:50%;
+      background:linear-gradient(135deg,var(--gold),#f0ddb9);
+      box-shadow:0 0 0 7px rgba(198,148,73,.15);
     }
 
-    h1{
-      margin:0;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(2.8rem, 6vw, 5.1rem);
-      line-height:.94;
-      letter-spacing:-.04em;
-      color:#221714;
-      position:relative;
-      z-index:1;
+    .hero-inner h1 {
+      color:#fff8f4;
+      max-width:9ch;
+      margin:0 auto 18px;
     }
 
-    .hero-description{
-      margin:22px 0 0;
-      color:var(--muted);
-      font-size:1.06rem;
-      max-width:980px;
-      position:relative;
-      z-index:1;
+    .hero-highlight {
+      color:#c69449;
     }
 
-    .hero-top-actions{
-      margin-top:24px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      position:relative;
-      z-index:1;
+    .hero-description {
+      max-width:760px; margin:0 auto 28px;
+      color:rgba(255,242,236,.82);
+      font-size:1.12rem;
+      line-height:1.8;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:14px 20px;
-      border-radius:999px;
-      font-weight:800;
-      border:1px solid transparent;
-      transition:.22s ease;
-      cursor:pointer;
-      background:#fff;
-      color:var(--wine);
+    .hero-actions {
+      display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:24px;
     }
 
-    .btn-primary{
-      background:linear-gradient(135deg,var(--wine),var(--wine-2));
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center;
+      min-height:54px; padding:14px 22px; border-radius:999px; border:1px solid transparent;
+      font-weight:800; transition:.22s ease; cursor:pointer;
+    }
+    .btn-primary {
       color:#fff;
-      box-shadow:0 16px 30px rgba(110,33,50,.18);
+      background:linear-gradient(135deg,var(--wine-2),var(--gold));
+      box-shadow:0 18px 36px rgba(159,44,74,.24);
+    }
+    .btn-secondary {
+      color:#fff1eb; background:transparent; border-color:rgba(255,255,255,.3);
+    }
+    .btn:hover { transform:translateY(-2px); }
+
+    .section { padding:24px 0 18px; }
+    .section-header {
+      display:flex; align-items:end; justify-content:space-between; gap:18px; margin-bottom:22px;
+    }
+    .section-header h2 {
+      max-width:12ch;
+    }
+    .section-header p {
+      color:var(--muted); max-width:44ch;
     }
 
-    .btn-primary:hover{
-      transform:translateY(-2px);
-    }
-
-    .btn-secondary{
-      background:#fff;
-      color:var(--wine);
-      border-color:rgba(110,33,50,.12);
-    }
-
-    .hero-stats{
-      margin-top:28px;
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:16px;
-      position:relative;
-      z-index:1;
-    }
-
-    .stat{
-      background:rgba(255,255,255,.9);
-      border:1px solid rgba(86,50,38,.08);
-      border-radius:20px;
-      padding:18px;
-    }
-
-    .stat strong{
-      display:block;
-      color:var(--wine);
-      font-size:.8rem;
-      text-transform:uppercase;
-      letter-spacing:.09em;
-      margin-bottom:6px;
-    }
-
-    .stat span{
-      color:#2a1d18;
-      font-weight:700;
-      font-size:.98rem;
-    }
-
-    .layout{
-      display:grid;
-      grid-template-columns:300px minmax(0,1fr);
-      gap:24px;
-      padding:24px 0 80px;
-      align-items:start;
-    }
-
-    .sidebar{
-      position:sticky;
-      top:104px;
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
-
-    .side-card,
-    .content-card{
-      background:rgba(255,253,249,.94);
+    .paper {
+      background:linear-gradient(180deg, rgba(251,248,246,.95), rgba(247,242,238,.92));
       border:1px solid var(--line);
-      border-radius:28px;
+      border-radius:var(--radius);
       box-shadow:var(--shadow);
     }
 
-    .side-card{
+    .overview-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .panel { padding:30px; }
+    .panel p, .chapter-copy p, .info-box p, .chapter-note, .carousel-note {
+      color:var(--muted);
+    }
+
+    .callout {
+      margin-top:18px;
+      padding:18px 20px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,242,214,.60), rgba(255,255,255,.92));
+      border-left:4px solid var(--gold);
+      color:var(--muted);
+    }
+
+    .metrics {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:22px;
+    }
+    .metric {
+      padding:20px 16px;
+      border-radius:22px;
+      background:var(--white);
+      border:1px solid rgba(86,20,33,.08);
+      box-shadow:0 10px 24px rgba(39,11,17,.05);
+    }
+    .metric strong {
+      display:block; font-size:1.9rem; line-height:1; margin-bottom:8px;
+      font-weight:900; letter-spacing:-.04em; color:#171214;
+    }
+    .metric span {
+      display:block; color:var(--muted); font-weight:700; font-size:.92rem;
+    }
+
+    .toc-section {
+      padding-top:8px;
+    }
+
+    .toc-card {
       padding:24px;
     }
 
-    .side-card h2{
-      margin:0 0 12px;
-      font-size:1.02rem;
-      color:var(--wine);
+    .toc-card h3 {
+      font-size:1.9rem;
+      margin-bottom:8px;
+      letter-spacing:-.04em;
+      font-weight:900;
+      color:#181215;
     }
 
-    .search-box{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .search-box input{
-      flex:1 1 100%;
-      min-width:0;
-      border:none;
-      outline:none;
-      padding:14px 16px;
-      border-radius:16px;
-      border:1px solid rgba(86,50,38,.1);
-      background:#fff;
-      color:var(--text);
-      font-size:1rem;
-    }
-
-    .search-status{
-      margin-top:12px;
-      min-height:20px;
-      color:var(--muted);
-      font-size:.9rem;
-      font-weight:600;
-    }
-
-    .toc{
+    .toc-grid {
       display:grid;
-      gap:8px;
+      grid-template-columns:repeat(10, minmax(0,1fr));
+      gap:10px;
+      margin-top:18px;
     }
 
-    .toc a{
-      padding:10px 12px;
-      border-radius:14px;
-      color:var(--muted);
-      font-weight:600;
-      transition:.2s ease;
+    .toc-link {
+      display:flex; align-items:center; justify-content:center;
+      min-height:48px; border-radius:16px;
+      background:#f1ece9; color:var(--wine);
+      font-weight:900; transition:.2s ease;
+      border:1px solid rgba(86,20,33,.06);
     }
-
-    .toc a:hover,
-    .toc a.is-match{
+    .toc-link:hover {
+      transform:translateY(-2px);
       background:#fff;
+      box-shadow:0 10px 20px rgba(39,11,17,.06);
+    }
+
+    .curiosity-wrap {
+      position:relative;
+    }
+
+    .carousel-toolbar {
+      display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:18px;
+    }
+
+    .carousel-actions {
+      display:flex; align-items:center; gap:10px;
+    }
+
+    .carousel-btn {
+      width:44px; height:44px; border:none; border-radius:50%;
+      background:#fff; color:var(--wine);
+      box-shadow:0 10px 20px rgba(39,11,17,.07);
+      font-size:1.1rem; cursor:pointer; transition:.2s ease;
+      flex:0 0 auto;
+    }
+    .carousel-btn:hover { transform:translateY(-2px); }
+
+    .curiosity-rail {
+      display:flex; gap:18px;
+      overflow-x:auto; overflow-y:hidden;
+      scroll-snap-type:x proximity;
+      padding:4px 4px 14px;
+      scrollbar-width:none;
+    }
+    .curiosity-rail::-webkit-scrollbar { display:none; }
+
+    .curiosity-card {
+      flex:0 0 min(360px, 84vw);
+      scroll-snap-align:start;
+      padding:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(248,243,239,.92));
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+    .mini-tag {
+      display:inline-flex;
+      margin-bottom:12px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:rgba(107,17,38,.07);
       color:var(--wine);
+      font-size:.76rem;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
     }
 
-    .content{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
+    .chapters-wrap {
+      display:block;
     }
 
-    .content-card{
-      padding:32px;
-      transition:.2s ease;
+    .chapter-card {
+      margin-bottom:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,243,239,.94));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
     }
 
-    .content-card h2{
-      margin:0 0 14px;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:2rem;
-      letter-spacing:-.02em;
-      color:#241916;
+    .chapter-card summary {
+      list-style:none;
+      cursor:pointer;
+      display:flex; align-items:center; justify-content:space-between; gap:18px;
+      padding:22px 24px;
+    }
+    .chapter-card summary::-webkit-details-marker { display:none; }
+
+    .chapter-head {
+      display:flex; align-items:flex-start; gap:18px; min-width:0;
     }
 
-    .content-card h3{
-      margin:24px 0 10px;
-      font-size:1.08rem;
-      color:var(--wine);
+    .chapter-number {
+      flex:0 0 68px; width:68px; height:68px;
+      display:grid; place-items:center; border-radius:22px;
+      background:#f2ece8;
+      border:1px solid rgba(86,20,33,.07);
+      box-shadow:0 10px 20px rgba(39,11,17,.05);
+      font-size:1.48rem; font-weight:900; letter-spacing:-.04em; color:#211519;
     }
 
-    .content-card p{
-      margin:0 0 14px;
-      color:var(--muted);
+    .chapter-action {
+      display:inline-flex; align-items:center; gap:10px; color:var(--wine); font-weight:800; white-space:nowrap;
     }
-
-    .content-card ul{
-      margin:0;
-      padding-left:18px;
-      color:var(--muted);
+    .chapter-action::after {
+      content:"+";
+      width:30px; height:30px; display:grid; place-items:center; border-radius:50%;
+      background:rgba(107,17,38,.08);
     }
+    .chapter-card[open] .chapter-action::after { content:"–"; }
 
-    .content-card li + li{
-      margin-top:8px;
+    .chapter-body {
+      padding:0 24px 24px;
     }
-
-    .content-card.is-hidden{
-      display:none;
-    }
-
-    .content-card.is-highlight{
-      border-color:rgba(110,33,50,.3);
-      box-shadow:0 24px 50px rgba(110,33,50,.10);
-    }
-
-    .mini-grid{
+    .chapter-grid {
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:16px;
-      margin-top:18px;
     }
-
-    .mini-box{
-      background:linear-gradient(180deg,#fff,#fbf7f1);
-      border:1px solid rgba(199,164,97,.18);
-      border-radius:22px;
-      padding:20px;
-    }
-
-    .mini-box h3{
-      margin:0 0 10px;
-      color:var(--wine);
-      font-size:1rem;
-    }
-
-    .quote-box{
-      margin-top:18px;
-      padding:22px;
-      border-radius:22px;
-      background:linear-gradient(135deg, rgba(199,164,97,.12), rgba(110,33,50,.04));
-      border:1px solid rgba(199,164,97,.18);
-      color:#2a1d18;
-      font-weight:600;
-    }
-
-    .key-list{
-      display:grid;
-      gap:12px;
-      margin-top:14px;
-    }
-
-    .key-item{
-      padding:16px 18px;
-      border-radius:18px;
-      background:#fff;
-      border:1px solid rgba(86,50,38,.08);
-      color:var(--muted);
-    }
-
-    .chapters-grid{
-      display:grid;
-      gap:14px;
-      margin-top:18px;
-    }
-
-    details.chapter{
-      background:linear-gradient(180deg,#fff,#fcf8f2);
-      border:1px solid rgba(199,164,97,.18);
-      border-radius:20px;
-      overflow:hidden;
-      transition:.2s ease;
-    }
-
-    details.chapter.is-hidden{
-      display:none;
-    }
-
-    details.chapter.is-highlight{
-      border-color:rgba(110,33,50,.3);
-      box-shadow:0 20px 40px rgba(110,33,50,.08);
-    }
-
-    details.chapter summary{
-      list-style:none;
-      cursor:pointer;
-      padding:18px 20px;
-      font-weight:800;
-      color:#2a1d18;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-
-    details.chapter summary::-webkit-details-marker{
-      display:none;
-    }
-
-    .chapter-label{
-      color:var(--wine);
-      font-size:.88rem;
-      letter-spacing:.06em;
-      text-transform:uppercase;
-      font-weight:800;
-    }
-
-    .chapter-body{
-      padding:0 20px 20px;
-      color:var(--muted);
-      border-top:1px solid rgba(86,50,38,.08);
-    }
-
-    .chapter-body p{
-      margin:14px 0 0;
-    }
-
-    .chapter-body .focus{
-      margin-top:14px;
-      padding:14px 16px;
-      background:#fff;
-      border:1px solid rgba(86,50,38,.08);
-      border-radius:16px;
-      color:#5f4f48;
-    }
-
-    .qa-list{
-      display:grid;
-      gap:14px;
-      margin-top:16px;
-    }
-
-    .qa-item{
-      background:linear-gradient(180deg,#fff,#fcf8f2);
-      border:1px solid rgba(199,164,97,.18);
-      border-radius:20px;
+    .info-box {
       padding:18px;
+      border-radius:22px;
+      background:#fffdfa;
+      border:1px solid rgba(86,20,33,.08);
     }
 
-    .qa-item strong{
-      display:block;
-      color:#2a1d18;
-      margin-bottom:8px;
+    .footer {
+      margin-top:48px;
+      padding:44px 0 50px;
+      background:linear-gradient(180deg, rgba(71,12,26,.98), rgba(49,8,19,1));
+      color:rgba(255,241,234,.92);
+    }
+    .footer-grid {
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      gap:28px;
+    }
+    .footer-copy {
+      color:rgba(255,241,234,.76);
+      max-width:44ch;
+    }
+    .footer-links h4 {
+      color:#fff; margin-bottom:14px;
+    }
+    .footer-links a {
+      display:block; margin-bottom:10px; color:rgba(255,241,234,.76);
+    }
+    .footer-links a:hover { color:#fff; }
+
+    .to-top {
+      position:fixed; right:18px; bottom:18px; width:54px; height:54px; display:none;
+      place-items:center; border:none; border-radius:50%;
+      background:linear-gradient(135deg,var(--wine),var(--wine-2)); color:#fff; font-size:1.1rem;
+      box-shadow:0 18px 34px rgba(126,25,48,.24);
+      cursor:pointer; z-index:1400;
     }
 
-    .next-prev{
-      display:flex;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
-      margin-top:4px;
+    .reveal {
+      opacity:0; transform:translateY(22px);
+      transition:opacity .66s ease, transform .66s ease;
     }
-
-    .nav-card{
-      flex:1 1 260px;
-      background:rgba(255,253,249,.92);
-      border:1px solid var(--line);
-      border-radius:24px;
-      box-shadow:var(--shadow);
-      padding:22px;
+    .reveal.is-visible {
+      opacity:1; transform:none;
     }
+    .is-hidden { display:none !important; }
 
-    .nav-card small{
-      display:block;
-      color:var(--muted);
-      margin-bottom:6px;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      font-weight:700;
-    }
-
-    .nav-card strong{
-      color:var(--wine);
-      font-size:1.08rem;
-    }
-
-    footer{
-      padding:0 0 42px;
-      color:var(--muted);
-      font-size:.95rem;
-    }
-
-    @media (max-width:1100px){
-      .hero-stats{
+    @media (max-width:1180px) {
+      .overview-grid {
+        grid-template-columns:1fr;
+      }
+      .metrics {
         grid-template-columns:repeat(2,1fr);
       }
-      .layout{
-        grid-template-columns:1fr;
-      }
-      .sidebar{
-        position:static;
+      .toc-grid {
+        grid-template-columns:repeat(8, minmax(0,1fr));
       }
     }
 
-    @media (max-width:860px){
-      .nav{
-        padding:14px 0;
-        align-items:flex-start;
-        flex-direction:column;
+    @media (max-width:860px) {
+      .nav-links { display:none; }
+      .hero-inner {
+        padding:46px 0 54px;
       }
-      .nav-links{
-        width:100%;
-      }
-      .brand-text span{
-        white-space:normal;
-      }
-    }
-
-    @media (max-width:760px){
-      .hero{
-        padding-top:36px;
-      }
-      .hero-card,
-      .content-card{
-        padding:24px;
-      }
-      .hero-stats,
-      .mini-grid{
-        grid-template-columns:1fr;
-      }
-      .brand-logo{
-        width:46px;
-        height:46px;
-      }
-      .brand-text strong{
+      .hero-description {
         font-size:1rem;
       }
-      .brand-text span{
-        font-size:.78rem;
+      .hero-actions {
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .btn {
+        width:100%;
+      }
+      .section-header {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .metrics, .chapter-grid, .footer-grid {
+        grid-template-columns:1fr;
+      }
+      .toc-grid {
+        grid-template-columns:repeat(5, minmax(0,1fr));
+      }
+      .chapter-card summary {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .chapter-head {
+        flex-direction:column;
+      }
+      .carousel-toolbar {
+        flex-direction:column;
+        align-items:flex-start;
       }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="../index.html" class="brand" aria-label="soloteo">
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="container nav-shell">
+      <a class="brand" href="../../index.html" aria-label="soloteo">
         <img src="../assets/img/logo-soloteo.png" alt="Logo soloteo" class="brand-logo" />
         <div class="brand-text">
           <strong>SOLOTEO</strong>
-          <span>Teologia com profundidade, beleza e clareza</span>
+          <span>Teologia com profundidade, beleza e direção</span>
         </div>
       </a>
 
       <nav class="nav-links" aria-label="Principal">
-        <a href="../index.html">Início</a>
-        <a href="../categorias/categorias.html">Categorias</a>
-        <a href="../categorias/livros-da-biblia.html" class="active">Livros da Bíblia</a>
-        <a href="pentateuco.html">Pentateuco</a>
-        <a href="../categorias/apologetica.html">Apologética</a>
+        <a href="../../index.html">Início</a>
+        <a href="../../categorias/livros-da-biblia.html" class="active">Livros da Bíblia</a>
+        <a href="./pentateuco.html">Pentateuco</a>
+        <a href="../../categorias/trilhas-de-estudo.html">Trilhas</a>
+        <a href="../../categorias/apologetica.html">Apologética</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  
+  <main id="conteudo">
     <section class="hero">
-      <div class="container">
-        <div class="hero-card">
-          <div class="breadcrumbs">
-            <a href="../index.html">Início</a>
-            <span>•</span>
-            <a href="../categorias/livros-da-biblia.html">Livros da Bíblia</a>
-            <span>•</span>
-            <a href="pentateuco.html">Pentateuco</a>
-            <span>•</span>
-            <span>Êxodo</span>
-          </div>
-
-          <div class="eyebrow"><span class="dot"></span> Estudo do livro</div>
-          <h1>Êxodo</h1>
+      <div class="hero-shell">
+        <div class="hero-inner">
+          <div class="eyebrow"><span class="dot"></span> Jornadas guiadas</div>
+          <h1>Estudo de <span class="hero-highlight">Êxodo</span> com profundidade</h1>
           <p class="hero-description">
-            Êxodo é o livro da libertação, da aliança e da presença de Deus com seu povo. Aqui vemos Israel sair da escravidão, atravessar o deserto, receber a lei e aprender que redenção não é apenas sair do Egito, mas ser formado para viver diante do Senhor.
+            Aqui você vai encontrar um estudo aprofundado sobre o livro de Êxodo, capítulo a capítulo, além de curiosidades, fatos históricos e observações arqueológicas. Um acervo pensado para profundidade, consulta e contemplação da ação redentora de Deus na formação do seu povo.
           </p>
-
-          <div class="hero-top-actions">
-            <a href="#capitulos" class="btn btn-primary">Ir para os capítulos</a>
-            <a href="pentateuco-levitico.html" class="btn btn-secondary">Próximo livro: Levítico</a>
+          <div class="hero-actions">
+            <a href="#capitulos" class="btn btn-primary">Explorar capítulos</a>
+            <a href="#curiosidades" class="btn btn-secondary">Ver curiosidades</a>
           </div>
+        </div>
+      </div>
 
-          <div class="hero-stats">
-            <div class="stat">
-              <strong>Categoria</strong>
-              <span>Pentateuco</span>
+      <div class="container">
+        <section class="overview-grid">
+          <article class="paper panel reveal">
+            <div class="section-header">
+              <div><h2>Uma biblioteca viva para estudar as Escrituras com seriedade, clareza e organização.</h2></div>
             </div>
-            <div class="stat">
-              <strong>Ênfase</strong>
-              <span>Libertação, lei e presença</span>
+            <div class="callout">
+              <strong>Leitura-chave:</strong> Êxodo não é apenas o relato da saída do Egito. Ele mostra como Deus liberta,
+              forma, santifica e habita no meio do seu povo.
             </div>
-            <div class="stat">
-              <strong>Estrutura</strong>
-              <span>40 capítulos</span>
+            <div class="metrics">
+              <div class="metric"><strong>10</strong><span>Capítulos aprofundados</span></div>
+              <div class="metric"><strong>4</strong><span>Grandes blocos até aqui</span></div>
+              <div class="metric"><strong>8</strong><span>Curiosidades históricas</span></div>
+              <div class="metric"><strong>1</strong><span>Redenção, aliança e presença</span></div>
             </div>
-            <div class="stat">
-              <strong>Visão central</strong>
-              <span>Deus liberta para formar um povo santo</span>
+          </article>
+
+          <article class="paper panel reveal">
+            <div class="section-header">
+              <div><h2>Um acervo pensado para profundidade e consulta</h2></div>
             </div>
+            <p><strong>Capítulos 1–2:</strong> opressão no Egito, preservação de Moisés e preparação silenciosa.</p>
+            <p><strong>Capítulos 3–4:</strong> sarça ardente, revelação do nome divino e confirmação do chamado.</p>
+            <p><strong>Capítulos 5–6:</strong> confronto inicial com Faraó, agravamento da dor e reafirmação da aliança.</p>
+            <p><strong>Capítulos 7–10:</strong> início das pragas, juízo progressivo e endurecimento do coração de Faraó.</p>
+            <div class="callout">
+              <strong>Movimento do livro:</strong> da escravidão para a adoração, do cativeiro para a aliança,
+              da opressão para a presença manifesta de Deus.
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <section class="section toc-section">
+      <div class="narrow">
+        <article class="paper toc-card reveal">
+          <h3>Navegação rápida</h3>
+          <div class="toc-grid">
+            <a href="#cap-1" class="toc-link">1</a><a href="#cap-2" class="toc-link">2</a><a href="#cap-3" class="toc-link">3</a><a href="#cap-4" class="toc-link">4</a><a href="#cap-5" class="toc-link">5</a><a href="#cap-6" class="toc-link">6</a><a href="#cap-7" class="toc-link">7</a><a href="#cap-8" class="toc-link">8</a><a href="#cap-9" class="toc-link">9</a><a href="#cap-10" class="toc-link">10</a><a href="#cap-11" class="toc-link">11</a><a href="#cap-12" class="toc-link">12</a><a href="#cap-13" class="toc-link">13</a><a href="#cap-14" class="toc-link">14</a><a href="#cap-15" class="toc-link">15</a><a href="#cap-16" class="toc-link">16</a><a href="#cap-17" class="toc-link">17</a><a href="#cap-18" class="toc-link">18</a><a href="#cap-19" class="toc-link">19</a><a href="#cap-20" class="toc-link">20</a><a href="#cap-21" class="toc-link">21</a><a href="#cap-22" class="toc-link">22</a><a href="#cap-23" class="toc-link">23</a><a href="#cap-24" class="toc-link">24</a><a href="#cap-25" class="toc-link">25</a><a href="#cap-26" class="toc-link">26</a><a href="#cap-27" class="toc-link">27</a><a href="#cap-28" class="toc-link">28</a><a href="#cap-29" class="toc-link">29</a><a href="#cap-30" class="toc-link">30</a><a href="#cap-31" class="toc-link">31</a><a href="#cap-32" class="toc-link">32</a><a href="#cap-33" class="toc-link">33</a><a href="#cap-34" class="toc-link">34</a><a href="#cap-35" class="toc-link">35</a><a href="#cap-36" class="toc-link">36</a><a href="#cap-37" class="toc-link">37</a><a href="#cap-38" class="toc-link">38</a><a href="#cap-39" class="toc-link">39</a><a href="#cap-40" class="toc-link">40</a>
           </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="curiosidades">
+      <div class="container curiosity-wrap">
+        <div class="carousel-toolbar reveal">
+          <div class="section-header" style="margin-bottom:0; width:100%;">
+            <div><h2>Curiosidades, fatos históricos e observações arqueológicas</h2></div>
+          </div>
+          <div class="carousel-actions" aria-label="Controles do carrossel">
+            <button class="carousel-btn" id="curioPrev" type="button" aria-label="Rolar curiosidades para a esquerda">←</button>
+            <button class="carousel-btn" id="curioNext" type="button" aria-label="Rolar curiosidades para a direita">→</button>
+          </div>
+        </div>
+
+        <div class="curiosity-rail reveal" id="curiosityRail">
+          <article class="curiosity-card">
+            <span class="mini-tag">Mundo egípcio</span>
+            <h3>Faraó era um título real, não nome pessoal</h3>
+            <p>Em Êxodo, “Faraó” funciona como título do governante do Egito. Isso reforça o foco bíblico na função política e teológica do rei como representante do poder opressor diante do Deus de Israel.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Geografia bíblica</span>
+            <h3>Gósen aparece como espaço de preservação</h3>
+            <p>A região de Gósen, associada à permanência dos hebreus no Egito, se torna importante para o contraste entre juízo e proteção. O texto de Êxodo ressalta, em vários momentos, a distinção entre Israel e o restante da terra egípcia.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Confronto teológico</span>
+            <h3>As pragas não são apenas catástrofes</h3>
+            <p>As pragas funcionam como juízos de Deus contra a arrogância de Faraó e contra o sistema egípcio. O livro não retrata apenas um conflito político, mas um confronto entre o Senhor e os falsos poderes do mundo.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Memória litúrgica</span>
+            <h3>A páscoa nasce como memorial de libertação</h3>
+            <p>Mesmo antes de chegarmos ao capítulo 12, Êxodo já prepara o leitor para um evento que se tornará central na identidade de Israel: a memória ritual de que o povo foi libertado pela ação poderosa de Deus.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Deserto</span>
+            <h3>O deserto será lugar de prova e formação</h3>
+            <p>No livro, o deserto não aparece só como espaço vazio. Ele se torna ambiente pedagógico, onde Deus forma um povo, corrige mentalidade de escravidão e estabelece dependência da sua presença.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Aliança</span>
+            <h3>O Sinai é o grande centro teológico de Êxodo</h3>
+            <p>Se a saída do Egito mostra redenção, o Sinai mostrará constituição. O povo não é libertado apenas para escapar de Faraó, mas para pertencer ao Senhor em santidade e adoração.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Tabernáculo</span>
+            <h3>Boa parte do livro se volta para a presença de Deus</h3>
+            <p>Êxodo dedica muitos capítulos à habitação divina no meio do povo. Isso mostra que a redenção bíblica não se resume a libertação da opressão, mas culmina em comunhão e presença.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="mini-tag">Final do livro</span>
+            <h3>A glória de Deus será o grande clímax</h3>
+            <p>O livro caminha para muito mais do que a derrota do Egito. Seu ápice é a manifestação da glória do Senhor enchendo o tabernáculo e selando, de modo visível, a presença divina no meio do povo.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="container layout">
-      <aside class="sidebar">
-        <div class="side-card">
-          <h2>Buscar neste estudo</h2>
-          <div class="search-box">
-            <input
-              type="text"
-              id="pageSearch"
-              placeholder="Ex.: moisés, páscoa, faraó, pragas, mar vermelho, tabernáculo"
-              aria-label="Buscar em Êxodo"
-            />
-            <button type="button" id="searchButton" class="btn btn-primary">Buscar</button>
-            <button type="button" id="clearButton" class="btn btn-secondary">Limpar</button>
-          </div>
-          <div class="search-status" id="searchStatus"></div>
+    <section class="section" id="capitulos">
+      <div class="narrow chapters-wrap">
+        <div class="section-header reveal">
+          <div><h2>Êxodo capítulo por capítulo</h2></div>
         </div>
 
-        <div class="side-card">
-          <h2>Nesta página</h2>
-          <nav class="toc" id="tocLinks">
-            <a href="#introducao">Introdução geral</a>
-            <a href="#contexto">Contexto e propósito</a>
-            <a href="#estrutura">Estrutura do livro</a>
-            <a href="#temas">Temas centrais</a>
-            <a href="#como-ler">Como ler Êxodo</a>
-            <a href="#capitulos">Estudo capítulo por capítulo</a>
-            <a href="#aplicacoes">Aplicações gerais</a>
-            <a href="#perguntas">Perguntas para estudo</a>
-            <a href="#cristo">Conexão com Cristo</a>
-          </nav>
-        </div>
-
-        <div class="side-card">
-          <h2>Navegação</h2>
-          <nav class="toc">
-            <a href="pentateuco-genesis.html">← Livro anterior: Gênesis</a>
-            <a href="pentateuco.html">Voltar ao Pentateuco</a>
-            <a href="pentateuco-levitico.html">Próximo livro: Levítico →</a>
-          </nav>
-        </div>
-      </aside>
-
-      <div class="content" id="contentArea">
-        <article class="content-card" id="introducao" data-search="introdução geral exodo êxodo libertação promessa escravidão egito deserto aliança presença identidade">
-          <h2>Introdução geral</h2>
-          <p>
-            Se Gênesis mostra o começo da promessa, Êxodo mostra o começo da formação do povo da promessa. O livro revela Deus intervindo na história para libertar Israel da escravidão, julgando o orgulho do Egito, conduzindo seu povo pelo deserto e estabelecendo com ele uma relação pactual mais explícita.
-          </p>
-          <p>
-            Êxodo não é apenas uma narrativa de fuga política. É um livro sobre redenção, adoração, obediência e presença. Deus não liberta Israel apenas para tirá-lo de um lugar difícil, mas para conduzi-lo a uma nova identidade. O povo não está sendo apenas removido do Egito; está sendo moldado para pertencer ao Senhor.
-          </p>
-          <div class="quote-box">
-            Em Êxodo, libertação não é o fim da história. É o começo da formação de um povo que viverá diante de Deus.
-          </div>
-        </article>
-
-        <article class="content-card" id="contexto" data-search="contexto propósito êxodo opressão egito aflição aliança poder impérios tabernáculo">
-          <h2>Contexto e propósito</h2>
-          <p>
-            O livro começa com Israel multiplicado, mas oprimido. O Egito, que em Gênesis foi lugar de preservação, agora se tornou lugar de aflição. Essa mudança é importante: o mesmo espaço que serviu a um propósito numa geração pode se transformar em ambiente de cativeiro na seguinte.
-          </p>
-          <p>
-            O propósito de Êxodo é mostrar que Deus é fiel à aliança, lembra-se de seu povo, age em poder, confronta impérios humanos, estabelece padrões de vida e decide habitar no meio dos que redimiu.
-          </p>
-          <div class="mini-grid">
-            <div class="mini-box">
-              <h3>Função narrativa</h3>
-              <p>Levar o leitor da opressão no Egito à presença de Deus no tabernáculo.</p>
+        <details class="chapter-card reveal" id="cap-1" data-title="Capítulo 1" data-keywords="êxodo exodo capitulo 1 opressão israel egito">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">01</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 1 — Opressão e crescimento de Israel</h3>
+                <p>O Egito tenta sufocar o povo de Deus, mas a multiplicação de Israel mostra que a promessa continua viva.</p>
+              </div>
             </div>
-            <div class="mini-box">
-              <h3>Função teológica</h3>
-              <p>Mostrar que o Deus da promessa é também o Deus que resgata, governa e santifica.</p>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Êxodo começa retomando a história deixada por Gênesis. A família de Jacó, antes acolhida por causa de José, agora existe como povo numeroso dentro do Egito. Um novo rei surge e não reconhece a memória de José; para ele, Israel não é herança de graça, mas ameaça demográfica e política.</p>
+                <p>O capítulo mostra a lógica típica dos impérios: medo do crescimento do outro, propaganda política, exploração econômica e desumanização. O povo é submetido a trabalhos forçados, e a opressão se torna política de Estado.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>A grande verdade do texto é que a opressão humana não interrompe a bênção divina. Quanto mais o Egito aflige Israel, mais o povo se multiplica. Isso conecta Êxodo diretamente às promessas patriarcais de descendência abundante.</p>
+                <p>O capítulo apresenta Faraó como antiimagem de Deus: enquanto o Senhor dá vida e preserva, o rei tenta conter, esmagar e matar. O conflito central do livro já começa aqui: quem terá a última palavra sobre a existência do povo, o império ou o Deus da aliança?</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>O texto progride da memória dos filhos de Israel para a ascensão do novo Faraó, depois para a escravidão, e por fim para o decreto de morte dos meninos hebreus. Cada etapa aumenta a densidade da opressão. O Egito não apenas usa o povo; tenta controlar o futuro dele.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Êxodo 1 ensina que o povo de Deus pode atravessar fases de intensa pressão sem perder o cuidado divino. Também revela como o poder sem temor de Deus se torna cruel muito rapidamente. O texto nos chama a discernir sistemas que transformam pessoas em massa controlável e a confiar que a fidelidade divina permanece ativa mesmo quando a história parece dominada por forças hostis.</p>
+              </article>
             </div>
           </div>
-        </article>
+        </details>
 
-        <article class="content-card" id="estrutura" data-search="estrutura êxodo capítulos 1 12 13 18 19 24 25 40 escravidão páscoa mar vermelho lei tabernáculo">
-          <h2>Estrutura do livro</h2>
-          <div class="mini-grid">
-            <div class="mini-box">
-              <h3>Capítulos 1–12</h3>
-              <p>Escravidão, chamado de Moisés, confronto com Faraó e a Páscoa.</p>
+        <details class="chapter-card reveal" id="cap-2" data-title="Capítulo 2" data-keywords="êxodo exodo capitulo 2 moisés nascimento midiã">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">02</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 2 — Nascimento, fuga e preservação de Moisés</h3>
+                <p>Deus preserva o libertador em meio ao decreto de morte e o conduz por caminhos improváveis.</p>
+              </div>
             </div>
-            <div class="mini-box">
-              <h3>Capítulos 13–18</h3>
-              <p>Saída do Egito, travessia do mar, provisão no deserto e organização inicial.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Capítulos 19–24</h3>
-              <p>Monte Sinai, lei, aliança e compromisso do povo.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Capítulos 25–40</h3>
-              <p>Tabernáculo, crise do bezerro de ouro, renovação e manifestação da glória.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="content-card" id="temas" data-search="temas centrais libertação aliança lei presença santidade adoração">
-          <h2>Temas centrais de Êxodo</h2>
-          <div class="key-list">
-            <div class="key-item">Libertação: Deus intervém para quebrar o jugo da opressão.</div>
-            <div class="key-item">Aliança: a relação entre Deus e seu povo ganha forma mais explícita.</div>
-            <div class="key-item">Lei: a redenção conduz a uma vida ordenada pela vontade de Deus.</div>
-            <div class="key-item">Presença: o alvo da libertação não é só sair do Egito, mas viver com Deus no centro.</div>
-            <div class="key-item">Santidade: o povo redimido é chamado a refletir o caráter do Senhor.</div>
-            <div class="key-item">Adoração: Êxodo mostra repetidamente que libertação e culto estão profundamente ligados.</div>
-          </div>
-        </article>
-
-        <article class="content-card" id="como-ler" data-search="como ler êxodo jornada opressão libertação aliança presença pragas mar vermelho lei tabernáculo">
-          <h2>Como ler Êxodo</h2>
-          <p>
-            Êxodo deve ser lido como uma grande jornada em quatro movimentos: opressão, libertação, aliança e presença. Isso ajuda a não fragmentar o livro. As pragas, o mar vermelho, a lei e o tabernáculo não são episódios isolados; todos servem à mesma história.
-          </p>
-          <p>
-            Também é importante perceber que o livro alterna poder divino e fragilidade humana. Deus age com autoridade; o povo responde muitas vezes com medo, murmuração e instabilidade. Essa tensão torna Êxodo espiritualmente muito atual.
-          </p>
-        </article>
-
-        <article class="content-card" id="capitulos" data-search="capítulos capítulo por capítulo estudo detalhado êxodo">
-          <h2>Estudo capítulo por capítulo</h2>
-          <div class="chapters-grid">
-
-            <details class="chapter" open data-search="capítulo 1 israel oprimido egito crescimento faraó escravidão opressão">
-              <summary><span>Capítulo 1</span><span class="chapter-label">Israel oprimido no Egito</span></summary>
-              <div class="chapter-body">
-                <p>O livro começa com crescimento e opressão ao mesmo tempo. Israel se multiplica, mas isso desperta o medo político de Faraó. O poder egípcio reage transformando o povo em mão de obra explorada.</p>
-                <p>O capítulo mostra que opressão frequentemente nasce quando estruturas humanas enxergam o crescimento do outro como ameaça em vez de realidade a ser governada com justiça.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> mesmo em tempos de opressão, o propósito de Deus sobre seu povo continua avançando.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 2 moisés nascimento fuga midian providência preservação">
-              <summary><span>Capítulo 2</span><span class="chapter-label">Nascimento e fuga de Moisés</span></summary>
-              <div class="chapter-body">
-                <p>Moisés nasce em contexto de morte, mas é preservado de maneira surpreendente. A providência divina opera através de coragem humana, compaixão feminina e ironias da história.</p>
-                <p>Mais tarde, Moisés tenta agir com suas próprias mãos, mata um egípcio e foge. O libertador ainda precisa ser trabalhado. O zelo sem formação adequada não basta.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> Deus preserva instrumentos antes de prepará-los plenamente.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 3 sarça ardente chamado revelação nome deus sofrimento">
-              <summary><span>Capítulo 3</span><span class="chapter-label">A sarça ardente</span></summary>
-              <div class="chapter-body">
-                <p>No deserto, Deus se revela a Moisés de forma decisiva. A sarça ardente combina santidade, mistério e proximidade. O Deus que chama é transcendente, mas também atento ao sofrimento do povo.</p>
-                <p>Esse capítulo é central para a identidade divina no livro. Deus se apresenta como o Senhor vivo, fiel à aliança e comprometido em agir na história.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> o chamado nasce da revelação de Deus e da sua compaixão pelo sofrimento do povo.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 4 resistência moisés sinais envio arão">
-              <summary><span>Capítulo 4</span><span class="chapter-label">Resistência de Moisés e envio</span></summary>
-              <div class="chapter-body">
-                <p>Moisés hesita, questiona, teme e apresenta desculpas. O capítulo mostra que até vocações decisivas passam pela fragilidade humana.</p>
-                <p>Deus responde com sinais, presença e provisão de auxílio. O foco não é a autoconfiança de Moisés, mas a suficiência do Deus que o envia.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> quem chama também sustenta, corrige e capacita.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 5 faraó primeiro confronto opressão agravamento">
-              <summary><span>Capítulo 5</span><span class="chapter-label">Primeiro confronto com Faraó</span></summary>
-              <div class="chapter-body">
-                <p>O primeiro resultado da obediência parece piorar a situação. Faraó endurece ainda mais a opressão, e o povo sofre com exigências mais duras.</p>
-                <p>Esse capítulo é importante porque corrige a expectativa de que obedecer a Deus torna tudo imediatamente mais fácil. Às vezes o conflito se intensifica antes da libertação aparecer claramente.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> o começo da obediência pode incluir resistência e agravamento aparente das circunstâncias.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 6 aliança promessa fidelidade esperança">
-              <summary><span>Capítulo 6</span><span class="chapter-label">Deus reafirma sua aliança</span></summary>
-              <div class="chapter-body">
-                <p>Em meio à crise, Deus reafirma quem ele é e o que fará. O capítulo destaca a fidelidade divina e a centralidade da aliança.</p>
-                <p>Quando o povo já não consegue ouvir por causa da angústia, Deus continua falando. Isso mostra que a firmeza da promessa não depende da força emocional do povo, mas da constância do Senhor.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a esperança permanece porque a fidelidade divina é maior do que o desânimo humano.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 7 pragas confronto faraó endurecimento coração">
-              <summary><span>Capítulo 7</span><span class="chapter-label">Início das pragas</span></summary>
-              <div class="chapter-body">
-                <p>O confronto entre Moisés e Faraó ganha intensidade. As pragas não são meros fenômenos impressionantes; elas expõem o poder limitado do Egito diante do Senhor.</p>
-                <p>O endurecimento de Faraó mostra como o coração humano pode resistir mesmo diante de sinais claros. Poder não garante sensibilidade espiritual.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> Deus confronta sistemas arrogantes que se colocam como absolutos.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 8 pragas negociações arrependimento superficial">
-              <summary><span>Capítulo 8</span><span class="chapter-label">Pragas se intensificam</span></summary>
-              <div class="chapter-body">
-                <p>As pragas avançam, e o Egito experimenta progressivamente o colapso da falsa segurança. O poder de Faraó se mostra incapaz de controlar a realidade diante do juízo divino.</p>
-                <p>Também surgem negociações superficiais. Faraó tenta aliviar pressão sem se render de fato. O capítulo mostra a diferença entre alívio momentâneo e arrependimento verdadeiro.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> remorso circunstancial não é o mesmo que submissão real a Deus.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 9 juízo egito distinção israel">
-              <summary><span>Capítulo 9</span><span class="chapter-label">Juízo sobre o Egito</span></summary>
-              <div class="chapter-body">
-                <p>O Egito sofre perdas mais profundas, e a superioridade do Senhor se torna ainda mais evidente. O capítulo expõe a fragilidade das pretensões humanas diante do Deus verdadeiro.</p>
-                <p>Há também distinção entre Egito e Israel, reforçando que Deus age com discernimento, não de forma cega ou arbitrária.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> o juízo de Deus não é caótico; ele é soberano, específico e moralmente significativo.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 10 gafanhotos trevas escuridão">
-              <summary><span>Capítulo 10</span><span class="chapter-label">Gafanhotos e trevas</span></summary>
-              <div class="chapter-body">
-                <p>As pragas caminham para um clímax. A destruição econômica e as trevas comunicam desestruturação completa da segurança egípcia.</p>
-                <p>As trevas, em especial, carregam forte simbolismo: o Egito, que parecia centro de poder, revela-se incapaz de sustentar luz verdadeira.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> todo sistema que se ergue contra Deus acabará mostrando sua própria escuridão.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 11 última praga primogênitos anúncio juízo">
-              <summary><span>Capítulo 11</span><span class="chapter-label">Anúncio da última praga</span></summary>
-              <div class="chapter-body">
-                <p>O juízo final é anunciado com solenidade. A narrativa prepara o leitor para um momento decisivo na história da redenção de Israel.</p>
-                <p>O capítulo cria tensão e mostra que o conflito já não está apenas em nível político; ele chegou ao ponto em que a própria estrutura do Egito será atingida em sua força vital.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> quando a resistência ao Senhor persiste, o juízo alcança seu ponto mais grave.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 12 páscoa sangue saída libertação memória">
-              <summary><span>Capítulo 12</span><span class="chapter-label">Páscoa e saída</span></summary>
-              <div class="chapter-body">
-                <p>A Páscoa se torna marco central de memória, identidade e redenção. O sangue nos umbrais sinaliza que a libertação está ligada à proteção provida por Deus.</p>
-                <p>A saída do Egito não é apenas geográfica. É o nascimento histórico de Israel como povo redimido. A memória da libertação passará a organizar a espiritualidade futura da nação.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> redenção gera memória, identidade e adoração.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 13 consagração primogênitos nuvem coluna fogo direção">
-              <summary><span>Capítulo 13</span><span class="chapter-label">Consagração e direção divina</span></summary>
-              <div class="chapter-body">
-                <p>Depois da saída, o povo é orientado a lembrar continuamente a libertação. A consagração dos primogênitos e a festa dos pães sem fermento reforçam que a história do êxodo deve moldar o futuro.</p>
-                <p>A nuvem e a coluna de fogo mostram que o Deus que liberta também guia. A presença divina não é um detalhe adicional; é o centro da jornada.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> quem foi redimido deve viver lembrando-se de quem o redimiu e seguindo sua direção.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 14 mar vermelho travessia exército egípcio vitória">
-              <summary><span>Capítulo 14</span><span class="chapter-label">Travessia do mar vermelho</span></summary>
-              <div class="chapter-body">
-                <p>O povo se vê encurralado entre o mar e o exército egípcio. A situação revela o limite humano e a necessidade absoluta da intervenção divina.</p>
-                <p>Deus abre caminho onde não havia saída visível. A travessia se torna um dos maiores símbolos bíblicos de redenção, vitória e dependência do Senhor.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> Deus pode abrir caminhos impossíveis quando seu povo está no limite.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 15 cântico mara prova adoração">
-              <summary><span>Capítulo 15</span><span class="chapter-label">Cântico e primeiras provas</span></summary>
-              <div class="chapter-body">
-                <p>O cântico celebra a vitória do Senhor, reconhecendo que a libertação pertence a ele. Mas logo depois da adoração vêm as provas no deserto.</p>
-                <p>Êxodo mostra aqui uma dinâmica muito humana: o povo canta na vitória, mas rapidamente enfrenta a dificuldade da caminhada. O coração precisa aprender constância, não apenas celebração ocasional.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a adoração verdadeira precisa atravessar também os dias de prova.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 16 maná pão deserto provisão dependência">
-              <summary><span>Capítulo 16</span><span class="chapter-label">Maná no deserto</span></summary>
-              <div class="chapter-body">
-                <p>O povo murmura por alimento, e Deus responde com provisão diária. O maná ensina dependência contínua, não acumulação ansiosa.</p>
-                <p>Esse capítulo é profundamente pedagógico. Deus não apenas mata a fome; forma um povo a viver da sua palavra, do seu ritmo e da sua provisão cotidiana.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a provisão divina educa o coração para a dependência.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 17 água rocha amaleque guerra sustentação">
-              <summary><span>Capítulo 17</span><span class="chapter-label">Água da rocha e guerra contra Amaleque</span></summary>
-              <div class="chapter-body">
-                <p>Mais uma vez o povo enfrenta falta e responde com murmuração. Deus provê água, mostrando cuidado em meio à fragilidade do deserto.</p>
-                <p>Na guerra contra Amaleque, o capítulo mostra que a vitória de Israel não depende apenas de força militar, mas da sustentação divina e da perseverança comunitária.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> Deus sustenta seu povo tanto em necessidades básicas quanto em conflitos externos.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 18 jetro organização liderança conselho">
-              <summary><span>Capítulo 18</span><span class="chapter-label">Jetro e organização</span></summary>
-              <div class="chapter-body">
-                <p>Jetro reconhece a obra de Deus e aconselha Moisés sobre liderança. O capítulo mostra que espiritualidade e organização não são opostas.</p>
-                <p>Há sabedoria em distribuir responsabilidades. O povo de Deus não deve depender de centralização exaustiva para funcionar bem.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> maturidade espiritual inclui aprender a liderar com ordem e partilha de responsabilidades.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 19 sinai santidade preparação monte">
-              <summary><span>Capítulo 19</span><span class="chapter-label">Chegada ao Sinai</span></summary>
-              <div class="chapter-body">
-                <p>O monte Sinai marca uma nova fase. Agora o povo libertado será formalmente instruído sobre como viver diante do Senhor.</p>
-                <p>O capítulo destaca santidade, preparação e reverência. Aproximar-se de Deus não é algo trivial. A libertação conduz à aliança, e a aliança exige consciência do caráter santo de Deus.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> redenção conduz à reverência, não à familiaridade irreverente.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 20 dez mandamentos lei obediência">
-              <summary><span>Capítulo 20</span><span class="chapter-label">Os Dez Mandamentos</span></summary>
-              <div class="chapter-body">
-                <p>Os mandamentos não são apresentados como meio de conquistar redenção, mas como forma de vida para quem já foi redimido. Isso é essencial.</p>
-                <p>O capítulo organiza a vida em torno de amor a Deus e justiça relacional. A lei revela que liberdade sem verdade moral não produz vida plena.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a graça que liberta também orienta como viver.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 21 leis sociais justiça responsabilidade">
-              <summary><span>Capítulo 21</span><span class="chapter-label">Leis sociais I</span></summary>
-              <div class="chapter-body">
-                <p>As leis começam a tocar situações práticas da vida comunitária. O capítulo mostra que a santidade bíblica não é abstrata; ela precisa alcançar relações, justiça e responsabilidade.</p>
-                <p>O texto revela um Deus que se importa com a concretude da vida social, e não apenas com ritos religiosos.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> espiritualidade verdadeira precisa atingir a forma como as pessoas são tratadas.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 22 leis sociais necessitado honestidade">
-              <summary><span>Capítulo 22</span><span class="chapter-label">Leis sociais II</span></summary>
-              <div class="chapter-body">
-                <p>O capítulo continua moldando a vida do povo em áreas de dano, responsabilidade, vulnerabilidade e sensibilidade social.</p>
-                <p>Êxodo mostra aqui que o Deus da aliança também é defensor da justiça concreta, da honestidade e do cuidado com os mais expostos.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> o caráter de Deus deve aparecer na prática diária da justiça.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 23 descanso promessa ética justiça festas">
-              <summary><span>Capítulo 23</span><span class="chapter-label">Justiça, descanso e promessa</span></summary>
-              <div class="chapter-body">
-                <p>O povo é chamado a praticar justiça, guardar ritmos santos e olhar para a terra prometida. O capítulo combina ética, culto e esperança.</p>
-                <p>Deus não prepara Israel apenas para sobreviver, mas para viver de forma distinta. O futuro da promessa exige um presente moldado por obediência.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a esperança futura deve transformar a forma de viver agora.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 24 aliança sangue compromisso">
-              <summary><span>Capítulo 24</span><span class="chapter-label">Confirmação da aliança</span></summary>
-              <div class="chapter-body">
-                <p>A aliança é formalmente confirmada. O povo responde com compromisso, e o sangue da aliança marca a solenidade desse vínculo.</p>
-                <p>O capítulo mostra que relação pactual com Deus envolve palavra, compromisso e consagração. Não se trata de espiritualidade vaga, mas de vínculo real.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a aliança com Deus é séria, bela e transformadora.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 25 tabernáculo ofertas presença comunhão">
-              <summary><span>Capítulo 25</span><span class="chapter-label">Ofertas e início do tabernáculo</span></summary>
-              <div class="chapter-body">
-                <p>Deus ordena a construção do tabernáculo. O objetivo é claro: habitar no meio do povo. A presença divina se torna o centro da vida comunitária.</p>
-                <p>O capítulo ensina que redenção caminha em direção à comunhão. Deus não liberta apenas para afastar o povo do mal, mas para aproximá-lo de si.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> o alvo da libertação é a presença de Deus no centro da vida.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulos 26 27 tabernáculo altar culto reverência">
-              <summary><span>Capítulos 26–27</span><span class="chapter-label">Estrutura do tabernáculo e altar</span></summary>
-              <div class="chapter-body">
-                <p>Esses capítulos detalham medidas, tecidos, divisões e objetos. À primeira vista podem parecer apenas técnicos, mas revelam ordem, reverência e intencionalidade no culto.</p>
-                <p>Deus ensina que a adoração não deve ser tratada com improviso irreverente. O espaço do culto comunica algo sobre a santidade de quem é adorado.</p>
-                <div class="focus"><strong>Foco dos capítulos:</strong> a forma do culto também ensina teologia e reverência.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 28 vestes sacerdotais sacerdote mediação">
-              <summary><span>Capítulo 28</span><span class="chapter-label">Vestes sacerdotais</span></summary>
-              <div class="chapter-body">
-                <p>As vestes do sacerdote mostram honra, representação e consagração. O sacerdote não atua em nome próprio, mas em função de serviço diante de Deus em favor do povo.</p>
-                <p>O capítulo reforça que mediação e culto exigem santidade e responsabilidade.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> quem serve diante de Deus precisa fazê-lo com consciência de santidade e representação.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 29 consagração sacerdotal serviço santo">
-              <summary><span>Capítulo 29</span><span class="chapter-label">Consagração sacerdotal</span></summary>
-              <div class="chapter-body">
-                <p>A consagração dos sacerdotes mostra que servir no culto não é apenas executar funções; é ser separado para o serviço santo.</p>
-                <p>Há forte ênfase em purificação, dedicação e regularidade. O capítulo ensina que proximidade com o sagrado exige preparação e entrega.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> serviço santo não se improvisa; ele exige consagração.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 30 incenso resgate unção oração">
-              <summary><span>Capítulo 30</span><span class="chapter-label">Altar de incenso, resgate e unção</span></summary>
-              <div class="chapter-body">
-                <p>O capítulo reúne elementos que reforçam oração, redenção e consagração. Tudo aponta para a seriedade da aproximação diante de Deus.</p>
-                <p>Mesmo detalhes que parecem secundários ajudam a construir uma visão integrada de culto, pureza e dependência.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a adoração envolve memória de redenção, reverência e separação para Deus.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 31 capacitação sábado dons trabalho descanso">
-              <summary><span>Capítulo 31</span><span class="chapter-label">Capacitação e sábado</span></summary>
-              <div class="chapter-body">
-                <p>Deus capacita pessoas para o trabalho artístico do tabernáculo. Isso mostra que habilidades também podem ser lugar de serviço santo.</p>
-                <p>O sábado reaparece como sinal importante de aliança e ritmo. A formação do povo inclui aprender a trabalhar e aprender a descansar diante de Deus.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> dons, trabalho e descanso devem ser integrados à vida de aliança.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 32 bezerro de ouro idolatria crise">
-              <summary><span>Capítulo 32</span><span class="chapter-label">Bezerro de ouro</span></summary>
-              <div class="chapter-body">
-                <p>Esse é um dos capítulos mais chocantes do livro. Enquanto Deus estabelece aliança, o povo cai rapidamente em idolatria. A crise revela a profundidade da instabilidade espiritual humana.</p>
-                <p>O bezerro de ouro não é só um erro ritual. É uma tentativa de domesticar o sagrado, trocar o Deus vivo por algo manipulável e adaptar a fé ao imediatismo do coração.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a idolatria nasce quando se tenta reduzir Deus aos limites do desejo humano.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 33 intercessão presença moisés">
-              <summary><span>Capítulo 33</span><span class="chapter-label">Intercessão e presença</span></summary>
-              <div class="chapter-body">
-                <p>Depois da crise, a grande pergunta do capítulo é: Deus continuará no meio do povo? A resposta gira em torno da presença divina.</p>
-                <p>Moisés entende que não basta ter direção, promessas ou território. Sem a presença do Senhor, a jornada perde seu sentido. Esse é um dos pontos espiritualmente mais profundos de Êxodo.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> nada substitui a presença de Deus como centro da vida do povo redimido.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 34 renovação aliança misericórdia santidade rosto resplandecente">
-              <summary><span>Capítulo 34</span><span class="chapter-label">Renovação da aliança</span></summary>
-              <div class="chapter-body">
-                <p>Deus renova a aliança e revela mais uma vez seu caráter. O capítulo une misericórdia, santidade e compromisso pactual.</p>
-                <p>O rosto resplandecente de Moisés após o encontro com Deus simboliza a profundidade transformadora da comunhão divina.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a graça de Deus renova, mas não relativiza sua santidade.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulos 35 36 ofertas trabalho tabernáculo generosidade">
-              <summary><span>Capítulos 35–36</span><span class="chapter-label">Oferta e trabalho para o tabernáculo</span></summary>
-              <div class="chapter-body">
-                <p>O povo agora responde de modo voluntário e abundante. O que antes foi cenário de desordem agora se torna contexto de generosidade e cooperação.</p>
-                <p>Esses capítulos mostram que restauração não é só perdão interno; ela também produz novas atitudes, novos usos dos recursos e novo tipo de serviço.</p>
-                <div class="focus"><strong>Foco dos capítulos:</strong> o coração restaurado se expressa em generosidade e serviço ordenado.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulos 37 38 execução obra fidelidade tabernáculo">
-              <summary><span>Capítulos 37–38</span><span class="chapter-label">Execução da obra</span></summary>
-              <div class="chapter-body">
-                <p>A construção do tabernáculo avança conforme a ordem recebida. A repetição intencional sublinha obediência cuidadosa.</p>
-                <p>O texto mostra a beleza de fazer exatamente o que Deus ordenou, sem buscar brilho autônomo ou inovação irreverente.</p>
-                <div class="focus"><strong>Foco dos capítulos:</strong> fidelidade prática importa tanto quanto inspiração inicial.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 39 vestes concluídas excelência santidade">
-              <summary><span>Capítulo 39</span><span class="chapter-label">Vestes concluídas</span></summary>
-              <div class="chapter-body">
-                <p>As vestes sacerdotais são concluídas, e a obra mostra cuidado, precisão e beleza. O capítulo reforça que culto e reverência não se opõem à excelência.</p>
-                <p>A repetição de que tudo foi feito conforme o Senhor ordenou destaca novamente o valor da obediência integral.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> beleza e santidade se unem quando o serviço é moldado pela vontade de Deus.</div>
-              </div>
-            </details>
-
-            <details class="chapter" open data-search="capítulo 40 tabernáculo glória presença habitação">
-              <summary><span>Capítulo 40</span><span class="chapter-label">Tabernáculo erguido e glória manifesta</span></summary>
-              <div class="chapter-body">
-                <p>O livro termina com a montagem do tabernáculo e a descida da glória do Senhor. Esse encerramento é perfeito: Êxodo começou com escravidão e termina com a presença divina habitando entre os redimidos.</p>
-                <p>A narrativa mostra o objetivo final da libertação: um povo que vive com Deus no centro, conduzido por sua glória.</p>
-                <div class="focus"><strong>Foco do capítulo:</strong> a redenção alcança seu ápice provisório quando a presença de Deus passa a habitar no meio do povo.</div>
-              </div>
-            </details>
-
-          </div>
-        </article>
-
-        <article class="content-card" id="aplicacoes" data-search="aplicações gerais opressão jornadas difíceis vida espiritual adoração presença">
-          <h2>Aplicações gerais de Êxodo</h2>
-          <p>
-            Êxodo continua extremamente atual porque fala de escravidões visíveis e invisíveis, do medo diante do poder humano, da tendência à murmuração, da necessidade de direção, da importância da santidade e do valor da presença de Deus.
-          </p>
-          <div class="mini-grid">
-            <div class="mini-box">
-              <h3>Para tempos de opressão</h3>
-              <p>Deus vê o sofrimento do seu povo e não é indiferente ao clamor.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Para jornadas difíceis</h3>
-              <p>A libertação não elimina imediatamente as provas, mas muda quem governa a caminhada.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Para a vida espiritual</h3>
-              <p>Não basta sair do Egito; é preciso aprender a viver diante de Deus.</p>
-            </div>
-            <div class="mini-box">
-              <h3>Para a adoração</h3>
-              <p>O centro da vida redimida não é apenas bênção recebida, mas presença cultivada.</p>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Moisés nasce dentro do cenário de perseguição criado no capítulo anterior. Sua mãe o esconde, depois o coloca num cesto nas águas do Nilo, e ele acaba sendo recolhido justamente pela filha de Faraó. O menino que deveria morrer pelo decreto real passa a ser criado no coração da casa real.</p>
+                <p>Mais tarde, já adulto, Moisés se sensibiliza com a dor do seu povo, mata um egípcio ao defender um hebreu e precisa fugir. O futuro libertador passa da corte ao exílio, do palácio ao deserto, de uma posição de privilégio para uma condição de deslocamento.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>O capítulo revela a providência de Deus em modo silencioso. Não há ainda sarça ardente nem grande discurso, mas a mão divina está em cada dobra da história: no esconderijo, nas águas, na compaixão inesperada da princesa, na irmã que observa à distância, no retorno do bebê à própria mãe, e depois na fuga que prepara Moisés para sua missão.</p>
+                <p>Além disso, Êxodo 2 mostra que zelo sem direção divina pode produzir violência estéril. Moisés percebe a injustiça, mas ainda não sabe agir segundo o tempo e o modo de Deus.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>Primeiro vemos o nascimento e preservação de Moisés, depois sua tentativa precipitada de intervir na opressão, e por fim o exílio em Midiã. O encerramento do capítulo retorna ao povo de Israel: eles gemem, clamam, e Deus ouve, lembra-se da aliança e vê a sua aflição. Esse final prepara diretamente o chamado do capítulo 3.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Deus frequentemente prepara seus servos por processos longos, quebrados e pouco glamourosos. O capítulo também nos ensina a diferença entre indignação justa e missão amadurecida. Nem toda percepção correta já significa prontidão completa para agir.</p>
+              </article>
             </div>
           </div>
-        </article>
+        </details>
 
-        <article class="content-card" id="perguntas" data-search="perguntas estudo reflexão libertação lei tabernáculo presença bezerro de ouro">
-          <h2>Perguntas para estudo</h2>
-          <div class="qa-list">
-            <div class="qa-item">
-              <strong>1. O que Êxodo ensina sobre libertação?</strong>
-              <p>Observe que Deus não apenas remove o povo de um lugar ruim, mas o forma para um novo modo de viver.</p>
+        <details class="chapter-card reveal" id="cap-3" data-title="Capítulo 3" data-keywords="êxodo exodo capitulo 3 sarça ardente chamado de moisés">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">03</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 3 — A sarça ardente e o chamado</h3>
+                <p>Deus se revela a Moisés, declara seu nome e o envia para confrontar o Egito.</p>
+              </div>
             </div>
-            <div class="qa-item">
-              <strong>2. Qual a relação entre redenção e lei?</strong>
-              <p>Perceba que a obediência vem depois da libertação, como resposta de aliança, não como tentativa de compra da graça.</p>
-            </div>
-            <div class="qa-item">
-              <strong>3. Por que o tabernáculo é tão importante?</strong>
-              <p>Porque ele mostra que o alvo final da história não é apenas liberdade, mas presença de Deus.</p>
-            </div>
-            <div class="qa-item">
-              <strong>4. O que o bezerro de ouro revela sobre o coração humano?</strong>
-              <p>Que mesmo após grandes livramentos, o coração pode tentar substituir Deus por algo mais controlável.</p>
-            </div>
-            <div class="qa-item">
-              <strong>5. Como Êxodo prepara o restante da Bíblia?</strong>
-              <p>Ele estabelece temas decisivos como redenção, aliança, santidade, mediação, presença e adoração.</p>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>No deserto, Moisés vê uma sarça que arde sem se consumir. Ao se aproximar, é interrompido por uma voz que o chama pelo nome e ordena que tire as sandálias, porque o lugar se tornou santo pela presença divina. Deus se apresenta como o Deus de Abraão, Isaque e Jacó e declara que viu a aflição do seu povo no Egito.</p>
+                <p>O chamado de Moisés nasce, portanto, não de sua iniciativa, mas da compaixão ativa de Deus. O Senhor não é indiferente ao clamor do povo; ele desce para libertar.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>Êxodo 3 é um dos centros teológicos do Antigo Testamento. Aqui Deus é revelado como santo, pessoal, fiel à aliança e intimamente conhecedor do sofrimento humano. Ele vê, ouve, conhece e age. A revelação do nome divino aprofunda essa verdade: o Senhor não é uma divindade localizada ou manipulável, mas o Deus que é, que permanece e que se mostra fiel ao que prometeu.</p>
+                <p>O texto também une transcendência e proximidade. Deus exige reverência, mas se aproxima para salvar. Sua santidade não o torna distante; torna sua presença transformadora.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>O capítulo vai da manifestação extraordinária ao temor de Moisés, depois da autodeclaração divina à exposição da missão. Em seguida, Moisés pergunta sobre o nome de Deus e recebe resposta que moldará toda a teologia de Êxodo.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Antes de servir, o homem precisa ser confrontado pela presença de Deus. Êxodo 3 nos lembra que chamado não começa com estratégia, mas com revelação. Também nos ensina que a dor do povo de Deus jamais passa despercebida diante do Senhor.</p>
+              </article>
             </div>
           </div>
-        </article>
+        </details>
 
-        <article class="content-card" id="cristo" data-search="cristo conexão páscoa mediação moisés travessia aliança tabernáculo redenção">
-          <h2>Conexão com Cristo</h2>
-          <p>
-            Êxodo prepara o leitor para Cristo de várias formas: a Páscoa, a mediação de Moisés, a travessia da libertação, a aliança, o tabernáculo e a presença de Deus no meio do povo. Tudo isso aponta para uma redenção mais plena e definitiva.
-          </p>
-          <p>
-            O livro ensina que o povo precisa não só de libertação externa, mas de transformação interna, mediação verdadeira e acesso duradouro à presença de Deus.
-          </p>
-          <div class="quote-box">
-            Êxodo mostra que ser salvo não é apenas escapar do cativeiro, mas ser conduzido à presença de Deus.
+        <details class="chapter-card reveal" id="cap-4" data-title="Capítulo 4" data-keywords="êxodo exodo capitulo 4 sinais aarão resistência de moisés">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">04</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 4 — Resistência de Moisés e confirmação da missão</h3>
+                <p>Deus responde às objeções de Moisés com sinais, presença e auxílio.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Moisés não recebe o chamado com heroísmo imediato. Ele levanta sucessivas objeções: o povo pode não crer; ele não se vê eloquente; sente-se incapaz. Deus responde com sinais, com autoridade e com a promessa da sua presença. Ao final, Arão é incorporado à missão como porta-voz.</p>
+                <p>O capítulo é profundamente humano. O grande libertador entra em cena cheio de hesitação, não de autopoder.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>A missão não repousa na segurança psicológica do enviado, mas no Deus que o envia. O Senhor não nega a fraqueza de Moisés; antes, mostra que a suficiência da missão está fora dele. Deus é quem dá sinais, abre caminhos e até forma a boca humana.</p>
+                <p>Ao mesmo tempo, o capítulo mostra que há uma linha entre humildade e resistência. A relutância prolongada de Moisés não é romantizada. A graça divina é paciente, mas o chamado continua sendo sério.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>O texto progride em ciclos de objeção e resposta, tornando cada vez mais claro que Deus já tratou todas as barreiras levantadas por Moisés. No fim, a narrativa deixa o deserto e reorienta tudo de volta para o Egito, onde a missão será testada na prática.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>É comum sentir-se pequeno diante daquilo que Deus chama para fazer. O problema não é sentir insuficiência, mas transformá-la em desculpa permanente. Êxodo 4 nos convida a trocar autodesconfiança paralisante por dependência obediente.</p>
+              </article>
+            </div>
           </div>
-        </article>
+        </details>
 
-        <div class="next-prev">
-          <a href="pentateuco-genesis.html" class="nav-card">
-            <small>Livro anterior</small>
-            <strong>Gênesis</strong>
-          </a>
+        <details class="chapter-card reveal" id="cap-5" data-title="Capítulo 5" data-keywords="êxodo exodo capitulo 5 faraó endurecimento palha">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">05</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 5 — O primeiro confronto com Faraó</h3>
+                <p>O pedido de libertação parece piorar tudo, e a opressão aumenta sobre Israel.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Moisés e Arão finalmente comparecem diante de Faraó com a palavra do Senhor: “Deixa ir o meu povo”. A resposta do rei é desprezo. Ele não reconhece o Senhor e endurece ainda mais o sistema de opressão, exigindo a mesma produção de tijolos sem fornecer palha.</p>
+                <p>O resultado imediato do anúncio da libertação é mais dor para o povo. Os hebreus sofrem, os capatazes são pressionados, e Moisés termina o capítulo em crise diante de Deus.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>Êxodo 5 desmonta a expectativa de que obediência sempre traga melhora instantânea. Em muitos momentos bíblicos, quando Deus começa a confrontar um poder opressor, esse poder reage aumentando a pressão. O texto ensina que agravamento temporário não significa ausência de Deus.</p>
+                <p>Também fica evidente que o centro do conflito é teológico: Faraó rejeita o Senhor. A escravidão egípcia não é apenas problema social; é expressão de um reino que não se submete à autoridade divina.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>O capítulo se move do confronto direto com Faraó para o agravamento das condições de trabalho, depois para a revolta do povo contra Moisés e, por fim, para a oração angustiada do próprio Moisés. O capítulo termina sem resolução visível, sustentando a tensão narrativa.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Há fases em que obedecer a Deus parece trazer mais batalha antes de trazer saída. Esse capítulo fortalece a fé contra leituras simplistas da vida espiritual. Nem toda piora inicial é derrota; às vezes é sinal de que o confronto real começou.</p>
+              </article>
+            </div>
+          </div>
+        </details>
 
-          <a href="pentateuco-levitico.html" class="nav-card">
-            <small>Próximo livro</small>
-            <strong>Levítico</strong>
-          </a>
-        </div>
+        <details class="chapter-card reveal" id="cap-6" data-title="Capítulo 6" data-keywords="êxodo exodo capitulo 6 eu sou o senhor aliança">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">06</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 6 — Deus reafirma sua aliança</h3>
+                <p>Quando Moisés vacila, Deus responde reafirmando quem ele é e o que fará por Israel.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Depois da amarga crise do capítulo 5, Deus fala novamente com Moisés e reafirma, com força, sua identidade e suas promessas. O Senhor declara que libertará, resgatará, tomará Israel por povo e o conduzirá à terra prometida aos patriarcas.</p>
+                <p>O capítulo também mostra que o povo, esmagado pela angústia, já não consegue ouvir a esperança. O sofrimento prolongado afetou a capacidade espiritual de escutar.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>O eixo de Êxodo 6 é a fórmula repetida: “Eu sou o Senhor”. A redenção se funda no caráter de Deus, não na força do povo nem na estabilidade emocional de Moisés. O Senhor age porque é fiel à aliança feita com Abraão, Isaque e Jacó.</p>
+                <p>A libertação, então, não é improviso histórico. É memória pactual em movimento. O Deus que prometeu é o Deus que cumpre.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>Promessas de resgate, dificuldade do povo em ouvir, reafirmação da missão e inserção da genealogia de Moisés e Arão. Essa genealogia não é detalhe seco; ela ancora historicamente os mediadores escolhidos por Deus.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Quando o coração está esmagado, a fé pode ter dificuldade até de receber consolo. Êxodo 6 consola justamente aí: Deus continua fiel mesmo quando o povo já não consegue sustentar esperança com clareza.</p>
+              </article>
+            </div>
+          </div>
+        </details>
+
+        <details class="chapter-card reveal" id="cap-7" data-title="Capítulo 7" data-keywords="êxodo exodo capitulo 7 vara sangue endurecimento">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">07</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 7 — Início dos sinais e endurecimento</h3>
+                <p>O confronto entre o Senhor e Faraó entra em fase pública e poderosa.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Deus estabelece Moisés e Arão diante de Faraó e inicia a sequência de sinais. A vara de Arão se transforma e devora as varas dos magos egípcios. Em seguida, as águas do Nilo se tornam sangue, atingindo a base simbólica e econômica do Egito.</p>
+                <p>Mesmo vendo tudo isso, Faraó permanece endurecido. O conflito agora sai da esfera do anúncio e entra na esfera do juízo manifesto.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>Os sinais não são espetáculo vazio. Eles revelam quem é o Senhor e expõem a impotência dos poderes rivais. O endurecimento de Faraó mostra que um coração fechado pode reagir à revelação não com rendição, mas com resistência ainda maior.</p>
+                <p>Êxodo 7 também mostra que Deus governa o processo inteiro. O Senhor não perde controle do conflito; ao contrário, conduz a história de modo que sua glória seja conhecida.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>Preparação de Moisés e Arão, sinal diante de Faraó, imitação limitada dos magos, primeira praga e endurecimento persistente. O capítulo funciona como abertura solene da grande disputa entre o Deus de Israel e o poder do Egito.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Nem todo contato com o poder de Deus gera quebrantamento. Quando o orgulho governa o coração, até sinais impressionantes podem ser recebidos com racionalização, imitação superficial ou negação obstinada.</p>
+              </article>
+            </div>
+          </div>
+        </details>
+
+        <details class="chapter-card reveal" id="cap-8" data-title="Capítulo 8" data-keywords="êxodo exodo capitulo 8 rãs piolhos moscas">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">08</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 8 — Pragas e distinção do povo de Deus</h3>
+                <p>O juízo avança, e Deus começa a destacar de forma mais visível a diferença entre Israel e o Egito.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Rãs invadem a terra, depois vêm os piolhos e, em seguida, as moscas. Cada praga aprofunda a desordem do Egito e expõe a incapacidade do regime de manter estabilidade. Faraó ensaia concessões, pede alívio e logo volta atrás.</p>
+                <p>Ao mesmo tempo, o Senhor começa a destacar Gósen, mostrando que seu povo não é atingido do mesmo modo. Juízo e proteção passam a aparecer lado a lado.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>Êxodo 8 enfatiza que Deus não age de forma indistinta. O Senhor sabe diferenciar, guardar e marcar o seu povo no meio da crise. Isso é profundamente pactual: redenção envolve pertencimento.</p>
+                <p>Também fica evidente a superficialidade do coração de Faraó. Ele deseja alívio das consequências, não transformação de postura diante de Deus.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>O capítulo segue o padrão de advertência, praga, pedido de intercessão e recaída no endurecimento. Esse ritmo repetitivo não é redundância inútil; é retrato literário da insistência rebelde de Faraó.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Há pessoas que querem paz sem rendição, alívio sem arrependimento, resposta sem submissão. Êxodo 8 nos chama a distinguir entre um pedido momentâneo de socorro e um coração realmente quebrantado diante de Deus.</p>
+              </article>
+            </div>
+          </div>
+        </details>
+
+        <details class="chapter-card reveal" id="cap-9" data-title="Capítulo 9" data-keywords="êxodo exodo capitulo 9 peste sarna saraiva">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">09</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 9 — Juízo intensificado sobre o Egito</h3>
+                <p>O Senhor expõe ainda mais a fragilidade do Egito e a arrogância de Faraó.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>O juízo avança com peste sobre os rebanhos, sarna sobre homens e animais e depois saraiva devastadora sobre a terra. O Egito começa a entrar em colapso mais visível: economia, saúde e colheita são afetadas.</p>
+                <p>Faraó chega a admitir verbalmente culpa, mas continua sem verdadeira rendição. A confissão não se converte em submissão real.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>Êxodo 9 mostra que Deus é Senhor não apenas do culto, mas da criação inteira. Animais, pele, fogo, chuva e campo respondem à sua palavra. O Egito, que parecia sólido e invencível, vai sendo desmontado por dentro.</p>
+                <p>O texto também ensina que reconhecimento verbal do pecado não é a mesma coisa que arrependimento. O coração humano pode admitir a pressão sem realmente abandonar a rebelião.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>As pragas aumentam em impacto e também em clareza teológica. O Senhor anuncia, executa, distingue o seu povo e confronta Faraó novamente. Cada ciclo aprofunda a exposição do rei e do sistema que ele representa.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>O capítulo chama à honestidade espiritual. Nem toda fala de culpa é conversão. Às vezes a pessoa só reconhece o erro enquanto a dor aperta, mas volta ao mesmo endurecimento quando a pressão diminui.</p>
+              </article>
+            </div>
+          </div>
+        </details>
+
+        <details class="chapter-card reveal" id="cap-10" data-title="Capítulo 10" data-keywords="êxodo exodo capitulo 10 gafanhotos trevas faraó">
+          <summary>
+            <div class="chapter-head">
+              <span class="chapter-number">10</span>
+              <div class="chapter-copy">
+                <h3>Capítulo 10 — Gafanhotos, trevas e endurecimento final</h3>
+                <p>O Egito se aproxima do colapso total, mas Faraó insiste em não se submeter ao Senhor.</p>
+              </div>
+            </div>
+            <span class="chapter-action">Abrir</span>
+          </summary>
+          <div class="chapter-body">
+            <div class="chapter-grid">
+              <article class="info-box">
+                <h4>Leitura central</h4>
+                <p>Depois da saraiva, os gafanhotos consomem o que ainda restava da terra. Em seguida, densas trevas cobrem o Egito. O país vive devastação crescente, e ainda assim Faraó insiste em negociar apenas parcialmente, querendo manter algum controle sobre a situação.</p>
+                <p>Israel, por outro lado, permanece marcado por distinção. O contraste entre trevas e preservação intensifica a mensagem do livro.</p>
+              </article>
+              <article class="info-box">
+                <h4>Teologia do capítulo</h4>
+                <p>As trevas têm força simbólica profunda. Elas apontam para o colapso do poder egípcio, para a humilhação dos falsos deuses e para a incapacidade do império de produzir luz verdadeira. O Senhor se revela como soberano sobre aquilo que o Egito julgava controlar.</p>
+                <p>Também aparece aqui a denúncia das concessões parciais. Faraó quer aliviar os efeitos do juízo sem entregar-se totalmente à palavra de Deus.</p>
+              </article>
+              <article class="info-box">
+                <h4>Estrutura e movimento</h4>
+                <p>Advertência, destruição por gafanhotos, nova tentativa de negociação e depois as trevas como golpe mais simbólico e abrangente. O capítulo termina com ruptura mais dura entre Faraó e Moisés, preparando o clímax que virá a seguir.</p>
+              </article>
+              <article class="info-box">
+                <h4>Aplicação</h4>
+                <p>Obediência parcial não é obediência. Êxodo 10 confronta a tendência humana de querer manter controle sobre áreas que Deus já reivindicou por inteiro. A fé madura não negocia o senhorio de Deus por partes.</p>
+              </article>
+            </div>
+          </div>
+        </details>
+
       </div>
-    </section>
+    
+
+
+<details class="chapter-card reveal" id="cap-11" data-title="Capítulo 11" data-keywords="êxodo exodo capitulo 11 última praga anúncio primogênitos">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">11</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 11 — O anúncio da última praga</h3>
+        <p>Antes da libertação definitiva, Deus anuncia o golpe final contra o Egito e contra a arrogância de Faraó.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Depois de repetidos confrontos e sucessivos endurecimentos, o Senhor anuncia a última praga: a morte dos primogênitos. O capítulo funciona como preparação solene para o clímax da redenção, deixando claro que a saída de Israel não ocorrerá por concessão política espontânea, mas por juízo divino irresistível.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O Senhor mostra que a libertação não é apenas um evento social, mas um ato judicial e redentor. O Egito, que ameaçou a vida dos filhos hebreus no início do livro, agora enfrentará o peso da justiça divina. O texto também reforça a distinção entre Israel e Egito, sublinhando eleição, proteção e pertencimento.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo combina anúncio profético, promessa de saída e palavra de juízo. Há um tom de encerramento do ciclo de negociações: o tempo de advertências está chegando ao fim, e a história caminha para uma intervenção definitiva.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Deus é paciente, mas sua paciência não elimina sua justiça. Quando o coração resiste repetidamente à verdade, o juízo deixa de ser mera advertência futura e se torna realidade inevitável.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-12" data-title="Capítulo 12" data-keywords="êxodo exodo capitulo 12 páscoa saída do egito">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">12</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 12 — Páscoa e saída do Egito</h3>
+        <p>A redenção ganha forma litúrgica, histórica e familiar: Deus salva, separa e manda lembrar.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Êxodo 12 é um dos centros teológicos do livro. Deus institui a páscoa, estabelece o cordeiro, o sangue nos umbrais, o pão sem fermento e o padrão memorial que marcaria Israel para gerações. Na mesma noite, o juízo atinge o Egito e a libertação se concretiza.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A redenção aqui envolve substituição, proteção, pressa e memória. O povo não é poupado porque é moralmente superior ao Egito, mas porque está coberto segundo a palavra de Deus. O sangue sinaliza pertencimento e proteção. A libertação não é só evento passado; torna-se rito pedagógico permanente.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>Primeiro vêm as instruções da páscoa; depois, a noite do juízo; por fim, a saída de Israel e a regulamentação memorial. O capítulo alterna rito e narrativa para mostrar que o povo deve viver a história e lembrar dela continuamente.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Grandes atos de Deus não devem ser tratados como fatos esquecidos. A fé bíblica cultiva memória santa, transmite redenção às gerações e organiza a vida em torno do que Deus fez.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-13" data-title="Capítulo 13" data-keywords="êxodo exodo capitulo 13 consagração primogênitos nuvem fogo">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">13</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 13 — Consagração, memória e condução divina</h3>
+        <p>O Senhor não apenas tira o povo do Egito: ele passa a conduzi-lo, marcá-lo e ensinar-lhe como lembrar.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Após a saída, Deus ordena a consagração dos primogênitos e reforça a festa dos pães sem fermento. Em seguida, o texto mostra que o Senhor guia Israel por um caminho específico e vai adiante em coluna de nuvem e de fogo.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A redenção cria reivindicação santa: aquilo que foi poupado pertence ao Senhor. Ao mesmo tempo, a condução divina mostra que liberdade não é autonomia. O povo liberto continua dependente da direção de Deus para não voltar à mentalidade de escravidão.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo une legislação memorial, identidade comunitária e geografia espiritual. A saída do Egito se conecta imediatamente à formação do povo como comunidade consagrada e guiada.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Ser salvo por Deus não significa apenas escapar de algo ruim. Significa passar a pertencer ao Senhor e aprender a seguir sua direção diária.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-14" data-title="Capítulo 14" data-keywords="êxodo exodo capitulo 14 mar vermelho travessia">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">14</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 14 — Travessia do mar</h3>
+        <p>O povo fica encurralado entre Faraó e o mar, e Deus abre um caminho onde não havia saída.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Faraó persegue Israel, e o povo, dominado pelo medo, interpreta a situação como sentença de morte. Moisés é chamado a permanecer firme, e o Senhor intervém de maneira decisiva: abre o mar para seu povo e fecha o caminho sobre o exército egípcio.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O Senhor mostra que a salvação vem dele, não da capacidade de fuga ou de combate de Israel. O mar, símbolo de impossibilidade e ameaça, se torna cenário de livramento. A redenção passa a ser lida como ato soberano, exclusivo e glorioso de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo caminha do pânico ao comando divino, depois à abertura do mar e por fim ao juízo sobre os egípcios. O texto constrói tensão máxima para revelar que o momento mais crítico pode se tornar o palco da intervenção mais memorável de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Há situações em que Deus não apenas fortalece para continuar andando; ele cria o próprio caminho que não existe aos olhos humanos. Fé inclui aprender a esperar quando tudo parece fechado.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-15" data-title="Capítulo 15" data-keywords="êxodo exodo capitulo 15 cântico de moisés mara">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">15</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 15 — Cântico, louvor e primeiras provas</h3>
+        <p>A celebração da vitória rapidamente dá lugar ao teste do deserto, revelando que redenção e formação caminham juntas.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo começa com o cântico de Moisés e de Israel após a travessia do mar. O povo reconhece a grandeza do Senhor como guerreiro e libertador. Em seguida, a narrativa muda de tom: a caminhada chega a Mara, as águas são amargas e o povo murmura.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Êxodo 15 ensina que o Deus da vitória pública é o mesmo Deus das necessidades diárias. Louvor verdadeiro precisa atravessar a transição entre momentos extraordinários e cotidianos. O Senhor não apenas derrota inimigos; ele também forma confiança no deserto.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>A primeira metade do capítulo é poética e triunfante; a segunda, narrativa e pedagógica. A Bíblia faz questão de unir celebração e teste para mostrar que a vida do povo de Deus não vive de êxtase contínuo, mas de fidelidade prolongada.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Depois de grandes vitórias, ainda virão águas amargas. Maturidade espiritual aparece quando o coração aprende a continuar confiando no Senhor além do momento do milagre.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-16" data-title="Capítulo 16" data-keywords="êxodo exodo capitulo 16 maná codornizes provisão">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">16</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 16 — Maná, codornizes e dependência diária</h3>
+        <p>Deus responde à murmuração com provisão, mas também com pedagogia de dependência e descanso.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Faltando alimento, Israel murmura contra Moisés e Arão, desejando nostalgicamente o Egito. O Senhor então envia codornizes e maná, estabelecendo um padrão diário de recolhimento e disciplina, inclusive com destaque para o sábado.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A provisão de Deus não visa apenas saciar a fome, mas ensinar o povo a depender da sua palavra. O maná impede acúmulo ansioso e convida a confiar no cuidado diário do Senhor. A menção ao sábado mostra que confiança e descanso estão conectados.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo parte da queixa do povo, passa pela promessa divina, pela descrição do maná e culmina em instruções detalhadas para recolhimento, preservação memorial e observância do descanso santo.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Deus muitas vezes nos sustenta sem nos entregar autonomia absoluta. Ele quer formar confiança, não apenas resolver carência. Há provisões que vêm em medida suficiente para treinar o coração.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-17" data-title="Capítulo 17" data-keywords="êxodo exodo capitulo 17 água da rocha amaleque">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">17</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 17 — Água da rocha e batalha contra Amaleque</h3>
+        <p>O capítulo reúne duas grandes lições: Deus sustenta o povo na escassez e o preserva no conflito.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Israel enfrenta sede em Refidim e novamente murmura. Deus manda Moisés ferir a rocha, de onde sai água. Na sequência, Amaleque ataca, e o povo precisa enfrentar batalha enquanto Moisés intercede no alto do monte.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O Senhor se mostra provedor e defensor. A água da rocha revela sua suficiência na escassez; a batalha contra Amaleque mostra que a vitória não depende apenas da força militar, mas da sustentação divina acolhida em intercessão e perseverança.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>Primeiro, o teste da sede; depois, o conflito externo. O capítulo une crise interna e ameaça externa para mostrar que o povo de Deus precisa ser sustentado em todas as frentes da caminhada.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Há momentos em que nossa fraqueza se manifesta como carência e, em outros, como combate. Em ambos os casos, a resposta central não é autossuficiência, mas dependência do Senhor.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-18" data-title="Capítulo 18" data-keywords="êxodo exodo capitulo 18 jetro conselho liderança">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">18</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 18 — Jetro e a sabedoria da organização</h3>
+        <p>A missão de Deus não elimina a necessidade de estrutura, conselho sábio e delegação madura.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Jetro, sogro de Moisés, ouve sobre os feitos de Deus, visita o acampamento e percebe que Moisés está sobrecarregado julgando sozinho as causas do povo. Então sugere um sistema de liderança distribuída, com homens capazes auxiliando na administração da comunidade.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O capítulo mostra que sabedoria administrativa também participa da obra de Deus. Não basta ter chamado; é preciso organizar a missão de forma que ela permaneça sustentável. Liderança bíblica envolve humildade para ouvir conselhos e coragem para delegar.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto passa da celebração do que Deus fez para a observação da rotina cansativa de Moisés e chega à reestruturação prática da liderança. Êxodo mostra que espiritualidade e organização não são rivais.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Sobrecarga não é prova de santidade. Em muitas fases, obedecer a Deus inclui construir estrutura, dividir responsabilidades e liderar com sabedoria.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-19" data-title="Capítulo 19" data-keywords="êxodo exodo capitulo 19 sinai aliança preparação">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">19</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 19 — Chegada ao Sinai</h3>
+        <p>Israel chega ao monte da aliança, e a narrativa entra em uma nova fase: da libertação para a constituição do povo santo.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>No Sinai, Deus lembra ao povo o que fez no Egito e anuncia sua intenção de torná-lo propriedade peculiar, reino de sacerdotes e nação santa. Ao mesmo tempo, ordena preparação, consagração e limites diante do monte.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A graça que libertou agora chama para santidade e vocação. Israel não foi resgatado apenas para existir como grupo étnico livre, mas para viver como povo separado para Deus. A proximidade divina exige reverência, pureza e obediência.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo é uma grande preparação para a revelação da lei. Ele organiza identidade, promessa e temor santo. O Sinai não é apenas lugar geográfico; é o centro teológico de formação da comunidade pactual.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Não existe intimidade genuína com Deus sem reverência. O Deus que chama para perto continua sendo o Deus santo que estabelece limites, ordem e consagração.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-20" data-title="Capítulo 20" data-keywords="êxodo exodo capitulo 20 dez mandamentos">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">20</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 20 — Os Dez Mandamentos</h3>
+        <p>O Deus que libertou o povo do Egito agora revela a forma de vida que corresponde à sua aliança.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Êxodo 20 apresenta o Decálogo. O texto começa lembrando a libertação do Egito, e só então apresenta os mandamentos. Isso é decisivo: a obediência nasce a partir da redenção, não como meio de comprá-la. As palavras regulam culto, linguagem, tempo, família, vida, sexualidade, propriedade e desejos.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Os mandamentos revelam o caráter de Deus e ordenam a vida humana em duas grandes direções: amor reverente a Deus e justiça relacional entre as pessoas. A lei não é oposta à graça; ela mostra como o povo redimido deve viver diante do Redentor.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>Primeiro, mandamentos voltados diretamente à relação com Deus; depois, mandamentos voltados à vida comunitária. Ao final, o povo reage com temor diante da manifestação divina, e Moisés atua como mediador.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Liberdade sem direção moral não é redenção completa. Deus salva e, em seguida, ensina como viver de forma santa, justa e ordenada.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-21" data-title="Capítulo 21" data-keywords="êxodo exodo capitulo 21 estatutos servos violência justiça">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">21</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 21 — Estatutos sobre servidão e justiça social</h3>
+        <p>A aliança se desdobra em leis concretas para a vida cotidiana, mostrando que santidade também alcança relações sociais e responsabilidade civil.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo trata de servos hebreus, violência física, compensações e dignidade da vida. As leis não legitimam crueldade; ao contrário, impõem limites, proteção e responsabilidade em uma sociedade real, ainda marcada por estruturas imperfeitas.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O Deus que libertou Israel da opressão não tolera que seu povo reproduza arbitrariedade sem freios. A legislação mostra que justiça bíblica envolve proporcionalidade, proteção do vulnerável e responsabilização concreta por danos causados.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>Êxodo 21 começa com servidão contratual e depois passa para casos de agressão, homicídio, negligência e reparação. O texto usa casos específicos para ensinar princípios amplos de justiça e ordem comunitária.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>A fé bíblica não se limita ao culto. Ela exige que relações de trabalho, uso de força e reparação de danos sejam submetidos ao temor de Deus e à dignidade humana.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-22" data-title="Capítulo 22" data-keywords="êxodo exodo capitulo 22 restituição vulneráveis justiça">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">22</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 22 — Restituição e proteção dos vulneráveis</h3>
+        <p>Deus ordena a vida comunitária exigindo reparação, honestidade e sensibilidade para com os mais frágeis.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo reúne leis sobre furto, prejuízos materiais, depósitos confiados, sedução, feitiçaria, idolatria e tratamento de estrangeiros, viúvas, órfãos e pobres. A legislação mistura justiça civil e fidelidade religiosa porque, na Bíblia, essas dimensões não se separam.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O Senhor exige que seu povo reproduza sua sensibilidade moral. Quem foi liberto da opressão não deve oprimir o estrangeiro. Quem foi alvo da compaixão de Deus não pode ignorar os vulneráveis. Justiça bíblica nasce da memória da graça.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto alterna entre perdas materiais, delitos morais e proteção social. Isso revela que Deus se importa tanto com verdade contratual quanto com misericórdia comunitária.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Espiritualidade sem responsabilidade com pessoas vulneráveis é incoerente com a aliança. O povo de Deus deve ser marcado por justiça prática e compaixão concreta.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-23" data-title="Capítulo 23" data-keywords="êxodo exodo capitulo 23 justiça sábados festas anjo">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">23</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 23 — Justiça, descanso e direção para a terra</h3>
+        <p>O Senhor une ética, calendário sagrado e promessa de condução futura numa mesma moldura pactual.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Êxodo 23 aborda falso testemunho, parcialidade, justiça no tribunal, cuidado até com o inimigo, sábado, ano sabático, festas anuais e a promessa de que Deus enviará seu mensageiro diante do povo rumo à terra.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O capítulo mostra que santidade não é apenas evitar ídolos; é também cultivar verdade, equidade e ritmo de vida sob a autoridade de Deus. O descanso sabático e as festas estruturam o tempo do povo, enquanto a promessa da terra projeta esperança histórica.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>Primeiro, princípios de justiça; depois, leis de calendário e descanso; por fim, promessa de condução e alerta contra alianças contaminadoras na terra futura. O texto conecta o cotidiano presente ao destino pactual adiante.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Viver para Deus envolve o que falamos, como julgamos, como descansamos e como nos posicionamos diante da cultura ao redor. A aliança ordena a totalidade da vida.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-24" data-title="Capítulo 24" data-keywords="êxodo exodo capitulo 24 confirmação da aliança sangue">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">24</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 24 — Confirmação da aliança</h3>
+        <p>A palavra recebida é selada com sangue, compromisso e subida ao monte.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Moisés registra as palavras do Senhor, o povo responde com compromisso verbal, sacrifícios são oferecidos e o sangue da aliança é aspergido. Depois, Moisés sobe ao monte para receber instruções adicionais, enquanto a glória do Senhor se manifesta.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A aliança não é mera inspiração religiosa; é vínculo formal, solene e sacrificial. O sangue indica seriedade, consagração e pertencimento. O capítulo também reforça a mediação de Moisés e a santidade da presença divina.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>Há três movimentos fortes: leitura da palavra, selamento com sangue e subida à presença divina. A narrativa mostra que revelação, resposta e comunhão estão interligadas no pacto.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Compromissos com Deus não devem ser tratados de forma superficial. A aliança exige escuta, entrega e reverência diante da santidade do Senhor.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-25" data-title="Capítulo 25" data-keywords="êxodo exodo capitulo 25 ofertas arca tabernáculo">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">25</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 25 — O início das instruções do tabernáculo</h3>
+        <p>Deus pede ofertas e começa a revelar, em detalhes, como habitar simbolicamente no meio do povo.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O Senhor ordena a coleta voluntária de materiais e dá instruções para a arca, a mesa e o candelabro. O tabernáculo não surge por criatividade humana; é revelado segundo um padrão mostrado por Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O grande tema é presença. O Deus santo, que se revelou no Sinai, quer habitar no meio do povo sem abandonar sua santidade. Por isso, a adoração exige forma, beleza, precisão e submissão ao padrão divino.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto começa com a convocação das ofertas e depois entra nos móveis centrais do santuário. A ordem não é casual: ela parte do espaço mais santo, indicando que toda a estrutura do tabernáculo se organiza em torno da presença de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Deus não é adorado de qualquer modo. A presença divina é graciosa, mas nunca banal. Reverência, generosidade e obediência fazem parte do culto aceitável.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-26" data-title="Capítulo 26" data-keywords="êxodo exodo capitulo 26 cortinas tabernáculo véu">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">26</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 26 — A estrutura do tabernáculo</h3>
+        <p>Cortinas, tábuas, véus e divisões mostram que a presença de Deus é real, mas cercada de santidade e ordem.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Êxodo 26 detalha os tecidos, véus, armações e proporções do tabernáculo. O espaço sagrado não é improvisado. Cada dimensão, material e separação possui função dentro da lógica de aproximação cuidadosa à presença divina.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O véu e as divisões internas ensinam que Deus habita no meio do povo, mas não de forma trivial. A graça da presença não elimina a necessidade de mediação. O tabernáculo visualiza proximidade e distância ao mesmo tempo.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo vai do revestimento externo ao espaço interno, revelando um santuário ordenado por camadas de santidade. Isso cria pedagogia visual: o acesso a Deus é real, porém regulado.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>O culto verdadeiro envolve beleza, intenção e reverência. A maneira como nos aproximamos de Deus também comunica o quanto levamos sua santidade a sério.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-27" data-title="Capítulo 27" data-keywords="êxodo exodo capitulo 27 altar átrio azeite">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">27</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 27 — Altar, átrio e serviço contínuo</h3>
+        <p>A aproximação ao Deus santo passa por sacrifício, espaço ordenado e luz mantida diante dele.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo trata do altar do holocausto, do átrio do tabernáculo e do azeite para manter continuamente acesa a luz do candelabro. Assim, o texto conecta sacrifício, espaço de acesso e constância do serviço sagrado.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O altar mostra que aproximação envolve oferta e consagração. O átrio define ordem comunitária ao redor do sagrado. A luz contínua comunica permanência do serviço diante de Deus e cuidado constante com a adoração.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo sai do altar central para o contorno do átrio e conclui com a manutenção da luz. Há um movimento do acesso sacrificial para a regularidade do culto.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Vida espiritual não se sustenta apenas em momentos intensos. Deus também valoriza constância, zelo e serviço contínuo diante da sua presença.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-28" data-title="Capítulo 28" data-keywords="êxodo exodo capitulo 28 vestes sacerdotais arão">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">28</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 28 — As vestes sacerdotais</h3>
+        <p>As roupas de Arão e de seus filhos expressam glória, beleza, mediação e responsabilidade diante de Deus.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O Senhor separa Arão e seus filhos para o sacerdócio e descreve suas vestes com minúcia: peitoral, éfode, túnica, mitra e inscrições santas. A indumentária não é mero ornamento, mas parte da teologia do ofício sacerdotal.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O sacerdote representa o povo diante de Deus e carrega simbolicamente os nomes das tribos. Glória e beleza, aqui, não são luxo vazio; apontam para dignidade, consagração e peso da mediação sagrada.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo apresenta primeiro o chamado sacerdotal e depois percorre cada peça das vestes. No final, enfatiza que servir diante do Senhor exige cobertura santa e ordem específica.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Quem serve a Deus não o faz de forma leviana. O serviço santo requer consciência do peso da vocação, responsabilidade e reverência visível no modo de se apresentar diante do Senhor.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-29" data-title="Capítulo 29" data-keywords="êxodo exodo capitulo 29 consagração sacerdotes altar">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">29</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 29 — Consagração dos sacerdotes</h3>
+        <p>Arão e seus filhos são separados por meio de sacrifícios, unção e ritos que mostram a seriedade do serviço sacerdotal.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo descreve o processo de consagração dos sacerdotes e o uso de ofertas específicas. Também estabelece o holocausto contínuo como parte central da vida cúltica de Israel.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Ninguém assume o sacerdócio de forma casual. Aproximar-se de Deus em favor do povo exige purificação, sacrifício e dedicação total. O altar e o sacerdócio funcionam juntos como instrumentos de mediação e santidade.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto percorre lavagem, vestimenta, unção, sacrifícios e continuidade do serviço diário. Tudo reforça que a mediação diante do Senhor depende do que ele mesmo estabeleceu.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Serviço espiritual não é improviso nem plataforma de prestígio. É responsabilidade santa, marcada por consagração e perseverança diante de Deus.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-30" data-title="Capítulo 30" data-keywords="êxodo exodo capitulo 30 altar do incenso bacia óleo">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">30</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 30 — Incenso, purificação e unção</h3>
+        <p>O Senhor amplia a ordem do culto mostrando que aproximação, intercessão e consagração caminham juntas.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Êxodo 30 fala do altar do incenso, do resgate ao contar o povo, da bacia de bronze para lavagem e das fórmulas do óleo da unção e do incenso sagrado. O texto detalha práticas que preservam a santidade do culto.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Intercessão, purificação e unção mostram que a vida diante de Deus deve ser tratada como santa. O incenso aponta para adoração contínua; a lavagem, para pureza no serviço; a unção, para separação do que pertence especificamente ao Senhor.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo alterna entre objetos de culto e regras de consagração. Não se trata apenas de mobília sagrada, mas de uma gramática espiritual que ensina como o povo deve tratar o santo.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Nem tudo pode ser tratado de modo comum. Quando Deus separa algo para si, o povo deve aprender a honrar essa distinção com seriedade e temor.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-31" data-title="Capítulo 31" data-keywords="êxodo exodo capitulo 31 bezaleel aoliabe sábado tábuas">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">31</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 31 — Capacitação, sábado e tábuas</h3>
+        <p>Deus capacita artistas, reafirma o sábado e entrega a Moisés as tábuas da aliança.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O Senhor chama Bezalel e Aoliabe, enchendo-os de habilidade para a obra do tabernáculo. Em seguida, reafirma o sábado como sinal da aliança e entrega a Moisés as tábuas de pedra escritas pelo dedo de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Deus não distribui apenas chamados “religiosos” no sentido estreito. Ele capacita trabalho artístico, técnico e manual para sua glória. O sábado, por sua vez, continua lembrando que produtividade não é deus. Já as tábuas apontam para a objetividade da palavra revelada.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo une dons, descanso e revelação escrita. Assim, mostra que a vida da aliança inclui serviço habilitado, ritmo santo e obediência à palavra de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Talento também pode ser vocação sagrada. Quando consagrados a Deus, arte, técnica e trabalho deixam de ser meramente funcionais e se tornam serviço santo.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-32" data-title="Capítulo 32" data-keywords="êxodo exodo capitulo 32 bezerro de ouro idolatria">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">32</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 32 — O bezerro de ouro</h3>
+        <p>Enquanto Moisés está no monte, o povo rapidamente troca a glória de Deus por um ídolo visível.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Na ausência prolongada de Moisés, o povo pressiona Arão e fabrica um bezerro de ouro. A idolatria explode no próprio contexto em que a aliança estava sendo consolidada. Moisés desce, quebra as tábuas e confronta o pecado nacional.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O capítulo revela a profundidade da tendência humana a substituir Deus por algo manipulável, imediato e visível. Idolatria aqui não é simples troca de símbolo; é ruptura da aliança. Ao mesmo tempo, a intercessão de Moisés destaca o papel mediador em meio ao juízo merecido.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto sobe do desejo do povo por algo visível até a celebração idólatra, e depois desce em juízo, quebra, confronto e disciplina. É um dos pontos mais dramáticos de Êxodo.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>O coração humano continua tentado a reduzir Deus ao que consegue controlar. Sempre que a espera se torna difícil, cresce a tentação de fabricar substitutos mais imediatos.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-33" data-title="Capítulo 33" data-keywords="êxodo exodo capitulo 33 presença de deus tenda encontro">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">33</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 33 — O valor supremo da presença</h3>
+        <p>Após o pecado do bezerro, a grande questão não é apenas seguir viagem, mas saber se Deus irá com o povo.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O Senhor fala sobre a gravidade do pecado e sobre a possibilidade de o povo seguir sem sua presença manifesta. Moisés então insiste: se Deus não for com eles, não vale a pena prosseguir. A tenda do encontro se torna espaço de mediação e busca.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Êxodo 33 mostra que a essência da aliança não é apenas posse de terra ou continuidade histórica, mas a própria presença de Deus. Moisés entende que sem o Senhor o povo até pode avançar geograficamente, mas estará espiritualmente vazio.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo transita da ameaça de distância para a busca intensa de Moisés e culmina na ousada petição para conhecer os caminhos de Deus e contemplar sua glória.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Há conquistas que não compensam a perda da presença. A maturidade espiritual aprende a desejar Deus mais do que os benefícios que ele pode conceder.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-34" data-title="Capítulo 34" data-keywords="êxodo exodo capitulo 34 renovação da aliança glória">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">34</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 34 — Renovação da aliança e revelação do caráter de Deus</h3>
+        <p>Depois da ruptura, Deus renova a aliança e proclama seu nome diante de Moisés.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Moisés sobe novamente ao monte com novas tábuas. Ali, o Senhor proclama seu nome e seu caráter: misericordioso, compassivo, longânimo, abundante em amor, mas também justo. A aliança é renovada, e Moisés desce com o rosto resplandecente.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O centro do capítulo é a autodeclaração divina. Deus não é reduzido nem a severidade sem ternura nem a ternura sem santidade. Sua glória inclui misericórdia e justiça em perfeita integridade. A renovação da aliança demonstra graça, mas não banalização do pecado.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>Subida ao monte, proclamação do nome, renovação da aliança, advertências contra idolatria e descida de Moisés. O brilho no rosto do mediador funciona como sinal de encontro real com a glória de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Conhecer a Deus de verdade é conhecer seu caráter, não apenas seus atos. E todo encontro genuíno com sua glória deixa marcas visíveis na vida do servo.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-35" data-title="Capítulo 35" data-keywords="êxodo exodo capitulo 35 ofertas tabernáculo sábado">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">35</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 35 — Convocação para a obra do tabernáculo</h3>
+        <p>A renovação da aliança se desdobra em generosidade, trabalho consagrado e participação comunitária.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Moisés reúne o povo, relembra o sábado e convoca ofertas voluntárias para a construção do tabernáculo. Homens e mulheres, artesãos e pessoas generosas, passam a contribuir com materiais e habilidades.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>Depois da queda do bezerro, o povo agora é chamado a responder corretamente à presença de Deus. Em vez de doar ouro para a idolatria, oferece seus recursos para o culto ordenado pelo Senhor. A obediência transforma o uso dos dons e bens.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo começa com o sábado, segue com a convocação das ofertas e culmina na mobilização dos capacitados. O texto mostra que descanso santo, generosidade e trabalho consagrado podem coexistir em harmonia.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Quando o coração se volta de novo para Deus, até os recursos que antes poderiam alimentar vaidade passam a ser direcionados para sua glória e para a edificação da comunidade.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-36" data-title="Capítulo 36" data-keywords="êxodo exodo capitulo 36 beçalel tabernáculo construção">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">36</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 36 — Início da construção</h3>
+        <p>A obra do tabernáculo começa com tanta generosidade do povo que as ofertas precisam ser interrompidas.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Bezalel, Aoliabe e os demais artesãos iniciam a construção segundo tudo o que o Senhor ordenou. O povo traz mais do que o necessário, e Moisés precisa conter as ofertas. Em seguida, o texto detalha a execução das partes estruturais do tabernáculo.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A resposta do povo mostra que a graça recebida pode produzir generosidade abundante. O tabernáculo não é construído pela lógica do mínimo indispensável, mas por um coração despertado para participar da obra de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>Primeiro, a abundância das ofertas; depois, a descrição técnica da construção. O texto enfatiza que a beleza da obra nasce de obediência detalhada e zelo coletivo.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Quando Deus move o coração do povo, a generosidade deixa de ser peso e se torna privilégio. Participar daquilo que honra o Senhor deve ser visto como graça.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-37" data-title="Capítulo 37" data-keywords="êxodo exodo capitulo 37 arca mesa candelabro">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">37</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 37 — Móveis sagrados executados</h3>
+        <p>A arca, a mesa, o candelabro e o altar do incenso são feitos em conformidade com o padrão divino.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo descreve a execução dos principais objetos sagrados do tabernáculo. O que antes havia sido revelado em instrução agora toma forma em construção concreta.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A repetição detalhada não é redundância vazia. Ela sublinha obediência. O povo não está inventando um culto próprio; está respondendo ao padrão recebido do Senhor. A fidelidade se expressa na atenção aos detalhes.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O texto percorre os móveis centrais do santuário em ordem litúrgica, reforçando a centralidade da presença, da provisão e da luz diante de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Nem toda repetição na vida espiritual é estagnação. Muitas vezes, ela é sinal de perseverança obediente e de zelo em fazer exatamente o que Deus pediu.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-38" data-title="Capítulo 38" data-keywords="êxodo exodo capitulo 38 altar átrio materiais">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">38</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 38 — Altar, átrio e levantamento dos materiais</h3>
+        <p>A construção continua, e o texto registra tanto os objetos quanto a administração dos recursos empregados.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Êxodo 38 descreve o altar do holocausto, a bacia de bronze, o átrio e depois apresenta um registro dos metais e materiais utilizados. A obra de Deus é tratada com transparência e precisão.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A santidade do culto não exclui responsabilidade prática. O texto sugere que tudo o que é oferecido ao Senhor deve ser administrado com ordem e seriedade. Beleza, sacrifício e prestação de contas podem caminhar juntos.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>Primeiro, descrição dos elementos; depois, registro numérico dos materiais. A narrativa mostra que a casa de Deus não é construída na desordem nem na opacidade.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Serviço santo também envolve responsabilidade com recursos, clareza e administração íntegra. O que pertence a Deus deve ser tratado com excelência e honestidade.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-39" data-title="Capítulo 39" data-keywords="êxodo exodo capitulo 39 vestes sacerdotais conclusão">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">39</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 39 — Vestes sacerdotais e conclusão da obra</h3>
+        <p>As vestes são finalizadas, e todo o trabalho chega ao fim segundo o que o Senhor ordenou.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>O capítulo narra a execução das vestes sacerdotais e resume a conclusão de toda a obra do tabernáculo. Os itens são apresentados a Moisés, que os inspeciona e abençoa o povo porque tudo foi feito conforme o Senhor havia ordenado.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>A frase repetida “como o Senhor ordenara” se torna o coração do texto. Êxodo quer destacar a beleza da obediência. Depois de episódios de murmuração e idolatria, a narrativa mostra um povo finalmente respondendo de forma alinhada à vontade revelada de Deus.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo percorre a finalização das vestes, a apresentação da obra e a inspeção final de Moisés. É como uma assinatura de fidelidade sobre tudo o que foi construído.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>Há grande beleza espiritual em simplesmente fazer o que Deus mandou. A obediência consistente, ainda que sem espetáculo, honra profundamente o Senhor.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+<details class="chapter-card reveal" id="cap-40" data-title="Capítulo 40" data-keywords="êxodo exodo capitulo 40 glória do senhor tabernáculo">
+  <summary>
+    <div class="chapter-head">
+      <span class="chapter-number">40</span>
+      <div class="chapter-copy">
+        <h3>Capítulo 40 — O tabernáculo erguido e a glória do Senhor</h3>
+        <p>Êxodo termina não apenas com a obra concluída, mas com a presença de Deus enchendo o tabernáculo.</p>
+      </div>
+    </div>
+    <span class="chapter-action">Abrir</span>
+  </summary>
+  <div class="chapter-body">
+    <div class="chapter-grid">
+      <article class="info-box">
+        <h4>Leitura central</h4>
+        <p>Moisés levanta o tabernáculo, organiza cada item no seu lugar, consagra o espaço e estabelece o serviço. Então a nuvem cobre a tenda, e a glória do Senhor enche o tabernáculo de tal modo que Moisés não consegue entrar. A nuvem passa a guiar o povo em suas jornadas.</p>
+      </article>
+      <article class="info-box">
+        <h4>Teologia do capítulo</h4>
+        <p>O clímax de Êxodo é a presença. Deus libertou, conduziu, disciplinou, fez aliança, revelou sua vontade e ordenou um santuário para finalmente habitar no meio do povo. A redenção alcança seu ápice quando a glória divina se manifesta como centro da vida comunitária.</p>
+      </article>
+      <article class="info-box">
+        <h4>Estrutura e movimento</h4>
+        <p>O capítulo parte da montagem do tabernáculo, passa pela consagração e culmina na descida da glória. O final retoma a condução por nuvem e fogo, ligando presença e peregrinação.</p>
+      </article>
+      <article class="info-box">
+        <h4>Aplicação</h4>
+        <p>O alvo final da obra de Deus não é apenas tirar o povo de um lugar ruim, mas trazer seu povo para perto de si. O êxodo encontra seu sentido pleno quando a presença de Deus se torna o centro da caminhada.</p>
+      </article>
+    </div>
+  </div>
+</details>
+
+</section>
   </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;">
+          <img src="../assets/img/logo-soloteo.png" alt="Logo soloteo" class="brand-logo" />
+          <div class="brand-text">
+            <strong>SOLOTEO</strong>
+            <span>Teologia com profundidade, beleza e direção</span>
+          </div>
+        </div>
+        <p class="footer-copy">
+          Uma biblioteca viva para estudar as Escrituras com seriedade, clareza, organização e beleza visual.
+        </p>
+      </div>
 
-  <footer>
-    <div class="container">
-      © 2026 soloteo — Teologia profunda, clara e viva.
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <a href="../../index.html">Início</a>
+        <a href="../../categorias/livros-da-biblia.html">Livros da Bíblia</a>
+        <a href="./pentateuco.html">Pentateuco</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Continuar</h4>
+        <a href="./pentateuco-levitico.html">Levítico</a>
+        <a href="../../categorias/trilhas-de-estudo.html">Trilhas</a>
+        <a href="../../categorias/apologetica.html">Apologética</a>
+      </div>
     </div>
   </footer>
 
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo">↑</button>
+
   <script>
     (function () {
-      const searchInput = document.getElementById('pageSearch');
-      const searchButton = document.getElementById('searchButton');
-      const clearButton = document.getElementById('clearButton');
-      const searchStatus = document.getElementById('searchStatus');
-      const contentCards = Array.from(document.querySelectorAll('.content-card'));
-      const chapterBlocks = Array.from(document.querySelectorAll('details.chapter'));
-      const tocLinks = Array.from(document.querySelectorAll('#tocLinks a'));
-      const chaptersSection = document.getElementById('capitulos');
+      const progressBar = document.getElementById('progressBar');
+      const topbar = document.getElementById('topbar');
+      const toTop = document.getElementById('toTop');
+      const rail = document.getElementById('curiosityRail');
+      const prevBtn = document.getElementById('curioPrev');
+      const nextBtn = document.getElementById('curioNext');
+      const revealItems = document.querySelectorAll('.reveal');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      function normalize(text) {
-        return text
-          .toLowerCase()
-          .normalize('NFD')
-          .replace(/[\u0300-\u036f]/g, '')
-          .trim();
+      function updateProgressBar() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+        topbar.classList.toggle('is-scrolled', scrollTop > 8);
+        toTop.style.display = scrollTop > 460 ? 'grid' : 'none';
       }
 
-      function clearHighlights() {
-        contentCards.forEach(card => card.classList.remove('is-highlight'));
-        chapterBlocks.forEach(block => block.classList.remove('is-highlight'));
-        tocLinks.forEach(link => link.classList.remove('is-match'));
-        chaptersSection.classList.remove('is-highlight');
-      }
-
-      function runSearch() {
-        const query = normalize(searchInput.value);
-        clearHighlights();
-
-        if (query === '') {
-          contentCards.forEach(card => card.classList.remove('is-hidden'));
-          chapterBlocks.forEach(block => block.classList.remove('is-hidden'));
-          searchStatus.textContent = 'Mostrando o estudo completo de Êxodo.';
+      function setupReveal() {
+        if (prefersReducedMotion) {
+          revealItems.forEach((item) => item.classList.add('is-visible'));
           return;
         }
 
-        let visibleSections = 0;
-        let visibleChapters = 0;
-        let firstMatch = null;
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
 
-        contentCards.forEach(card => {
-          if (card.id === 'capitulos') {
-            card.classList.remove('is-hidden');
-            return;
-          }
-
-          const text = normalize((card.dataset.search || '') + ' ' + card.textContent);
-          const matched = text.includes(query);
-
-          card.classList.toggle('is-hidden', !matched);
-
-          if (matched) {
-            visibleSections += 1;
-            card.classList.add('is-highlight');
-            if (!firstMatch) firstMatch = card;
-            const link = document.querySelector('#tocLinks a[href="#' + card.id + '"]');
-            if (link) link.classList.add('is-match');
-          }
-        });
-
-        chapterBlocks.forEach(block => {
-          const text = normalize((block.dataset.search || '') + ' ' + block.textContent);
-          const matched = text.includes(query);
-
-          block.classList.toggle('is-hidden', !matched);
-
-          if (matched) {
-            visibleChapters += 1;
-            block.classList.add('is-highlight');
-            block.open = true;
-            if (!firstMatch) firstMatch = block;
-            chaptersSection.classList.add('is-highlight');
-            const link = document.querySelector('#tocLinks a[href="#capitulos"]');
-            if (link) link.classList.add('is-match');
-          }
-        });
-
-        if (!firstMatch) {
-          searchStatus.textContent = 'Nenhum trecho encontrado para "' + searchInput.value + '".';
-          return;
-        }
-
-        const totalMatches = visibleSections + visibleChapters;
-        if (totalMatches === 1) {
-          searchStatus.textContent = '1 resultado encontrado para "' + searchInput.value + '".';
-        } else {
-          searchStatus.textContent = totalMatches + ' resultados encontrados para "' + searchInput.value + '".';
-        }
-
-        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        revealItems.forEach((item) => observer.observe(item));
       }
 
-      function clearSearch() {
-        searchInput.value = '';
-        clearHighlights();
-        contentCards.forEach(card => card.classList.remove('is-hidden'));
-        chapterBlocks.forEach(block => block.classList.remove('is-hidden'));
-        searchStatus.textContent = 'Mostrando o estudo completo de Êxodo.';
-        searchInput.focus();
+      function scrollRail(direction) {
+        if (!rail) return;
+        const amount = Math.min(rail.clientWidth * 0.88, 420);
+        rail.scrollBy({
+          left: direction * amount,
+          behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
       }
 
-      searchButton.addEventListener('click', runSearch);
-      clearButton.addEventListener('click', clearSearch);
-      searchInput.addEventListener('input', runSearch);
-      searchInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-          event.preventDefault();
-          runSearch();
-        }
+      if (prevBtn) prevBtn.addEventListener('click', () => scrollRail(-1));
+      if (nextBtn) nextBtn.addEventListener('click', () => scrollRail(1));
+
+      toTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
       });
 
-      clearSearch();
+      window.addEventListener('scroll', updateProgressBar, { passive: true });
+      updateProgressBar();
+      setupReveal();
     })();
   </script>
 </body>
